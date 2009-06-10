@@ -46,11 +46,11 @@
 	<necessite id="SPIP" version="[2.1;)" />
 	
 	
-	<bouton id="statistiques_visites" position='-4'>
-		<icone>images/statistiques-48.png</icone>
-		<titre>icone_statistiques_visites</titre>		
+	<bouton id="statistiques" parent="bando_activite">
+		<icone>images/statistique-16.png</icone>
+		<titre>icone_statistiques_visites</titre>
+		<url>statistiques_visites</url>
 	</bouton>
-	
 		<onglet id='statistiques_visites' parent='statistiques'>
 			<icone>null</icone>
 			<titre>icone_statistiques_visites</titre>
@@ -66,22 +66,23 @@
 			<titre>onglet_repartition_lang</titre>
 			<url>statistiques_lang</url>
 		</onglet>
-		
-		<bouton id='statistiques_referers' parent='statistiques_visites'>
-			<icone>images/referers-24.gif</icone>
-			<titre>titre_liens_entrants</titre>
-		</bouton>
-			<onglet id='jour_referers' parent='stat_referers'>
-				<icone>null</icone>
-				<titre>date_aujourdhui</titre>
-				<url>statistiques_referers</url>
-			</onglet>
-			<onglet id='veille_referers' parent='stat_referers'>
-				<icone>null</icone>
-				<titre>date_hier</titre>
-				<url>statistiques_referers</url>
-				<args>jour=veille</args>
-			</onglet>		
+
+	<bouton id="referers" parent="bando_activite">
+		<icone>images/referer-16.png</icone>
+		<titre>titre_liens_entrants</titre>
+		<url>statistiques_referers</url>
+	</bouton>
+		<onglet id='jour_referers' parent='stat_referers'>
+			<icone>null</icone>
+			<titre>date_aujourdhui</titre>
+			<url>statistiques_referers</url>
+		</onglet>
+		<onglet id='veille_referers' parent='stat_referers'>
+			<icone>null</icone>
+			<titre>date_hier</titre>
+			<url>statistiques_referers</url>
+			<args>jour=veille</args>
+		</onglet>
 				
 </plugin>
 

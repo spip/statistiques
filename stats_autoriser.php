@@ -3,6 +3,14 @@
 function stats_autoriser(){}
 
 
+function autoriser_statistiques_bouton_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
+	return $GLOBALS['visiteur_session']['statut']=='0minirezo';
+}
+function autoriser_referers_bouton_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
+	return $GLOBALS['visiteur_session']['statut']=='0minirezo';
+}
+
+
 // Lire les stats ?
 // = tous les admins
 // http://doc.spip.org/@autoriser_voirstats_dist
@@ -29,6 +37,5 @@ function autoriser_statistiques_lang_bouton_dist($faire, $type, $id, $qui, $opt)
 function autoriser_statistiques_referers_bouton_dist($faire, $type, $id, $qui, $opt) {
 	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
-
 
 ?>
