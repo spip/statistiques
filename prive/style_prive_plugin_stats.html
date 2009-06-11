@@ -9,6 +9,7 @@
 
 	ATTENTION: il faut absolument le charset sinon Firefox croit que
 	c'est du text/html !
+	<style>
 ]
 #CACHE{3600*100,cache-client}
 #HTTP_HEADER{Content-Type: text/css; charset=iso-8859-15}
@@ -74,3 +75,6 @@ table#visites tr.c_recap th {background-color:#[(#GET{foncee}|couleur_foncer)];c
 .statistiques_visites .graphInfo{float:none;}
 .statistiques_visites .graphLegend table{width:100%; padding:0 1em 1em 1em;}
 .statistiques_visites .graphLegend tr{display:inline;}
+
+[(#REM)	</style>]
+
