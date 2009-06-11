@@ -165,7 +165,7 @@ function exec_statistiques_repartition_dist()
 	if ($abs_total<1) $abs_total=1;
 	$nombre_vis[0] = 0;
 
-	echo debut_cadre_relief("statistiques-24.gif",true);
+	echo debut_cadre_relief("statistique-24.png",true);
 	echo "<div style='border: 1px solid #aaaaaa; border-bottom: 0px;'>";
 	enfants_aff(0,$taille, $critere);
 	echo "</div><br />",

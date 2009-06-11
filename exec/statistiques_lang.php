@@ -60,7 +60,7 @@ function statistiques_lang_ok()
 //
 
 
-	echo debut_cadre_enfonce("langues-24.gif", true);
+	echo debut_cadre_enfonce("langue-24.png", true);
 
 	$r = sql_fetsel("SUM($critere) AS total_visites", "spip_articles");
 

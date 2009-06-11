@@ -113,7 +113,7 @@ function aff_statistique_visites_par_visites($serveur='', $id_article=0, $classe
 function cadre_stat($stats, $table, $id_article)
 {
 	if (!$stats) return '';
-	return debut_cadre_relief("statistiques-24.gif", true)
+	return debut_cadre_relief("statistique-24.png", true)
 	. join('', $stats)
 	. fin_cadre_relief(true)
 	. statistiques_mode($table, $id_article);

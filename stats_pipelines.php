@@ -41,9 +41,9 @@ function stats_affiche_milieu($flux){
 
 		$flux['data'] .= 
 			debut_cadre_trait_couleur('',true,'',_T('texte_effacer_statistiques'))
-			. '<img src="' .  chemin_image('warning.gif') . '" alt="'
+			. '<img src="' .  chemin_image("warning-48.png") . '" alt="'
 			. _T('info_avertissement')
-			. "\" style='width: 48px; height: 48px; float: right;margin: 10px;' />"
+			. "\" style='float: right;margin: 10px;' />"
 			. _T('texte_admin_effacer_stats')
 			. "<br class='nettoyeur' />"
 			. "\n<div style='text-align: center'>"

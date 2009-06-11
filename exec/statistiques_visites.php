@@ -103,7 +103,7 @@ function exec_statistiques_visites_args($id_article, $duree, $interval, $type, $
 		echo creer_colonne_droite('', true);
 
 	if ($id_article) {
-		echo bloc_des_raccourcis(icone_horizontale(_T('icone_retour_article'), generer_url_ecrire("articles","id_article=$id_article"), "article-24.gif","rien.gif", false));
+		echo bloc_des_raccourcis(icone_horizontale(_T('icone_retour_article'), generer_url_ecrire("articles","id_article=$id_article"), "article-24.png","", false));
 	}
 	echo $result;
 
