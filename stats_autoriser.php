@@ -4,10 +4,10 @@ function stats_autoriser(){}
 
 
 function autoriser_statistiques_bouton_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
-	return $GLOBALS['visiteur_session']['statut']=='0minirezo';
+	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 function autoriser_referers_bouton_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
-	return $GLOBALS['visiteur_session']['statut']=='0minirezo';
+	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
 
