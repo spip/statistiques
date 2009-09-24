@@ -5,10 +5,10 @@
  */
 
 (function($){
-	
+
 	/**
 	 * Des variables a garder globalement
-	 * 
+	 *
 	 * collections : stockage de l'ensemble de toutes les valeurs de tous les graphs et leurs options
 	 * collectionsActives : stockage des series actives
 	 * plots : stockage des graphiques
@@ -16,26 +16,27 @@
 	 * idGraph : identifiant unique pour tous les graphs
 	 */
 	collections = [];
-	collectionsActives = []; 
-	plots = []; 
-	vignettes = []; 
+	collectionsActives = [];
+	plots = [];
+	vignettes = [];
 	vignettesSelection = [];
 	idGraph = 0;
-	
+
 	/*
 	 * Fait un graphique d'un tableau donne
-	 * $("table.graph").makeGraph();
-	 * necessite la librairie "flot".
-	 */	
+	 * $("table.graph").tFlot();
+	 * necessite la librairie "jQuery flot".
+	 * http://code.google.com/p/flot/
+	 */
 	$.fn.tFlot = function(settings) {
 		var options, flot;
 
-			  
+
 		options = {
 			width:'500px',
 			height:'250px',
 			parse:{
-				orientation:'row', // 'column' : tableaux verticaux par defaut... 
+				orientation:'row', // 'column' : tableaux verticaux par defaut...
 				axeOnTitle:false // les coordonnees x d'axe sont donnes dans l'attribut title du <th> et non dans le <th> ?
 			},
 			legendeExterne:false,
@@ -65,7 +66,7 @@
 		}
 		$.extend(true, options, settings);
 
-		
+
 		$(this).each(function(){
 
 			// identifiant unique pour tous les graphs
@@ -82,7 +83,7 @@
 
 			graph = $("<div class='graphResult' style='width:" + options.width + ";height:" + options.height + ";'></div>").appendTo(graphique);
 			gInfo = $("<div class='graphInfo'></div>").appendTo(graphique);
-			
+
 			// legende en dehors du dessin ?
 			if (options.legendeExterne) {
 				legend = $("<div class='graphLegend' id='grapLegend"+idGraph+"'></div>").appendTo(gInfo);
@@ -116,16 +117,16 @@
 				values.options.xaxis = $.extend(true, {
 							mode: "time",
 							timeformat: "%d/%m/%y"
-						}, 
-						values.options.xaxis, 
+						},
+						values.options.xaxis,
 						{ticks: null}
 				);
 				if (options.grille.weekend) {
 					values.options.grid = { markings: weekendAreas }
-				}				
+				}
 				if (options.grille.years) {
 					values.options.grid = { markings: yearsArea }
-				}				
+				}
 			}
 
 			// en cas de moyenne glissante, on la calcule
@@ -141,21 +142,21 @@
 					grid:{hoverable:true}
 				});
 			}
-			
-					
+
+
 			// dessiner
 			plots[idGraph] = $.plot(graph, values.series, values.options);
-			
+
 			// prevoir les actions sur les labels
 			if (options.legendeActions) {
 				$.extend(values.options, {legend:{container:null, show:false}});
 				actionsLegendes($('#graphique'+idGraph));
 			}
-		
+
 			// ajouter une mini vue si demandee
 			if (options.vignette.show) {
-				$("<div class='graphVignette' id='#graphVignette"+idGraph 
-					+ "' style='width:" + options.vignette.width + ";height:" 
+				$("<div class='graphVignette' id='#graphVignette"+idGraph
+					+ "' style='width:" + options.vignette.width + ";height:"
 					+ options.vignette.height + ";'></div>").appendTo(gInfo);
 				creerVignette($('#graphique'+idGraph), values.series, values.options, options.vignette);
 			}
@@ -167,15 +168,10 @@
 			// stocker les valeurs
 			collections.push({id:idGraph, values:values}); // sources
 			collectionsActives = $.extend(true, {}, collections); // affiches
-			
-					
+
+
 			++idGraph;
 		});
-
-
-
-
-
 
 		/*
 		 * Prendre une table HTML
@@ -184,7 +180,7 @@
 		function parseTable(table, settings){
 			var options;
 			flot = [];
-			
+
 			options = {
 				ticks:[], // [1:"label 1", 2:"label 2"]
 				orientation:'row', // 'column'
@@ -204,13 +200,13 @@
 				}
 			}
 			$.extend(options, settings);
-			
+
 			row = (options.orientation == 'row');
-		
-			// 
+
+			//
 			// recuperer les points d'axes
-			// 	
-			
+			//
+
 			//
 			// Une fonction pour simplifier la recup
 			//
@@ -221,8 +217,8 @@
 					return element.text();
 				}
 			}
-			
-			axe=0; 
+
+			axe=0;
 			if (row) {
 				// dans le th de chaque tr
 				$(table).find('tr:not(:first)').each(function(){
@@ -240,12 +236,12 @@
 				});
 			}
 
-			
-			// 
+
+			//
 			// recuperer les noms de series
 			//
 			axe = (axe ? 1 : 0);
-			
+
 			if (row) {
 				// si axes definis, on saute une ligne
 				if (axe) {
@@ -254,7 +250,7 @@
 					columns = $(table).find('tr:first th');
 				}
 				// chaque colonne est une serie
-				
+
 				for(i=0; i<columns.length; i++){
 					cpt=0, data=[];
 					th = $(table).find('tr:first th:eq(' + (i + axe) + ')');
@@ -269,7 +265,7 @@
 					flot.push(serie);
 				}
 
-				
+
 			} else {
 				// si axes definis, on saute une colonne
 				if (axe) {
@@ -291,10 +287,10 @@
 					serie = {label:label, data:data};
 					$.extend(serie, serieOptions);
 					flot.push(serie);
-				});		
+				});
 			}
 
-			// 
+			//
 			// mettre les options dans les series
 			//
 			color=0;
@@ -302,7 +298,7 @@
 				serie = $.extend(true, {}, options.defaultSerie, {color: color++}, serie);
 				flot[i] = serie;
 			});
-			
+
 
 			opt = {
 				xaxis: {}
@@ -314,13 +310,10 @@
 			return {series:flot, options:opt};
 		}
 
-
-		
-		
 		/*
-		 * 
+		 *
 		 * Recuperer les options en fonctions de CSS
-		 * 
+		 *
 		 */
 		function optionsCss(element) {
 			var options = {};
@@ -338,18 +331,14 @@
 					bars:{fill:true}
 				});
 			}
-			return options;			
+			return options;
 		}
-		
-		
-		
-		
 
 		/*
-		 * 
+		 *
 		 *  calcul d'une moyenne glissante
-		 * 
-		 */ 
+		 *
+		 */
 		function moyenneGlissante(lesSeries, settings) {
 			var options;
 			options = {
@@ -367,18 +356,18 @@
 					// et retrait du trop vieux
 					moy.push(parseInt(d[1]));
 					if (moy.length>=g) { moy.shift();}
-					
+
 					// calcul de la somme et ajout de la moyenne
 					for(var k=0,sum=0;k<moy.length;sum+=moy[k++]);
-					data.push([d[0], Math.round(sum/moy.length)]);						
+					data.push([d[0], Math.round(sum/moy.length)]);
 				});
-				
+
 				serieG = $.extend(true, {}, val, {
 					data:data,
 					label:val.label + " ("+options.texte+")",
 					lines:{
 						show:true,
-						fill:false	
+						fill:false
 					},
 					bars:{show:false}
 				});
@@ -391,11 +380,7 @@
 				val.color = color++;
 			});
 			return series;
-		}		
-		
-		
-		
-
+		}
 
 		//
 		// Permettre de cacher certaines series
@@ -411,7 +396,7 @@
 				// bof bof tous ces parent() et ca marche qu'avec legendeExterne:true
 				master = tr.parent().parent().parent().parent().parent();
 				pid = master.attr('id').substr(9); // enlever 'graphique'
-				
+
 				var seriesActives = [];
 				tr.parent().find('tr:not(.cacher)').each(function(){
 					nom = $(this).find('a').text();
@@ -431,11 +416,8 @@
 					creerVignette(master, seriesActives, collections[pid].values.options);
 				}
 
-			});			
+			});
 		}
-		
-		
-
 
 		//
 		// Afficher une miniature
@@ -452,8 +434,8 @@
 
 					grid: { color: "#999", hoverable:null },
 					selection: { mode: "x" },
-					xaxis:{min:null, max:null},			
-					yaxis:{min:null, max:null}			
+					xaxis:{min:null, max:null},
+					yaxis:{min:null, max:null}
 				}
 			};
 			$.extend(true, options, settings);
@@ -463,21 +445,21 @@
 			vignette = $(graphique).find('.graphVignette');
 			pid = vignette.parent().parent().attr('id').substr(9);
 			vignettes[pid] = $.plot(vignette, series, options.flot);
-			
+
 			if (vignettesSelection[pid] !== undefined) {
 				vignettes[pid].setSelection(vignettesSelection[pid]);
 			}
 		}
-		
-		
-		
+
+
+
 		//
 		// Permettre le zoom sur le graphique
-		// et sur la miniature 		
-		//		
+		// et sur la miniature
+		//
 		function zoomGraphique(graphique) {
-			pid = $(graphique).attr('id').substr(9);		
-						
+			pid = $(graphique).attr('id').substr(9);
+
 			$(graphique).find('.graphResult').bind("plotselected", function (event, ranges) {
 				graph = $(event.target);
 				pid = graph.parent().attr('id').substr(9);
@@ -487,7 +469,7 @@
 					ranges.xaxis.to = ranges.xaxis.from + 0.00001;
 				if (ranges.yaxis.to - ranges.yaxis.from < 0.00001)
 					ranges.yaxis.to = ranges.yaxis.from + 0.00001;
-				
+
 				// do the zooming
 				// et sauver les parametres du zoom
 				plots[pid] = $.plot(graph, collectionsActives[pid].values.series,
@@ -495,70 +477,70 @@
 					  xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to },
 					  yaxis: { min: ranges.yaxis.from, max: ranges.yaxis.to }
 					}));
-				
+
 				// don't fire event on the overview to prevent eternal loop
 				if (vignettes[pid] !== undefined) {
 					vignettes[pid].setSelection(ranges, true);
 				}
 			});
-			
+
 			// raz sur double clic
 			$(graphique).find('.graphResult').dblclick(function (event) {
 				var graphique;
 				graphique = $(event.target).parent().parent();
-				pid = graphique.attr('id').substr(9);	
+				pid = graphique.attr('id').substr(9);
 				vignettesSelection[pid] = undefined;
-				if (vignettes[pid] != undefined) {	
+				if (vignettes[pid] != undefined) {
 					vignettes[pid].clearSelection();
-				}			
-				plots[pid] = $.plot(graphique.find('.graphResult'), 
+				}
+				plots[pid] = $.plot(graphique.find('.graphResult'),
 					collectionsActives[pid].values.series,
 					$.extend(true, collections[pid].values.options, {
 						xaxis: { min: null, max: null },
 					  	yaxis: { min: null, max: null }
 					}));
-					
-			});	
-			
-			
+
+			});
+
+
 			// si une vignette est presente
 			vignette = $(graphique).find('.graphVignette');
-			
+
 			if (vignette.length) {
-				
-				// zoom depuis la miniature			
+
+				// zoom depuis la miniature
 				vignette.bind("plotselected", function (event, ranges) {
 					graph = $(event.target);
-					pid = graph.parent().parent().attr('id').substr(9);	
-					vignettesSelection[pid] = ranges;			
+					pid = graph.parent().parent().attr('id').substr(9);
+					vignettesSelection[pid] = ranges;
 					plots[pid].setSelection(ranges);
 				});
-				
+
 				// raz depuis la miniature sur double clic
 				vignette.dblclick(function (event) {
 					var graphique;
 					graphique = $(event.target).parent().parent().parent();
-					pid = graphique.attr('id').substr(9);	
-					vignettesSelection[pid] = undefined;							
-					
-					plots[pid] = $.plot(graphique.find('.graphResult'), 
+					pid = graphique.attr('id').substr(9);
+					vignettesSelection[pid] = undefined;
+
+					plots[pid] = $.plot(graphique.find('.graphResult'),
 						collectionsActives[pid].values.series,
 						$.extend(true, collections[pid].values.options, {
 							xaxis: { min: null, max: null },
 							yaxis: { min: null, max: null }
-						}));		
-				});	
-			}	
-			
-		}	
-	
-	
-	
-		
+						}));
+				});
+			}
+
+		}
+
+
+
+
 		/*
-		 * 
+		 *
 		 * Infobulles
-		 * 
+		 *
 		 */
 		var previousPoint = null;
 		function infobulle(graph, settings) {
@@ -567,49 +549,49 @@
 				show:true
 			};
 			$.extend(true, options, settings);
-			
+
 			$(graph).bind("plothover", function (event, pos, item) {
 				$("#x").text(pos.x.toFixed(2));
 				$("#y").text(pos.y.toFixed(2));
-				
+
 				graph = $(event.target);
 				pid = graph.parent().attr('id').substr(9);
-				
+
 				if (options.show) {
 					if (item) {
 						if (previousPoint != item.datapoint) {
 							previousPoint = item.datapoint;
-							
+
 							$("#tooltip").remove();
 							var x = item.datapoint[0],
 								y = item.datapoint[1];
 
 							x = collectionsActives[pid].values.options.xaxis.ticksReels[item.dataIndex][1];
-							
+
 							showTooltip(item.pageX, item.pageY,
 										item.series.label + " [" + x + "] = " + y);
 						}
 					}
 					else {
 						$("#tooltip").remove();
-						previousPoint = null;            
+						previousPoint = null;
 					}
 				}
 			});
-		}				
+		}
 	}
-	
 
 
-		
-		
+
+
+
 	// Adapte du site de Flot (exemple de visites)
     // helper for returning the weekends in a period
     function weekendAreas(axes) {
         var markings = [];
 		var heure = 60 * 60 * 1000;
 		var jour = 24 * heure;
-        	
+
 		// les week ends
         // go to the first Saturday
 		var d = new Date(axes.xaxis.min);
@@ -620,9 +602,9 @@
         do {
             markings.push({ xaxis: { from: i, to: i + 2*jour }, color: '#f6f6f6' });
             i += 7*jour;
-        } while (i < axes.xaxis.max);	
+        } while (i < axes.xaxis.max);
 
-		
+
 		// les mois et les ans...
 		$.each(yearsArea(axes), function(i,j){
 			markings.push(j);
@@ -630,7 +612,7 @@
 
         return markings;
     }
-	
+
 	// une grille pour afficher les mois et les ans...
 	function yearsArea(axes){
     	var markings = [];
@@ -638,7 +620,7 @@
 		var jour = 24 * heure;
 
 		// les mois et les ans...
-		d = new Date(axes.xaxis.min);     
+		d = new Date(axes.xaxis.min);
 		y = d.getUTCFullYear();
 		m = d.getUTCMonth();
 		if (++m == 12) {m=0; ++y;}
@@ -651,11 +633,11 @@
 			if (++m == 12) {m=0; ++y;}
 			d = new Date(Date.UTC(y,m,1,0,0,0));
 		} while (d.getTime() < axes.xaxis.max);
-		
-        return markings;		
+
+        return markings;
 	}
-	
-	
+
+
 	// Pris sur le site de Flot (exemple d'interactions)
 	// montrer les informations des points
     function showTooltip(x, y, contents) {
@@ -674,14 +656,14 @@
 			n = "" + n;
 			return n.length == 1 ? "0" + n : n;
 		};
-		
+
 		var r = [];
 		var escape = false;
 		if (monthNames == null)
 			monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 		for (var i = 0; i < fmt.length; ++i) {
 			var c = fmt.charAt(i);
-			
+
 			if (escape) {
 				switch (c) {
 				case 'h': c = "" + d.getUTCHours(); break;
