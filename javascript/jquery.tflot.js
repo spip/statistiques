@@ -47,7 +47,10 @@
 				plage:7 // plage de glissement (nombre impair !)
 			},
 			grille:{weekend:false},
-			infobulle:{show:false},
+			infobulle:{
+				show:false,
+				serie_color:false // utiliser comme couleur de fond la même couleur que les lignes du graph
+			},
 			zoom:false,
 			vignette:{
 				show:false,
@@ -534,9 +537,6 @@
 
 		}
 
-
-
-
 		/*
 		 *
 		 * Infobulles
@@ -553,7 +553,6 @@
 			$(graph).bind("plothover", function (event, pos, item) {
 				$("#x").text(pos.x.toFixed(2));
 				$("#y").text(pos.y.toFixed(2));
-
 				graph = $(event.target);
 				pid = graph.parent().attr('id').substr(9);
 
@@ -566,10 +565,15 @@
 							var x = item.datapoint[0],
 								y = item.datapoint[1];
 
+							var color = '';
+							if(options.serie_color){
+								color = item.series.color;
+							}
 							x = collectionsActives[pid].values.options.xaxis.ticksReels[item.dataIndex][1];
 
 							showTooltip(item.pageX, item.pageY,
-										item.series.label + " [" + x + "] = " + y);
+										item.series.label + " [" + x + "] = " + y,
+										color);
 						}
 					}
 					else {
@@ -580,10 +584,6 @@
 			});
 		}
 	}
-
-
-
-
 
 	// Adapte du site de Flot (exemple de visites)
     // helper for returning the weekends in a period
@@ -637,14 +637,22 @@
         return markings;
 	}
 
-
-	// Pris sur le site de Flot (exemple d'interactions)
-	// montrer les informations des points
-    function showTooltip(x, y, contents) {
+	/**
+	 * Exemple adapte du site de Flot (exemple d'interactions)
+	 * montrer les informations des points
+	 *
+	 * Arguments :
+	 * x (Float) Coordonnee longitudinale de la bulle
+	 * y (Float) Coordonnee latitudinale de la bulle
+	 * contents (String) Le contenu de la bulle
+	 * color La couleur de fond de l'infobulles
+	 */
+    function showTooltip(x, y, contents, color) {
         $('<div id="tooltip">' + contents + '</div>').css( {
             top: y + 5,
             left: x + 5,
-            opacity: 0.80
+            opacity: 0.80,
+            background:color
         }).addClass('tooltip_statistiques').appendTo("body").fadeIn(200);
     }
 
