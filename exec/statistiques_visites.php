@@ -22,7 +22,7 @@ function exec_statistiques_visites_dist()
 	$type = _request('type');
 	if (!preg_match('/^\w+$/', $type)) $type = 'day';
 	$duree = intval(_request('duree'));
-	if (!$duree) $duree = 1825;
+	if (!$duree) $duree = 90;
 	$interval = intval(_request('interval'));
 	if (!$interval) {
 	  if ($type == 'day')
@@ -133,7 +133,6 @@ function exec_statistiques_visites_args($id_article, $duree, $interval, $type, $
   // installer les js
   echo recuperer_fond('prive/stats/visites');
   echo cadre_stat($res, $table, $id_article);
-
 	if ($id_article) {
 		$signatures = charger_fonction('signatures', 'statistiques');
 		echo $signatures($duree, $interval, $type, $id_article, $serveur);

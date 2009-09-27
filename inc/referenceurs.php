@@ -226,7 +226,7 @@ function referes($referermd5, $serveur='') {
 
 	foreach ($retarts as $k => $rowart) {
 		$titre = typo($rowart['titre']);
-		$url = generer_url_action('redirect', 'type=article&id='.$rowart['id_article'].'&var_mode=calcul');
+		$url = generer_url_entite($rowart['id_article'], 'article', '', '', TRUE);
 		$retarts[$k] = "<a href='$url'><i>$titre</i></a>";
 	}
 
