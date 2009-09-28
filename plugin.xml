@@ -46,7 +46,7 @@
 	<necessite id="SPIP" version="[2.1;)" />
 	
 	
-	<bouton id="statistiques" parent="bando_statistiques">
+	<bouton id="statistiques" parent="bando_activite">
 		<icone>images/statistique-16.png</icone>
 		<titre>icone_statistiques_visites</titre>
 		<url>statistiques_visites</url>
@@ -67,7 +67,7 @@
 			<url>statistiques_lang</url>
 		</onglet>
 
-	<bouton id="referers" parent="bando_statistiques">
+	<bouton id="referers" parent="bando_activite">
 		<icone>images/referer-16.png</icone>
 		<titre>titre_liens_entrants</titre>
 		<url>statistiques_referers</url>
