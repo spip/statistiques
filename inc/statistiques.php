@@ -183,7 +183,7 @@ function statistiques_tous($log, $id_article, $table, $where, $order, $serveur, 
 // http://doc.spip.org/@statistiques_resume
 function statistiques_resume($max, $moyenne, $last, $prec, $popularite,$total, $classement=null)
 {
-	return  "<table class='info'>
+	return  "<table class='info visites'>
 	<thead>
 		<tr class='row_first'>
 		<th>".trim(trim(_T('info_maximum'),':'))."</th><th>".trim(trim(_T('info_moyenne'),':'))."</th>
