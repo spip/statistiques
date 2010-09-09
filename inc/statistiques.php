@@ -186,20 +186,20 @@ function statistiques_resume($max, $moyenne, $last, $prec, $popularite,$total, $
 	return  "<table class='info visites'>
 	<thead>
 		<tr class='row_first'>
-		<th>".trim(trim(_T('info_maximum'),':'))."</th><th>".trim(trim(_T('info_moyenne'),':'))."</th>
+		<th>".ucfirst(trim(trim(_T('info_maximum'),':')))."</th><th>".ucfirst(trim(trim(_T('info_moyenne'),':')))."</th>
 		<th>".'<a href="'
 		. generer_url_ecrire("statistiques_referers")
-		. '" title="'._T('titre_liens_entrants').'">'
-		. trim(trim(_T('info_aujourdhui'),':'))
+		. '" title="'._T('titre_liens_entrants').': '.attribut_html(trim(trim(_T('info_aujourdhui'),':'))).'">'
+		. ucfirst(trim(trim(_T('info_aujourdhui'),':')))
 		. '</a> '."</th>"
 		. (($prec <= 0) ? '' :
 		     '<th><a href="'
 		      . generer_url_ecrire("statistiques_referers","jour=veille")
-		      .'"  title="'._T('titre_liens_entrants').'">'
-		      .trim(trim(_T('info_hier'),':')).'</a></th>')
-		. (!$popularite ? '' :"<th>".trim(trim(_T('info_popularite_5'),':'))."</th>")
-		. (!$total ? '' :"<th>".trim(trim(_T('info_total'),':'))."</th>")
-		. (!$classement ? '' :"<th>".trim(trim($classement[0],':'))."</th>")
+		      .'"  title="'._T('titre_liens_entrants').': '.attribut_html(trim(trim(_T('info_hier'),':'))).'">'
+		      .ucfirst(trim(trim(_T('info_hier'),':'))).'</a></th>')
+		. (!$popularite ? '' :"<th>".ucfirst(trim(trim(_T('info_popularite_5'),':')))."</th>")
+		. (!$total ? '' :"<th>".ucfirst(trim(trim(_T('info_total'),':')))."</th>")
+		. (!$classement ? '' :"<th>".ucfirst(trim(trim($classement[0],':')))."</th>")
 		. "</tr>
 	</thead>
 	<tbody>
