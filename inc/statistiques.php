@@ -234,8 +234,8 @@ function statistiques_zoom($id_article, $largeur_abs, $date_premier, $date_debut
 {
 	if ($largeur_abs > 1) {
 		$inc = ceil($largeur_abs / 5);
-		$duree_plus = 420 / ($largeur_abs - $inc);
-		$duree_moins = 420 / ($largeur_abs + $inc);
+		$duree_plus = round(420 / ($largeur_abs - $inc));
+		$duree_moins = round(420 / ($largeur_abs + $inc));
 	}
 
 	if ($largeur_abs == 1) {
@@ -244,8 +244,8 @@ function statistiques_zoom($id_article, $largeur_abs, $date_premier, $date_debut
 	}
 
 	if ($largeur_abs < 1) {
-		$duree_plus = 420 * ((1/$largeur_abs) + 1);
-		$duree_moins = 420 * ((1/$largeur_abs) - 1);
+		$duree_plus = round(420 * ((1/$largeur_abs) + 1));
+		$duree_moins = round(420 * ((1/$largeur_abs) - 1));
 	}
 
 	$pour_article = $id_article ? "&id_article=$id_article" : '';
