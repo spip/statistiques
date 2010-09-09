@@ -336,6 +336,12 @@ function stat_log1($log, $date_today, $interval, $script) {
 		$date_prec = $key;
 		$val_prec = $value;
 	}
+	
+	// Tenir compte des valeurs du mois en cours
+	if ($cumul > 0) {
+		moyenne_glissante_mois($cumul);			
+		$res_mois .= statistiques_mois($key, $cumul, moyenne_glissante_mois(), $script);
+	}
 	return array($moyenne, $val_prec, $res, $res_mois);
 }
 
@@ -392,7 +398,7 @@ function statistiques_jour($key, $value, $moyenne, $script)
 	}
 	
 	$res .= "<td class='val'>" . $value . "</td>"
-	. "<td class='mean'>" . $moyenne . "</td>"
+	. "<td class='mean'>" . round($moyenne) . "</td>"
 	." </tr>";
 
 	return $res;
@@ -402,7 +408,7 @@ function statistiques_mois($key, $value, $moyenne, $script) {
 	$res = "<tr>"
 		. "<th title='" . date("Y/m/01", $key) . "'>" . affdate_mois_annee(date('Y-m-d',$key)) . "</th>"
 		. "<td class='val'>" . $value . "</td>"
-		. "<td class='mean'>" . $moyenne . "</td>"
+		. "<td class='mean'>" . round($moyenne) . "</td>"
 		. "</tr>";
 		
 	return $res;	  
@@ -439,7 +445,7 @@ function statistiques_signatures_dist($duree, $interval, $type, $id_article, $se
 	} else $res = '';
 
 	$mois = statistiques_collecte_date( "COUNT(*)",
-		"FROM_UNIXTIME(UNIX_TIMESTAMP(date_time),'%Y-%m')",
+		"DATE_FORMAT(date_time,'%Y%m')",
 		"spip_signatures",
 		"date_time > DATE_SUB(NOW(),INTERVAL 2700 DAY)"
 		. (" AND id_article=$id_article"),
