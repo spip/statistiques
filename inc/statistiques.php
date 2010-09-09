@@ -139,8 +139,8 @@ function statistiques_tous($log, $id_article, $table, $where, $order, $serveur, 
 	$last = (time()-$date_fin>$interval) ? 0 : $log[$date_fin];
 	$max = max($log);
 
-	list($moyenne,$prec, $res, $res_mois) = stat_log1($log, $date_fin, $interval, $script);
-
+	list($moyenne,$prec, $res) = stat_log1($log, $date_fin, $interval, $script);
+	$res_mois = statistiques_mensuelles($order, $table, $where, $serveur, $script);
 	$stats = 
 	  "<table class='visites' id='visites_quotidiennes'>"
 	  . "<caption>"._T('visites_journalieres')."</caption>"
@@ -305,7 +305,7 @@ function stat_log1($log, $date_today, $interval, $script) {
 	$res = '';
 	$res_mois = '';
 
-	$cumul = $decal_jour = $decal_mois = $date_prec = $val_prec = $moyenne = 0;
+	$decal_jour = $decal_mois = $date_prec = $val_prec = $moyenne = 0;
 	foreach ($log as $key => $value) {
 		if ($key == $date_today) break;
 		moyenne_glissante_jour($value);
@@ -315,34 +315,18 @@ function stat_log1($log, $date_today, $interval, $script) {
 			for ($i=$interval; $i <= $ecart; $i+=$interval){
 				moyenne_glissante_jour($value);
 				$res .= statistiques_jour($date_prec+$i, 0, moyenne_glissante_jour(), $script);
-				if (date('m',$date_prec+$i+$interval)!=date('m',$date_prec+$i)){
-					moyenne_glissante_mois($cumul);				
-					$res_mois .= statistiques_mois($date_prec+$i, $cumul, moyenne_glissante_mois(), $script);
-					$cumul = 0;
-				}
 			}
 		}
 		
-		$cumul += $value;
 		$moyenne = moyenne_glissante_jour();
 
 		$res .= statistiques_jour($key, $value, $moyenne, $script);
-		if (date('m',$key+$interval)!=date('m',$key)){
-			moyenne_glissante_mois($cumul);			
-			$res_mois .= statistiques_mois($key, $cumul, moyenne_glissante_mois(), $script);
-			$cumul = 0;
-		}
 
 		$date_prec = $key;
 		$val_prec = $value;
 	}
 	
-	// Tenir compte des valeurs du mois en cours
-	if ($cumul > 0) {
-		moyenne_glissante_mois($cumul);			
-		$res_mois .= statistiques_mois($key, $cumul, moyenne_glissante_mois(), $script);
-	}
-	return array($moyenne, $val_prec, $res, $res_mois);
+	return array($moyenne, $val_prec, $res);
 }
 
 // http://doc.spip.org/@statistiques_href
@@ -405,14 +389,28 @@ function statistiques_jour($key, $value, $moyenne, $script)
 }
 
 function statistiques_mois($key, $value, $moyenne, $script) {
+	$key = substr($key,0,4).'-'.substr($key,4,2);
 	$res = "<tr>"
-		. "<th title='" . date("Y/m/01", $key) . "'>" . affdate_mois_annee(date('Y-m-d',$key)) . "</th>"
+		. "<th title='$key-01'>" . affdate_mois_annee($key) . "</th>"
 		. "<td class='val'>" . $value . "</td>"
 		. "<td class='mean'>" . round($moyenne) . "</td>"
 		. "</tr>";
 		
 	return $res;	  
 }
+
+// http://doc.spip.org/@statistiques_mensuelles
+function statistiques_mensuelles($order, $table, $where, $serveur, $script) {
+	$result = sql_select("SUM(visites) AS v, DATE_FORMAT($order,'%Y%m') AS d", "$table", "$where", "d", "date", "",'',$serveur);
+	$res_mois = '';
+
+	while ($r = sql_fetch($result,$serveur)) {
+		moyenne_glissante_mois($r['v']);
+		$res_mois .= statistiques_mois($r['d'], $r['v'], moyenne_glissante_mois() , $script);
+	}
+	return $res_mois;
+}
+
 
 
 // http://doc.spip.org/@statistiques_moyenne
