@@ -351,7 +351,7 @@ function statistiques_prevision($id_article, $moyenne, $val_popularite, $visites
 	$prevision = (1 - (date("H")*60 + date("i"))/(24*60)) * $val_popularite;
 	
 	$prevision = (round($prevision,0)+$visites_today);
-	return statistiques_jour(_T('info_aujourdhui'),"$visites_today<em>(<span>$prevision</span>)</em>","","");
+	return statistiques_jour(_T('info_aujourdhui'),"$visites_today<em>(<span>$prevision</span>)</em>",$moyenne,"");
 }
 
 // Dimanche en couleur foncee
