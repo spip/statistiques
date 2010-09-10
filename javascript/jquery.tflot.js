@@ -331,7 +331,8 @@
 			if ($(element).hasClass('flotFill')) {
 				$.extend(true, options, {
 					lines:{fill:true},
-					bars:{fill:true}
+					bars:{fill:true},
+					points: { show: true }
 				});
 			}
 			return options;
