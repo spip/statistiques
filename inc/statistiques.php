@@ -401,7 +401,7 @@ function statistiques_mois($key, $value, $moyenne, $script) {
 
 // http://doc.spip.org/@statistiques_mensuelles
 function statistiques_mensuelles($order, $table, $where, $serveur, $script) {
-	$result = sql_select("SUM(visites) AS v, DATE_FORMAT($order,'%Y%m') AS d", "$table", "$where", "d", "date", "",'',$serveur);
+	$result = sql_select("SUM(visites) AS v, DATE_FORMAT($order,'%Y%m') AS d", "$table", "$where", "d", "d", "",'',$serveur);
 	$res_mois = '';
 
 	while ($r = sql_fetch($result,$serveur)) {
