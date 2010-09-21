@@ -35,24 +35,9 @@ function stats_affiche_milieu($flux){
 	}
 	
 	// afficher le formulaire de suppression des visites (configuration > maintenance du site).
-	if ($flux['args']['exec'] == 'admin_effacer') {
+	if ($flux['args']['exec'] == 'admin_tech') {
 
-		$res = generer_form_ecrire('delete_statistiques', "", '', _T('bouton_effacer_statistiques'));
-
-		$flux['data'] .= 
-			debut_cadre_trait_couleur('',true,'',_T('texte_effacer_statistiques'))
-			. '<img src="' .  chemin_image("warning-48.png") . '" alt="'
-			. _T('info_avertissement')
-			. "\" style='float: right;margin: 10px;' />"
-			. _T('texte_admin_effacer_stats')
-			. "<br class='nettoyeur' />"
-			. "\n<div style='text-align: center'>"
-			. "\n<div class='serif'>"
-			. "\n<b>"._T('avis_suppression_base')."&nbsp;!</b>"
-			. $res
-			. "\n</div>"
-			. "</div>"
-			. fin_cadre_relief(true);	
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/admin_effacer_stats',array());
 		
 	}
 	return $flux;

@@ -20,6 +20,7 @@ javascript/jquery.tflot.js -text
 prive/bouton/statistiques.html -text
 prive/configurer/compteur.html -text
 prive/images/statistiques-48.png -text
+prive/squelettes/inclure/admin_effacer_stats.html -text
 prive/stats/visites.html -text
 prive/style_prive_plugin_stats.html -text
 public/stats.php -text
