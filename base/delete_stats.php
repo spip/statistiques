@@ -17,8 +17,13 @@ if (!defined("_ECRIRE_INC_VERSION")) return; // securiser
 // Afficher la liste de ce qu'on va detruire et demander confirmation 
 // ca vaudrait mieux
 
-// http://doc.spip.org/@base_delete_statistiques_dist
-function base_delete_statistiques_dist($titre='', $reprise='')
+/**
+ * Supprimer les stats
+ * @param strinf $titre
+ * @param bool $reprise
+ * @return string
+ */
+function base_delete_stats_dist($titre='', $reprise='')
 {
 	if (!$titre) return; // anti-testeur automatique
 	sql_delete("spip_visites");

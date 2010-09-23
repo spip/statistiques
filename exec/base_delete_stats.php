@@ -12,8 +12,8 @@
 
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
-// http://doc.spip.org/@exec_delete_statistiques_dist
-function exec_delete_statistiques_dist()
+
+function exec_base_delete_stats_dist()
 {
 	include_spip('inc/autoriser');
 	if (!autoriser('detruire','statistiques')) {
@@ -22,7 +22,7 @@ function exec_delete_statistiques_dist()
 	} else {
 		include_spip('inc/headers');
 		$admin = charger_fonction('admin', 'inc');
-		$res = $admin('delete_statistiques', _T('bouton_effacer_statistiques'), '');
+		$res = $admin('delete_stats', _T('bouton_effacer_statistiques'), '');
 		if ($res) echo $res; else redirige_url_ecrire('statistiques_visites','');
 		
 	}

@@ -1,16 +1,16 @@
 <plugin>
-    <nom>Statistiques</nom>
-    <auteur>Collectif SPIP</auteur>
-    <version>0.1.2</version>
-    <version_base>0.1</version_base>
-    <etat>dev</etat>
-    <description>
+	<nom>Statistiques</nom>
+	<auteur>Collectif SPIP</auteur>
+	<version>0.1.2</version>
+	<version_base>0.1</version_base>
+	<etat>dev</etat>
+	<description>
 	Statistiques de SPIP
 	</description>
-    <prefix>stats</prefix>
-    <install>base/stats_upgrade.php</install>
-    <options>stats_options.php</options>
-	
+	<prefix>stats</prefix>
+	<install>base/stats_upgrade.php</install>
+
+	<pipeline><nom>delete_statistiques</nom><action></action></pipeline>
 	<pipeline>
 		<nom>declarer_tables_auxiliaires</nom>
 		<inclure>base/stats.php</inclure>

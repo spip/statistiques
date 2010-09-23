@@ -1,9 +1,9 @@
 * text=auto !eol
-base/delete_statistiques.php -text
+base/delete_stats.php -text
 base/stats.php -text
 base/stats_upgrade.php -text
 /engines-list.txt -text
-exec/delete_statistiques.php -text
+exec/base_delete_stats.php -text
 exec/statistiques_lang.php -text
 exec/statistiques_referers.php -text
 exec/statistiques_repartition.php -text
@@ -26,5 +26,4 @@ prive/stats/visites.html -text
 prive/style_prive_plugin_stats.html -text
 public/stats.php -text
 /stats_autoriser.php -text
-/stats_options.php -text
 /stats_pipelines.php -text
