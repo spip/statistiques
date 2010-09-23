@@ -3,6 +3,7 @@ base/delete_statistiques.php -text
 base/stats.php -text
 base/stats_upgrade.php -text
 /engines-list.txt -text
+exec/delete_statistiques.php -text
 exec/statistiques_lang.php -text
 exec/statistiques_referers.php -text
 exec/statistiques_repartition.php -text
