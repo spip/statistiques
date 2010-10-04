@@ -19,7 +19,6 @@ javascript/jquery.flot.js -text
 javascript/jquery.tflot.js -text
 /plugin.xml -text
 prive/bouton/statistiques.html -text
-prive/configurer/compteur.html -text
 prive/images/statistiques-48.png -text
 prive/squelettes/inclure/admin_effacer_stats.html -text
 prive/stats/visites.html -text

@@ -30,9 +30,9 @@ function stats_affichage_entetes_final($entetes){
 // contenus des pages exec
 function stats_affiche_milieu($flux){
 	// afficher le formulaire de configuration (activer ou desactiver les statistiques).
-	if ($flux['args']['exec'] == 'config_fonctions') {
-		$flux['data'] .= recuperer_fond('prive/configurer/compteur',array());
-	}
+	if ($flux['args']['exec'] == 'configurer_avancees')
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer',array('configurer'=>'configurer_compteur'));
+
 	
 	// afficher le formulaire de suppression des visites (configuration > maintenance du site).
 	if ($flux['args']['exec'] == 'admin_tech') {
