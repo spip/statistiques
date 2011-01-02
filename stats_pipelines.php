@@ -70,7 +70,7 @@ function stats_formulaire_admin($flux) {
 function admin_stats($objet, $id_objet, $var_preview)
 {
 	if ($GLOBALS['meta']["activer_statistiques"] != "non" 
-	AND $objet = 'article'
+	AND $objet == 'article'
 	AND !$var_preview
 	AND autoriser('voirstats')
 	) {
