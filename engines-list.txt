@@ -259,6 +259,10 @@ x_query=
 q=
 search\.babylon\.com
 
+[Yandex]
+text=
+(www\.)?yandex\.ru
+
 #
 # Services de mail
 # 
