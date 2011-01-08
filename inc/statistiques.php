@@ -253,17 +253,16 @@ function statistiques_zoom($id_article, $largeur_abs, $date_premier, $date_debut
 	$zoom = '';
 
 	if ($date_premier < $date_debut)
-		$zoom= http_href(generer_url_ecrire("statistiques_visites","duree=$duree_plus$pour_article"),
-			 http_img_pack('loupe-moins.gif',
-				       _T('info_zoom'). '-',
-				       "style='border: 0px; vertical-align: middle;'"),
-			 "&nbsp;");
+		$zoom= lien_ou_expose(
+						generer_url_ecrire("statistiques_visites","duree=$duree_plus$pour_article"),
+						http_img_pack('loupe-moins.gif',_T('info_zoom'). '-',"style='border: 0px; vertical-align: middle;'")
+					);
+
 	if ( (($date_fin - $date_debut) / (24*3600)) > 30)
-		$zoom .= http_href(generer_url_ecrire("statistiques_visites","duree=$duree_moins$pour_article"),
-			 http_img_pack('loupe-plus.gif',
-				       _T('info_zoom'). '+',
-				       "style='border: 0px; vertical-align: middle;'"),
-			 "&nbsp;");
+		$zoom .= lien_ou_expose(
+						generer_url_ecrire("statistiques_visites","duree=$duree_moins$pour_article"),
+						http_img_pack('loupe-plus.gif',_T('info_zoom'). '+',"style='border: 0px; vertical-align: middle;'")
+					);
 
 	return $zoom;
 }
