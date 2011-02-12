@@ -109,4 +109,20 @@ function stats_configurer_liste_metas($metas){
 	$metas['activer_captures_referers']='non';
 	return $metas;
 }
+
+function stats_boite_infos($flux){
+	if ($GLOBALS['meta']["activer_statistiques"] == "oui") {
+		if ($flux['args']['type']=='article'
+			AND $id_article=$flux['args']['id']
+			AND autoriser('voirstats','article',$id_article)){
+			$visites = sql_getfetsel('visites','spip_articles','id_article='.intval($id_article));
+			if ($visites>0){
+				$icone_horizontale=chercher_filtre('icone_horizontale');
+				$flux['data'].=$icone_horizontale(generer_url_ecrire("statistiques_visites","id_article=$id_article"),_T('icone_evolution_visites', array('visites' => $visites)),"statistique-24.png");
+			}
+		}
+	}
+  return $flux;
+}
+
 ?>
