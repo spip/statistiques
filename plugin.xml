@@ -2,8 +2,8 @@
 	<nom>Statistiques</nom>
 	<icon>prive/themes/spip/images/statistique-24.png</icon>
 	<auteur>Collectif SPIP</auteur>
-	<version>0.1.3</version>
-	<version_base>0.1.1</version_base>
+	<version>0.1.4</version>
+	<version_base>0.1.0</version_base>
 	<etat>dev</etat>
 	<description>
 	Statistiques de SPIP
