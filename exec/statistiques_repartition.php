@@ -76,10 +76,10 @@ function enfants_aff($id_parent,$decalage, $critere, $gauche=0) {
 
 				
 				if ( $largeur_rouge > 2) 
-					echo bouton_block_depliable("<a href='" . generer_url_ecrire("naviguer","id_rubrique=$id_rubrique") . "' style='color: black;' title=\"$descriptif\">$titre</a>","incertain", "stats$id_rubrique");
+					echo bouton_block_depliable("<a href='" . generer_url_entite($id_rubrique,'rubrique') . "' style='color: black;' title=\"$descriptif\">$titre</a>","incertain", "stats$id_rubrique");
 				else
 					echo 	"<div class='verdana1' style='padding-left: 18px; padding-top: 4px; padding-bottom: 3px;'>",
-					  "<a href='" . generer_url_ecrire("naviguer","id_rubrique=$id_rubrique") . "' style='color: black;' title=\"$descriptif\">$titre</a>",
+					  "<a href='" . generer_url_entite($id_rubrique,'rubrique') . "' style='color: black;' title=\"$descriptif\">$titre</a>",
 					  "</div>";
 				echo "</td>";
 				
