@@ -119,9 +119,19 @@ function cadre_stat($stats, $table, $id_article)
 	. statistiques_mode($table, $id_article);
 }
 
-// http://doc.spip.org/@statistiques_collecte_date
-function statistiques_collecte_date($count, $date, $table, $where, $serveur)
-{
+
+/**
+ * 
+ * // http://doc.spip.org/@statistiques_collecte_date
+ * 
+ * @param string $count
+ * @param string $date
+ * @param string $table
+ * @param string $where
+ * @param string $serveur
+ * @return array
+ */
+function statistiques_collecte_date($count, $date, $table, $where, $serveur){
 	$result = sql_select("$count AS n, $date AS d", $table, $where, 'd', 'd', '','', $serveur);
 	$log = array();
 
@@ -140,7 +150,7 @@ function statistiques_tous($log, $id_article, $table, $where, $order, $serveur, 
 	$max = max($log);
 
 	list($moyenne,$prec, $res) = stat_log1($log, $date_fin, $interval, $script);
-	$res_mois = statistiques_mensuelles($order, $table, $where, $serveur, $script);
+	$res_mois = statistiques_mensuelles($order, $table, $where, $serveur);
 	$stats = 
 	  "<table class='visites' id='visites_quotidiennes'>"
 	  . "<caption>"._T('visites_journalieres')."</caption>"
@@ -387,7 +397,7 @@ function statistiques_jour($key, $value, $moyenne, $script)
 	return $res;
 }
 
-function statistiques_mois($key, $value, $moyenne, $script) {
+function statistiques_mois($key, $value, $moyenne) {
 	$key = substr($key,0,4).'-'.substr($key,4,2);
 	$res = "<tr>"
 		. "<th title='$key-01'>" . affdate_mois_annee($key) . "</th>"
@@ -399,22 +409,50 @@ function statistiques_mois($key, $value, $moyenne, $script) {
 }
 
 // http://doc.spip.org/@statistiques_mensuelles
-function statistiques_mensuelles($order, $table, $where, $serveur, $script) {
+function statistiques_mensuelles($order, $table, $where, $serveur) {
 	$result = sql_select("SUM(visites) AS v, DATE_FORMAT($order,'%Y%m') AS d", "$table", "$where", "d", "d", "",'',$serveur);
 	$res_mois = '';
 
 	while ($r = sql_fetch($result,$serveur)) {
 		moyenne_glissante_mois($r['v']);
-		$res_mois .= statistiques_mois($r['d'], $r['v'], moyenne_glissante_mois() , $script);
+		$res_mois .= statistiques_mois($r['d'], $r['v'], moyenne_glissante_mois());
 	}
 	return $res_mois;
 }
 
 
+/**
+ * Calculer la moyenne glissante sur un nombre d'echantillons donnes
+ * @param int|bool $valeur
+ * @param int $glisse
+ * @return float
+ */
+function moyenne_glissante($valeur = false, $glisse=0) {
+	static $v = array();
+	// pas d'argument, raz de la moyenne
+	if ($valeur === false) {
+		$v = array();
+		return 0;
+	}
 
-// http://doc.spip.org/@statistiques_moyenne
-function statistiques_moyenne($tab)
-{
+	// argument, on l'ajoute au tableau...
+	// surplus, on enleve...
+	$v[] = $valeur;
+	if (count($v) > $glisse)
+		array_shift($v);
+
+	return round(statistiques_moyenne($v),2);
+}
+
+/**
+ * Calculer la moyenne d'un tableau de valeurs
+ *
+ * http://doc.spip.org/@statistiques_moyenne
+ *
+ * @param array $tab
+ * @return float
+ */
+function statistiques_moyenne($tab){
 	if (!$tab) return 0;
 	$moyenne = 0;
 	foreach($tab as $v) $moyenne += $v;

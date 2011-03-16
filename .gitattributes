@@ -14,13 +14,17 @@ genie/popularites.php -text
 genie/visites.php -text
 inc/referenceurs.php -text
 inc/statistiques.php -text
+inc/stats_to_array.php -text
 javascript/excanvas.js -text
 javascript/jquery.flot.js -text
 javascript/jquery.tflot.js -text
 /plugin.xml -text
 prive/bouton/statistiques.html -text
 prive/images/statistiques-48.png -text
+prive/squelettes/contenu/stats_visites.html -text
 prive/squelettes/inclure/admin_effacer_stats.html -text
+prive/squelettes/inclure/stats-visites-data.html -text
+prive/squelettes/inclure/stats-visites-data_fonctions.php -text
 prive/stats/visites.html -text
 prive/style_prive_plugin_stats.html -text
 prive/themes/spip/images/statistique-16.png -text

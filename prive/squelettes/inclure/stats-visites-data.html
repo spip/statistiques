@@ -1,0 +1,49 @@
+<p class="pagination">
+	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{moins}})]"
+		 class="ajax">[(#CHEMIN_IMAGE{loupe-moins.gif}|balise_img{<:info_zoom:> -})]</a>
+	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{plus}})]"
+		 class="ajax">[(#CHEMIN_IMAGE{loupe-plus.gif}|balise_img{<:info_zoom:> +})]</a>
+</p>
+<B_statsj>
+	<table class='visites' id='visites_quotidiennes'>
+		<caption><:visites_journalieres:></caption>
+	  <thead>
+			<tr class='row_first'>
+				<th><:date|trim{':'}|trim:></th>
+				<th class='valeur'><:info_visites|trim{':'}|trim:></th>
+				<th class='moyenne'><:info_moyenne|trim{':'}|trim:></th>
+			</tr>
+		</thead>
+	  <tbody>
+		<BOUCLE_statsj(DATA){source stats,jour,#ENV{duree,90},#ENV{id_article}}>
+			<tr class="c_[(#CLE|affdate{l}|substr{0,3})][(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)c_today]">
+				<th title="[(#CLE|affdate{'Y-m-d'})]">[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|?{<:info_aujourdhui:>,#CLE|affdate_jourcourt})]</th>
+				<td class="val">#VALEUR{visites}[<em>(<span>(#VALEUR{prevision})</span>)</em>]</td>
+				<td class="mean">#VALEUR{moyenne}</td>
+			</tr>
+		</BOUCLE_statsj>
+		</tbody>
+	</table>
+</B_statsj>
+
+<B_statsm>
+	<table class='visites' id='visites_mensuelles'>
+		<caption><:visites_mensuelles:></caption>
+	  <thead>
+			<tr class='row_first'>
+				<th><:date|trim{':'}|trim:></th>
+				<th class='valeur'><:info_visites|trim{':'}|trim:></th>
+				<th class='moyenne'><:info_moyenne|trim{':'}|trim:></th>
+			</tr>
+		</thead>
+	  <tbody>
+		<BOUCLE_statsm(DATA){source stats,mois,#ENV{duree,90},#ENV{id_article}}>
+			<tr class="c_[(#CLE|affdate{l}|substr{0,3})][(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)c_today]">
+				<th title="[(#CLE|affdate{'Y-m-01'})]">[(#CLE|affdate_mois_annee)]</th>
+				<td class="val">#VALEUR{visites}[<em>(<span>(#VALEUR{prevision})</span>)</em>]</td>
+				<td class="mean">[(#VALEUR{moyenne}|round)]</td>
+			</tr>
+		</BOUCLE_statsm>
+		</tbody>
+	</table>
+</B_statsm>
