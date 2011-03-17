@@ -6,6 +6,7 @@
 	<h2 class='objet_titre'><a href='#URL_ARTICLE'>#TITRE</a></h2>
 #BOITE_FERMER
 </BOUCLE_expose>
+#SET{c,#VAL{article}|classement_populaires}
 
 <p class="pagination">
 	<span class="dl">
@@ -49,7 +50,7 @@
 			<BOUCLE_art(ARTICLES){id_article}{statut?}>
 				<td class='num'>[(#CHAMP_SQL{popularite}|round)]</td>
 				<td class='num'>[(#VISITES|round)]</td>
-				<td class='num'></td>
+				<td class='num'>[<strong>(#ID_ARTICLE|array_search{#GET{c}}|plus{1})</strong>[(#GET{c}|count|singulier_ou_pluriel{info_classement_1,info_classement_2,liste})]]</td>
 			</BOUCLE_art>
 				<td class='num'>[(#REM|stats_total)]</td>
 				<td class='num'>[(#CONFIG{popularite_total}|round)]</td>
@@ -115,7 +116,6 @@
 	<div class="unit size1of2">
 
 <p><:info_visites_plus_populaires:></p>
-#SET{c,#VAL{article}|classement_populaires}
 <B_pluspop>
 	<ol class='classement'>
 	<BOUCLE_pluspop(ARTICLES){id_article IN #GET{c}}{0,30}{doublons}>
