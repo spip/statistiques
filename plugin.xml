@@ -61,6 +61,11 @@
 			<titre>icone_statistiques_visites</titre>
 			<url>stats_visites</url>
 		</onglet>
+		<onglet id='stats_referers' parent='statistiques'>
+			<icone>null</icone>
+			<titre>titre_liens_entrants</titre>
+			<url>stats_referers</url>
+		</onglet>
 		<onglet id='statistiques_repartition' parent='statistiques'>
 			<icone>null</icone>
 			<titre>icone_repartition_visites</titre>

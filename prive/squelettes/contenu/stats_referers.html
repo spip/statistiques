@@ -1,0 +1,26 @@
+<?php
+	$referenceurs = charger_fonction('referenceurs', 'inc');
+	$res = $referenceurs('#ENV{id_article,''}', "visites", '[(#ENV{id_article,''}|?{spip_referers,spip_referers_articles})]', array(), '', '#ENV{limit,300}');
+
+	if ($res) {
+
+		// Le lien pour en afficher "plus"
+		$args = ($id_article?"id_article=$id_article&" : '') . "limit=" . strval($limit+200);
+		$n =  count($res);
+		$plus = generer_url_ecrire('statistiques_visites', $args);
+		if ($plus) {
+			$plus = "<div style='text-align:right;'><b><a href='$plus'>+++</a></b></div>";
+		}
+		$titre = _T("onglet_origine_visites")
+		. " ($n "
+		. ($n == 1 ?  _T('info_site') :  _T('info_sites'))
+		  . ")";
+		echo gros_titre($titre,'', false);
+		echo "<div style='overflow:hidden;' class='verdana1 spip_small'><br />";
+		echo "<ul class='referers'><li>";
+		echo join("</li><li>\n",$res);
+		echo "</li></ul>";
+		echo $plus;
+		echo "<br /></div>";
+	}
+?>
