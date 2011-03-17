@@ -155,7 +155,10 @@ function stats_show_keywords($kw_referer, $kw_referer_host){
 		$query = isset($url['query']) ? $url['query'] : "";
 		$host = strtolower($url['host']);
 		$path = $url['path'];
-	} else $query = $host = $path = '';
+		$scheme = $url['scheme'];
+	}
+	else
+		$scheme = $query = $host = $path = '';
 
 	// Cette fonction affecte directement les variables selon la query-string !
 	parse_str($query);
@@ -208,6 +211,7 @@ function stats_show_keywords($kw_referer, $kw_referer_host){
 	}
 
 	$buffer["host"] = $host;
+	$buffer["scheme"] = $scheme;
 	if (!isset($buffer["hostname"]) OR !$buffer["hostname"])
 		$buffer["hostname"] = $host;
 

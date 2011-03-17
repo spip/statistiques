@@ -13,6 +13,7 @@ genie/popularites.php -text
 genie/visites.php -text
 inc/referenceurs.php -text
 inc/statistiques.php -text
+inc/stats_referers_to_array.php -text
 inc/stats_visites_to_array.php -text
 javascript/excanvas.js -text
 javascript/jquery.flot.js -text
@@ -21,6 +22,7 @@ javascript/jquery.tflot.js -text
 prive/bouton/statistiques.html -text
 prive/images/statistiques-48.png -text
 prive/squelettes/contenu/stats_referers.html -text
+prive/squelettes/contenu/stats_referers_fonctions.php -text
 prive/squelettes/contenu/stats_visites.html -text
 prive/squelettes/inclure/admin_effacer_stats.html -text
 prive/squelettes/inclure/stats-visites-data.html -text
