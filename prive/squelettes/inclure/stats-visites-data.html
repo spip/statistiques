@@ -83,7 +83,7 @@
 			</tr>
 		</thead>
 	  <tbody>
-		<BOUCLE_statsj(DATA){source stats,jour,#ENV{duree,90},#ENV{id_article}}>
+		<BOUCLE_statsj(DATA){source stats_visites,jour,#ENV{duree,90},#ENV{id_article}}>
 			<tr class="c_[(#CLE|affdate{l}|substr{0,3})][(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)c_today]">
 				<th title="[(#CLE|affdate{'Y-m-d'})]">[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|?{<:info_aujourdhui:>,#CLE|affdate_jourcourt})]</th>
 				<td class="val">#VALEUR{visites}[<em>(<span>(#VALEUR{prevision})</span>)</em>]</td>
@@ -111,7 +111,7 @@
 			</tr>
 		</thead>
 	  <tbody>
-		<BOUCLE_statsm(DATA){source stats,mois,#ENV{duree,90},#ENV{id_article}}>
+		<BOUCLE_statsm(DATA){source stats_visites,mois,#ENV{duree,90},#ENV{id_article}}>
 			<tr class="c_[(#CLE|affdate{l}|substr{0,3})][(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)c_today]">
 				<th title="[(#CLE|affdate{'Y-m-01'})]">[(#CLE|affdate_mois_annee)]</th>
 				<td class="val">#VALEUR{visites}[<em>(<span>(#VALEUR{prevision})</span>)</em>]</td>

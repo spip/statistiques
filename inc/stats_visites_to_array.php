@@ -19,8 +19,7 @@ define('MOYENNE_GLISSANTE_JOUR', 30);
 // moyenne glissante sur 12 mois
 define('MOYENNE_GLISSANTE_MOIS', 12);
 
-function inc_stats_to_array_dist($unite, $duree, $id_article, $options = array()) {
-	$args = func_get_args();
+function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options = array()) {
 	$now = time();
 
 	if (!in_array($unite,array('jour','mois')))
