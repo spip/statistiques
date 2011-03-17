@@ -26,37 +26,50 @@
 #SET{lastlast,0}
 <B_statsj>
 
-	<table class='spip info visites'>
-		<thead>
-			<tr class='row_first'>
-			<th><:info_maximum|trim{':'}|trim|ucfirst:></th>
-			<th><:info_moyenne|trim{':'}|trim|ucfirst:></th>
-			<th><a href="#URL_ECRIRE{statistiques_referers}"
-							title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_aujourdhui|trim{':'}|trim|ucfirst:></a></th>
-			<th><a href="#URL_ECRIRE{statistiques_referers,jour=veille}"
-							title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_hier|trim{':'}|trim|ucfirst:></a></th>
-			[(#ID_ARTICLE|oui)<th><:info_popularite_5|trim{':'}|trim|ucfirst:></th>]
-			<th><:info_total|trim{':'}|trim|ucfirst:></th>
-			[(#ID_ARTICLE|oui)<th></th>]
-			[(#ID_ARTICLE|non)<th><:info_popularite_2|trim{':'}|trim|ucfirst:></th>]
-
-		</thead>
+	<table class='spip info visites' style="width:145px;position:absolute;right:10px;margin-top:7px;">
+		<caption>Resume</caption>
 		<tbody>
 			<tr>
-			<td class='num'>#GET{max}</td>
-			<td class='num'>[(#GET{moy}|round)]</td>
-			<td class='num'>#GET{last}</td>
-			<td class='num'>#GET{lastlast}</td>
-			<BOUCLE_art(ARTICLES){id_article}{statut?}>
-				<td class='num'>[(#CHAMP_SQL{popularite}|round)]</td>
-				<td class='num'>[(#VISITES|round)]</td>
-				<td class='num'>[<strong>(#ID_ARTICLE|array_search{#GET{c}}|plus{1})</strong>[(#GET{c}|count|singulier_ou_pluriel{info_classement_1,info_classement_2,liste})]]</td>
-			</BOUCLE_art>
-				<td class='num'>[(#REM|stats_total)]</td>
-				<td class='num'>[(#CONFIG{popularite_total}|round)]</td>
-			<//B_art>
-
+				<th><:info_maximum|trim{':'}|trim|ucfirst:></th>
+				<td class='num'>#GET{max}</td>
 			</tr>
+			<tr>
+				<th><:info_moyenne|trim{':'}|trim|ucfirst:></th>
+				<td class='num'>[(#GET{moy}|round)]</td>
+			</tr>
+			<tr>
+				<th><a href="#URL_ECRIRE{statistiques_referers}"
+								title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_aujourdhui|trim{':'}|trim|ucfirst:></a></th>
+				<td class='num'>#GET{last}</td>
+			</tr>
+			<tr>
+				<th><a href="#URL_ECRIRE{statistiques_referers,jour=veille}"
+								title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_hier|trim{':'}|trim|ucfirst:></a></th>
+				<td class='num'>#GET{lastlast}</td>
+			</tr>
+			<BOUCLE_art(ARTICLES){id_article}{statut?}>
+				<tr>
+					<th><:info_popularite_5|trim{':'}|trim|ucfirst:></th>
+					<td class='num'>[(#CHAMP_SQL{popularite}|round)]</td>
+				</tr>
+				<tr>
+					<th><:info_total|trim{':'}|trim|ucfirst:></th>
+					<td class='num'>[(#VISITES|round)]</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td class='num'>[<strong>(#ID_ARTICLE|array_search{#GET{c}}|plus{1})</strong>[(#GET{c}|count|singulier_ou_pluriel{info_classement_1,info_classement_2,liste})]]</td>
+				</tr>
+			</BOUCLE_art>
+				<tr>
+					<th><:info_total|trim{':'}|trim|ucfirst:></th>
+					<td class='num'>[(#REM|stats_total)]</td>
+				</tr>
+				<tr>
+					<th><:info_popularite_2|trim{':'}|trim|ucfirst:></th>
+					<td class='num'>[(#CONFIG{popularite_total}|round)]</td>
+				</tr>
+			<//B_art>
 		</tbody>
 	</table>
 	
