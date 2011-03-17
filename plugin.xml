@@ -2,7 +2,7 @@
 	<nom>Statistiques</nom>
 	<icon>prive/themes/spip/images/statistique-32.png</icon>
 	<auteur>Collectif SPIP</auteur>
-	<version>0.3.0</version>
+	<version>0.3.1</version>
 	<version_base>0.1.0</version_base>
 	<etat>dev</etat>
 	<description>
@@ -69,7 +69,7 @@
 		<onglet id='statistiques_repartition' parent='statistiques'>
 			<icone>images/chartpie-24.png</icone>
 			<titre>icone_repartition_visites</titre>
-			<url>statistiques_repartition</url>
+			<url>stats_repartition</url>
 		</onglet>
 		<onglet id='statistiques_lang' parent='statistiques'>
 			<icone>images/langue-24.png</icone>
