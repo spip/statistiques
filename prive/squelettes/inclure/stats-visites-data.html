@@ -1,9 +1,10 @@
 [(#BOITE_OUVRIR{[(#CHEMIN_IMAGE{statistique-24.png}|balise_img{'',cadre-icone})]<h1><:titre_evolution_visite:></h1>,'simple stats'})]
-<BOUCLE_expose(ARTICLES){id_article}>
+<BOUCLE_expose(ARTICLES){id_article}{statut==.*}>
 #BOITE_OUVRIR{'','note'}
 	<a class='annule_filtre ajax' href="[(#SELF|parametre_url{id_article,''})]" title="<:tout_voir|attribut_html:>">[(#CHEMIN_IMAGE{fermer-16.png}|balise_img|inserer_attribut{alt,<:tout_voir:>})]</a>
 	<:titre_page_statistiques_visites:> <:info_pour:>
 	<h2 class='objet_titre'><a href='#URL_ARTICLE'>#TITRE</a></h2>
+	<a href="#URL_ECRIRE{stats_referers,id_article=#ID_ARTICLE}"><:titre_liens_entrants:></a>
 #BOITE_FERMER
 </BOUCLE_expose>
 #SET{c,#VAL{article}|classement_populaires}
@@ -13,12 +14,12 @@
 		#SET{args,#ARRAY{id_article,#ID_ARTICLE,duree,#DUREE}}
 		<a href="[(#URL_PAGE{transmettre,[(#VAL{statistiques}|param_low_sec{#GET{args}, '', 'transmettre'})]})]" class="noajax">CSV</a>
 	</span>
-
-	[<span class="duree">(#ENV{duree,90}) <:info_jours:></span>]
+	|
+	[<span class="duree">(#ENV{duree,90}) <:info_jours:></span>] |
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{moins}})]"
-		 class="ajax">[(#CHEMIN_IMAGE{loupe-moins.gif}|balise_img{<:info_zoom:> -})]</a>
+		 class="ajax">[(#CHEMIN_IMAGE{zoomout-24.png}|balise_img{<:info_zoom:> -})]</a>
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{plus}})]"
-		 class="ajax">[(#CHEMIN_IMAGE{loupe-plus.gif}|balise_img{<:info_zoom:> +})]</a>
+		 class="ajax">[(#CHEMIN_IMAGE{zoomin-24.png}|balise_img{<:info_zoom:> +})]</a>
 </p>
 #SET{max,0}
 #SET{moy,0}

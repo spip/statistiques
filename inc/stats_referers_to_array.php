@@ -20,12 +20,18 @@ define('MOYENNE_GLISSANTE_JOUR', 30);
 define('MOYENNE_GLISSANTE_MOIS', 12);
 include_spip('inc/referenceurs');
 
-function inc_stats_referers_to_array_dist($limit, $id_article, $options = array()) {
-	$now = time();
+function inc_stats_referers_to_array_dist($limit, $jour, $id_article, $options = array()) {
 
+	$visites = 'visites';
 	$table = "spip_referers";
 	$where = array();
 	$serveur = '';
+
+	if (in_array($jour,array('jour','veille'))){
+		$visites .= "_$jour";
+		$where[] = "$visites>0";
+	}
+	//$res = $referenceurs (0, "SUM(visites_$jour)", 'spip_referers', "visites_$jour>0", "referer", $limit);
 
 	if ($id_article) {
 			$table = "spip_referers_articles";
@@ -35,8 +41,7 @@ function inc_stats_referers_to_array_dist($limit, $id_article, $options = array(
 	$where = implode(" AND ",$where);
 	$limit = $limit?"0,".intval($limit):'';
 
-	$nbvisites = $lescriteres = array();
-	$result = sql_select("referer_md5, referer, visites AS vis", $table, $where, '', "maj DESC", $limit,'',$serveur);
+	$result = sql_select("referer_md5, referer, $visites AS vis", $table, $where, '', "maj DESC", $limit,'',$serveur);
 
 	$referers = array();
 	$trivisites = array(); // pour le tri
