@@ -7,7 +7,6 @@ exec/base_delete_stats.php -text
 exec/statistiques_lang.php -text
 exec/statistiques_referers.php -text
 exec/statistiques_repartition.php -text
-exec/statistiques_visites.php -text
 formulaires/configurer_compteur.html -text
 formulaires/configurer_compteur.php -text
 genie/popularites.php -text

@@ -1,6 +1,6 @@
 <?php
 	$referenceurs = charger_fonction('referenceurs', 'inc');
-	$res = $referenceurs('#ENV{id_article,''}', "visites", '[(#ENV{id_article,''}|?{spip_referers,spip_referers_articles})]', array(), '', '#ENV{limit,300}');
+	$res = $referenceurs('#ENV{id_article,''}', "visites", '[(#ENV{id_article,''}|?{spip_referers,spip_referers_articles})]', array(), '', '#ENV{limit,100}');
 
 	if ($res) {
 
