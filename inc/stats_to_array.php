@@ -50,6 +50,9 @@ function inc_stats_to_array_dist($unite, $duree, $id_article, $options = array()
 	moyenne_glissante();
 	$data = array();
 	$r = sql_fetch($res,$serveur);
+	if (!$r){
+		$r = array('d'=>date($format,$now),'v'=>0);
+	}
 	do {
 		$data[$r['d']] = array('visites'=>$r['v'],'moyenne'=>moyenne_glissante($r['v'], $glisse));
 		$last = $r['d'];

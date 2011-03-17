@@ -25,10 +25,12 @@ prive/squelettes/contenu/stats_visites.html -text
 prive/squelettes/inclure/admin_effacer_stats.html -text
 prive/squelettes/inclure/stats-visites-data.html -text
 prive/squelettes/inclure/stats-visites-data_fonctions.php -text
+prive/squelettes/top/stats_visites.html -text
 prive/stats/visites.html -text
 prive/style_prive_plugin_stats.html -text
 prive/themes/spip/images/statistique-16.png -text
 prive/themes/spip/images/statistique-24.png -text
+prive/transmettre/statistiques.html -text
 public/stats.php -text
 /stats_autoriser.php -text
 /stats_pipelines.php -text

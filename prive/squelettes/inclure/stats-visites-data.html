@@ -1,10 +1,64 @@
+[(#BOITE_OUVRIR{[(#CHEMIN_IMAGE{statistique-24.png}|balise_img{'',cadre-icone})]<h1><:titre_evolution_visite:></h1>,'simple stats'})]
+<BOUCLE_expose(ARTICLES){id_article}>
+#BOITE_OUVRIR{'','note'}
+	<a class='annule_filtre ajax' href="[(#SELF|parametre_url{id_article,''})]" title="<:tout_voir|attribut_html:>">[(#CHEMIN_IMAGE{fermer-16.png}|balise_img|inserer_attribut{alt,<:tout_voir:>})]</a>
+	<:titre_page_statistiques_visites:> <:info_pour:>
+	<h2 class='objet_titre'><a href='#URL_ARTICLE'>#TITRE</a></h2>
+#BOITE_FERMER
+</BOUCLE_expose>
+
 <p class="pagination">
+	<span class="dl">
+		#SET{args,#ARRAY{id_article,#ID_ARTICLE,duree,#DUREE}}
+		<a href="[(#URL_PAGE{transmettre,[(#VAL{statistiques}|param_low_sec{#GET{args}, '', 'transmettre'})]})]" class="noajax">CSV</a>
+	</span>
+
+	[<span class="duree">(#ENV{duree,90}) <:info_jours:></span>]
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{moins}})]"
 		 class="ajax">[(#CHEMIN_IMAGE{loupe-moins.gif}|balise_img{<:info_zoom:> -})]</a>
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{plus}})]"
 		 class="ajax">[(#CHEMIN_IMAGE{loupe-plus.gif}|balise_img{<:info_zoom:> +})]</a>
 </p>
+#SET{max,0}
+#SET{moy,0}
+#SET{last,0}
+#SET{lastlast,0}
 <B_statsj>
+
+	<table class='spip info visites'>
+		<thead>
+			<tr class='row_first'>
+			<th><:info_maximum|trim{':'}|trim|ucfirst:></th>
+			<th><:info_moyenne|trim{':'}|trim|ucfirst:></th>
+			<th><a href="#URL_ECRIRE{statistiques_referers}"
+							title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_aujourdhui|trim{':'}|trim|ucfirst:></a></th>
+			<th><a href="#URL_ECRIRE{statistiques_referers,jour=veille}"
+							title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_hier|trim{':'}|trim|ucfirst:></a></th>
+			[(#ID_ARTICLE|oui)<th><:info_popularite_5|trim{':'}|trim|ucfirst:></th>]
+			<th><:info_total|trim{':'}|trim|ucfirst:></th>
+			[(#ID_ARTICLE|oui)<th></th>]
+			[(#ID_ARTICLE|non)<th><:info_popularite_2|trim{':'}|trim|ucfirst:></th>]
+
+		</thead>
+		<tbody>
+			<tr>
+			<td class='num'>#GET{max}</td>
+			<td class='num'>[(#GET{moy}|round)]</td>
+			<td class='num'>#GET{last}</td>
+			<td class='num'>#GET{lastlast}</td>
+			<BOUCLE_art(ARTICLES){id_article}{statut?}>
+				<td class='num'>[(#CHAMP_SQL{popularite}|round)]</td>
+				<td class='num'>[(#VISITES|round)]</td>
+				<td class='num'></td>
+			</BOUCLE_art>
+				<td class='num'>[(#REM|stats_total)]</td>
+				<td class='num'>[(#CONFIG{popularite_total}|round)]</td>
+			<//B_art>
+
+			</tr>
+		</tbody>
+	</table>
+	
 	<table class='visites' id='visites_quotidiennes'>
 		<caption><:visites_journalieres:></caption>
 	  <thead>
@@ -21,9 +75,15 @@
 				<td class="val">#VALEUR{visites}[<em>(<span>(#VALEUR{prevision})</span>)</em>]</td>
 				<td class="mean">#VALEUR{moyenne}</td>
 			</tr>
+			#SET{max,#GET{max}|max{#VALEUR{visites}}}
+			#SET{moy,#VALEUR{moyenne}}
+			#SET{lastlast,#GET{last}}
+			#SET{last,#VALEUR{visites}}
 		</BOUCLE_statsj>
 		</tbody>
 	</table>
+
+
 </B_statsj>
 
 <B_statsm>
@@ -47,3 +107,51 @@
 		</tbody>
 	</table>
 </B_statsm>
+
+#BOITE_FERMER
+
+#BOITE_OUVRIR{'','note'}
+<div class="stats-articles">
+	<div class="unit size1of2">
+
+<p><:info_visites_plus_populaires:></p>
+#SET{c,#VAL{article}|classement_populaires}
+<B_pluspop>
+	<ol class='classement'>
+	<BOUCLE_pluspop(ARTICLES){id_article IN #GET{c}}{0,30}{doublons}>
+		<li[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]" class="ajax"
+					title="<:info_popularite_3{visites=#VISITES,popularite=#POPULARITE}|attribut_html:>">#TITRE</a></li>
+	</BOUCLE_pluspop>
+	</ol>
+	<B_derniers>
+		<p class="center">[...]</p>
+		<ol class='classement'>
+		<BOUCLE_derniers(ARTICLES){popularite>0}{!par date}{0,10}{doublons}>
+			<li value="[(#ID_ARTICLE|array_search{#GET{c}}|plus{1})]"[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]" class="ajax"
+						title="<:info_popularite_3{visites=#VISITES,popularite=#POPULARITE}|attribut_html:>">#TITRE</a></li>
+		</BOUCLE_derniers>
+		</ol>
+	</B_derniers>
+</B_pluspop>
+
+<h4><a href='#' onclick="$(this).parent().next().toggle('fast');return false;"><:info_comment_lire_tableau:></a></h4>
+<p class="none"><:texte_comment_lire_tableau:></p>
+
+
+	</div>
+	<div class="unit lastUnit">
+
+		<p><:info_affichier_visites_articles_plus_visites:></p>
+		#SET{c,#VAL{article}|classement_populaires}
+		<B_plusvisites>
+			<ol class='classement'>
+			<BOUCLE_plusvisites(ARTICLES){popularite>0}{!par visites}{0,30}{doublons}>
+				<li value="[(#ID_ARTICLE|array_search{#GET{c}}|plus{1})]"[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]" class="ajax"
+							title="<:info_popularite_3{visites=#VISITES,popularite=#POPULARITE}|attribut_html:>">#TITRE</a></li>
+			</BOUCLE_plusvisites>
+			</ol>
+		</B_plusvisites>
+
+	</div>
+</div>
+#BOITE_FERMER

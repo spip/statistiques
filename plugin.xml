@@ -54,12 +54,12 @@
 	<bouton id="statistiques" parent="bando_activite" position="0">
 		<icone>images/statistique-16.png</icone>
 		<titre>icone_statistiques_visites</titre>
-		<url>statistiques_visites</url>
+		<url>stats_visites</url>
 	</bouton>
-		<onglet id='statistiques_visites' parent='statistiques'>
+		<onglet id='stats_visites' parent='statistiques'>
 			<icone>null</icone>
 			<titre>icone_statistiques_visites</titre>
-			<url>statistiques_visites</url>
+			<url>stats_visites</url>
 		</onglet>
 		<onglet id='statistiques_repartition' parent='statistiques'>
 			<icone>null</icone>

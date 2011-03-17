@@ -459,6 +459,22 @@ function statistiques_moyenne($tab){
 	return  $moyenne / count($tab);
 }
 
+/**
+ * Construire un tableau par popularite
+ *   classemnt => id_truc
+ * @param string $type
+ * @param string $serveur
+ * @return array
+ */
+function classement_populaires($type, $serveur=''){
+	static $classement = array();
+	if (isset($classement[$type]))
+		return $classement[$type];
+	$classement[$type] = sql_allfetsel(id_table_objet($type, $serveur), table_objet_sql($type, $serveur), "statut='publie' AND popularite > 0", "", "popularite DESC",'','',$serveur);
+	$classement[$type] = array_map('reset',$classement[$type]);
+	return $classement[$type];
+}
+
 
 // http://doc.spip.org/@statistiques_signatures_dist
 function statistiques_signatures_dist($duree, $interval, $type, $id_article, $serveur)
