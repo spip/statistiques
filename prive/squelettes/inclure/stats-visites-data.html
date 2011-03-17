@@ -128,27 +128,24 @@
 <div class="stats-articles">
 	<div class="unit size1of2">
 
-<p><:info_visites_plus_populaires:></p>
-<B_pluspop>
-	<ol class='classement'>
-	<BOUCLE_pluspop(ARTICLES){id_article IN #GET{c}}{0,30}{doublons}>
-		<li[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]" class="ajax"
-					title="<:info_popularite_3{visites=#VISITES,popularite=#POPULARITE}|attribut_html:>">#TITRE</a></li>
-	</BOUCLE_pluspop>
-	</ol>
-	<B_derniers>
-		<p class="center">[...]</p>
+	<p><:info_visites_plus_populaires:></p>
+	<B_pluspop>
 		<ol class='classement'>
-		<BOUCLE_derniers(ARTICLES){popularite>0}{!par date}{0,10}{doublons}>
-			<li value="[(#ID_ARTICLE|array_search{#GET{c}}|plus{1})]"[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]" class="ajax"
+		<BOUCLE_pluspop(ARTICLES){id_article IN #GET{c}}{0,30}{doublons}>
+			<li[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]" class="ajax"
 						title="<:info_popularite_3{visites=#VISITES,popularite=#POPULARITE}|attribut_html:>">#TITRE</a></li>
-		</BOUCLE_derniers>
+		</BOUCLE_pluspop>
 		</ol>
-	</B_derniers>
-</B_pluspop>
-
-<h4><a href='#' onclick="$(this).parent().next().toggle('fast');return false;"><:info_comment_lire_tableau:></a></h4>
-<p class="none"><:texte_comment_lire_tableau:></p>
+		<B_derniers>
+			<p class="center">[...]</p>
+			<ol class='classement'>
+			<BOUCLE_derniers(ARTICLES){popularite>0}{!par date}{0,10}{doublons}>
+				<li value="[(#ID_ARTICLE|array_search{#GET{c}}|plus{1})]"[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]" class="ajax"
+							title="<:info_popularite_3{visites=#VISITES,popularite=#POPULARITE}|attribut_html:>">#TITRE</a></li>
+			</BOUCLE_derniers>
+			</ol>
+		</B_derniers>
+	</B_pluspop>
 
 
 	</div>
@@ -164,6 +161,9 @@
 			</BOUCLE_plusvisites>
 			</ol>
 		</B_plusvisites>
+
+		<h4><a href='#' onclick="$(this).parent().next().toggle('fast');return false;"><:info_comment_lire_tableau:></a></h4>
+		<p class="none"><:texte_comment_lire_tableau:></p>
 
 	</div>
 </div>
