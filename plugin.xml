@@ -66,15 +66,15 @@
 			<titre>titre_liens_entrants</titre>
 			<url>stats_referers</url>
 		</onglet>
-		<onglet id='statistiques_repartition' parent='statistiques'>
+		<onglet id='stats_repartition' parent='statistiques'>
 			<icone>images/chartpie-24.png</icone>
 			<titre>icone_repartition_visites</titre>
 			<url>stats_repartition</url>
 		</onglet>
-		<onglet id='statistiques_lang' parent='statistiques'>
+		<onglet id='stats_lang' parent='statistiques'>
 			<icone>images/langue-24.png</icone>
 			<titre>onglet_repartition_lang</titre>
-			<url>statistiques_lang</url>
+			<url>stats_lang</url>
 		</onglet>
 
 </plugin>
