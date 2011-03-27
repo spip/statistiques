@@ -28,6 +28,11 @@ prive/squelettes/contenu/stats_visites.html -text
 prive/squelettes/inclure/admin_effacer_stats.html -text
 prive/squelettes/inclure/stats-visites-data.html -text
 prive/squelettes/inclure/stats-visites-data_fonctions.php -text
+prive/squelettes/inclure/stats-visites-jours.html -text
+prive/squelettes/inclure/stats-visites-jours_fonctions.php -text
+prive/squelettes/inclure/stats-visites-mois.html -text
+prive/squelettes/inclure/stats-visites-mois_fonctions.php -text
+prive/squelettes/inclure/stats-visites-populaires.html -text
 prive/squelettes/top/stats_lang.html -text
 prive/squelettes/top/stats_referers.html -text
 prive/squelettes/top/stats_repartition.html -text

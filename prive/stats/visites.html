@@ -4,21 +4,22 @@
 [<script type="text/javascript" src="(#CHEMIN{javascript/jquery.tflot.js})"></script>]
 
 <script type="text/javascript">
-function trace_stats(){
-	// copier le titre des tableaux
-	titre = $("#visites_quotidiennes caption").text();
-	$("#visites_quotidiennes")
-		.before("<h3 class='caption'>" + titre + "</h3>")
-		.wrap("<div class='statistiques_visites_quotidiennes statistiques_visites'></div>");
+	
+function trace_stats_table(table, classes, options) {
+	$table = $(table);
+	if ($table.is(':hidden')) {
+		return true; // pas a faire ou deja fait.
+	}
 
-	titre = $("#visites_mensuelles caption").text();
-	$("#visites_mensuelles")
+	// copier le titre des tableaux
+	titre = $table.find("caption").text();
+	$table
 		.before("<h3 class='caption'>" + titre + "</h3>")
-		.wrap("<div class='statistiques_visites_mensuelles statistiques_visites'></div>");
+		.wrap("<div class='" + classes + "'></div>");
 
 	// mettre les visites avec un fond colore pour le graphique
-	$("#visites_mensuelles thead th:eq(1), #visites_quotidiennes thead th:eq(1)").addClass('flotFill').addClass('flotBar');
-	$("#visites_mensuelles thead th:eq(2), #visites_quotidiennes thead th:eq(2)").addClass('flotLine');
+	$table.find("thead th:eq(1)").addClass('flotFill').addClass('flotBar');
+	$table.find("thead th:eq(2)").addClass('flotLine');
 
 	params = {
 		legendeExterne:true,
@@ -57,8 +58,14 @@ function trace_stats(){
 		infobulle:{show:true}
 	}
 
-	$("#visites_quotidiennes").tFlot(
-		$.extend(true, {}, params, {
+	$table.tFlot($.extend(true, params, options));	
+}
+
+function trace_stats(){
+	trace_stats_table(
+		"#visites_quotidiennes",
+		"statistiques_visites_quotidiennes statistiques_visites",
+		{
 			grille:{weekend:true},
 			flot:{
 				xaxis:{
@@ -66,11 +73,11 @@ function trace_stats(){
 				},
 				bars:{barWidth:24 * 60 * 60 * 1000}
 			}
-		})
-	);
-
-	$("#visites_mensuelles").tFlot(
-		$.extend(true, {}, params, {
+		});
+		
+	trace_stats_table(
+		"#visites_mensuelles",
+		"statistiques_visites_mensuelles statistiques_visites", {
 			grille:{years:true},
 			flot:{
 				xaxis:{
@@ -79,8 +86,8 @@ function trace_stats(){
 				},
 				bars:{barWidth:30 * 24 * 60 * 60 * 1000 /* nb de jours... approximatif */}
 			}
-		})
-	);
+	});
+	
 }
 (function($){
 	$(document).ready(function(){
