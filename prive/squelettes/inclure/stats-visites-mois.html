@@ -6,7 +6,7 @@
 		<a href="[(#URL_PAGE{transmettre,[(#VAL{statistiques}|param_low_sec{#GET{args}, '', 'transmettre'})]})]" class="noajax">CSV</a>
 	</span>
 	|
-	[<span class="duree">(#ENV{duree,365}) <:info_jours:></span>] |
+	[<span class="duree">(#ENV{duree,365}|div{30}|intval) <:date_mois:></span>] |
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,365}|duree_zoom{moins}})]"
 		 class="ajax">[(#CHEMIN_IMAGE{zoomout-24.png}|balise_img{<:info_zoom:> -})]</a>
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,365}|duree_zoom{plus}})]"
