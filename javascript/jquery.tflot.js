@@ -325,15 +325,28 @@
 			if ($(element).hasClass('flotLine')) {
 				$.extend(true, options, {
 					lines:{show:true},
-					bars:{show:false}
+					bars:{show:false},
+					points:{show:false}
+				});
+			}
+			if ($(element).hasClass('flotBar')) {
+				$.extend(true, options, {
+					lines:{show:false},
+					bars:{show:true},
+					points:{show:false}
 				});
 			}
 			// si classe 'flotFill' on met rempli
 			if ($(element).hasClass('flotFill')) {
 				$.extend(true, options, {
-					lines:{fill:true},
-					bars:{fill:true},
-					points:{show:true}
+					lines:{
+						fill:true,
+						fillColor: { colors: [ { opacity: 0.7 }, { opacity: 0 } ] }
+					},
+					bars:{
+						fill:true,
+						fillColor: { colors: [ { opacity: 0.7 }, { opacity: 0 } ] }
+					}
 				});
 			}
 			return options;

@@ -17,7 +17,8 @@ function trace_stats(){
 		.wrap("<div class='statistiques_visites_mensuelles statistiques_visites'></div>");
 
 	// mettre les visites avec un fond colore pour le graphique
-	$("#visites_mensuelles thead th:eq(1), #visites_quotidiennes thead th:eq(1)").addClass('flotFill');
+	$("#visites_mensuelles thead th:eq(1), #visites_quotidiennes thead th:eq(1)").addClass('flotFill').addClass('flotBar');
+	$("#visites_mensuelles thead th:eq(2), #visites_quotidiennes thead th:eq(2)").addClass('flotLine');
 
 	params = {
 		legendeExterne:true,
@@ -29,8 +30,9 @@ function trace_stats(){
 		parse:{
 			axeOnTitle:true,
 			defaultSerie:{
-				bars:{show:false},
-				lines:{show:true}
+				bars:{show:true},
+				lines:{show:true},
+				points:{show:false}
 			}
 		},
 		flot:{
@@ -57,7 +59,13 @@ function trace_stats(){
 
 	$("#visites_quotidiennes").tFlot(
 		$.extend(true, {}, params, {
-			grille:{weekend:true}
+			grille:{weekend:true},
+			flot:{
+				xaxis:{
+					minTickSize: [1, "day"]
+				},
+				bars:{barWidth:24 * 60 * 60 * 1000}
+			}
 		})
 	);
 
@@ -66,8 +74,10 @@ function trace_stats(){
 			grille:{years:true},
 			flot:{
 				xaxis:{
-					timeformat:"%b %y"
-				}
+					timeformat:"%b %y",
+					minTickSize: [1, "month"]
+				},
+				bars:{barWidth:30 * 24 * 60 * 60 * 1000 /* nb de jours... approximatif */}
 			}
 		})
 	);
