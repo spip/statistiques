@@ -1,7 +1,7 @@
 /**
  * Librairie tFlot pour jQuery et jQuery.flot
  * Licence GNU/GPL - Matthieu Marcillaud
- * Version 1.2.0
+ * Version 1.3.0
  */
 
 (function($){
@@ -296,12 +296,12 @@
 			//
 			// mettre les options dans les series
 			//
+
 			color=0;
 			$.each(flot, function(i, serie) {
 				serie = $.extend(true, {}, options.defaultSerie, {color: color++}, serie);
 				flot[i] = serie;
 			});
-
 
 			opt = {
 				xaxis: {}
@@ -310,6 +310,7 @@
 				opt.xaxis.ticks = options.ticks;
 				opt.xaxis.ticksReels = options.ticksReels;
 			}
+
 			return {series:flot, options:opt};
 		}
 
@@ -332,7 +333,7 @@
 				$.extend(true, options, {
 					lines:{fill:true},
 					bars:{fill:true},
-					points: { show: true }
+					points:{show:true}
 				});
 			}
 			return options;
@@ -433,9 +434,8 @@
 				zoom:true,
 				flot:{
 					legend: { show: false },
-					lines: { show: true, lineWidth: 1 },
 					shadowSize: 0,
-
+					lines: { show: true, lineWidth: 1 },
 					grid: { color: "#999", hoverable:null },
 					selection: { mode: "x" },
 					xaxis:{min:null, max:null},

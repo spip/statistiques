@@ -14,6 +14,7 @@ inc/stats_referers_to_array.php -text
 inc/stats_visites_to_array.php -text
 javascript/excanvas.js -text
 javascript/jquery.flot.js -text
+javascript/jquery.flot.selection.js -text
 javascript/jquery.tflot.js -text
 /plugin.xml -text
 prive/bouton/statistiques.html -text
