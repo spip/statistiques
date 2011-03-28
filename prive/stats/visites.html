@@ -18,8 +18,18 @@ function trace_stats_table(table, classes, options) {
 		.wrap("<div class='" + classes + "'></div>");
 
 	// mettre les visites avec un fond colore pour le graphique
-	$table.find("thead th:eq(1)").addClass('flotFill').addClass('flotBar');
-	$table.find("thead th:eq(2)").addClass('flotLine');
+	$table.find("thead th:eq(1)").data({fill: true, serie: 'bar', color: '#FFD845'});
+	$table.find("thead th:eq(2)").data({serie: 'line', color: '#7FC4FF'});
+	$table.find("thead th:eq(3)").data({fill: true, serie: 'bar', color: '#A9DD3A'});
+	
+	// mettre les previsions en premier
+	// (pour que les autres graph passent par dessus)
+	$table.find('thead tr th:first-child').after(function(){
+		return $(this).parent().find('th:eq(3)').detach();
+	});
+	$table.find('tbody tr th:first-child').after(function(){
+		return $(this).parent().find('td:last-child').detach();
+	});
 
 	params = {
 		legendeExterne:true,
@@ -58,7 +68,7 @@ function trace_stats_table(table, classes, options) {
 		infobulle:{show:true}
 	}
 
-	$table.tFlot($.extend(true, params, options));	
+	$table.tFlot($.extend(true, {}, params, options));	
 }
 
 function trace_stats(){

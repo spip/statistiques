@@ -1,7 +1,7 @@
 /**
  * Librairie tFlot pour jQuery et jQuery.flot
  * Licence GNU/GPL - Matthieu Marcillaud
- * Version 1.3.0
+ * Version 1.4.0
  */
 
 (function($){
@@ -63,6 +63,7 @@
 					container:null,
 					labelFormatter:null
 				},
+				bars: {fill:false},
 				yaxis: { min: 0 },
 				selection: { mode: "x" }
 			}
@@ -194,7 +195,7 @@
 						barWidth: 0.9,
 						align: "center",
 						show:true,
-						fill:true
+						fill:false
 					},
 					lines: {
 						show:false,
@@ -299,7 +300,10 @@
 
 			color=0;
 			$.each(flot, function(i, serie) {
-				serie = $.extend(true, {}, options.defaultSerie, {color: color++}, serie);
+				if (!serie.color) {
+					serie.color = color++;
+				}
+				serie = $.extend(true, {}, options.defaultSerie, serie);
 				flot[i] = serie;
 			});
 
@@ -321,23 +325,29 @@
 		 */
 		function optionsCss(element) {
 			var options = {};
-			// si classe 'flotLine' on met une ligne
-			if ($(element).hasClass('flotLine')) {
+			$element = $(element);
+			if ($element.data('serie') == 'line') {
 				$.extend(true, options, {
 					lines:{show:true},
 					bars:{show:false},
 					points:{show:false}
 				});
 			}
-			if ($(element).hasClass('flotBar')) {
+			if ($element.data('serie') == 'bar') {
 				$.extend(true, options, {
 					lines:{show:false},
 					bars:{show:true},
 					points:{show:false}
 				});
 			}
-			// si classe 'flotFill' on met rempli
-			if ($(element).hasClass('flotFill')) {
+			if ($element.data('serie') == 'lineBar') {
+				$.extend(true, options, {
+					lines:{show:true,steps:true},
+					bars:{show:false},
+					points:{show:false}
+				});
+			}
+			if ($element.data('fill')) {
 				$.extend(true, options, {
 					lines:{
 						fill:true,
@@ -348,6 +358,9 @@
 						fillColor: { colors: [ { opacity: 0.7 }, { opacity: 0 } ] }
 					}
 				});
+			}
+			if (color = $element.data('color')) {
+				options.color = color;
 			}
 			return options;
 		}
@@ -367,7 +380,11 @@
 
 			g = options.plage;
 			series = [];
+			color = 0;
 			$.each(lesSeries, function(i, val){
+				// recuperer le numero de couleur max
+				color = ParseInt(Math.max(color,val.color));
+				
 				data = [], moy = [];
 				$.each(val.data, function (j, d){
 					// ajout du nouvel element
@@ -393,9 +410,10 @@
 				series.push(serieG);
 			});
 			// remettre les couleurs
-			color=0;
 			$.each(series, function(i, val) {
-				val.color = color++;
+				if (!val.color) {
+					val.color = color++;
+				}
 			});
 			return series;
 		}

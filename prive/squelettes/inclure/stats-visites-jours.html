@@ -72,14 +72,16 @@
 				<th><:date|trim{':'}|trim:></th>
 				<th class='valeur'><:info_visites|trim{':'}|trim:></th>
 				<th class='moyenne'><:info_moyenne|trim{':'}|trim:></th>
+				<th class='prevision'><:info_previsions|trim{':'}|trim:></th>
 			</tr>
 		</thead>
 	  <tbody>
 		<BOUCLE_statsj(DATA){source stats_visites,jour,#ENV{duree,90},#ENV{id_article}}>
 			<tr class="c_[(#CLE|affdate{l}|substr{0,3})][(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)c_today]">
 				<th title="[(#CLE|affdate{'Y-m-d'})]">[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|?{<:info_aujourdhui:>,#CLE|affdate_jourcourt})]</th>
-				<td class="val">#VALEUR{visites}[<em>(<span>(#VALEUR{prevision})</span>)</em>]</td>
+				<td class="val">#VALEUR{visites}</td>
 				<td class="mean">#VALEUR{moyenne}</td>
+				<td class="prev">#VALEUR{prevision}</td>
 			</tr>
 			#SET{max,#GET{max}|max{#VALEUR{visites}}}
 			#SET{moy,#VALEUR{moyenne}}
