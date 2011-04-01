@@ -30,6 +30,7 @@ function stats_upgrade($nom_meta_base_version,$version_cible){
 	$maj['create'] = array(
 		array('maj_tables',array('spip_visites','spip_visites_articles','spip_referers','spip_referers_articles')),
 	);
+	$maj['1.0.0'] = array();
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
