@@ -16,6 +16,7 @@ javascript/excanvas.js -text
 javascript/jquery.flot.js -text
 javascript/jquery.flot.selection.js -text
 javascript/jquery.tflot.js -text
+lang/statistiques_fr.php -text
 /plugin.xml -text
 prive/bouton/statistiques.html -text
 prive/squelettes/contenu/stats_lang.html -text
