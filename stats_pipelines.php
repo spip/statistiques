@@ -87,7 +87,7 @@ function admin_stats($objet, $id_objet, $var_preview)
 
 // http://doc.spip.org/@generer_url_ecrire_statistiques
 function generer_url_ecrire_statistiques($id_article) {
-	return generer_url_ecrire('statistiques_visites', "id_article=$id_article");
+	return generer_url_ecrire('stats_visites', "id_article=$id_article");
 }
 
 
@@ -118,7 +118,7 @@ function stats_boite_infos($flux){
 			$visites = sql_getfetsel('visites','spip_articles','id_article='.intval($id_article));
 			if ($visites>0){
 				$icone_horizontale=chercher_filtre('icone_horizontale');
-				$flux['data'].=$icone_horizontale(generer_url_ecrire("statistiques_visites","id_article=$id_article"),_T('icone_evolution_visites', array('visites' => $visites)),"statistique-24.png");
+				$flux['data'].=$icone_horizontale(generer_url_ecrire("stats_visites","id_article=$id_article"),_T('icone_evolution_visites', array('visites' => $visites)),"statistique-24.png");
 			}
 		}
 	}
