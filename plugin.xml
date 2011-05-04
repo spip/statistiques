@@ -53,12 +53,12 @@
 	
 	<bouton id="statistiques" parent="bando_activite" position="0">
 		<icone>images/statistique-16.png</icone>
-		<titre>icone_statistiques_visites</titre>
+		<titre>statistiques:icone_statistiques_visites</titre>
 		<url>stats_visites</url>
 	</bouton>
 		<onglet id='stats_visites' parent='statistiques'>
 			<icone>images/statistique-24.png</icone>
-			<titre>icone_statistiques_visites</titre>
+			<titre>statistiques:icone_statistiques_visites</titre>
 			<url>stats_visites</url>
 		</onglet>
 		<onglet id='stats_referers' parent='statistiques'>
@@ -68,7 +68,7 @@
 		</onglet>
 		<onglet id='stats_repartition' parent='statistiques'>
 			<icone>images/chartpie-24.png</icone>
-			<titre>icone_repartition_visites</titre>
+			<titre>statistiques:icone_repartition_visites</titre>
 			<url>stats_repartition</url>
 		</onglet>
 		<onglet id='stats_lang' parent='statistiques'>
