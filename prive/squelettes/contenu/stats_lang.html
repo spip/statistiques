@@ -1,10 +1,10 @@
 [(#AUTORISER{voirstats}|sinon_interdire_acces)]
-<h1><:onglet_repartition_lang:></h1>
+<h1><:statistiques:onglet_repartition_lang:></h1>
 
 <div class="onglets_simple clearfix">
 	<ul>
-		<li>[(#URL_ECRIRE{stats_lang}|lien_ou_expose{<:icone_repartition_actuelle:>,[(#ENV{critere,''}|=={debut}|non)],ajax})]</li>
-		<li>[(#URL_ECRIRE{stats_lang,critere=debut}|lien_ou_expose{<:onglet_repartition_debut:>,[(#ENV{critere,''}|=={debut}|oui)],ajax})]</li>
+		<li>[(#URL_ECRIRE{stats_lang}|lien_ou_expose{<:statistiques:icone_repartition_actuelle:>,[(#ENV{critere,''}|=={debut}|non)],ajax})]</li>
+		<li>[(#URL_ECRIRE{stats_lang,critere=debut}|lien_ou_expose{<:statistiques:onglet_repartition_debut:>,[(#ENV{critere,''}|=={debut}|oui)],ajax})]</li>
 	</ul>
 </div>
 

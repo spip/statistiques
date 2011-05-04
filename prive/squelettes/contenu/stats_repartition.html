@@ -1,10 +1,10 @@
 [(#AUTORISER{voirstats}|sinon_interdire_acces)]
-<h1><:titre_page_statistiques:></h1>
+<h1><:statistiques:titre_page_statistiques:></h1>
 
 <div class="onglets_simple clearfix">
 	<ul>
-		<li>[(#URL_ECRIRE{stats_repartition}|lien_ou_expose{<:icone_repartition_actuelle:>,[(#ENV{critere,''}|=={debut}|non)],ajax})]</li>
-		<li>[(#URL_ECRIRE{stats_repartition,critere=debut}|lien_ou_expose{<:onglet_repartition_debut:>,[(#ENV{critere,''}|=={debut}|oui)],ajax})]</li>
+		<li>[(#URL_ECRIRE{stats_repartition}|lien_ou_expose{<:statistiques:icone_repartition_actuelle:>,[(#ENV{critere,''}|=={debut}|non)],ajax})]</li>
+		<li>[(#URL_ECRIRE{stats_repartition,critere=debut}|lien_ou_expose{<:statistiques:onglet_repartition_debut:>,[(#ENV{critere,''}|=={debut}|oui)],ajax})]</li>
 	</ul>
 </div>
 
@@ -12,6 +12,6 @@
 
 	[(#REM|intval|enfants_aff{400, 400, #ENV{critere}|=={debut}|?{visites,popularite}})]
 
-	<p><:texte_signification:></p>
+	<p><:statistiques:texte_signification:></p>
 
 #BOITE_FERMER

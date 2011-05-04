@@ -8,9 +8,9 @@
 	|
 	[<span class="duree">(#ENV{duree,90}) <:info_jours:></span>] |
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{moins}})]"
-		 class="ajax">[(#CHEMIN_IMAGE{zoomout-24.png}|balise_img{<:info_zoom:> -})]</a>
+		 class="ajax">[(#CHEMIN_IMAGE{zoomout-24.png}|balise_img{<:statistiques:info_zoom:> -})]</a>
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,90}|duree_zoom{plus}})]"
-		 class="ajax">[(#CHEMIN_IMAGE{zoomin-24.png}|balise_img{<:info_zoom:> +})]</a>
+		 class="ajax">[(#CHEMIN_IMAGE{zoomin-24.png}|balise_img{<:statistiques:info_zoom:> +})]</a>
 </p>
 #SET{max,0}
 #SET{moy,0}
@@ -41,7 +41,7 @@
 			</tr>
 			<BOUCLE_art(ARTICLES){id_article}{statut?}>
 				<tr>
-					<th><:info_popularite_5|trim{':'}|trim|ucfirst:></th>
+					<th><:statistiques:info_popularite_5|trim{':'}|trim|ucfirst:></th>
 					<td class='num'>[(#CHAMP_SQL{popularite}|round)]</td>
 				</tr>
 				<tr>
@@ -58,7 +58,7 @@
 					<td class='num'>[(#REM|stats_total)]</td>
 				</tr>
 				<tr>
-					<th><:info_popularite_2|trim{':'}|trim|ucfirst:></th>
+					<th><:statistiques:info_popularite_2|trim{':'}|trim|ucfirst:></th>
 					<td class='num'>[(#CONFIG{popularite_total}|round)]</td>
 				</tr>
 			<//B_art>
@@ -66,13 +66,13 @@
 	</table>
 	
 	<table class='visites' id='visites_quotidiennes'>
-		<caption><:visites_journalieres:></caption>
+		<caption><:statistiques:visites_journalieres:></caption>
 	  <thead>
 			<tr class='row_first'>
 				<th><:date|trim{':'}|trim:></th>
-				<th class='valeur'><:info_visites|trim{':'}|trim:></th>
+				<th class='valeur'><:statistiques:info_visites|trim{':'}|trim:></th>
 				<th class='moyenne'><:info_moyenne|trim{':'}|trim:></th>
-				<th class='prevision'><:info_previsions|trim{':'}|trim:></th>
+				<th class='prevision'><:statistiques:info_previsions|trim{':'}|trim:></th>
 			</tr>
 		</thead>
 	  <tbody>

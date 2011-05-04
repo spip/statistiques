@@ -8,21 +8,21 @@
 	|
 	[<span class="duree">(#ENV{duree,365}|div{30}|intval) <:date_mois:></span>] |
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,365}|duree_zoom{moins}})]"
-		 class="ajax">[(#CHEMIN_IMAGE{zoomout-24.png}|balise_img{<:info_zoom:> -})]</a>
+		 class="ajax">[(#CHEMIN_IMAGE{zoomout-24.png}|balise_img{<:statistiques:info_zoom:> -})]</a>
 	<a href="[(#SELF|parametre_url{duree,#ENV{duree,365}|duree_zoom{plus}})]"
-		 class="ajax">[(#CHEMIN_IMAGE{zoomin-24.png}|balise_img{<:info_zoom:> +})]</a>
+		 class="ajax">[(#CHEMIN_IMAGE{zoomin-24.png}|balise_img{<:statistiques:info_zoom:> +})]</a>
 </p>
 
 
 <B_statsm>
 	<table class='visites' id='visites_mensuelles'>
-		<caption><:visites_mensuelles:></caption>
+		<caption><:statistiques:visites_mensuelles:></caption>
 	  <thead>
 			<tr class='row_first'>
 				<th><:date|trim{':'}|trim:></th>
-				<th class='valeur'><:info_visites|trim{':'}|trim:></th>
+				<th class='valeur'><:statistiques:info_visites|trim{':'}|trim:></th>
 				<th class='moyenne'><:info_moyenne|trim{':'}|trim:></th>
-				<th class='prevision'><:info_previsions|trim{':'}|trim:></th>
+				<th class='prevision'><:statistiques:info_previsions|trim{':'}|trim:></th>
 			</tr>
 		</thead>
 	  <tbody>

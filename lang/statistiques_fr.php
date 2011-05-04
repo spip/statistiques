@@ -42,7 +42,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_admin_tech_03' => 'Vous pouvez choisir de sauvegarder le fichier sous forme compressée, afin
 	d\'écourter son transfert chez vous ou sur un serveur de sauvegardes, et d\'économiser de l\'espace disque.',
 	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ',
-	'texte_sauvegarde_compressee' => 'La sauvegarde sera faite dans le fichier non compressé @fichier@.'
+	'texte_sauvegarde_compressee' => 'La sauvegarde sera faite dans le fichier non compressé @fichier@.',
+
+	// V
+	'visites_journalieres' => 'Nombre de visites par jour',
+	'visites_mensuelles' => 'Nombre de visites par mois',
 );
 
 ?>

@@ -63,7 +63,7 @@
 		</onglet>
 		<onglet id='stats_referers' parent='statistiques'>
 			<icone>images/referers-24.png</icone>
-			<titre>titre_liens_entrants</titre>
+			<titre>statistiques:titre_liens_entrants</titre>
 			<url>stats_referers</url>
 		</onglet>
 		<onglet id='stats_repartition' parent='statistiques'>
@@ -73,7 +73,7 @@
 		</onglet>
 		<onglet id='stats_lang' parent='statistiques'>
 			<icone>images/langue-24.png</icone>
-			<titre>onglet_repartition_lang</titre>
+			<titre>statistiques:onglet_repartition_lang</titre>
 			<url>stats_lang</url>
 		</onglet>
 
