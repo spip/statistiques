@@ -1,0 +1,71 @@
+<traduction module="statistiques" gestionnaire="salvatore" reference="fr">
+	<langue code="ar">
+		<traducteur nom="kandalaft" />
+	</langue>
+	<langue code="ast" />
+	<langue code="ay" />
+	<langue code="bg" />
+	<langue code="br" />
+	<langue code="bs" />
+	<langue code="ca">
+		<traducteur nom="merce" />
+	</langue>
+	<langue code="co" />
+	<langue code="cpf" />
+	<langue code="cpf_hat" />
+	<langue code="cs" />
+	<langue code="da" />
+	<langue code="de">
+		<traducteur nom="klaus" />
+	</langue>
+	<langue code="en">
+		<traducteur nom="squonk" />
+	</langue>
+	<langue code="en_hx" />
+	<langue code="eo" />
+	<langue code="es" />
+	<langue code="eu" />
+	<langue code="fa" />
+	<langue code="fi" />
+	<langue code="fon" />
+	<langue code="fr_tu" />
+	<langue code="gl">
+		<traducteur nom="webmaster3" />
+	</langue>
+	<langue code="hac" />
+	<langue code="he" />
+	<langue code="hu" />
+	<langue code="id" />
+	<langue code="is" />
+	<langue code="it" />
+	<langue code="it_fem" />
+	<langue code="ja" />
+	<langue code="km" />
+	<langue code="lb" />
+	<langue code="my" />
+	<langue code="nb" />
+	<langue code="nl" />
+	<langue code="no" />
+	<langue code="oc_auv" />
+	<langue code="oc_gsc" />
+	<langue code="oc_lms" />
+	<langue code="oc_lnc" />
+	<langue code="oc_ni" />
+	<langue code="oc_ni_la" />
+	<langue code="oc_prv" />
+	<langue code="oc_va" />
+	<langue code="pl" />
+	<langue code="pt">
+		<traducteur nom="rporto" />
+	</langue>
+	<langue code="pt_br">
+		<traducteur nom="rporto" />
+	</langue>
+	<langue code="ro" />
+	<langue code="ru" />
+	<langue code="sk" />
+	<langue code="sv" />
+	<langue code="tr" />
+	<langue code="vi" />
+	<langue code="zh" />
+</traduction>
