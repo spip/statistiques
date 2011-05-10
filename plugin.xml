@@ -76,6 +76,8 @@
 			<titre>statistiques:onglet_repartition_lang</titre>
 			<url>stats_lang</url>
 		</onglet>
+	<categorie>statistique</categorie>
+	<traduire gestionnaire="salvatore" module="statistiques" reference="fr" />
 
 </plugin>
 
