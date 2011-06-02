@@ -9,8 +9,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
 	'bouton_effacer_statistiques' => 'حذف الاحصاءات',
-	'bouton_radio_sauvegarde_compressee' => 'sauvegarde compressée sous @fichier@', # NEW
-	'bouton_radio_sauvegarde_non_compressee' => 'sauvegarde non compressée sous @fichier@', # NEW
+	'bouton_radio_sauvegarde_compressee' => 'نسخة احتياطية مضغوطة باسم @fichier@',
+	'bouton_radio_sauvegarde_non_compressee' => 'نيخة احتياطية غير مضغوطة باسم @fichier@',
 
 	// I
 	'icone_evolution_visites' => 'تطور الزيارات <br />@visites@ زيارة ',
@@ -18,9 +18,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_repartition_visites' => 'توزيع الزيارات',
 	'icone_statistiques_visites' => 'الإحصاءات',
 	'info_affichier_visites_articles_plus_visites' => 'إظهار الزيارات المتعلقة <b> بأكثر المقالات زيارة منذ البداية:</ b>',
-	'info_base_restauration' => 'La base est en cours de restauration.', # NEW
+	'info_base_restauration' => 'القاعدة قيد الاسترجاع.',
 	'info_comment_lire_tableau' => 'كيفية قراءة هذا الرسم البياني',
-	'info_erreur_restauration' => 'Erreur de restauration : fichier inexistant.', # NEW
+	'info_erreur_restauration' => 'خطأ خلال الاسترجاع: ملف غير موجود.',
 	'info_forum_statistiques' => 'إحصاءات الزيارات',
 	'info_popularite_2' => 'شعبية الموقع:',
 	'info_popularite_3' => 'الشعبية: @popularite@؛ الزيارات: @visites@',
@@ -29,26 +29,26 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_question_gerer_statistiques' => 'هل تريد أن يدير الموقع إحصاءات الزيارات؟',
 	'info_question_vignettes_referer' => 'عندما تعين الاحضاءات، يمكنك ايضاً مشاهدة مصغرات عن المواقع الصادرة منها.',
 	'info_question_vignettes_referer_oui' => 'عرض مصغرات عن مواقع مصدر الزيارات',
-	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
-	'info_sauvegarde_articles' => 'Sauvegarder les articles', # NEW
-	'info_sauvegarde_articles_sites_ref' => 'Sauvegarder les articles des sites référencés', # NEW
-	'info_sauvegarde_auteurs' => 'Sauvegarder les auteurs', # NEW
-	'info_sauvegarde_breves' => 'Sauvegarder les brèves', # NEW
-	'info_sauvegarde_documents' => 'Sauvegarder les documents', # NEW
-	'info_sauvegarde_echouee' => 'Si la sauvegarde a échoué («Maximum execution time exceeded»),', # NEW
-	'info_sauvegarde_forums' => 'Sauvegarder les forums', # NEW
-	'info_sauvegarde_groupe_mots' => 'Sauvegarder les groupes de mots', # NEW
-	'info_sauvegarde_messages' => 'Sauvegarder les messages', # NEW
-	'info_sauvegarde_mots_cles' => 'Sauvegarder les mots-clés', # NEW
-	'info_sauvegarde_petitions' => 'Sauvegarder les pétitions', # NEW
-	'info_sauvegarde_refers' => 'Sauvegarder les referers', # NEW
-	'info_sauvegarde_reussi_01' => 'Sauvegarde réussie.', # NEW
-	'info_sauvegarde_rubrique_reussi' => 'Les tables de la rubrique @titre@ ont été sauvegardée dans @archive@. Vous pouvez', # NEW
-	'info_sauvegarde_rubriques' => 'Sauvegarder les rubriques', # NEW
-	'info_sauvegarde_signatures' => 'Sauvegarder les signatures de pétitions', # NEW
-	'info_sauvegarde_sites_references' => 'Sauvegarder les sites référencés', # NEW
-	'info_sauvegarde_type_documents' => 'Sauvegarder les types de documents', # NEW
-	'info_sauvegarde_visites' => 'Sauvegarder les visites', # NEW
+	'info_restauration_sauvegarde_insert' => 'إدراج @archive@ في القاعدة',
+	'info_sauvegarde_articles' => 'حفظ المقالات',
+	'info_sauvegarde_articles_sites_ref' => 'حفظ مقالات المواقع المبوبة',
+	'info_sauvegarde_auteurs' => 'حفظ المؤلفين',
+	'info_sauvegarde_breves' => 'حفظ الأخبار',
+	'info_sauvegarde_documents' => 'حفظ المستندات',
+	'info_sauvegarde_echouee' => 'اذا فشل النسخ الاحتياطي (مع رسالة «Maximum execution time exceeded»)،',
+	'info_sauvegarde_forums' => 'حفظ المنتديات',
+	'info_sauvegarde_groupe_mots' => 'حفظ مجموعات المفاتيح',
+	'info_sauvegarde_messages' => 'حفظ الرسائل',
+	'info_sauvegarde_mots_cles' => 'حفظ المفاتيح',
+	'info_sauvegarde_petitions' => 'حفظ العرائض',
+	'info_sauvegarde_refers' => 'حفظ مصادر الزيارات',
+	'info_sauvegarde_reussi_01' => 'نجح النسخ الاحتياطي.',
+	'info_sauvegarde_rubrique_reussi' => 'تم حفظ جداول القسم @titre@ في @archive@. يمكنك',
+	'info_sauvegarde_rubriques' => 'حفظ الأقسام',
+	'info_sauvegarde_signatures' => 'حفظ تواقيع العرائض',
+	'info_sauvegarde_sites_references' => 'حفظ المواقع المبوبة',
+	'info_sauvegarde_type_documents' => 'حفظ أنواع المستندات',
+	'info_sauvegarde_visites' => 'حفظ الزيارات',
 	'info_visites' => 'زيارة:',
 	'info_visites_plus_populaires' => 'إظهار الزيارات <b>لأكثر المقالات شعبية</b> و<b>لأحدث المقالات المنشورة:</ b>',
 	'info_zoom' => 'تكبير-تصغير العرض',
@@ -60,15 +60,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'التوزيع حسب اللغات',
 
 	// S
-	'sauvegarde_fusionner' => 'Fusionner la base actuelle et la sauvegarde', # NEW
-	'sauvegarde_fusionner_depublier' => 'Dépublier les objets fusionnés', # NEW
-	'sauvegarde_url_origine' => 'Eventuellement, URL du site d\'origine :', # NEW
+	'sauvegarde_fusionner' => 'دمج قاعدة البيانات الحالية بالنسخة الاحتياطية',
+	'sauvegarde_fusionner_depublier' => 'مضاعفة العناصر المدموجة',
+	'sauvegarde_url_origine' => 'عنوان URL للموقع المصدر اذا وجد:',
 
 	// T
 	'texte_admin_effacer_stats' => 'هذا الأمر يحذف كل البيانات المرتبطة بإحصاءات  زيارات الموقع، بما فيها شعبية المقالات.',
-	'texte_admin_tech_03' => 'Vous pouvez choisir de sauvegarder le fichier sous forme compressée, afin
-	d\'écourter son transfert chez vous ou sur un serveur de sauvegardes, et d\'économiser de l\'espace disque.', # NEW
-	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ', # NEW
+	'texte_admin_tech_03' => 'بمكن اختيار ملف مضغوط للنسخة الاحتياطية، من أجل
+تسريع نقله الى جهازك او الى جهاز خدمة مخصص والتوفير في المساحة على القرص الثابت.',
+	'texte_admin_tech_04' => 'بهدف الدمج بقاعدة أخرى، يمكن اقتصار النسخ الاحتياطي على القسم:',
 	'texte_comment_lire_tableau' => 'تظهر مرتبة
 المقال في تصنيف الشعبية، في
 الهامش؛ وتظهر شعبية المقال (تقدير
@@ -76,7 +76,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 تصفح الموقع على وتيرته الحالية) وعدد الزيارات
 المسجلة منذ البداية، في المربع الذي
 يظهر لدى حوم مؤشر الفأرة فوق العنوان.',
-	'texte_sauvegarde_compressee' => 'La sauvegarde sera faite dans le fichier non compressé @fichier@.', # NEW
+	'texte_sauvegarde_compressee' => 'سيتم حفظ النسخة الاحتياطية في الملف غير المضغوط @fichier@.',
 	'texte_signification' => 'القضبان الداكنة تجسد البنود المتراكمة (مجموع الأقسام الفرعية)، القضبان الفاتحة تجسد عدد الزيارات لكل قسم.',
 	'titre_evolution_visite' => 'تطور الزيارات',
 	'titre_liens_entrants' => 'الوصلات الآتية',
@@ -84,8 +84,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'إحصاءات الزيارات',
 
 	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'visites_journalieres' => 'عدد الزيارات اليومية',
+	'visites_mensuelles' => 'عدد الزيارات الشهرية'
 );
 
 ?>
