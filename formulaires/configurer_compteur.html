@@ -6,7 +6,7 @@
 	<form action="#ENV{action}#formulaire_configurer_compteur" method="post"><div>
 		[(#ACTION_FORMULAIRE{#ENV{action}})]
 		<ul>
-			<li class='configurer_activer_statistiques[ (#ENV**{erreurs}|table_valeur{activer_statistiques}|oui)erreur]'>
+			<li class='editer configurer_activer_statistiques[ (#ENV**{erreurs}|table_valeur{activer_statistiques}|oui)erreur]'>
 				<label><:statistiques:info_question_gerer_statistiques:></label>
 				[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{activer_statistiques})</span>]
 				<div class='choix'>
@@ -14,7 +14,7 @@
 					<label for="activer_statistiques"><:statistiques:item_gerer_statistiques:></label>
 				</div>
 			</li>			
-			<li class='configurer_activer_captures_referers[ (#ENV**{erreurs}|table_valeur{activer_captures_referers}|oui)erreur]'>
+			<li class='editer configurer_activer_captures_referers[ (#ENV**{erreurs}|table_valeur{activer_captures_referers}|oui)erreur]'>
 				<div class='explication'><:statistiques:info_question_vignettes_referer:></div>
 				[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{activer_captures_referers})</span>]
 				<div class='choix'>
