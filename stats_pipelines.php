@@ -52,7 +52,7 @@ function stats_formulaire_admin($flux) {
 	 AND isset($flux['args']['contexte']['id_objet'])
 	 AND $id_objet = $flux['args']['contexte']['id_objet']
 	 ) {
-		if ($l = admin_stats($objet, $id_objet, defined('_VAR_INCLURE') ? _VAR_PREVIEW : '')) {
+		if ($l = admin_stats($objet, $id_objet, defined('_VAR_PREVIEW') ? _VAR_PREVIEW : '')) {
 			$btn = recuperer_fond('prive/bouton/statistiques', array(
 				'visites' => $l[0],
 				'popularite' => $l[1],
