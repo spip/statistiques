@@ -5,6 +5,7 @@
 	<version>0.3.1</version>
 	<version_base>1.0.0</version_base>
 	<etat>dev</etat>
+	<slogan>Gestion des statistiques dans SPIP</slogan>
 	<description>
 	Statistiques de SPIP
 	</description>
