@@ -1,8 +1,10 @@
 * text=auto !eol
+base/delete_referers.php -text
 base/delete_stats.php -text
 base/stats.php -text
 base/stats_upgrade.php -text
 /engines-list.txt -text
+exec/base_delete_referers.php -text
 exec/base_delete_stats.php -text
 formulaires/configurer_compteur.html -text
 formulaires/configurer_compteur.php -text
