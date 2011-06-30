@@ -12,7 +12,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_sauvegarde_compressee' => 'نسخة احتياطية مضغوطة باسم @fichier@',
 	'bouton_radio_sauvegarde_non_compressee' => 'نيخة احتياطية غير مضغوطة باسم @fichier@',
 
-	// I
+	// C
+	'csv' => 'سي.اس.في.',
+  
+  // I
 	'icone_evolution_visites' => 'تطور الزيارات <br />@visites@ زيارة ',
 	'icone_repartition_actuelle' => 'إظهار التوزيع الحالي',
 	'icone_repartition_visites' => 'توزيع الزيارات',
@@ -58,6 +61,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_origine_visites' => 'مصدر الزيارات',
 	'onglet_repartition_debut' => 'منذ البداية',
 	'onglet_repartition_lang' => 'التوزيع حسب اللغات',
+	
+	// R
+	'resume' => 'ملخّص',
 
 	// S
 	'sauvegarde_fusionner' => 'دمج قاعدة البيانات الحالية بالنسخة الاحتياطية',

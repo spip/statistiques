@@ -3,7 +3,7 @@
 <p class="pagination">
 	<span class="dl">
 		#SET{args,#ARRAY{id_article,#ID_ARTICLE,duree,#DUREE}}
-		<a href="[(#URL_PAGE{transmettre,[(#VAL{statistiques}|param_low_sec{#GET{args}, '', 'transmettre'})]})]" class="noajax">CSV</a>
+		<a href="[(#URL_PAGE{transmettre,[(#VAL{statistiques}|param_low_sec{#GET{args}, '', 'transmettre'})]})]" class="noajax"><:statistiques:csv:></a>
 	</span>
 	|
 	[<span class="duree">(#ENV{duree,365}|div{30}|intval) <:date_mois:></span>] |

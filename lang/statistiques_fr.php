@@ -11,7 +11,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_sauvegarde_compressee' => 'sauvegarde compressée sous @fichier@',
 	'bouton_radio_sauvegarde_non_compressee' => 'sauvegarde non compressée sous @fichier@',
 
-	// I
+	// C
+	'csv' => 'csv',
+  
+  // I
 	'icone_evolution_visites' => 'Évolution des visites<br />@visites@ visites',
 	'icone_repartition_actuelle' => 'Afficher la répartition actuelle',
 	'icone_repartition_visites' => 'Répartition des visites',
@@ -57,6 +60,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_origine_visites' => 'Origine des visites',
 	'onglet_repartition_debut' => 'depuis le début',
 	'onglet_repartition_lang' => 'Répartition par langues',
+	
+	// R
+	'resume' => 'Resume',
 
 	// S
 	'sauvegarde_fusionner' => 'Fusionner la base actuelle et la sauvegarde',
