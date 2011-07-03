@@ -8,27 +8,31 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_statistiques' => 'Delete the statistics', # MODIF
+	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
+	'bouton_effacer_statistiques' => 'Vymazať štatistiku', # MODIF
 	'bouton_radio_sauvegarde_compressee' => 'sauvegarde compressée sous @fichier@', # NEW
 	'bouton_radio_sauvegarde_non_compressee' => 'sauvegarde non compressée sous @fichier@', # NEW
 
+	// C
+	'csv' => 'csv', # NEW
+
 	// I
-	'icone_evolution_visites' => 'Visits level<br />@visites@ visits', # MODIF
-	'icone_repartition_actuelle' => 'Show current distribution',
-	'icone_repartition_visites' => 'Visits distribution',
-	'icone_statistiques_visites' => 'Štatistiky návštev',
-	'info_affichier_visites_articles_plus_visites' => 'Show visits for <b>the most visited articles since the beginning:</b>',
+	'icone_evolution_visites' => 'Počet návštev<br />@visites@ návštev',
+	'icone_repartition_actuelle' => 'Zobraziť aktuálnu distribúciu',
+	'icone_repartition_visites' => 'Distribúcia návštev',
+	'icone_statistiques_visites' => 'Štatistika',
+	'info_affichier_visites_articles_plus_visites' => 'Zobraziť návštevy <b>najnavštevovanejších článkov od začiatku:</b>',
 	'info_base_restauration' => 'La base est en cours de restauration.', # NEW
-	'info_comment_lire_tableau' => 'How to read this graphic', # MODIF
+	'info_comment_lire_tableau' => 'Ako čítať tento graf',
 	'info_erreur_restauration' => 'Erreur de restauration : fichier inexistant.', # NEW
-	'info_forum_statistiques' => 'Štatistiky návštev',
-	'info_popularite_2' => 'site popularity:',
-	'info_popularite_3' => 'popularity: @popularite@; visits: @visites@',
-	'info_popularite_5' => 'popularity:',
-	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Je možné na vašej stránke spravovať štatistiky?',
-	'info_question_vignettes_referer' => 'When you consult the statistics, you can see a preview of the originating sites of the visits. ',
-	'info_question_vignettes_referer_oui' => 'Show the screenshots of the originating sites', # MODIF
+	'info_forum_statistiques' => 'Štatistika návštev',
+	'info_popularite_2' => 'popularita stránky:',
+	'info_popularite_3' => 'popularita: @popularite@, návštev: @visites@',
+	'info_popularite_5' => 'popularita:',
+	'info_previsions' => 'predpovede:',
+	'info_question_gerer_statistiques' => 'Chcete mať na vašej stránke štatistiku?',
+	'info_question_vignettes_referer' => 'Keď sa pozriete do štatistiky, uvidíte ukážku každej stránky, z ktorej prišiel nejaký návštevník. ',
+	'info_question_vignettes_referer_oui' => 'Zobraziť obrázky odkazujúcich stránok',
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
 	'info_sauvegarde_articles' => 'Sauvegarder les articles', # NEW
 	'info_sauvegarde_articles_sites_ref' => 'Sauvegarder les articles des sites référencés', # NEW
@@ -49,15 +53,18 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_sauvegarde_sites_references' => 'Sauvegarder les sites référencés', # NEW
 	'info_sauvegarde_type_documents' => 'Sauvegarder les types de documents', # NEW
 	'info_sauvegarde_visites' => 'Sauvegarder les visites', # NEW
-	'info_visites' => 'Návštevy:',
-	'info_visites_plus_populaires' => 'Show visits for <b>the most popular articles</b> and for <b>the last published articles:</b>',
-	'info_zoom' => 'zvětšit/zmenšit', # NEW
-	'item_gerer_statistiques' => 'Spravovať štatistiky',
+	'info_visites' => 'Návštev:',
+	'info_visites_plus_populaires' => 'Zobraziť návštevy <b>najčítanejších</b> a <b>najnovších publikovaných článkov:</b>',
+	'info_zoom' => 'lupa',
+	'item_gerer_statistiques' => 'Riadiť štatistiky',
 
 	// O
 	'onglet_origine_visites' => 'Pôvod návštev',
-	'onglet_repartition_debut' => 'from the start',
-	'onglet_repartition_lang' => 'Distribution by languages', # MODIF
+	'onglet_repartition_debut' => 'v každom čase',
+	'onglet_repartition_lang' => 'Distribúcia podľa jazyka',
+
+	// R
+	'resume' => 'Resume', # NEW
 
 	// S
 	'sauvegarde_fusionner' => 'Fusionner la base actuelle et la sauvegarde', # NEW
@@ -65,21 +72,20 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'sauvegarde_url_origine' => 'Eventuellement, URL du site d\'origine :', # NEW
 
 	// T
-	'texte_admin_effacer_stats' => 'This command deletes all data linked to the statistics of visits to the site, including the relative popularity of articles.',
+	'texte_admin_effacer_stats' => 'Tento príkaz vymaže všetky štatistiky o návštevách na stránke, vrátane popularity článkov.',
+	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_admin_tech_03' => 'Vous pouvez choisir de sauvegarder le fichier sous forme compressée, afin
 	d\'écourter son transfert chez vous ou sur un serveur de sauvegardes, et d\'économiser de l\'espace disque.', # NEW
 	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ', # NEW
-	'texte_comment_lire_tableau' => 'The rank of the article,
-		in the popularity classification, is indicated in the
-		margin; the article popularity (an estimate of
-		the number of daily visits it will have if the actual pace of
-		traffic is maintained) and the number of visits recorded
-		since the beginning are displayed in the balloon that
-		appears as the mouse hovers over the title.',
+	'texte_comment_lire_tableau' => 'Články sa hodnotia podľa popularity.
+ Ak prejdete myšou po názve nejakého článku,
+zobrazí sa jeho popularita (tzn. približný počet
+ návštev za deň, ktorý bude mať, ak bude pokračovať súčasný trend)
+  a počet návštev zaznamenaných odvtedy, čo bol prvýkrát publikovaný.',
 	'texte_sauvegarde_compressee' => 'La sauvegarde sera faite dans le fichier non compressé @fichier@.', # NEW
-	'texte_signification' => 'Dark bars represent cumulative entries (total of sub-sections), light bars represent the number of visits for each section.', # MODIF
-	'titre_evolution_visite' => 'Visits level',
-	'titre_liens_entrants' => 'Incoming links', # MODIF
+	'texte_signification' => 'Tmavé čiary znázorňujú kumulatívne vstupy (celkom za podrubriky), svetlé čiary znázorňujú počet návštev každej rubriky.',
+	'titre_evolution_visite' => 'Úroveň návštev',
+	'titre_liens_entrants' => 'Prichádzajúce odkazy',
 	'titre_page_statistiques' => 'Štatistiky podľa rubrík',
 	'titre_page_statistiques_visites' => 'Štatistiky návštev',
 

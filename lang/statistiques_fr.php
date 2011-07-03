@@ -6,15 +6,15 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_statistiques' => 'Effacer toutes les statistiques',
 	'bouton_effacer_referers' => 'Effacer seulement les liens entrants',
+	'bouton_effacer_statistiques' => 'Effacer toutes les statistiques',
 	'bouton_radio_sauvegarde_compressee' => 'sauvegarde compressée sous @fichier@',
 	'bouton_radio_sauvegarde_non_compressee' => 'sauvegarde non compressée sous @fichier@',
 
 	// C
 	'csv' => 'csv',
-  
-  // I
+
+	// I
 	'icone_evolution_visites' => 'Évolution des visites<br />@visites@ visites',
 	'icone_repartition_actuelle' => 'Afficher la répartition actuelle',
 	'icone_repartition_visites' => 'Répartition des visites',
@@ -60,7 +60,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_origine_visites' => 'Origine des visites',
 	'onglet_repartition_debut' => 'depuis le début',
 	'onglet_repartition_lang' => 'Répartition par langues',
-	
+
 	// R
 	'resume' => 'Resume',
 
@@ -71,7 +71,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.',
-        'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.',
+	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.',
 	'texte_admin_tech_03' => 'Vous pouvez choisir de sauvegarder le fichier sous forme compressée, afin
 	d\'écourter son transfert chez vous ou sur un serveur de sauvegardes, et d\'économiser de l\'espace disque.',
 	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ',

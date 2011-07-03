@@ -8,9 +8,13 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_statistiques' => 'Borrar las estadísticas',
+	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
+	'bouton_effacer_statistiques' => 'Borrar las estadísticas', # MODIF
 	'bouton_radio_sauvegarde_compressee' => 'sauvegarde compressée sous @fichier@', # NEW
 	'bouton_radio_sauvegarde_non_compressee' => 'sauvegarde non compressée sous @fichier@', # NEW
+
+	// C
+	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Evolución de las visitas<br />@visites@ visitas',
@@ -59,6 +63,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_debut' => 'desde el principio',
 	'onglet_repartition_lang' => 'Distribución por idiomas',
 
+	// R
+	'resume' => 'Resume', # NEW
+
 	// S
 	'sauvegarde_fusionner' => 'Fusionner la base actuelle et la sauvegarde', # NEW
 	'sauvegarde_fusionner_depublier' => 'Dépublier les objets fusionnés', # NEW
@@ -66,6 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Esta orden borra todos los datos ligados con las estadísticas de visitas al sitio, incluyendo la popularidad de los artículos.',
+	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_admin_tech_03' => 'Vous pouvez choisir de sauvegarder le fichier sous forme compressée, afin
 	d\'écourter son transfert chez vous ou sur un serveur de sauvegardes, et d\'économiser de l\'espace disque.', # NEW
 	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ', # NEW

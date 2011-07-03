@@ -8,14 +8,15 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_statistiques' => 'حذف الاحصاءات',
+	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
+	'bouton_effacer_statistiques' => 'حذف الاحصاءات', # MODIF
 	'bouton_radio_sauvegarde_compressee' => 'نسخة احتياطية مضغوطة باسم @fichier@',
 	'bouton_radio_sauvegarde_non_compressee' => 'نيخة احتياطية غير مضغوطة باسم @fichier@',
 
 	// C
-	'csv' => 'سي.اس.في.',
-  
-  // I
+	'csv' => 'csv', # NEW
+
+	// I
 	'icone_evolution_visites' => 'تطور الزيارات <br />@visites@ زيارة ',
 	'icone_repartition_actuelle' => 'إظهار التوزيع الحالي',
 	'icone_repartition_visites' => 'توزيع الزيارات',
@@ -30,7 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_5' => 'الشعبية:',
 	'info_previsions' => 'توقعات:',
 	'info_question_gerer_statistiques' => 'هل تريد أن يدير الموقع إحصاءات الزيارات؟',
-	'info_question_vignettes_referer' => 'عندما تعين الاحضاءات، يمكنك ايضاً مشاهدة مصغرات عن المواقع الصادرة منها.',
+	'info_question_vignettes_referer' => 'عندما تعاين الاحضاءات، يمكنك ايضاً مشاهدة مصغرات عن المواقع الصادرة منها.',
 	'info_question_vignettes_referer_oui' => 'عرض مصغرات عن مواقع مصدر الزيارات',
 	'info_restauration_sauvegarde_insert' => 'إدراج @archive@ في القاعدة',
 	'info_sauvegarde_articles' => 'حفظ المقالات',
@@ -61,9 +62,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_origine_visites' => 'مصدر الزيارات',
 	'onglet_repartition_debut' => 'منذ البداية',
 	'onglet_repartition_lang' => 'التوزيع حسب اللغات',
-	
+
 	// R
-	'resume' => 'ملخّص',
+	'resume' => 'Resume', # NEW
 
 	// S
 	'sauvegarde_fusionner' => 'دمج قاعدة البيانات الحالية بالنسخة الاحتياطية',
@@ -72,6 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'هذا الأمر يحذف كل البيانات المرتبطة بإحصاءات  زيارات الموقع، بما فيها شعبية المقالات.',
+	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_admin_tech_03' => 'بمكن اختيار ملف مضغوط للنسخة الاحتياطية، من أجل
 تسريع نقله الى جهازك او الى جهاز خدمة مخصص والتوفير في المساحة على القرص الثابت.',
 	'texte_admin_tech_04' => 'بهدف الدمج بقاعدة أخرى، يمكن اقتصار النسخ الاحتياطي على القسم:',
