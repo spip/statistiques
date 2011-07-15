@@ -8,13 +8,13 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
-	'bouton_effacer_statistiques' => 'حذف الاحصاءات', # MODIF
+	'bouton_effacer_referers' => 'حذف الوصلات الداخلة الآتية',
+	'bouton_effacer_statistiques' => 'حذف كل الاحصاءات',
 	'bouton_radio_sauvegarde_compressee' => 'نسخة احتياطية مضغوطة باسم @fichier@',
 	'bouton_radio_sauvegarde_non_compressee' => 'نيخة احتياطية غير مضغوطة باسم @fichier@',
 
 	// C
-	'csv' => 'csv', # NEW
+	'csv' => 'سي.اس.في.',
 
 	// I
 	'icone_evolution_visites' => 'تطور الزيارات <br />@visites@ زيارة ',
@@ -64,7 +64,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'التوزيع حسب اللغات',
 
 	// R
-	'resume' => 'Resume', # NEW
+	'resume' => 'ملخص',
 
 	// S
 	'sauvegarde_fusionner' => 'دمج قاعدة البيانات الحالية بالنسخة الاحتياطية',
@@ -73,7 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'هذا الأمر يحذف كل البيانات المرتبطة بإحصاءات  زيارات الموقع، بما فيها شعبية المقالات.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
+	'texte_admin_effacer_toutes_stats' => 'يجذف الزر الأول كل الإحصاءات: الزيارات والشعبية والوصلات الآتية.',
 	'texte_admin_tech_03' => 'بمكن اختيار ملف مضغوط للنسخة الاحتياطية، من أجل
 تسريع نقله الى جهازك او الى جهاز خدمة مخصص والتوفير في المساحة على القرص الثابت.',
 	'texte_admin_tech_04' => 'بهدف الدمج بقاعدة أخرى، يمكن اقتصار النسخ الاحتياطي على القسم:',
