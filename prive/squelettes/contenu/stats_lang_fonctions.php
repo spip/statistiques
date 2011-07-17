@@ -16,7 +16,7 @@ include_spip('inc/presentation');
 
 // http://doc.spip.org/@statistiques_lang_ok
 function affiche_stats_lang($critere) {
-	global $spip_ecran, $spip_lang_right;
+	global $spip_lang_right;
 
 	$taille = 450;
 	//
