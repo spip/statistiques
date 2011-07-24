@@ -68,7 +68,7 @@
 			<url>stats_referers</url>
 		</onglet>
 		<onglet id='stats_repartition' parent='statistiques'>
-			<icone>images/chartpie-24.png</icone>
+			<icone>images/repartition-24.png</icone>
 			<titre>statistiques:icone_repartition_visites</titre>
 			<url>stats_repartition</url>
 		</onglet>
