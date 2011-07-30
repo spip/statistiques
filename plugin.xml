@@ -49,7 +49,7 @@
 		<inclure>stats_autoriser.php</inclure>
 	</pipeline>
 
-	<necessite id="SPIP" version="[2.1;)" />
+	<necessite id="SPIP" version="[2.1.0;)" />
 	
 	
 	<bouton id="statistiques" parent="bando_activite" position="0">
