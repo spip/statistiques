@@ -25,7 +25,7 @@
 	<pipeline nom="taches_generales_cron" inclure="stats_pipelines.php" />
 	<pipeline nom="autoriser" inclure="stats_autoriser.php" />
 
-	<menu nom="statistiques" titre="statistiques:icone_statistiques_visites" parent="bando_activite" icone="images/statistique-16.png" action="stats_visites" />
+	<menu nom="statistiques" titre="statistiques:icone_statistiques_visites" parent="menu_activite" icone="images/statistique-16.png" action="stats_visites" />
 
 	<onglet nom="stats_visites" titre="statistiques:icone_statistiques_visites" parent="statistiques" icone="images/statistique-24.png" action="stats_visites" />
 	<onglet nom="stats_referers" titre="statistiques:titre_liens_entrants" parent="statistiques" icone="images/referers-24.png" action="stats_referers" />
