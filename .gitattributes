@@ -2,7 +2,6 @@
 base/delete_referers.php -text
 base/delete_stats.php -text
 base/stats.php -text
-base/stats_upgrade.php -text
 /engines-list.txt -text
 exec/base_delete_referers.php -text
 exec/base_delete_stats.php -text
@@ -75,7 +74,6 @@ lang/statistiques_sv.php -text
 lang/statistiques_tr.php -text
 lang/statistiques_vi.php -text
 lang/statistiques_zh.php -text
-/plugin.xml -text
 prive/bouton/statistiques.html -text
 prive/squelettes/contenu/stats_lang.html -text
 prive/squelettes/contenu/stats_lang_fonctions.php -text
@@ -116,5 +114,6 @@ prive/themes/spip/images/zoomout-24.png -text
 prive/themes/spip/images/zoomout-32.png -text
 prive/transmettre/statistiques.html -text
 public/stats.php -text
+/stats_administrations.php -text
 /stats_autoriser.php -text
 /stats_pipelines.php -text
