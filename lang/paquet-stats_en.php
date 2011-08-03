@@ -4,14 +4,15 @@
 // Fichier produit par PlugOnet
 // Module: paquet-stats
 // Langue: en
-// Date: 30-07-2011 15:01:38
-// Items: 1
+// Date: 03-08-2011 19:45:21
+// Items: 2
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 // S
+	'stats_nom' => 'Statistics',
 	'stats_slogan' => 'Statistics management in SPIP',
 );
 ?>
