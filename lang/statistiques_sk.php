@@ -8,13 +8,13 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
-	'bouton_effacer_statistiques' => 'Vymazať štatistiku', # MODIF
-	'bouton_radio_sauvegarde_compressee' => 'sauvegarde compressée sous @fichier@', # NEW
-	'bouton_radio_sauvegarde_non_compressee' => 'sauvegarde non compressée sous @fichier@', # NEW
+	'bouton_effacer_referers' => 'Odstrániť len prichádzajúce odkazy',
+	'bouton_effacer_statistiques' => 'Vymazať všetky štatistiky',
+	'bouton_radio_sauvegarde_compressee' => 'komprimovaná záloha v súbore @fichier@',
+	'bouton_radio_sauvegarde_non_compressee' => 'dekomprimovaná záloha v súbore @fichier@',
 
 	// C
-	'csv' => 'csv', # NEW
+	'csv' => 'csv',
 
 	// I
 	'icone_evolution_visites' => 'Počet návštev<br />@visites@ návštev',
@@ -22,9 +22,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_repartition_visites' => 'Distribúcia návštev',
 	'icone_statistiques_visites' => 'Štatistika',
 	'info_affichier_visites_articles_plus_visites' => 'Zobraziť návštevy <b>najnavštevovanejších článkov od začiatku:</b>',
-	'info_base_restauration' => 'La base est en cours de restauration.', # NEW
+	'info_base_restauration' => 'Prebieha obnova databázy.',
 	'info_comment_lire_tableau' => 'Ako čítať tento graf',
-	'info_erreur_restauration' => 'Erreur de restauration : fichier inexistant.', # NEW
+	'info_erreur_restauration' => 'Chyba pri obnove: súbor neexistuje.',
 	'info_forum_statistiques' => 'Štatistika návštev',
 	'info_popularite_2' => 'popularita stránky:',
 	'info_popularite_3' => 'popularita: @popularite@, návštev: @visites@',
@@ -33,26 +33,26 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_question_gerer_statistiques' => 'Chcete mať na vašej stránke štatistiku?',
 	'info_question_vignettes_referer' => 'Keď sa pozriete do štatistiky, uvidíte ukážku každej stránky, z ktorej prišiel nejaký návštevník. ',
 	'info_question_vignettes_referer_oui' => 'Zobraziť obrázky odkazujúcich stránok',
-	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
-	'info_sauvegarde_articles' => 'Sauvegarder les articles', # NEW
-	'info_sauvegarde_articles_sites_ref' => 'Sauvegarder les articles des sites référencés', # NEW
-	'info_sauvegarde_auteurs' => 'Sauvegarder les auteurs', # NEW
-	'info_sauvegarde_breves' => 'Sauvegarder les brèves', # NEW
-	'info_sauvegarde_documents' => 'Sauvegarder les documents', # NEW
-	'info_sauvegarde_echouee' => 'Si la sauvegarde a échoué («Maximum execution time exceeded»),', # NEW
-	'info_sauvegarde_forums' => 'Sauvegarder les forums', # NEW
-	'info_sauvegarde_groupe_mots' => 'Sauvegarder les groupes de mots', # NEW
-	'info_sauvegarde_messages' => 'Sauvegarder les messages', # NEW
-	'info_sauvegarde_mots_cles' => 'Sauvegarder les mots-clés', # NEW
-	'info_sauvegarde_petitions' => 'Sauvegarder les pétitions', # NEW
-	'info_sauvegarde_refers' => 'Sauvegarder les referers', # NEW
-	'info_sauvegarde_reussi_01' => 'Sauvegarde réussie.', # NEW
-	'info_sauvegarde_rubrique_reussi' => 'Les tables de la rubrique @titre@ ont été sauvegardée dans @archive@. Vous pouvez', # NEW
-	'info_sauvegarde_rubriques' => 'Sauvegarder les rubriques', # NEW
-	'info_sauvegarde_signatures' => 'Sauvegarder les signatures de pétitions', # NEW
-	'info_sauvegarde_sites_references' => 'Sauvegarder les sites référencés', # NEW
-	'info_sauvegarde_type_documents' => 'Sauvegarder les types de documents', # NEW
-	'info_sauvegarde_visites' => 'Sauvegarder les visites', # NEW
+	'info_restauration_sauvegarde_insert' => 'Vloženie archívu @archive@ do databázy',
+	'info_sauvegarde_articles' => 'Zálohovať články',
+	'info_sauvegarde_articles_sites_ref' => 'Zálohovať články odkazovaných stránok',
+	'info_sauvegarde_auteurs' => 'Zálohovať autorov',
+	'info_sauvegarde_breves' => 'Zálohovať novinky',
+	'info_sauvegarde_documents' => 'Zálohovať dokumenty',
+	'info_sauvegarde_echouee' => 'Ak sa zálohu nepodarí vytvoriť ("Prekročenie maximálneho času na vykonanie operácie"),',
+	'info_sauvegarde_forums' => 'Zálohovať diskusné fóra',
+	'info_sauvegarde_groupe_mots' => 'Zálohovať skupiny kľúčových slov',
+	'info_sauvegarde_messages' => 'Zálohovať správy',
+	'info_sauvegarde_mots_cles' => 'Zálohovať kľúčové slová',
+	'info_sauvegarde_petitions' => 'Zálohovať petície',
+	'info_sauvegarde_refers' => 'Zálohovať referery',
+	'info_sauvegarde_reussi_01' => 'Záloha bola úspešne vytvorená.',
+	'info_sauvegarde_rubrique_reussi' => 'Tabuľky v rubrike @titre@ boli uložené do archívu @archive@. Môžete',
+	'info_sauvegarde_rubriques' => 'Zálohovať rubriky',
+	'info_sauvegarde_signatures' => 'Zálohovať podpisy pod petície',
+	'info_sauvegarde_sites_references' => 'Zálohovať odkazované stránky',
+	'info_sauvegarde_type_documents' => 'Zálohovať typy dokumentov',
+	'info_sauvegarde_visites' => 'Zálohovať návštevy',
 	'info_visites' => 'Návštev:',
 	'info_visites_plus_populaires' => 'Zobraziť návštevy <b>najčítanejších</b> a <b>najnovších publikovaných článkov:</b>',
 	'info_zoom' => 'lupa',
@@ -64,25 +64,25 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'Distribúcia podľa jazyka',
 
 	// R
-	'resume' => 'Resume', # NEW
+	'resume' => 'Zhrnutie',
 
 	// S
-	'sauvegarde_fusionner' => 'Fusionner la base actuelle et la sauvegarde', # NEW
-	'sauvegarde_fusionner_depublier' => 'Dépublier les objets fusionnés', # NEW
-	'sauvegarde_url_origine' => 'Eventuellement, URL du site d\'origine :', # NEW
+	'sauvegarde_fusionner' => 'Zlúčiť aktuálnu databázu so zálohou',
+	'sauvegarde_fusionner_depublier' => 'Zrušiť publikovanie zlúčených objektov',
+	'sauvegarde_url_origine' => 'Pre prípad potreby pôvodná adresa stránky:',
 
 	// T
 	'texte_admin_effacer_stats' => 'Tento príkaz vymaže všetky štatistiky o návštevách na stránke, vrátane popularity článkov.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
-	'texte_admin_tech_03' => 'Vous pouvez choisir de sauvegarder le fichier sous forme compressée, afin
-	d\'écourter son transfert chez vous ou sur un serveur de sauvegardes, et d\'économiser de l\'espace disque.', # NEW
-	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ', # NEW
+	'texte_admin_effacer_toutes_stats' => 'Prvé tlačidlo vymaže všetky štatistiky: návštevy, údaje o popularite článkov a prichádzajúcich odkazoch.',
+	'texte_admin_tech_03' => 'Môžete sa rozhodnúť, že súbor uložíte v komprimovanej podobe,
+ aby ste skrátili čas jeho prenosu na server so zálohou alebo z neho a ušetrili miesto na disku.',
+	'texte_admin_tech_04' => 'Cieľ zlúčenia s inou databázou, zálohu môžete obmedziť na nejakú rubriku:',
 	'texte_comment_lire_tableau' => 'Články sa hodnotia podľa popularity.
  Ak prejdete myšou po názve nejakého článku,
 zobrazí sa jeho popularita (tzn. približný počet
  návštev za deň, ktorý bude mať, ak bude pokračovať súčasný trend)
   a počet návštev zaznamenaných odvtedy, čo bol prvýkrát publikovaný.',
-	'texte_sauvegarde_compressee' => 'La sauvegarde sera faite dans le fichier non compressé @fichier@.', # NEW
+	'texte_sauvegarde_compressee' => 'Záloha sa vytvorí v dekomprimovanom súbore @fichier@.',
 	'texte_signification' => 'Tmavé čiary znázorňujú kumulatívne vstupy (celkom za podrubriky), svetlé čiary znázorňujú počet návštev každej rubriky.',
 	'titre_evolution_visite' => 'Úroveň návštev',
 	'titre_liens_entrants' => 'Prichádzajúce odkazy',
@@ -90,8 +90,8 @@ zobrazí sa jeho popularita (tzn. približný počet
 	'titre_page_statistiques_visites' => 'Štatistiky návštev',
 
 	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'visites_journalieres' => 'Počet návštev za deň',
+	'visites_mensuelles' => 'Počet návštev za mesiac'
 );
 
 ?>
