@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('_ECRIRE_INC_VERSION')) return;
+
 // sur les envois html,
 // compter les visites.
 function stats_affichage_entetes_final($entetes){
