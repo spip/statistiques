@@ -7,7 +7,6 @@
 		[(#ACTION_FORMULAIRE{#ENV{action}})]
 		<ul>
 			<li class='editer configurer_activer_statistiques[ (#ENV**{erreurs}|table_valeur{activer_statistiques}|oui)erreur]'>
-				<label><:statistiques:info_question_gerer_statistiques:></label>
 				[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{activer_statistiques})</span>]
 				<div class='choix'>
 					<input class='checkbox' type="checkbox" name="activer_statistiques" value='oui' [checked="(#ENV{activer_statistiques}|=={oui}|?{checked})"] id="activer_statistiques"/>
