@@ -263,6 +263,10 @@ search\.babylon\.com
 text=
 (www\.)?yandex\.ru
 
+[Xeoo]
+k=
+(www\.)?xeoo\.com
+
 #
 # Services de mail
 # 
