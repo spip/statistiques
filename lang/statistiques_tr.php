@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'popülerlik : @popularite@ ; ziyaretler : @visites@',
 	'info_popularite_5' => 'Popülerlik  ',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Siteniz ziyaret istatistiğini yönetmeli mi ?',
 	'info_question_vignettes_referer' => 'İstatistikleri incelediğinizde, ziyaretlerin yapıldığı kaynak sitelerden görüntüler görebilirsiniz',
 	'info_question_vignettes_referer_oui' => 'Ziyaretlerin yapıldığı kaynak sitelerden görüntüler göster',
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'Ziyaret :',
 	'info_visites_plus_populaires' => '<b>En popüler makaleler</b> ile <b>yayınlanan son makalelere</b> yapılan ziyaretleri görüntüle.',
 	'info_zoom' => 'yakınlaştır',
-	'item_gerer_statistiques' => 'İstatistikleri yönet',
+	'item_gerer_statistiques' => 'İstatistikleri yönet', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Ziyaretlerin kaynağı',

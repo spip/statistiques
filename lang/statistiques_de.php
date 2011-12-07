@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'Beliebtheit: @popularite@ ; Besuche: @visites@',
 	'info_popularite_5' => 'Beliebtheit:',
 	'info_previsions' => 'Vorschau:',
-	'info_question_gerer_statistiques' => 'Soll SPIP Besucherstatistiken anlegen?',
 	'info_question_vignettes_referer' => 'Sie können die Besucherstatistiken mit Thumbnails der Herkunftswebsites (referer) ergänzen',
 	'info_question_vignettes_referer_oui' => 'Thumbnails der Herkunftswebsites anzeigen',
 	'info_restauration_sauvegarde_insert' => '@archive@ wird in die Datenbank eingefügt',
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'Besuche:',
 	'info_visites_plus_populaires' => 'Seitenabrufe für die <b>beliebtesten Artikel</b> und die <b>letzten veröffentlichten Artikel:</b>',
 	'info_zoom' => 'Zoom',
-	'item_gerer_statistiques' => 'Statistiken verwalten',
+	'item_gerer_statistiques' => 'Statistiken verwalten', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Ursprung der Besuche',

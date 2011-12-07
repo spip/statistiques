@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'popularitate : @popularite@ ; vizites : @visites@',
 	'info_popularite_5' => 'popularitate :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Site-ul dumneavoastră trebuie să gestioneze statisticile vizitelor ?',
 	'info_question_vignettes_referer' => 'Atunci când vizualizaţi statisticile, puteţi vizualiza pre-vederi ale site-uri de unde provin vizitele',
 	'info_question_vignettes_referer_oui' => 'Afişaţi capturile site-urilor de unde provin vizitele',
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'vizite :',
 	'info_visites_plus_populaires' => 'Afişaţi vizitele pentru <b>articolele cele mai populare</b> şi pentru <b>ultimele articole publicate</b> :',
 	'info_zoom' => 'mărire',
-	'item_gerer_statistiques' => 'Gestionaţi statisticile',
+	'item_gerer_statistiques' => 'Gestionaţi statisticile', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Originea vizitelor',

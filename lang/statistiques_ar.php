@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'الشعبية: @popularite@؛ الزيارات: @visites@',
 	'info_popularite_5' => 'الشعبية:',
 	'info_previsions' => 'توقعات:',
-	'info_question_gerer_statistiques' => 'هل تريد أن يدير الموقع إحصاءات الزيارات؟',
 	'info_question_vignettes_referer' => 'عندما تعاين الاحضاءات، يمكنك ايضاً مشاهدة مصغرات عن المواقع الصادرة منها.',
 	'info_question_vignettes_referer_oui' => 'عرض مصغرات عن مواقع مصدر الزيارات',
 	'info_restauration_sauvegarde_insert' => 'إدراج @archive@ في القاعدة',
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'زيارة:',
 	'info_visites_plus_populaires' => 'إظهار الزيارات <b>لأكثر المقالات شعبية</b> و<b>لأحدث المقالات المنشورة:</ b>',
 	'info_zoom' => 'تكبير-تصغير العرض',
-	'item_gerer_statistiques' => 'إدارة الإحصاءات',
+	'item_gerer_statistiques' => 'إدارة الإحصاءات', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'مصدر الزيارات',

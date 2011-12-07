@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'suosio: @popularite@; käyntiä: @visites@',
 	'info_popularite_5' => 'suosio:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Tulisiko sivustosi käyttämään kävijätilastointia?',
 	'info_question_vignettes_referer' => 'When you consult the statistics, you can see a preview of the originating sites of the visits. ', # NEW
 	'info_question_vignettes_referer_oui' => 'Show the screenshots of the originating sites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'käyntejä:',
 	'info_visites_plus_populaires' => 'Show visits for <b>the most popular articles</b> and for <b>the last published articles:</b>', # NEW
 	'info_zoom' => 'zoom', # NEW
-	'item_gerer_statistiques' => 'Manage statistics', # NEW
+	'item_gerer_statistiques' => 'Manage statistics', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Kävijöiden alkuperä',

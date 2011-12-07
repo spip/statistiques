@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => '流行: @popularite@; 访问: @visites@',
 	'info_popularite_5' => '流行:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => '你的站点管理访问者统计吗?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => '访问:',
 	'info_visites_plus_populaires' => '显示 <b>最流行的文章</b> 访问者和 <b>最近发表的文章:</b>',
 	'info_zoom' => '缩放',
-	'item_gerer_statistiques' => '管理统计',
+	'item_gerer_statistiques' => '管理统计', # MODIF
 
 	// O
 	'onglet_origine_visites' => '访问者起源',

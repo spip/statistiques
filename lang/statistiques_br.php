@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'brud; : @popularite@ ; gweladennoù : @visites@',
 	'info_popularite_5' => 'brud; :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Ha rankout a ra ho lec\'hienn merañ stadegoù ar gweladennoù ?',
 	'info_question_vignettes_referer' => 'En ur sellet ouzh ar stadegoù e c\'hallit teuler un tamm sell ouzh lec\'hiennoù orin ar weladennerien',
 	'info_question_vignettes_referer_oui' => 'Diskouez skeudennoùigoù lec\'hiennoù orin ar weladennerien',
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'gweladenn :',
 	'info_visites_plus_populaires' => 'Diskouez ar gweladennoù evit <b>ar pennadoù brudetañ</b> hag evit <b>ar pennadoù nevez-embannet :</b>',
 	'info_zoom' => 'zoum',
-	'item_gerer_statistiques' => 'Merañ ar stadegoù',
+	'item_gerer_statistiques' => 'Merañ ar stadegoù', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Orin ar gweladennoù',

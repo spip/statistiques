@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'популярност: @popularite@; посещения: @visites@',
 	'info_popularite_5' => 'популярност:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Желаете ли сайтът да поддържа статистика на посещенията?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'посещения:',
 	'info_visites_plus_populaires' => 'Показване на посещения за <b>най-четени статии</b> и за <b>най-новите публикувани статии:</b>',
 	'info_zoom' => 'увеличение',
-	'item_gerer_statistiques' => 'Управление на статистиката',
+	'item_gerer_statistiques' => 'Управление на статистиката', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Произход на посещенията',

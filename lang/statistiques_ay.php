@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'popularité : @popularite@ ; visites : @visites@', # NEW
 	'info_popularite_5' => 'Juk\'amp tumpata:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Votre site doit-il gérer les statistiques des visites ?', # NEW
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'tumpawinaka:',
 	'info_visites_plus_populaires' => 'Afficher les visites pour <b>les articles les plus populaires</b> et pour <b>les derniers articles publiés :</b>', # NEW
 	'info_zoom' => 'Jach\'aptaña jisk\'aptaña',
-	'item_gerer_statistiques' => 'Gérer les statistiques', # NEW
+	'item_gerer_statistiques' => 'Gérer les statistiques des visites', # NEW
 
 	// O
 	'onglet_origine_visites' => 'Tumpatanakat qallta',

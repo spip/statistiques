@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'popularitas: @popularite@; kunjungan: @visites@',
 	'info_popularite_5' => 'popularitas:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Apakah situs anda ingin mengelola statistik kunjungan?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'kunjungan:',
 	'info_visites_plus_populaires' => 'Tampilkan kunjungan untuk <b>artikel-artikel yang terpopuler</b> dan untuk <b>artikel-artikel yang terakhir dipublikasi:</b>',
 	'info_zoom' => 'perbesar',
-	'item_gerer_statistiques' => 'Kelola statistik',
+	'item_gerer_statistiques' => 'Kelola statistik', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Kunjungan asal',

@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'oblívenost: @popularite@; návštěvy: @visites@',
 	'info_popularite_5' => 'oblíbenost:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Mají se na vašem webu vést statistiky návštěvnosti?',
 	'info_question_vignettes_referer' => 'When you consult the statistics, you can see a preview of the originating sites of the visits. ', # NEW
 	'info_question_vignettes_referer_oui' => 'Show the screenshots of the originating sites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'návštěvy:',
 	'info_visites_plus_populaires' => 'Zobrazit návštevnost <b>nejčtenějších</b> a <b>nejnovějších článků:</b>',
 	'info_zoom' => 'zvětšit/zmenšit',
-	'item_gerer_statistiques' => 'Správa statistik',
+	'item_gerer_statistiques' => 'Správa statistik', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Původ návštěv',

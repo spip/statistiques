@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'Mức phổ thông: @popularite@; lần viếng: @visites@',
 	'info_popularite_5' => ' phổ thông:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Có muốn quản trị các con số thống kê?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => ' thăm viếng:',
 	'info_visites_plus_populaires' => 'Cho thấy số lần vào xem của <b>những bài được chuộng nhất</b> và của <b>những bài đăng tải sau cùng:</b>',
 	'info_zoom' => 'phóng lớn',
-	'item_gerer_statistiques' => 'Quản trị số thống kê',
+	'item_gerer_statistiques' => 'Quản trị số thống kê', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Xuất xứ của thăm viếng',

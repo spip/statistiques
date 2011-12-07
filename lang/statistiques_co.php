@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'pupularità : @popularite@ ; vìsite : @visites@',
 	'info_popularite_5' => 'pupularità :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Deve gestisce u vostru situ e statìstiche di vìsite ?',
 	'info_question_vignettes_referer' => 'Cunsultendu e statìstiche, pudete puru vede in antìcipu siti d\'orìgine di e vìsite',
 	'info_question_vignettes_referer_oui' => 'Vede a cattura di screnu di i siti d\'orìgine di e vìsite',
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'vìsite :',
 	'info_visites_plus_populaires' => 'Vede e vìsite per <b>l\'artìculi i più pupulari</b> è per <b>l\'ùltimi artìculi pubblicati :</b>',
 	'info_zoom' => 'zoom',
-	'item_gerer_statistiques' => 'Gestisce e statìstiche',
+	'item_gerer_statistiques' => 'Gestisce e statìstiche', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Urìgine di e vìsite',

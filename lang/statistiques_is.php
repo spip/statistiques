@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => '<NEW> popularité : @popularite@ ; visites : @visites@',
 	'info_popularite_5' => 'vinsældir :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => '<NEW> Votre site doit-il gérer les statistiques des visites ?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => '<NEW> visites :',
 	'info_visites_plus_populaires' => '<NEW> Afficher les visites pour <b>les articles les plus populaires</b> et pour <b>les derniers articles publiés :</b>',
 	'info_zoom' => 'zoom', # NEW
-	'item_gerer_statistiques' => '<NEW> Gérer les statistiques',
+	'item_gerer_statistiques' => '<NEW> Gérer les statistiques', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Uppruni heimsókna',

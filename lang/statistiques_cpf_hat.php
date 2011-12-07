@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'kouman se popilè : @popularite@ ; vizit yo : @visites@',
 	'info_popularite_5' => 'Kouman se popilè :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Eske w vle sit w kapab okipe estatistik pou vizit yo ?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'vizit yo :',
 	'info_visites_plus_populaires' => 'Afiche tout visit pou <b> atik ki pli popilè</b> ak pou <b>denyé atik an liy :</b>',
 	'info_zoom' => 'gwoplan',
-	'item_gerer_statistiques' => 'Okipe lestatistik yo',
+	'item_gerer_statistiques' => 'Okipe lestatistik yo', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Lorijin vizit yo',

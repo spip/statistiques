@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'Koman lé populèr : @popularite@ ; bann vizit : @visites@',
 	'info_popularite_5' => 'popularité :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Di anou tèrla, si ou vé out sit i zèr bann sifklé pou bann vizit :',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'bann vizit :',
 	'info_visites_plus_populaires' => 'Afis bann vizit pou <b>bann zartik sak lé pli populèr</b> e <b>bann dernyé zartik an liyn :</b>',
 	'info_zoom' => 'zoum',
-	'item_gerer_statistiques' => 'Zèr bann sifklè pou bann vizit',
+	'item_gerer_statistiques' => 'Zèr bann sifklè pou bann vizit', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Lorizin bann vizit',

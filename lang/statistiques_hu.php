@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'Népszer?ség : @popularite@ ; látógatások : @visites@',
 	'info_popularite_5' => 'népszerűség :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'A honlap kezeljen-e státisztikákat a látógatásokról ?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'látógatás :',
 	'info_visites_plus_populaires' => 'Látógatások megjelenítése a <b>legnépszerűbb cikkekről</b> és a <b>legutóljára publikált cikkekről :</b>',
 	'info_zoom' => 'nagyítás',
-	'item_gerer_statistiques' => 'A statisztikák kezelése',
+	'item_gerer_statistiques' => 'A statisztikák kezelése', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'A látógatások származása',

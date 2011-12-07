@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'polularitet: @popularite@; besøg: @visites@',
 	'info_popularite_5' => 'polularitet:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Skal dit websted danne besøgsstatistik?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'besøg:',
 	'info_visites_plus_populaires' => 'Vis besøg til <b>de mest populære artikler</b> og til <b>de senest offentliggjorte artikler:</b>',
 	'info_zoom' => 'zoom', # NEW
-	'item_gerer_statistiques' => 'Dan statistik',
+	'item_gerer_statistiques' => 'Dan statistik', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Besøgendes oprindelse',

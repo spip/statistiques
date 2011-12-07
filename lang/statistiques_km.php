@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'ភាពប្រជាប្រិយ ៖  @popularite@; ចំណូលមើល ៖ @visites@',
 	'info_popularite_5' => 'ប្រជាប្រិយភាព៖',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'សៃថ៍ របស់អ្នក ត្រូវតែគ្រប់គ្រង ស្ថិតិ ពួកទស្សនាករ  ?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'ការ​ទស្សនា ៖',
 	'info_visites_plus_populaires' => 'បង្ហាញ​ចេញ ​ការ​ទស្សនា​ទាំងឡាយ សំរាប់<b>អត្ថបទ​ដែល​ប្រជាប្រិយ​បំផុត</b> និង​ សំរាប់ <b>អត្ថបទ ត្រូវបានផ្សព្វផ្សាយ ថ្មីៗ ៖</b>',
 	'info_zoom' => 'ពង្រីក',
-	'item_gerer_statistiques' => 'គ្រប់គ្រង​ស្ថិតិ',
+	'item_gerer_statistiques' => 'គ្រប់គ្រង​ស្ថិតិ', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'ភាព​ដើម នៃការទស្សនា',

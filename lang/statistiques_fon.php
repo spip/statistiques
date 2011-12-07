@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'Tòbítùn : @popularite@ ; Jōnɔ : @visites@',
 	'info_popularite_5' => 'Tòbítùn :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Gblogblojí mi tɔn ɖò ná wlí jōnɔ lɛ hɛn à ?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'jónɔ bìbá:',
 	'info_visites_plus_populaires' => 'xlɛ jónɔ bìbá',
 	'info_zoom' => 'vlɔnvlɔn',
-	'item_gerer_statistiques' => 'Tò nyíkɔ lɛ',
+	'item_gerer_statistiques' => 'Tò nyíkɔ lɛ', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Bìbɛ wɛn lɛ tɔn ',

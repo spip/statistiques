@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'ထင်ပေါ်ကျော်ကြားမှု -  @popularite@; ဝင်ရောက်လည်ပတ်သူများ  @visites@',
 	'info_popularite_5' => 'ထင်ပေါ်ကျော်ကြားမှု',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'သင့်ဝက်ဘ်ဆိုက်တွင် ဝင်ရောက်လည်ပတ်သူများစာရင်းကို စီမံလိုပါသလား',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'လာလည်သူများ',
 	'info_visites_plus_populaires' => '<b>အကျော်ကြားဆုံး ဆောင်းပါးများ</b> နှင့် <b>နောက်ဆုံး​ထုတ်ဝေ​သော ဆောင်းပါးများ</b>အတွက် ဝင်ရောက်ကြည့်ရှုသူများကို ပြပါ',
 	'info_zoom' => 'အ​ကြီးချဲ့ရန်',
-	'item_gerer_statistiques' => '​စာရင်းအင်းများကို စီမံခန့်ခွဲပါ',
+	'item_gerer_statistiques' => '​စာရင်းအင်းများကို စီမံခန့်ခွဲပါ', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'အ​မှန်တကယ် လာလယ်သူ',

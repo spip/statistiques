@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'Arrakasta: @popularite@ Bisitak: @visites@',
 	'info_popularite_5' => 'Arrakasta :',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => 'Zure tokiakbisiten estatistikak kudeatzea nahi duzu?',
 	'info_question_vignettes_referer' => 'Estatistikak begiratzean, bisiten jatorrien guneen aurrebista ikusten ahal duzu',
 	'info_question_vignettes_referer_oui' => 'Bisiten jatorrien guneen kapturak erakutsi',
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'bisitak :',
 	'info_visites_plus_populaires' => 'Bisitak bistaratu artikulu hedatuenengatik eta argitaratutako azken artikuluengatik :',
 	'info_zoom' => 'zoom',
-	'item_gerer_statistiques' => 'Estatistikak kudeatu',
+	'item_gerer_statistiques' => 'Estatistikak kudeatu', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'Bisiten jatorria',

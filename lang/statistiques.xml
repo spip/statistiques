@@ -18,6 +18,9 @@
 	<langue code="de">
 		<traducteur nom="klaus" />
 	</langue>
+	<langue code="el">
+		<traducteur nom="yann7" />
+	</langue>
 	<langue code="en_hx" />
 	<langue code="eo" />
 	<langue code="es" />
@@ -58,7 +61,6 @@
 		<traducteur nom="rporto" />
 	</langue>
 	<langue code="ro" />
-	<langue code="ru" />
 	<langue code="sk">
 		<traducteur nom="jaro" />
 	</langue>

@@ -30,7 +30,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'p0pu14r17y:&nb5p;@popularite@; v15175:&nb5p;@visites@',
 	'info_popularite_5' => 'p0pu14r17y:',
 	'info_previsions' => 'prévisions :', # NEW
-	'info_question_gerer_statistiques' => '5h0u1d y0ur 5173 m4n4g3 v15175 57471571c5?',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
@@ -56,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'v15175:',
 	'info_visites_plus_populaires' => '5h0w v15175 f0r <b>7h3 m057 p0pu14r 4r71c135</b> 4nd f0r <b>7h3 1457 pub115h3d 4r71c135:</b>',
 	'info_zoom' => 'zoom', # NEW
-	'item_gerer_statistiques' => 'M4n4g3 57471571c5',
+	'item_gerer_statistiques' => 'M4n4g3 57471571c5', # MODIF
 
 	// O
 	'onglet_origine_visites' => 'V15175 0r1g1n',
