@@ -28,7 +28,7 @@
 	  <tbody>
 		<BOUCLE_statsm(DATA){source stats_visites,mois,#ENV{duree,365},#ENV{id_article}}>
 			<tr class="c_[(#CLE|affdate{l}|substr{0,3})][(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)c_today]">
-				<th title="[(#CLE|affdate{'Y-m-01'})]">[(#CLE|affdate_mois_annee)]</th>
+				<th title="[(#CLE|affdate{'Y/m/01'})]">[(#CLE|affdate_mois_annee)]</th>
 				<td class="val">#VALEUR{visites}</td>
 				<td class="mean">[(#VALEUR{moyenne}|round)]</td>
 				<td class="prev">[(#VALEUR{prevision})]</td>
