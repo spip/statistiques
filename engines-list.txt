@@ -104,7 +104,7 @@ www\.excite\.fr
 (.*)recherchet?\.aol\.fr
 
 [AOLsearch]
-query=
+(query|q)=
 (.*)search\.aol\.(.*)
 
 [AllTheWeb]
