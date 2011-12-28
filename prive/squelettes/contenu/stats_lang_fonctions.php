@@ -27,10 +27,12 @@ function affiche_stats_lang($critere) {
 	$r = sql_fetsel("SUM($critere) AS total_visites", "spip_articles");
 
 	$visites = 1;
-	if ($r)
+	// attention a '0.0'
+	if ($r and $r['total_visites'] > 0) {
 		$total_visites = $r['total_visites'];
-	else
+	} else {
 		$total_visites = 1;
+	}
 
 	$result = sql_select("lang, SUM(".$critere.") AS cnt", "spip_articles", "statut='publie' ", "lang");
 		
