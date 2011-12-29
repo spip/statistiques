@@ -21,18 +21,6 @@
 #SET{right,#ENV{ltr}|choixsiegal{left,right,left}}
 
 
-/* exec=statistiques_visites */
-.statistiques_visites ul.referers { margin-left: 0; padding-left: 0; list-style: none; color: #666; }
-.statistiques_visites ul.referers li { clear: #GET{right}; margin-bottom: 1em; padding-left: 16px; }
-.statistiques_visites ul.referers li .titrem { margin-left: -16px; font-weight: normal; }
-.statistiques_visites ul.referers li .visites3 { color: red; }
-.statistiques_visites ul.referers li .visites2 { color: #666; }
-.statistiques_visites ul.referers li .visites1 { color: #999; }
-.statistiques_visites ul.referers li a { font-weight: bold; }
-.statistiques_visites ul.referers li ul { font-size: x-small; list-style-type: disc; }
-.statistiques_visites ul.referers li li { clear: none; margin-bottom: 0; padding-left: 0; }
-.statistiques_visites ul.referers li li a { font-weight: normal; }
-
 ul.classement {list-style:none;font-size:x-small;margin:0;padding:0;padding-#GET{left}:20px;color:#666666;}
 ul.classement li {padding:0 0 4px;margin:0;line-height:100%;}
 ul.classement li em {display:block;width:25px;float:#GET{left};margin-left:-10px;position:relative;display:inline;font-style:normal;text-align:#GET{right};}
@@ -73,11 +61,6 @@ table#visites tr.c_recap th {background-color:#[(#GET{foncee}|couleur_foncer)];c
 .graphLegend .legendColorBox div{width:14px; height:10px;}
 .graphLegend .cacher .legendColorBox div div{position:absolute; left:-3000em;}
 
-/* particularites stats SPIP */
-.statistiques_visites .graphResult{float:none;}
-.statistiques_visites .graphInfo{float:none;}
-.statistiques_visites .graphLegend table{width:100%; padding:0 1em 1em 1em;}
-.statistiques_visites .graphLegend tr{display:inline;}
 
 .tooltip_statistiques{
 	position: absolute;
@@ -87,7 +70,8 @@ table#visites tr.c_recap th {background-color:#[(#GET{foncee}|couleur_foncer)];c
 	background-color: #fee;
 }
 
-.stats_referers .liste-items.referers li.referer {padding-left:300px;}
+.stats_referers .liste-items.referers li.referer {padding-left:300px;background-image: url("#CHEMIN_IMAGE{deplierhaut.gif}");background-position: 0.6925em 0.6925em;background-repeat: no-repeat;}
+.stats_referers .liste-items.referers li.referer.open {background-image: url("#CHEMIN_IMAGE{deplierbas.gif}");}
 .stats_referers .liste-items.referers li.referer span.visites {float:left;text-align:right;width:140px;margin-left:-150px;}
 .stats_referers .liste-items.referers li.referer .miniature {margin-left:-295px;float:left;max-width:140px;}
 .stats_referers .liste-items.referers li.referer ul {margin-left:15px;padding-left:0;}
