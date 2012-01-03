@@ -55,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'Návštev:',
 	'info_visites_plus_populaires' => 'Zobraziť návštevy <b>najčítanejších</b> a <b>najnovších publikovaných článkov:</b>',
 	'info_zoom' => 'lupa',
-	'item_gerer_statistiques' => 'Riadiť štatistiky', # MODIF
+	'item_gerer_statistiques' => 'Riadiť štatistiky návštev',
 
 	// O
 	'onglet_origine_visites' => 'Pôvod návštev',
