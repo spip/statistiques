@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// S
-	'stats_description' => 'Statistiques de SPIP', # NEW
+	'stats_description' => 'Statistics of SPIP',
 	'stats_nom' => 'Statistics',
 	'stats_slogan' => 'Statistics management in SPIP'
 );
