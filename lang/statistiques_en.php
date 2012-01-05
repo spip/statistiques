@@ -63,7 +63,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'Distribution by language',
 
 	// R
-	'resume' => 'Resume', # NEW
+	'resume' => 'Resume', # MODIF
 
 	// S
 	'sauvegarde_fusionner' => 'Fusionner la base actuelle et la sauvegarde', # NEW

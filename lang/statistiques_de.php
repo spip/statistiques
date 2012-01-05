@@ -63,7 +63,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'nach Sprachen',
 
 	// R
-	'resume' => 'Resume', # NEW
+	'resume' => 'Resume', # MODIF
 
 	// S
 	'sauvegarde_fusionner' => 'Aktuelle Datenbank und Sicherung zusammenführen',

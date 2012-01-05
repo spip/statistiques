@@ -63,7 +63,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'Distribúcia podľa jazyka',
 
 	// R
-	'resume' => 'Zhrnutie',
+	'resume' => 'Zhrnutie', # MODIF
 
 	// S
 	'sauvegarde_fusionner' => 'Zlúčiť aktuálnu databázu so zálohou',
