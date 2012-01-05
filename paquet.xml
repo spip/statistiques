@@ -1,9 +1,9 @@
 <paquet
 	prefix="stats"
 	categorie="statistique"
-	version="0.4.2"
+	version="0.4.3"
 	etat="test"
-	compatibilite="[3.0.0-alpha2;["
+	compatibilite="[3.0.0-beta2;["
 	logo="prive/themes/spip/images/statistique-32.png"
 	schema="1.0.0"
 >	

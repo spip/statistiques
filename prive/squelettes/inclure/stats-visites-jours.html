@@ -18,7 +18,7 @@
 #SET{lastlast,0}
 <B_statsj>
 
-	<table class='spip info visites' style="width:145px;position:absolute;#LANG_RIGHT:10px;margin-top:7px;">
+	<table class='spip info visites' style="width:145px;position:absolute;#LANG_RIGHT:0px;margin-top:30px;">
 		<caption><:statistiques:resume:></caption>
 		<tbody>
 			<tr>
@@ -30,12 +30,12 @@
 				<td class='num'>[(#GET{moy}|round)]</td>
 			</tr>
 			<tr>
-				<th><a href="#URL_ECRIRE{statistiques_referers}"
+				<th><a href="#URL_ECRIRE{stats_referers}"
 								title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_aujourdhui|trim{':'}|trim|ucfirst:></a></th>
 				<td class='num'>#GET{last}</td>
 			</tr>
 			<tr>
-				<th><a href="#URL_ECRIRE{statistiques_referers,jour=veille}"
+				<th><a href="#URL_ECRIRE{stats_referers,jour=veille}"
 								title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_hier|trim{':'}|trim|ucfirst:></a></th>
 				<td class='num'>#GET{lastlast}</td>
 			</tr>
