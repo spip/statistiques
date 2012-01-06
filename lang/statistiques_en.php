@@ -34,11 +34,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_question_vignettes_referer_oui' => 'Show screenshots of referring sites',
 	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
 	'info_sauvegarde_articles' => 'Backup the articles',
-	'info_sauvegarde_articles_sites_ref' => 'Sauvegarder les articles des sites référencés', # NEW
+	'info_sauvegarde_articles_sites_ref' => 'Backup the articles of referenced Web sites',
 	'info_sauvegarde_auteurs' => 'Backup the autors',
 	'info_sauvegarde_breves' => 'Backup the news items',
 	'info_sauvegarde_documents' => 'Backup the documents',
-	'info_sauvegarde_echouee' => 'Si la sauvegarde a échoué («Maximum execution time exceeded»),', # NEW
+	'info_sauvegarde_echouee' => 'If the backup failed («Maximum execution time exceeded»),',
 	'info_sauvegarde_forums' => 'Backup the forums',
 	'info_sauvegarde_groupe_mots' => 'Backup the keyword groups',
 	'info_sauvegarde_messages' => 'Backup the messages',
@@ -48,10 +48,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_sauvegarde_reussi_01' => 'Successful backup.',
 	'info_sauvegarde_rubrique_reussi' => 'Les tables de la rubrique @titre@ ont été sauvegardée dans @archive@. Vous pouvez', # NEW
 	'info_sauvegarde_rubriques' => 'Backup the sections',
-	'info_sauvegarde_signatures' => 'Sauvegarder les signatures de pétitions', # NEW
-	'info_sauvegarde_sites_references' => 'Sauvegarder les sites référencés', # NEW
-	'info_sauvegarde_type_documents' => 'Sauvegarder les types de documents', # NEW
-	'info_sauvegarde_visites' => 'Sauvegarder les visites', # NEW
+	'info_sauvegarde_signatures' => 'Backup the petitions signatures',
+	'info_sauvegarde_sites_references' => 'Backup the referenced Web sites',
+	'info_sauvegarde_type_documents' => 'Backup the documents types',
+	'info_sauvegarde_visites' => 'Backup the visits',
 	'info_visites' => 'visits:',
 	'info_visites_plus_populaires' => 'Show visits for <b>the most popular articles</b> and <b>the most recent articles:</b>',
 	'info_zoom' => 'zoom',
@@ -63,18 +63,17 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'Distribution by language',
 
 	// R
-	'resume' => 'Resume', # MODIF
+	'resume' => 'Resume',
 
 	// S
-	'sauvegarde_fusionner' => 'Fusionner la base actuelle et la sauvegarde', # NEW
-	'sauvegarde_fusionner_depublier' => 'Dépublier les objets fusionnés', # NEW
+	'sauvegarde_fusionner' => 'Merge the current database and the backup',
+	'sauvegarde_fusionner_depublier' => 'Unpublish the merged objects',
 	'sauvegarde_url_origine' => 'Eventually, the original site URL:',
 
 	// T
 	'texte_admin_effacer_stats' => 'This command deletes all statistics on visits to the site, including article popularity.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
-	'texte_admin_tech_03' => 'Vous pouvez choisir de sauvegarder le fichier sous forme compressée, afin
-	d\'écourter son transfert chez vous ou sur un serveur de sauvegardes, et d\'économiser de l\'espace disque.', # NEW
+	'texte_admin_effacer_toutes_stats' => 'The first button deletes all statistics: visits, articles popularity and referers.',
+	'texte_admin_tech_03' => 'You can choose to save the file as compressed in order to shorten its transfer to your computer or to a backup server, and save disk space.',
 	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ', # NEW
 	'texte_comment_lire_tableau' => 'Articles are ranked by popularity.
  Mouseover any article\'s title to
