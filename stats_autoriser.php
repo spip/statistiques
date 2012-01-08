@@ -22,21 +22,21 @@ function autoriser_voirstats_dist($faire, $type, $id, $qui, $opt) {
 }
 
 // autorisation des boutons et onglets
-function autoriser_statistiques_visites_menu_dist($faire, $type, $id, $qui, $opt) {
+function autoriser_statsvisites_onglet_dist($faire, $type, $id, $qui, $opt) {
 	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
-function autoriser_statistiques_repartition_menu_dist($faire, $type, $id, $qui, $opt) {
+function autoriser_statsrepartition_onglet_dist($faire, $type, $id, $qui, $opt) {
 	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
-function autoriser_statistiques_lang_menu_dist($faire, $type, $id, $qui, $opt) {
-	return ($GLOBALS['meta']['multi_articles'] == 'oui' 
+function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
+	return ($GLOBALS['meta']['multi_articles'] == 'oui'
 			OR $GLOBALS['meta']['multi_rubriques'] == 'oui')
 		AND autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
-function autoriser_statistiques_referers_menu_dist($faire, $type, $id, $qui, $opt) {
+function autoriser_statsreferers_onglet_dist($faire, $type, $id, $qui, $opt) {
 	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
