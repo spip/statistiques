@@ -10,7 +10,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// B
 	'bouton_effacer_referers' => 'Delete only incoming links',
 	'bouton_effacer_statistiques' => 'Delete all statistics',
-	'bouton_radio_sauvegarde_compressee' => 'sauvegarde compressée sous @fichier@', # NEW
+	'bouton_radio_sauvegarde_compressee' => 'compressed backup as @fichier@',
 	'bouton_radio_sauvegarde_non_compressee' => 'Uncompressed backup in @fichier@',
 
 	// C
@@ -32,7 +32,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_previsions' => 'forecasts:',
 	'info_question_vignettes_referer' => 'When you consult the statistics, you can see a preview of any referring sites from which a visitor came. ',
 	'info_question_vignettes_referer_oui' => 'Show screenshots of referring sites',
-	'info_restauration_sauvegarde_insert' => 'Insertion de @archive@ dans la base', # NEW
+	'info_restauration_sauvegarde_insert' => 'Insertion of @archive@ in the database',
 	'info_sauvegarde_articles' => 'Backup the articles',
 	'info_sauvegarde_articles_sites_ref' => 'Backup the articles of referenced Web sites',
 	'info_sauvegarde_auteurs' => 'Backup the autors',
@@ -46,7 +46,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_sauvegarde_petitions' => 'Backup the petitions',
 	'info_sauvegarde_refers' => 'Backup the referers',
 	'info_sauvegarde_reussi_01' => 'Successful backup.',
-	'info_sauvegarde_rubrique_reussi' => 'Les tables de la rubrique @titre@ ont été sauvegardée dans @archive@. Vous pouvez', # NEW
+	'info_sauvegarde_rubrique_reussi' => 'The tables of the section @titre@ have been saved in @archive@. You can',
 	'info_sauvegarde_rubriques' => 'Backup the sections',
 	'info_sauvegarde_signatures' => 'Backup the petitions signatures',
 	'info_sauvegarde_sites_references' => 'Backup the referenced Web sites',
@@ -74,7 +74,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_admin_effacer_stats' => 'This command deletes all statistics on visits to the site, including article popularity.',
 	'texte_admin_effacer_toutes_stats' => 'The first button deletes all statistics: visits, articles popularity and referers.',
 	'texte_admin_tech_03' => 'You can choose to save the file as compressed in order to shorten its transfer to your computer or to a backup server, and save disk space.',
-	'texte_admin_tech_04' => 'Dans un but de fusion avec une autre base, vous pouvez limiter la sauvegarde à la rubrique: ', # NEW
+	'texte_admin_tech_04' => 'For the purpose of merging with another database, you can limit the backup to the section:',
 	'texte_comment_lire_tableau' => 'Articles are ranked by popularity.
  Mouseover any article\'s title to
  show its popularity (i.e. estimated number
