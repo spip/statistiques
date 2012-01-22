@@ -36,7 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// O
 	'onglet_origine_visites' => '访问者起源',
 	'onglet_repartition_debut' => '从开始',
-	'onglet_repartition_lang' => '<MODIF>根据语言重新分布',
+	'onglet_repartition_lang' => '根据语言重新分布', # MODIF
 
 	// R
 	'resume' => 'Resume', # MODIF
@@ -51,7 +51,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   ) 并且访问者数量记录
   自从鼠标开始移过标题显示在气球上
   .',
-	'texte_signification' => '<MODIF>深色条代表条目总数（子专栏总数），浅色条代表各个专栏的访问人数.',
+	'texte_signification' => '深色条代表条目总数（子专栏总数），浅色条代表各个专栏的访问人数.', # MODIF
 	'titre_evolution_visite' => '访问者评估',
 	'titre_liens_entrants' => '访问链接', # MODIF
 	'titre_page_statistiques' => '按专栏统计',

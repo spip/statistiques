@@ -8,11 +8,11 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => '<NEW>Effacer seulement les liens entrants', # NEW
+	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'Очистить статистику',
 
 	// C
-	'csv' => '<NEW>csv', # NEW
+	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Количество посещений<br />@visites@ ',
@@ -39,11 +39,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'Распределение по языкам',
 
 	// R
-	'resume' => '<NEW>Resume', # MODIF
+	'resume' => 'Resume', # NEW
 
 	// T
 	'texte_admin_effacer_stats' => 'Это команда удаляет все данные, которые связаны со статистикой посещений сайта,включая статистику по статьям. ',
-	'texte_admin_effacer_toutes_stats' => '<NEW>Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
+	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'Справа 
  показывается уровень 
   посещаемости статьи; черной линией отображается прогноз посещений (при условии 
@@ -58,8 +58,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'История посещений',
 
 	// V
-	'visites_journalieres' => '<NEW>Nombre de visites par jour', # NEW
-	'visites_mensuelles' => '<NEW>Nombre de visites par mois' # NEW
+	'visites_journalieres' => 'Nombre de visites par jour', # NEW
+	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
 );
 
 ?>
