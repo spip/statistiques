@@ -24,6 +24,7 @@
 	<pipeline nom="formulaire_admin" inclure="stats_pipelines.php" />
 	<pipeline nom="taches_generales_cron" inclure="stats_pipelines.php" />
 	<pipeline nom="autoriser" inclure="stats_autoriser.php" />
+	<pipeline nom="ieconfig_metas" inclure="stats_ieconfig.php" />
 
 	<menu nom="statistiques" titre="statistiques:icone_statistiques_visites" parent="menu_activite" icone="images/statistique-16.png" action="stats_visites" />
 

@@ -120,4 +120,5 @@ prive/transmettre/statistiques.html -text
 public/stats.php -text
 /stats_administrations.php -text
 /stats_autoriser.php -text
+/stats_ieconfig.php -text
 /stats_pipelines.php -text
