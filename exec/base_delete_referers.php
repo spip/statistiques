@@ -16,7 +16,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 function exec_base_delete_referers_dist()
 {
 	include_spip('inc/autoriser');
-	if (!autoriser('detruire','statistiques')) {
+	if (!autoriser('detruire','_statistiques')) {
 		include_spip('inc/minipres');
 		echo minipres();
 	} else {
