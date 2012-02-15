@@ -31,7 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites' => 'زيارة:',
 	'info_visites_plus_populaires' => 'إظهار الزيارات <b>لأكثر المقالات شعبية</b> و<b>لأحدث المقالات المنشورة:</ b>',
 	'info_zoom' => 'تكبير-تصغير العرض',
-	'item_gerer_statistiques' => 'إدارة الإحصاءات', # MODIF
+	'item_gerer_statistiques' => 'إدارة إحصاءات الزيارات',
 
 	// O
 	'onglet_origine_visites' => 'مصدر الزيارات',
@@ -39,7 +39,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'التوزيع حسب اللغات',
 
 	// R
-	'resume' => 'ملخص', # MODIF
+	'resume' => 'ملخص',
 
 	// T
 	'texte_admin_effacer_stats' => 'هذا الأمر يحذف كل البيانات المرتبطة بإحصاءات  زيارات الموقع، بما فيها شعبية المقالات.',
