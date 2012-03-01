@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// I
 	'icone_evolution_visites' => 'Počet návštev<br />@visites@ návštev',
 	'icone_repartition_actuelle' => 'Zobraziť aktuálnu distribúciu',
-	'icone_repartition_visites' => 'Distribúcia návštev',
+	'icone_repartition_visites' => 'Rozdelenie návštev',
 	'icone_statistiques_visites' => 'Štatistika',
 	'info_affichier_visites_articles_plus_visites' => 'Zobraziť návštevy <b>najnavštevovanejších článkov od začiatku:</b>',
 	'info_comment_lire_tableau' => 'Ako čítať tento graf',
