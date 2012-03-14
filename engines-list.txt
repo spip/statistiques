@@ -22,6 +22,7 @@ www\.cegetel\.net
 search\.conduit\.com
 search\.sweetim\.com
 chello\.fr
+isearch\.avg\.com
 
 [Voila]
 (kw|rdata)=
@@ -258,6 +259,18 @@ x_query=
 [Babylon]
 q=
 search\.babylon\.com
+
+[Crawler]
+q=
+(www\.)crawler\.com
+
+[Searchqu]
+q=
+(www\.)searchqu\.com
+
+[Facemoods]
+s=
+start\.facemoods\.com
 
 [Yandex]
 text=
