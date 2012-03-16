@@ -30,7 +30,7 @@ isearch\.avg\.com
 
 [Yahoo!]
 p=
-(.*)(search|ink|dir|google)\.yahoo\.([a-z]+)$
+(.*)(m|search|ink|dir|google)\.yahoo\.([a-z]+)$
 
 [AltaVista]
 q=
@@ -271,6 +271,22 @@ q=
 [Searchqu]
 q=
 (www\.)searchqu\.com
+
+[SearchYa]
+q=
+(www\.|)searchya\.com
+
+[Iadah]
+q=
+(www\.|)iadah\.com
+
+[Incredibar]
+q=
+(search\.)incredibar\.com
+
+[Search-Results]
+q=
+(.*\.|)search-results\.com
 
 [Facemoods]
 s=
