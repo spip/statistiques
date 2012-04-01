@@ -8,11 +8,11 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
+	'bouton_effacer_referers' => 'حذف پيوند‌هاي ورودي فقط',
 	'bouton_effacer_statistiques' => 'پاك كردن تمام آمارها',
 
 	// C
-	'csv' => 'csv', # NEW
+	'csv' => 'سي.اس.وي',
 
 	// I
 	'icone_evolution_visites' => 'نمودار بازديدها <br /> @visites@ بازديد  ',
@@ -25,13 +25,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => ': محبوبيت سايت',
 	'info_popularite_3' => '@popularite@ : محبوبيت سايت @visites@ : بازديد',
 	'info_popularite_5' => ': محبوبيت',
-	'info_previsions' => 'prévisions :', # NEW
+	'info_previsions' => 'پيش‌بيني‌ها: ',
 	'info_question_vignettes_referer' => 'هنگام مراجعه به آمارها، مي‌توانيد نشاني سايت‌هاي مبداء بازديد‌كنندگان را ببينيد.',
 	'info_question_vignettes_referer_oui' => 'گيراندازي سايت‌هاي مبداء بازديدكنندگان را نشان دادن',
 	'info_visites' => ':بازديد ',
 	'info_visites_plus_populaires' => 'نمودار بازديد محبوب ترين مقالات و آخرين مقالات منتشر شده را نمايش دهيد ',
 	'info_zoom' => 'زوم',
-	'item_gerer_statistiques' => 'آمار را اداره كنيد ', # MODIF
+	'item_gerer_statistiques' => 'مديريت آمارهاي بازديدها',
 
 	// O
 	'onglet_origine_visites' => 'مبدأ بازديدها',
@@ -39,11 +39,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'با زبانهاى',
 
 	// R
-	'resume' => 'Resume', # MODIF
+	'resume' => 'خلاصه',
 
 	// T
 	'texte_admin_effacer_stats' => 'اين فرمان تمام داده‌هاي مرتبط با آمارهاي بازديد‌ها از اين سايت و از جمله محبوبيت نسبي مقالات را پاك مي‌كند.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
+	'texte_admin_effacer_toutes_stats' => 'دكمه‌ي اول تمام آمارها را حذف مي‌كند:‌بازديدها، محبويت مقاله‌ها و پيوند‌هاي ورودي.',
 	'texte_comment_lire_tableau' => 'رتبه مقاله در رده بندى محبوبيتها در حاشيه صفحه مشخص شده كه نشانگر تعداد بازديدهاى روزانه مقاله ميباشد وتعداد بازديدها از ابتدا با قرار دادن نوك فلش برروى مقاله مشخص خواهد شد',
 	'texte_signification' => 'خطوط پر رنگ نمودار وروديها (مجموع زير بخشها) و خطوط روشن نشانگر تعداد بازديدكنندگان هر بخش ميباشد.',
 	'titre_evolution_visite' => 'تحول بازديدها',
@@ -52,8 +52,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'آمار بازديدها',
 
 	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'visites_journalieres' => 'تعداد بازديدها طي روز ',
+	'visites_mensuelles' => 'تعداد بازديد‌ها طي ماه '
 );
 
 ?>
