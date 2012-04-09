@@ -8,11 +8,11 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
+	'bouton_effacer_referers' => 'Eliminar sólo los enlaces entrantes',
 	'bouton_effacer_statistiques' => 'Borrar las estadísticas', # MODIF
 
 	// C
-	'csv' => 'csv', # NEW
+	'csv' => 'csv',
 
 	// I
 	'icone_evolution_visites' => 'Evolución de las visitas<br />@visites@ visitas',
@@ -25,7 +25,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'Popularidad del sitio:',
 	'info_popularite_3' => 'Popularidad: @popularite@  Visitas: @visites@',
 	'info_popularite_5' => 'Popularidad:',
-	'info_previsions' => 'prévisions :', # NEW
+	'info_previsions' => 'pronósticos :',
 	'info_question_vignettes_referer' => 'Cuando consultes las estadísticas, puedes tener una vista de los sitios de origen de las visitas',
 	'info_question_vignettes_referer_oui' => 'Mostrar las capturas de los sitios de origen de las visitas',
 	'info_visites' => 'visitas:',
@@ -39,11 +39,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'Distribución por idiomas',
 
 	// R
-	'resume' => 'Resume', # MODIF
+	'resume' => 'Resumen',
 
 	// T
 	'texte_admin_effacer_stats' => 'Esta orden borra todos los datos ligados con las estadísticas de visitas al sitio, incluyendo la popularidad de los artículos.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
+	'texte_admin_effacer_toutes_stats' => 'El primer botón elimina todas las estadísticas: visitas, popularidad de los artículos y enlaces entrantes.',
 	'texte_comment_lire_tableau' => 'El rango del artículo, en la clasificación por popularidad, está indicado al margen; la popularidad del artículo (una estimación del número de visitas cotidianas que recibirá si el ritmo actual de visitas se mantiene) y el número de visitas recibidas desde el inicio se muestran en el menú que aparece cuando pasamos el cursor sobre el título.',
 	'texte_signification' => 'Las barras oscuras representan las entradas acumuladas (total de las subsecciones), las barras claras el número de visitas de cada sección.',
 	'titre_evolution_visite' => 'Evolución de las visitas',
@@ -52,8 +52,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'Estadísticas de las visitas',
 
 	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'visites_journalieres' => 'Cantidad de visitas por día',
+	'visites_mensuelles' => 'Cantidad de visitas por mes'
 );
 
 ?>
