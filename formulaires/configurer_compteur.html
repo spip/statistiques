@@ -29,7 +29,7 @@
 </div>
 <script type='text/javascript'>
 function actualise_capture_referers(){
-	if (jQuery('#activer_statistiques').attr('checked'))
+	if (jQuery('#activer_statistiques').prop('checked'))
 		jQuery('#formulaire_configurer_compteur li.configurer_activer_captures_referers').show();
 	else
 		jQuery('#formulaire_configurer_compteur li.configurer_activer_captures_referers').hide();
