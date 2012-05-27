@@ -15,7 +15,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'csv' => 'csv',
 
 	// I
-	'icone_evolution_visites' => 'Amount of visits <br />@visites@ visits',
+	'icone_evolution_visites' => 'Number of visits <br />@visites@ visits',
 	'icone_repartition_actuelle' => 'Show current distribution',
 	'icone_repartition_visites' => 'Distribution of Visits',
 	'icone_statistiques_visites' => 'Statistics',
