@@ -23,7 +23,7 @@ function public_stats_dist() {
 
 	// Ne pas tenir compte des tentatives de spam des forums
 	if ($_SERVER['REQUEST_METHOD'] !== 'GET'
-	OR $_GET['page'] == 'forum')
+	OR (isset($_GET['page']) AND $_GET['page'] == 'forum'))
 		return;
 
 	// rejet des pages 404
