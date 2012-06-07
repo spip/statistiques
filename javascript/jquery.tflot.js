@@ -617,24 +617,26 @@
 		}
 	}
 
+
 	// Adapte du site de Flot (exemple de visites)
-    // helper for returning the weekends in a period
-    function weekendAreas(axes) {
-        var markings = [];
+	// helper for returning the weekends in a period
+	function weekendAreas(axes) {
+		var markings = [];
 		var heure = 60 * 60 * 1000;
 		var jour = 24 * heure;
 
 		// les week ends
-        // go to the first Saturday
+		// go to the first Saturday
 		var d = new Date(axes.xaxis.min);
-        d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 1) % 7))
-        d.setUTCSeconds(0);
-        d.setUTCMinutes(0);
-        d.setUTCHours(0);
-        do {
-            markings.push({ xaxis: { from: i, to: i + 2*jour }, color: '#f6f6f6' });
-            i += 7*jour;
-        } while (i < axes.xaxis.max);
+		d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 1) % 7))
+		d.setUTCSeconds(0);
+		d.setUTCMinutes(0);
+		d.setUTCHours(0);
+		var i = d.getTime();
+		do {
+			markings.push({ xaxis: { from: i, to: i + 2*jour }, color: '#f6f6f6' });
+			i += 7*jour;
+		} while (i < axes.xaxis.max);
 
 
 		// les mois et les ans...
@@ -642,8 +644,8 @@
 			markings.push(j);
 		});
 
-        return markings;
-    }
+		return markings;
+	}
 
 	// une grille pour afficher les mois et les ans...
 	function yearsArea(axes){
