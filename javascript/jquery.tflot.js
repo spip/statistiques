@@ -663,7 +663,7 @@
 			i = d.getTime();
 			if (m == 0) {couleur = '#CA5F18';}
 			else {couleur = '#D7C2AF'; }
-			markings.push({ xaxis: { from: i - jour, to: i}, color: couleur });
+			markings.push({ xaxis: { from: i, to: i + jour}, color: couleur });
 			if (++m == 12) {m=0; ++y;}
 			d = new Date(Date.UTC(y,m,1,0,0,0));
 		} while (d.getTime() < axes.xaxis.max);
