@@ -51,7 +51,9 @@
 	</langue>
 	<langue code="my" />
 	<langue code="nb" />
-	<langue code="nl" />
+	<langue code="nl" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=nl">
+		<traducteur nom="Suske" lien="http://trad.spip.net/auteur/suske" />
+	</langue>
 	<langue code="oc_auv" />
 	<langue code="oc_gsc" />
 	<langue code="oc_lms" />
