@@ -300,6 +300,18 @@ text=
 k=
 (www\.)?xeoo\.com
 
+[Delta Search]
+q=
+(.*\.|)delta-search\.com
+
+[HolaSearch]
+q=
+(.*\.|)holasearch\.com
+
+[Govome]
+q=
+(.*\.|)govome\.com
+
 #
 # Services de mail
 # 
