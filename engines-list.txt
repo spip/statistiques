@@ -328,6 +328,10 @@ q=
 wd=
 (.*\.|)baidu\.com
 
+[Dogpile]
+q=
+(.*\.|)dogpile\.co\.uk
+
 #
 # Services de mail
 # 
