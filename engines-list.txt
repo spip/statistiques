@@ -332,6 +332,10 @@ wd=
 q=
 (.*\.|)dogpile\.co\.uk
 
+[Trouver]
+q=
+(.*\.|)trouver\.fr
+
 #
 # Services de mail
 # 
