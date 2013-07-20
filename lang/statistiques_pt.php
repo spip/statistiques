@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
+	'bouton_effacer_referers' => 'Apagar apenas as ligações que são recebidas',
 	'bouton_effacer_statistiques' => 'Apagar todas as estatísticas',
 
 	// C
@@ -26,8 +26,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'popularidade : @popularite@ ; visitas : @visites@',
 	'info_popularite_5' => 'popularidade :',
 	'info_previsions' => 'previsões :',
-	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
-	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
+	'info_question_vignettes_referer' => 'Quando consultar as estatísticas, pode ver uma pré-visualização de qualquer sítio de origem das visitas.',
+	'info_question_vignettes_referer_oui' => 'Exibir as capturas de ecrã dos sítios de origem das visitas',
 	'info_visites' => 'visitas :',
 	'info_visites_plus_populaires' => 'Exibir as visitas para <b>os artigos mais populares</b> e para <b>os últimos artigos publicados :</b>',
 	'info_zoom' => 'zoom',
@@ -42,8 +42,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resumo',
 
 	// T
-	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.', # NEW
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
+	'texte_admin_effacer_stats' => 'Esta opção apaga todas as estatísticas das visitas ao seu sítio web, incluindo a popularidade dos artigos.',
+	'texte_admin_effacer_toutes_stats' => 'O primeiro botão apaga todas as estatísticas: visitas, popularidade dos artigos e ligações recebidas.',
 	'texte_comment_lire_tableau' => 'O lugar do artigo,
 na classificação por popularidade, é indicado na margem ; a popularidade do artigo (uma estimativa do
  número de visitas diárias que receberá se o ritmo actual de
@@ -57,8 +57,8 @@ desde o início são exibidos no balão que
 	'titre_page_statistiques_visites' => 'Estatísticas das visitas',
 
 	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'visites_journalieres' => 'Número de visitas por dia',
+	'visites_mensuelles' => 'Número de visitas por mês'
 );
 
 ?>
