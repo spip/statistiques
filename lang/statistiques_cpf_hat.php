@@ -8,11 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'Effacer les statistiques', # MODIF
-
-	// C
-	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Evolisyon vizit yo<br />@visites@ vizit yo',
@@ -25,9 +21,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'popilarite sit-la :',
 	'info_popularite_3' => 'kouman se popilè : @popularite@ ; vizit yo : @visites@',
 	'info_popularite_5' => 'Kouman se popilè :',
-	'info_previsions' => 'prévisions :', # NEW
-	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
-	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_visites' => 'vizit yo :',
 	'info_visites_plus_populaires' => 'Afiche tout visit pou <b> atik ki pli popilè</b> ak pou <b>denyé atik an liy :</b>',
 	'info_zoom' => 'gwoplan',
@@ -42,8 +35,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.', # NEW
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'Plas latik-la,
   nan klasman popilawite, se enskri sou kote ; populawite atik-la
  (yon kont nonb
@@ -55,11 +46,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Evolisyon vizit yo',
 	'titre_liens_entrants' => 'Lyen sa-yo ka rive',
 	'titre_page_statistiques' => 'Estatsitik pou tout pati yo nan sit sa a',
-	'titre_page_statistiques_visites' => 'Estatistik pou tout vizit yo',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'Estatistik pou tout vizit yo'
 );
 
 ?>

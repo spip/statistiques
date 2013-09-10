@@ -8,11 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'İstatistikleri sil', # MODIF
-
-	// C
-	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Ziyaretlerin gelişimi<br /> @visites@ ziyaret',
@@ -25,7 +21,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'Sitenin popülerliği',
 	'info_popularite_3' => 'popülerlik : @popularite@ ; ziyaretler : @visites@',
 	'info_popularite_5' => 'Popülerlik  ',
-	'info_previsions' => 'prévisions :', # NEW
 	'info_question_vignettes_referer' => 'İstatistikleri incelediğinizde, ziyaretlerin yapıldığı kaynak sitelerden görüntüler görebilirsiniz',
 	'info_question_vignettes_referer_oui' => 'Ziyaretlerin yapıldığı kaynak sitelerden görüntüler göster',
 	'info_visites' => 'Ziyaret :',
@@ -43,7 +38,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Bu komut, site ziyareti istatistiklerine bağlı tüm bilgileri siler (makalelerin popülerlikleri de dahil).',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'Popülerlik sınıflandırmasında makalenin sırası kenarda belirtilmiştir ;
    makalenin popülerliği (şimdiki başvuru sıklığı devam ettiği takdirde,
    geleceği tahmin edilen günlük ziyaretçi sayısı) ve başından beri gelen
@@ -53,11 +47,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Ziyaretlerin gelişimi ',
 	'titre_liens_entrants' => 'Giren bağlantılar',
 	'titre_page_statistiques' => 'Bölümlere göre istatistikler ',
-	'titre_page_statistiques_visites' => 'Ziyaret istatistikleri',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'Ziyaret istatistikleri'
 );
 
 ?>

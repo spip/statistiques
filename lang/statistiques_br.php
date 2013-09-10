@@ -8,11 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'Diverkañ ar stadegoù', # MODIF
-
-	// C
-	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Emdroadur ar gweladennoù : <br />@visites@ gweladenn',
@@ -25,7 +21,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'brud al lec\'hienn :',
 	'info_popularite_3' => 'brud; : @popularite@ ; gweladennoù : @visites@',
 	'info_popularite_5' => 'brud; :',
-	'info_previsions' => 'prévisions :', # NEW
 	'info_question_vignettes_referer' => 'En ur sellet ouzh ar stadegoù e c\'hallit teuler un tamm sell ouzh lec\'hiennoù orin ar weladennerien',
 	'info_question_vignettes_referer_oui' => 'Diskouez skeudennoùigoù lec\'hiennoù orin ar weladennerien',
 	'info_visites' => 'gweladenn :',
@@ -43,7 +38,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Diverket e vo an holl roadoù a denn da stadegoù gweladenniñ al lec\'hienn, en o zouez ar re a heuilh berzh ar pennadoù.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'Renk ar pennad,
   hervez e vrud, a c\'haller gwelet er marz;
   brud ar pennad (o rakwelet pet gweladenn en do bemdez ma kendalc\'h
@@ -54,11 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Emdroadur ar gweladennoù',
 	'titre_liens_entrants' => 'Liammoù davet al lec\'hienn',
 	'titre_page_statistiques' => 'Stadegoù dre rubrikennoù',
-	'titre_page_statistiques_visites' => 'Stadegoù gweladenniñ',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'Stadegoù gweladenniñ'
 );
 
 ?>

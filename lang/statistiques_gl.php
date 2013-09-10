@@ -8,11 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'Borrar as estatísticas', # MODIF
-
-	// C
-	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Evoluci&oacute;n das visitas<br />@visites@ visitas',
@@ -43,7 +39,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Este comando borra todos os datos ligados ás estatísticas de visita do web, e inclúe a popularidade dos artigos.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'O rango do artigo,
 		na clasificación por popularidade, está indicado á marxe;
 		a popularidade do artigo (unha estimación do número
@@ -55,11 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Evolución das visitas',
 	'titre_liens_entrants' => 'As ligazóns entrantes do día',
 	'titre_page_statistiques' => 'Estatísticas por temas',
-	'titre_page_statistiques_visites' => 'Estatísticas das visitas',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'Estatísticas das visitas'
 );
 
 ?>

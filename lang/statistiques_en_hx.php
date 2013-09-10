@@ -7,13 +7,6 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
-	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
-	'bouton_effacer_statistiques' => 'Effacer toutes les statistiques', # NEW
-
-	// C
-	'csv' => 'csv', # NEW
-
 	// I
 	'icone_evolution_visites' => 'V15175 3v01u710n<br />@visites@ v15175',
 	'icone_repartition_actuelle' => '5h0w 4c7u41 d157r1bu710n',
@@ -25,12 +18,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => '5173 p0pu14r17y:',
 	'info_popularite_3' => 'p0pu14r17y:&nb5p;@popularite@; v15175:&nb5p;@visites@',
 	'info_popularite_5' => 'p0pu14r17y:',
-	'info_previsions' => 'prévisions :', # NEW
-	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d\'origine des visites', # NEW
-	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d\'origine des visites', # NEW
 	'info_visites' => 'v15175:',
 	'info_visites_plus_populaires' => '5h0w v15175 f0r <b>7h3 m057 p0pu14r 4r71c135</b> 4nd f0r <b>7h3 1457 pub115h3d 4r71c135:</b>',
-	'info_zoom' => 'zoom', # NEW
 	'item_gerer_statistiques' => 'M4n4g3 57471571c5', # MODIF
 
 	// O
@@ -42,8 +31,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.', # NEW
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => '7h3 r4nk 0f 7h3 4r71c13,
 		1n 7h3 p0pu14r17y c14551f1c4710n, 15 1nd1c473d 1n 7h3
 		m4rg1n; 7h3 4r71c13 p0pu14r17y (4n 3571m473 0f
@@ -55,11 +42,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'V15175 3v01u710n',
 	'titre_liens_entrants' => '1nc0m1ng 11nk5 0f 7h3 d4y', # MODIF
 	'titre_page_statistiques' => '57471571c5 by 53c710n',
-	'titre_page_statistiques_visites' => 'V15175 57471571c5',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'V15175 57471571c5'
 );
 
 ?>

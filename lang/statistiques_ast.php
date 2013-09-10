@@ -8,11 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'Desaniciar les estadístiques', # MODIF
-
-	// C
-	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Evolución de les visites<br />@visites@ visites',
@@ -25,7 +21,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'popularidá del sitiu:',
 	'info_popularite_3' => 'popularidá: @popularite@; visites: @visites@',
 	'info_popularite_5' => 'popularidá:',
-	'info_previsions' => 'prévisions :', # NEW
 	'info_question_vignettes_referer' => 'Cuando consultes les estadístiques, pues amosar miniatures de los sitios d\'orixe de les visites',
 	'info_question_vignettes_referer_oui' => 'Amosar captures de los sitios d\'orixe de les visites',
 	'info_visites' => 'visites:',
@@ -43,7 +38,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Esta orde esborra tolos datos tocantes a les estadístiques de visites al sitiu, incluyendo la popularidá de los artículos.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'El rangu de l\'artículu,
   na clasificación por popularidá, vién indicáu nel
   marxe; la popularidá de l\'artículu (una estimación del
@@ -55,11 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Evolución de les visites',
 	'titre_liens_entrants' => 'Enllaces entrantes',
 	'titre_page_statistiques' => 'Estadístiques por estayes',
-	'titre_page_statistiques_visites' => 'Estadístiques de les visites',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'Estadístiques de les visites'
 );
 
 ?>

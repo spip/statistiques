@@ -8,11 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'Esborrar les estadístiques', # MODIF
-
-	// C
-	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Evolució de les visites<br />@visites@ visites',
@@ -25,7 +21,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'popularitat del lloc:',
 	'info_popularite_3' => 'popularitat: @popularite@ ; visites: @visites@',
 	'info_popularite_5' => 'popularitat:',
-	'info_previsions' => 'prévisions :', # NEW
 	'info_question_vignettes_referer' => 'Quan consulteu les estadístiques, podeu visualitzar una estimació dels llocs d\'origen de les visites',
 	'info_question_vignettes_referer_oui' => 'Mostrar les captures dels llocs d\'origen de les visites',
 	'info_visites' => 'visites:',
@@ -43,7 +38,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Aquesta ordre esborra totes les dades lligades a les estadístiques de visita del lloc, fins i tot la popularitat dels articles.',
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'El rang de l\'article,
  dins de la classificació per popularitat, està indicat al marge; la popularitat de l\'article (una estimació del nombre de visites quotidianes que rebrà l\'article si es manté el ritme actual de
   consultes) i el nombre de visites rebudes
@@ -52,11 +46,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Evolució de les visites',
 	'titre_liens_entrants' => 'Enllaços entrants',
 	'titre_page_statistiques' => 'Estadistiques per seccions',
-	'titre_page_statistiques_visites' => 'Estatistiques de les visites',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'Estatistiques de les visites'
 );
 
 ?>

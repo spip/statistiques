@@ -8,11 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_effacer_referers' => 'Effacer seulement les liens entrants', # NEW
 	'bouton_effacer_statistiques' => 'Forviŝi statistikojn', # MODIF
-
-	// C
-	'csv' => 'csv', # NEW
 
 	// I
 	'icone_evolution_visites' => 'Evoluado de la vizitoj<br />@visites@ vizitoj',
@@ -25,7 +21,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'populareco de la retejo :',
 	'info_popularite_3' => 'populareco : @popularite@ ; vizitoj : @visites@',
 	'info_popularite_5' => 'populareco :',
-	'info_previsions' => 'prévisions :', # NEW
 	'info_question_vignettes_referer' => 'Kiam vi konsultas statistikojn, vi povas havi superrigardon pri tio, de kiuj retejoj venas vizitantoj',
 	'info_question_vignettes_referer_oui' => 'Vidigi de kiuj retejoj venas vizitantoj',
 	'info_visites' => 'vizitoj :',
@@ -42,8 +37,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.', # NEW
-	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.', # NEW
 	'texte_comment_lire_tableau' => 'La rango de la artikolo,
   en la klasifiko laŭ populareco, estas indikita en la
   marĝeno ; la populareco de la artikolo (taksado de la
@@ -55,11 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Evoluo de la vizitoj',
 	'titre_liens_entrants' => 'Enirintaj ligoj',
 	'titre_page_statistiques' => 'Statistikoj laŭ rubrikoj',
-	'titre_page_statistiques_visites' => 'Statistikoj de la vizitoj',
-
-	// V
-	'visites_journalieres' => 'Nombre de visites par jour', # NEW
-	'visites_mensuelles' => 'Nombre de visites par mois' # NEW
+	'titre_page_statistiques_visites' => 'Statistikoj de la vizitoj'
 );
 
 ?>
