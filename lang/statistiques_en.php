@@ -45,7 +45,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_admin_effacer_stats' => 'This command deletes all statistics on visits to the site, including article popularity.',
 	'texte_admin_effacer_toutes_stats' => 'The first button deletes all statistics: visits, articles popularity and referers.',
 	'texte_comment_lire_tableau' => 'Articles are ranked by popularity.
- Mouseover any article\'s title to
+ Mouseover any article’s title to
  show its popularity (i.e. estimated number
  of daily visits it will have if the
  current trend continues), and the
