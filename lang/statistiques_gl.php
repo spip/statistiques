@@ -11,7 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_effacer_statistiques' => 'Borrar as estatísticas', # MODIF
 
 	// I
-	'icone_evolution_visites' => 'Evoluci&oacute;n das visitas<br />@visites@ visitas',
+	'icone_evolution_visites' => 'Evolución das visitas<br />@visites@ visitas',
 	'icone_repartition_actuelle' => 'Mostrar a distribución actual',
 	'icone_repartition_visites' => 'Distribución das visitas',
 	'icone_statistiques_visites' => 'Estatísticas',
