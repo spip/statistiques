@@ -15,14 +15,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_repartition_actuelle' => 'Amosar el repartu actual',
 	'icone_repartition_visites' => 'Repartu de les visites',
 	'icone_statistiques_visites' => 'Estadístiques',
-	'info_affichier_visites_articles_plus_visites' => 'Amosar les visites pa <b>los artículos más visitaos dende l\'entamu:</b>',
+	'info_affichier_visites_articles_plus_visites' => 'Amosar les visites pa <b>los artículos más visitaos dende l’entamu:</b>',
 	'info_comment_lire_tableau' => 'Cómo lleer esti cuadru',
 	'info_forum_statistiques' => 'Estadístiques de les visites',
 	'info_popularite_2' => 'popularidá del sitiu:',
 	'info_popularite_3' => 'popularidá: @popularite@; visites: @visites@',
 	'info_popularite_5' => 'popularidá:',
-	'info_question_vignettes_referer' => 'Cuando consultes les estadístiques, pues amosar miniatures de los sitios d\'orixe de les visites',
-	'info_question_vignettes_referer_oui' => 'Amosar captures de los sitios d\'orixe de les visites',
+	'info_question_vignettes_referer' => 'Cuando consultes les estadístiques, pues amosar miniatures de los sitios d’orixe de les visites',
+	'info_question_vignettes_referer_oui' => 'Amosar captures de los sitios d’orixe de les visites',
 	'info_visites' => 'visites:',
 	'info_visites_plus_populaires' => 'Amosar les visites de <b>los artículos más populares</b> y de <b>los caberos artículos espublizaos:</b>',
 	'info_zoom' => 'zoom',
@@ -30,7 +30,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// O
 	'onglet_origine_visites' => 'Orixe de les visites',
-	'onglet_repartition_debut' => 'dende l\'entamu',
+	'onglet_repartition_debut' => 'dende l’entamu',
 	'onglet_repartition_lang' => 'Repartío por llingües',
 
 	// R
@@ -38,12 +38,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Esta orde esborra tolos datos tocantes a les estadístiques de visites al sitiu, incluyendo la popularidá de los artículos.',
-	'texte_comment_lire_tableau' => 'El rangu de l\'artículu,
+	'texte_comment_lire_tableau' => 'El rangu de l’artículu,
   na clasificación por popularidá, vién indicáu nel
-  marxe; la popularidá de l\'artículu (una estimación del
+  marxe; la popularidá de l’artículu (una estimación del
   númberu de visites diaries que recibirá si el ritmu actual de
   consultes se mantuviere) y el númberu de visites recibíes
-  dende\'l so espublizamientu amuésense na burbuya
+  dende’l so espublizamientu amuésense na burbuya
   que apaez al pasar el mur pol títulu.',
 	'texte_signification' => 'Les barres escures representen les entráes acumuláes (total de les sub-estayes), les barres clares el númberu de visites pa cada estaya.',
 	'titre_evolution_visite' => 'Evolución de les visites',

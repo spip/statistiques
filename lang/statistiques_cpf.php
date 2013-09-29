@@ -18,7 +18,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'Popularité lo sitwèb :',
 	'info_popularite_3' => 'Koman lé populèr : @popularite@ ; bann vizit : @visites@',
 	'info_popularite_5' => 'popularité :',
-	'info_visites' => 'bann vizit :',
+	'info_visites' => 'bann vizit :',
 	'info_visites_plus_populaires' => 'Afis bann vizit pou <b>bann zartik sak lé pli populèr</b> e <b>bann dernyé zartik an liyn :</b>',
 	'info_zoom' => 'zoum',
 	'item_gerer_statistiques' => 'Zèr bann sifklè pou bann vizit', # MODIF
@@ -33,7 +33,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_comment_lire_tableau' => 'Dann lamarz-la, ou va trouv lo rand lartik pou vwar kouk sa lé populèr ; pou sa minm, kank
-ou bat-karé si lo non inn lartik, néna inn bil sak i aparé : dann bil-la, i va trouv la popularité lartik èk lo nonb vizit dopwi lorizin.La popularité lé kom inn prévizyon
+ou bat-karé si lo non inn lartik, néna inn bil sak i aparé : dann bil-la, i va trouv la popularité lartik èk lo nonb vizit dopwi lorizin.La popularité lé kom inn prévizyon
 lo nonb vizit posib sir lo sit porézon lo ritm aktyèl lé stab.',
 	'texte_signification' => 'Bann bar fénwar i roprézant  bann zantré kimilé (pou lansanm bann sourubrik), bann bar klèr lo nonb bann vizit pou sakinn rubrik.',
 	'titre_evolution_visite' => 'Lévolisyon do bann vizit',

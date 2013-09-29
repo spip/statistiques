@@ -32,11 +32,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Lo reng de l\'article,
-dins lo classament per popularitat, es indicat dins lo marge; la popularitat de l\'article 
-(una estimacion dau nombre de vesitas quotidiani qu\'eu recebrà se lo ritme actuau de consultacion si manten) e lo nombre de vesitas recebudi
-despí lo començament s\'afichan dins la bofiga 
-qu\'apareisse quora la rateta passa sus lo títol.',
+	'texte_comment_lire_tableau' => 'Lo reng de l’article,
+dins lo classament per popularitat, es indicat dins lo marge; la popularitat de l’article 
+(una estimacion dau nombre de vesitas quotidiani qu’eu recebrà se lo ritme actuau de consultacion si manten) e lo nombre de vesitas recebudi
+despí lo començament s’afichan dins la bofiga 
+qu’apareisse quora la rateta passa sus lo títol.',
 	'texte_signification' => 'Li barras escuri representan li intradas cumuladi (totau dei sosrubricas), li barras clari lo nombre de vesitas per cada rubrica.',
 	'titre_evolution_visite' => 'Evolucion dei vesitas',
 	'titre_liens_entrants' => 'Lu ligams intrants',

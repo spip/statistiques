@@ -35,11 +35,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Lo reng de l\'article,
-dins lo classament per popularitat, es indicat dins lo marge; la popularitat de l\'article 
+	'texte_comment_lire_tableau' => 'Lo reng de l’article,
+dins lo classament per popularitat, es indicat dins lo marge; la popularitat de l’article 
 (una estimacion dau nombre de visitas quotidiani que recebrà se lo ritme actuau de consultacion si manten) e lo nombre de visitas recebudi
-despí lo començament s\'afichan dins la bofa
-qu\'apareisse quora la rateta passa sus lo titre.',
+despí lo començament s’afichan dins la bofa
+qu’apareisse quora la rateta passa sus lo titre.',
 	'texte_signification' => 'Li barras rogi representan li intradas cumuladi (totau dei sosrubricas), li barras verdi lo nombre de visitas per cada rubrica.',
 	'titre_evolution_visite' => 'Evolucion dei visitas',
 	'titre_liens_entrants' => 'Estacs intrants',

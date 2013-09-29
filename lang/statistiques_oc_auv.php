@@ -12,7 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_repartition_actuelle' => 'Afichar la reparticion actuala',
 	'icone_repartition_visites' => 'Reparticion de las vesitas',
 	'icone_statistiques_visites' => 'Estadisticas',
-	'info_affichier_visites_articles_plus_visites' => 'Afichar las vesitas per los <b>articles mai vesitats dempuèi l\'emprimèir:</b>',
+	'info_affichier_visites_articles_plus_visites' => 'Afichar las vesitas per los <b>articles mai vesitats dempuèi l’emprimèir:</b>',
 	'info_comment_lire_tableau' => 'Cossí legir aquel tablèu',
 	'info_forum_statistiques' => 'Estadisticas de las vesitas',
 	'info_popularite_2' => 'popularitat dau sit:',
@@ -25,18 +25,18 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// O
 	'onglet_origine_visites' => 'Origina de las vesitas',
-	'onglet_repartition_debut' => 'dempuèi l\'emprimèir',
+	'onglet_repartition_debut' => 'dempuèi l’emprimèir',
 	'onglet_repartition_lang' => 'Reparticion per lengas',
 
 	// R
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Lo reng de l\'article,
-dins lo classament per popularitat, z-es indicat dins lo marge; la popularitat de l\'article 
+	'texte_comment_lire_tableau' => 'Lo reng de l’article,
+dins lo classament per popularitat, z-es indicat dins lo marge; la popularitat de l’article 
 (una estimacion dau nombre de vesitas quotidianas que z-elh recebrá se lo ritme actuau de consultacion se manten) e lo nombre de vesitas recebudas
-dempuèi lo començament s\'afichan dins la botiarla
-qu\'apareis quand la rata passa sus lo títol.',
+dempuèi lo començament s’afichan dins la botiarla
+qu’apareis quand la rata passa sus lo títol.',
 	'texte_signification' => 'Las barras escuras representan las entradas cumuladas (totau de las sosrubricas), las barras claras lo nombre de vesitas per chasca rubrica.',
 	'titre_evolution_visite' => 'Evolucion de las vesitas',
 	'titre_liens_entrants' => 'Liams entrants ',

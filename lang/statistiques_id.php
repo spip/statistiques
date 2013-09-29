@@ -8,7 +8,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// I
-	'icone_evolution_visites' => 'Kunjungi tingkat<br>@visites@ kunjungan',
+	'icone_evolution_visites' => 'Kunjungi tingkat<br />@visites@ kunjungan',
 	'icone_repartition_actuelle' => 'Tampilkan distribusi sekarang',
 	'icone_repartition_visites' => 'Distribusi kunjungan',
 	'icone_statistiques_visites' => 'Statistik',
