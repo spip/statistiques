@@ -10,6 +10,13 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du compage des statistiques de visites (cron)
+ * 
+ * @plugin Statistiques pour SPIP
+ * @license GPL
+ * @package SPIP\Statistiques\Genie
+**/
 
 if (!defined("_ECRIRE_INC_VERSION")) return;
 if (!defined('_CRON_LOT_FICHIERS_VISITE')) define('_CRON_LOT_FICHIERS_VISITE', 100);
@@ -17,10 +24,22 @@ if (!defined('_CRON_LOT_FICHIERS_VISITE')) define('_CRON_LOT_FICHIERS_VISITE', 1
 ### Pour se debarrasser du md5, comment faire ? Un index sur 'referer' ?
 ### ou alors la meme notion, mais sans passer par des fonctions HEX ?
 
-//
-// prendre en compte un fichier de visite
-//
-// http://doc.spip.org/@compte_fichier_visite
+
+/**
+ * Prendre en compte un fichier de visite
+ *
+ * @param string $fichier
+ *     Nom du fichier de visite
+ * @param int $visites
+ *     Nombre de visites
+ * @param array $visites_a
+ *     Couples id_article => nombre : comptage par identifiant d'article
+ * @param array $referers
+ *     Couples url_referer => nombre : comptage par url de referer
+ * @param array $referers_a
+ *     Couples id_article => array (url_referer => nombre) : comptage par article puis url de referer
+ * @return void
+**/
 function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$referers_a) {
 
 	// Noter la visite du site (article 0)
@@ -50,7 +69,18 @@ function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$r
 }
 
 
-// http://doc.spip.org/@calculer_visites
+/**
+ * Calcule les statistiques de visites, en plusieurs étapes
+ *
+ * @uses compte_fichier_visite()
+ * @uses genie_popularite_constantes()
+ * 
+ * @param int $t
+ *     Timestamp de la dernière exécution de cette tâche
+ * @return null|int
+ *     - null si aucune visite à prendre en compte ou si tous les fichiers de visite sont traités,
+ *     - entier négatif s'il reste encore des fichiers à traiter
+**/
 function calculer_visites($t) {
 	include_spip('base/abstract_sql');
 
@@ -207,10 +237,17 @@ function calculer_visites($t) {
 	}
 }
 
-//
-// Calcule les stats en plusieurs etapes
-//
-// http://doc.spip.org/@genie_visites_dist
+/**
+ * Cron de calcul de statistiques des visites
+ * 
+ * Calcule les stats en plusieurs étapes
+ * @uses calculer_visites()
+ * 
+ * @param int $t
+ *     Timestamp de la dernière exécution de cette tâche
+ * @return int
+ *     Positif si la tâche a été terminée, négatif pour réexécuter cette tâche
+**/
 function genie_visites_dist($t) {
 	$encore = calculer_visites($t);
 
