@@ -38,7 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.',
-	'texte_comment_lire_tableau' => 'Le rang de l’article, dans le classement par popularité, est indiqué dans la marge ; la popularité de l’article (une estimation du nombre de visites quotidiennes qu’il recevra si le rythme actuel de consultation se maintient) et le nombre de visites reçues depuis le début sont affichées dans la bulle qui apparaît lorsque la souris survole le titre.',
+	'texte_comment_lire_tableau' => 'Le rang de l’article, dans le classement par popularité, est indiqué dans la marge ; la popularité de l’article (une estimation du nombre de visites quotidiennes qu’il recevra si le rythme actuel de consultation se maintient) et le nombre de visites reçues depuis le début sont affichés dans la bulle qui apparaît lorsque la souris survole le titre.',
 	'texte_signification' => 'Les barres rouges représentent les entrées cumulées (total des sous-rubriques), les barres vertes le nombre de visites pour chaque rubrique.',
 	'titre_evolution_visite' => 'Évolution des visites',
 	'titre_liens_entrants' => 'Les liens entrants du jour',
