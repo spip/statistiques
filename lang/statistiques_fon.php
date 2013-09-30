@@ -32,7 +32,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'gblogblojí é lɔ nɔ zɔn bɔ mi nɔ sɛ  wɛn ɖó bó nɔ lɛ yí wɛnxó kléwun lɛ wěmà kléwún ɖé lɛ wɛbɔ yé nɔ zɔn bɔ xó lɛ nɔ yí àtɛjí gànmɛgànmɛmi sɔ xóxòkplégbàví mi tɔn ',
+	'texte_comment_lire_tableau' => 'gblogblojí é lɔ nɔ zɔn bɔ mi nɔ sɛ  wɛn ɖó bó nɔ lɛ yí wɛnxó kléwun lɛ wěmà kléwún ɖé lɛ wɛbɔ yé nɔ zɔn bɔ xó lɛ nɔ yí àtɛjí gànmɛgànmɛmi sɔ xóxòkplégbàví mi tɔn ', # MODIF
 	'texte_signification' => 'mi ná sɔ mɔ àlì gégéwékpá é lɔxógbè lɛ nyɔwlántɔ lɛ gblogblojí é lɔ nɔ zɔn bɔ mi nɔ sɛ  wɛn ɖó bó nɔ lɛ yí wɛnxó kléwun lɛ wěmà kléwún ɖé lɛ wɛbɔ yé nɔ zɔn bɔ xó lɛ nɔ yí àtɛjí gànmɛgànmɛmi sɔ xóxòkplégbàví mi tɔn mɔnɔ hɛnmi cyían ɖê jɛ ɖéwú ɔ.',
 	'titre_evolution_visite' => 'núkɔn yíyí jónɔ yíyi tɔn',
 	'titre_liens_entrants' => 'càcàdó ná byɔmɛ',

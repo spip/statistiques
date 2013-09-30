@@ -44,13 +44,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_admin_effacer_stats' => 'This command deletes all statistics on visits to the site, including article popularity.',
 	'texte_admin_effacer_toutes_stats' => 'The first button deletes all statistics: visits, articles popularity and referers.',
-	'texte_comment_lire_tableau' => 'Articles are ranked by popularity.
- Mouseover any article’s title to
- show its popularity (i.e. estimated number
- of daily visits it will have if the
- current trend continues), and the
- number of visits recorded since it was
- first published.',
+	'texte_comment_lire_tableau' => 'Articles are ranked by popularity. Mouseover any article’s title to show its popularity (i.e. estimated number of daily visits it will have if the current trend continues), and the number of visits recorded since it was first published.', # MODIF
 	'texte_signification' => 'Dark bars represent cumulative entries (total subsections), light bars represent the number of visits for each section.',
 	'titre_evolution_visite' => 'Visitor Statistics',
 	'titre_liens_entrants' => 'Incoming links',

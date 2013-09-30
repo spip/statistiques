@@ -38,13 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Esta orde esborra tolos datos tocantes a les estadístiques de visites al sitiu, incluyendo la popularidá de los artículos.',
-	'texte_comment_lire_tableau' => 'El rangu de l’artículu,
-  na clasificación por popularidá, vién indicáu nel
-  marxe; la popularidá de l’artículu (una estimación del
-  númberu de visites diaries que recibirá si el ritmu actual de
-  consultes se mantuviere) y el númberu de visites recibíes
-  dende’l so espublizamientu amuésense na burbuya
-  que apaez al pasar el mur pol títulu.',
+	'texte_comment_lire_tableau' => 'El rangu de l’artículu, na clasificación por popularidá, vién indicáu nel marxe; la popularidá de l’artículu (una estimación del númberu de visites diaries que recibirá si el ritmu actual de consultes se mantuviere) y el númberu de visites recibíes dende’l so espublizamientu amuésense na burbuya que apaez al pasar el mur pol títulu.',
 	'texte_signification' => 'Les barres escures representen les entráes acumuláes (total de les sub-estayes), les barres clares el númberu de visites pa cada estaya.',
 	'titre_evolution_visite' => 'Evolución de les visites',
 	'titre_liens_entrants' => 'Enllaces entrantes',

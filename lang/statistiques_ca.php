@@ -38,10 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Aquesta ordre esborra totes les dades lligades a les estadístiques de visita del lloc, fins i tot la popularitat dels articles.',
-	'texte_comment_lire_tableau' => 'El rang de l’article,
- dins de la classificació per popularitat, està indicat al marge; la popularitat de l’article (una estimació del nombre de visites quotidianes que rebrà l’article si es manté el ritme actual de
-  consultes) i el nombre de visites rebudes
- des que va estar per primer cop en línia estàn visibles al menú que apareix quan passem el ratolí per sobre del títol.',
+	'texte_comment_lire_tableau' => 'El rang de l’article, dins de la classificació per popularitat, està indicat al marge; la popularitat de l’article (una estimació del nombre de visites quotidianes que rebrà l’article si es manté el ritme actual de consultes) i el nombre de visites rebudes des que va estar per primer cop en línia estàn visibles al menú que apareix quan passem el ratolí per sobre del títol.',
 	'texte_signification' => 'Les columnes fosques representen les entrades acumulades (total de les subseccions), les columnes clares el número de visites per a cada secció.',
 	'titre_evolution_visite' => 'Evolució de les visites',
 	'titre_liens_entrants' => 'Enllaços entrants',

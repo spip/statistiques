@@ -44,11 +44,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// T
 	'texte_admin_effacer_stats' => 'Tento príkaz vymaže všetky štatistiky o návštevách na stránke, vrátane popularity článkov.',
 	'texte_admin_effacer_toutes_stats' => 'Prvé tlačidlo vymaže všetky štatistiky: návštevy, údaje o popularite článkov a prichádzajúcich odkazoch.',
-	'texte_comment_lire_tableau' => 'Články sa hodnotia podľa popularity.
- Ak prejdete myšou po názve nejakého článku,
-zobrazí sa jeho popularita (tzn. približný počet
- návštev za deň, ktorý bude mať, ak bude pokračovať súčasný trend)
-  a počet návštev zaznamenaných odvtedy, čo bol prvýkrát publikovaný.',
+	'texte_comment_lire_tableau' => 'Články sa hodnotia podľa popularity. Ak prejdete myšou po názve nejakého článku, zobrazí sa jeho popularita (tzn. približný počet návštev za deň, ktorý bude mať, ak bude pokračovať súčasný trend) a počet návštev zaznamenaných odvtedy, čo bol prvýkrát publikovaný.',
 	'texte_signification' => 'Tmavé čiary znázorňujú kumulatívne vstupy (celkom za podrubriky), svetlé čiary znázorňujú počet návštev každej rubriky.',
 	'titre_evolution_visite' => 'Vývoj počtu návštev',
 	'titre_liens_entrants' => 'Prichádzajúce odkazy',

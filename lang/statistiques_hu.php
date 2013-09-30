@@ -35,11 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'A népszerűség szerinti
-  cikk rangja a márgóban jelenik meg
- ; a cikk népszerűsége (olyan becslés a leendő napi látógatásokról, ha az eddigi látógatási ütem megmarad) és a kezdet óta történt látógatások száma
- szerepel abban a buborékban,
-  ami megjelenik, ha az egér lebeg a cím felett.',
+	'texte_comment_lire_tableau' => 'A népszerűség szerinti cikk rangja a márgóban jelenik meg ; a cikk népszerűsége (olyan becslés a leendő napi látógatásokról, ha az eddigi látógatási ütem megmarad) és a kezdet óta történt látógatások száma szerepel abban a buborékban, ami megjelenik, ha az egér lebeg a cím felett.',
 	'texte_signification' => 'A sötét sávok a halmodozott belépéseket jelzik (alrovatok összege), a világos sávok pedig a látogatások számát minden rovatnak.',
 	'titre_evolution_visite' => 'A látógatások kialakulása',
 	'titre_liens_entrants' => 'Bejövő linkek',

@@ -35,11 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Szereg artykułów występujących,
-  w klasyfikacji popularności jest na marginesie marge ; popularność artykułu(szacunek
-  dziennej liczby wizyt zostanie obiczony jeśli częstotliwość wizyt zostanie utrzymana)
- a liczba wizyt,
-od początku opublikowania artykułu pojawi się kiedy najedziesz myszką na tytuł artykułu.',
+	'texte_comment_lire_tableau' => 'Szereg artykułów występujących, w klasyfikacji popularności jest na marginesie marge ; popularność artykułu(szacunek dziennej liczby wizyt zostanie obiczony jeśli częstotliwość wizyt zostanie utrzymana) a liczba wizyt, od początku opublikowania artykułu pojawi się kiedy najedziesz myszką na tytuł artykułu.',
 	'texte_signification' => 'Ciemne paski oznaczają podsumowanie wszystkich odwiedzin w poddziałach, paski jasne liczbę wizyt dla poszczególnych działów.',
 	'titre_evolution_visite' => 'Ewolucja odwiedzin',
 	'titre_liens_entrants' => 'Linki wejściowe',

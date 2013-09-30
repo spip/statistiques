@@ -38,10 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Această comandă şterge toate datele legate de statisticile vizitelor în site, incluzând şi datele de popularitate a articolelor.',
-	'texte_comment_lire_tableau' => 'Rangul articolului,
-  în clasamentul de popularitate este indicat cu o marjă ;
-  popularitatea articolului (care este o estimare a numărului de vizite zilnice pe care articolul le va primi dacă ritmul actual de consultare se menţine) şi numărul de vizite primite
-  de la început sunt afişate în mica fereastră care apare la un survol al mouse-ului deasupra titlului.',
+	'texte_comment_lire_tableau' => 'Rangul articolului, în clasamentul de popularitate este indicat cu o marjă ; popularitatea articolului (care este o estimare a numărului de vizite zilnice pe care articolul le va primi dacă ritmul actual de consultare se menţine) şi numărul de vizite primite de la început sunt afişate în mica fereastră care apare la un survol al mouse-ului deasupra titlului.',
 	'texte_signification' => 'Barele întunecate reprezintă intrarile cumulate (totalul sub-rubricilor), barele  deschise la culoare reprezintă numărul de vizite pentru fiecare rubrică.',
 	'titre_evolution_visite' => 'Evoluţia vizitelor',
 	'titre_liens_entrants' => 'Legături în intrare',

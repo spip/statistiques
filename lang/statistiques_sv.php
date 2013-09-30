@@ -36,13 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Artikeln rank i
-  popularitetsklassificeringen visas i 
-  marginalen; artikelns popularitet (en uppskattning av
-  antalet dagliga besök den skulle få om den aktuella
-  trafikmängden upprätthålls) och antal besök
-  sedan starten visas i bubblan som 
-  dyker upp när muspekaren hålls över titeln.',
+	'texte_comment_lire_tableau' => 'Artikeln rank i popularitetsklassificeringen visas i marginalen; artikelns popularitet (en uppskattning av antalet dagliga besök den skulle få om den aktuella trafikmängden upprätthålls) och antal besök sedan starten visas i bubblan som dyker upp när muspekaren hålls över titeln.',
 	'titre_evolution_visite' => 'Besöksnivå',
 	'titre_liens_entrants' => 'Inkommande länkar',
 	'titre_page_statistiques' => 'Statistik uppdelat på avdelning',

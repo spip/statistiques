@@ -38,11 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Bu komut, site ziyareti istatistiklerine bağlı tüm bilgileri siler (makalelerin popülerlikleri de dahil).',
-	'texte_comment_lire_tableau' => 'Popülerlik sınıflandırmasında makalenin sırası kenarda belirtilmiştir ;
-   makalenin popülerliği (şimdiki başvuru sıklığı devam ettiği takdirde,
-   geleceği tahmin edilen günlük ziyaretçi sayısı) ve başından beri gelen
-   ziyaretçi sayısı, fare başlık üzerinden geçtiğinde
-   ortaya çıkan konuşma balonunun içinde görüntülenir. ',
+	'texte_comment_lire_tableau' => 'Popülerlik sınıflandırmasında makalenin sırası kenarda belirtilmiştir ; makalenin popülerliği (şimdiki başvuru sıklığı devam ettiği takdirde, geleceği tahmin edilen günlük ziyaretçi sayısı) ve başından beri gelen ziyaretçi sayısı, fare başlık üzerinden geçtiğinde ortaya çıkan konuşma balonunun içinde görüntülenir.',
 	'texte_signification' => 'Koyu çizgiler, toplam girişleri (alt-bölümlerin toplamını), açık çizgiler ise, her bir bölüme gelen ziyaret sayısını temsil eder.',
 	'titre_evolution_visite' => 'Ziyaretlerin gelişimi ',
 	'titre_liens_entrants' => 'Giren bağlantılar',

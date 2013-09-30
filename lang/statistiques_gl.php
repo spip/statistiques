@@ -39,13 +39,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Este comando borra todos os datos ligados ás estatísticas de visita do web, e inclúe a popularidade dos artigos.',
-	'texte_comment_lire_tableau' => 'O rango do artigo,
-		na clasificación por popularidade, está indicado á marxe;
-		a popularidade do artigo (unha estimación do número
-		de visitas cotiás que terá se o ritmo actual de
-		consulta se mantén) e o número de visitas recibidas
-		dende o principio son amosadas no bolo que
-		aparece cando pasas co rato por riba do título.',
+	'texte_comment_lire_tableau' => 'O rango do artigo, na clasificación por popularidade, está indicado á marxe; a popularidade do artigo (unha estimación do número de visitas cotiás que terá se o ritmo actual de consulta se mantén) e o número de visitas recibidas dende o principio son amosadas no bolo que aparece cando pasas co rato por riba do título.',
 	'texte_signification' => 'As barras escuras representan as entradas acumuladas (total dos apartados), as barras claras o número de visitas para cada tema.',
 	'titre_evolution_visite' => 'Evolución das visitas',
 	'titre_liens_entrants' => 'As ligazóns entrantes do día',

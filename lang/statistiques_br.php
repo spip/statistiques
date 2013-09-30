@@ -38,12 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Diverket e vo an holl roadoù a denn da stadegoù gweladenniñ al lec’hienn, en o zouez ar re a heuilh berzh ar pennadoù.',
-	'texte_comment_lire_tableau' => 'Renk ar pennad,
-  hervez e vrud, a c’haller gwelet er marz;
-  brud ar pennad (o rakwelet pet gweladenn en do bemdez ma kendalc’h
-  ar gweladenniñ d’ar memes lusk) hag an niver a weladennoù abaoe
-  an deroù a c’heller gwelet er lagadenn a zeu war wel
-  pa dremen al logodenn war an titl.',
+	'texte_comment_lire_tableau' => 'Renk ar pennad, hervez e vrud, a c’haller gwelet er marz; brud ar pennad (o rakwelet pet gweladenn en do bemdez ma kendalc’h ar gweladenniñ d’ar memes lusk) hag an niver a weladennoù abaoe an deroù a c’heller gwelet er lagadenn a zeu war wel pa dremen al logodenn war an titl.',
 	'texte_signification' => 'Diskouez a ra ar barrennoù teñval sammad ar gweladennoù bodet (hollad an isrubrikennoù), hag ar barrennoù sklaer an niver a weladennoù evit pep rubrikenn.',
 	'titre_evolution_visite' => 'Emdroadur ar gweladennoù',
 	'titre_liens_entrants' => 'Liammoù davet al lec’hienn',

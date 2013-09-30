@@ -32,9 +32,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Dann lamarz-la, ou va trouv lo rand lartik pou vwar kouk sa lé populèr ; pou sa minm, kank
-ou bat-karé si lo non inn lartik, néna inn bil sak i aparé : dann bil-la, i va trouv la popularité lartik èk lo nonb vizit dopwi lorizin.La popularité lé kom inn prévizyon
-lo nonb vizit posib sir lo sit porézon lo ritm aktyèl lé stab.',
+	'texte_comment_lire_tableau' => 'Dann lamarz-la, ou va trouv lo rand lartik pou vwar kouk sa lé populèr ; pou sa minm, kank ou bat-karé si lo non inn lartik, néna inn bil sak i aparé : dann bil-la, i va trouv la popularité lartik èk lo nonb vizit dopwi lorizin.La popularité lé kom inn prévizyon lo nonb vizit posib sir lo sit porézon lo ritm aktyèl lé stab.',
 	'texte_signification' => 'Bann bar fénwar i roprézant  bann zantré kimilé (pou lansanm bann sourubrik), bann bar klèr lo nonb bann vizit pou sakinn rubrik.',
 	'titre_evolution_visite' => 'Lévolisyon do bann vizit',
 	'titre_liens_entrants' => 'Bann gatiraz larivé',

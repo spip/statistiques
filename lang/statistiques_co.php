@@ -38,9 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Sta cumanda sguassa tutti i dati leati à e statìstiche di vìsite di u situ, cumpresa a pupularità di l’artìculi.',
-	'texte_comment_lire_tableau' => 'U rangu di l’artìculu in a classìfica pè pupularità hè indettatu quì sopra. A pupularità di l’artìculu (stimata da 
-	u nùmeru di vìsite cutidianu ch’ellu riceverà l’artìculu s’ellu ferma uguale u rìtimu attuale di cunsultazione) è u nùmeru di vìsite ricevute 
-	dipoi u principiu sò da vede in a scatuletta chì s’apre quandu omu passa u topu sopr’à u tìtulu.',
+	'texte_comment_lire_tableau' => 'U rangu di l’artìculu in a classìfica pè pupularità hè indettatu quì sopra. A pupularità di l’artìculu (stimata da u nùmeru di vìsite cutidianu ch’ellu riceverà l’artìculu s’ellu ferma uguale u rìtimu attuale di cunsultazione) è u nùmeru di vìsite ricevute dipoi u principiu sò da vede in a scatuletta chì s’apre quandu omu passa u topu sopr’à u tìtulu.',
 	'texte_signification' => 'L’aste più scure riprisentanu l’entrate cumulate (per u tutale di e sotturùbbriche), l’aste più chjare u nùmeru di vìsite 
 		per ogni rùbbrica.',
 	'titre_evolution_visite' => 'Evuluzione di e vìsite',

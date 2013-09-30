@@ -27,7 +27,7 @@
 		<traducteur nom="klaus++" lien="http://trad.spip.net/auteur/klaus" />
 		<traducteur nom="Torsten Willmann" lien="http://trad.spip.net/auteur/torsten-willmann" />
 	</langue>
-	<langue code="en" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=en" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+	<langue code="en" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=en" total="34" traduits="33" relire="0" modifs="1" nouveaux="0" pourcent="97.06">
 		<traducteur nom="Davood Hossein" lien="http://trad.spip.net/auteur/davood-hossein" />
 		<traducteur nom="George" lien="http://trad.spip.net/auteur/جورج-قندلفت" />
 		<traducteur nom="kent1" lien="http://trad.spip.net/auteur/kent1" />
@@ -46,7 +46,7 @@
 	<langue code="fa" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fa" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Davood Hossein" lien="http://trad.spip.net/auteur/davood-hossein" />
 	</langue>
-	<langue code="fon" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fon" total="34" traduits="22" relire="0" modifs="2" nouveaux="10" pourcent="64.71">
+	<langue code="fon" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fon" total="34" traduits="21" relire="0" modifs="3" nouveaux="10" pourcent="61.76">
 	</langue>
 	<langue code="fr" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 	</langue>

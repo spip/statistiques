@@ -35,13 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Pořadí článku v žebříčku,
-  oblíbenosti je uvedeno na okraji.
-  Oblíbenost článku (odhad každodenního
-  počtu návštěvníků za předpokladu, že počet návštěv bude pokračovat dosavadním tempem)
-  a počet celkových návštěv za celou dobu zveřejnění
-  jsou uvedeny v místní nabídce, která se zobrazí
-  při umístění myši nad názvem článku.',
+	'texte_comment_lire_tableau' => 'Pořadí článku v žebříčku, oblíbenosti je uvedeno na okraji. Oblíbenost článku (odhad každodenního počtu návštěvníků za předpokladu, že počet návštěv bude pokračovat dosavadním tempem) a počet celkových návštěv za celou dobu zveřejnění jsou uvedeny v místní nabídce, která se zobrazí při umístění myši nad názvem článku.',
 	'texte_signification' => 'Tmavě jsou označeny kumulované údaje (celkem v rámci podsekcí), světle je uveden počet návštěv v jednotlivých sekcích.',
 	'titre_evolution_visite' => 'Vývoj návštěvnosti',
 	'titre_liens_entrants' => 'Příchozí odkazy',

@@ -37,13 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'La rango de la artikolo,
-  en la klasifiko laŭ populareco, estas indikita en la
-  marĝeno ; la populareco de la artikolo (taksado de la
-  nombro de ĉiutagaj vizitoj, kiun ĝi atingos se la nuna vizit-ritmo
-  tiel daŭros) kaj la nombro de vizitoj ricevitaj
-  de la komenco afiŝiĝas en la veziko kiu
-  aperas kiam la tajpmontrilo superpasas la titolon.',
+	'texte_comment_lire_tableau' => 'La rango de la artikolo, en la klasifiko laŭ populareco, estas indikita en la marĝeno ; la populareco de la artikolo (taksado de la nombro de ĉiutagaj vizitoj, kiun ĝi atingos se la nuna vizit-ritmo tiel daŭros) kaj la nombro de vizitoj ricevitaj de la komenco afiŝiĝas en la veziko kiu aperas kiam la tajpmontrilo superpasas la titolon.',
 	'texte_signification' => 'La ruĝaj stangoj reprezentas la sumigitajn datenojn (sumo de la sub-rubrikoj), la helaj stangoj, la nombron de vizitoj por ĉiu rubriko.',
 	'titre_evolution_visite' => 'Evoluo de la vizitoj',
 	'titre_liens_entrants' => 'Enirintaj ligoj',

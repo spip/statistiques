@@ -35,13 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Plas latik-la,
-  nan klasman popilawite, se enskri sou kote ; populawite atik-la
- (yon kont nonb
-  vizit pa jou atik-la ki rannkout si li kembe ritm-la kounyen-a)
- ak nonb vizit ki vini 
-  depi koumansman, zot ka afich
-  nan yon bil ki parèt kank w vole sou titr-la.',
+	'texte_comment_lire_tableau' => 'Plas latik-la, nan klasman popilawite, se enskri sou kote ; populawite atik-la (yon kont nonb vizit pa jou atik-la ki rannkout si li kembe ritm-la kounyen-a) ak nonb vizit ki vini depi koumansman, zot ka afich nan yon bil ki parèt kank w vole sou titr-la.',
 	'texte_signification' => 'Tou liy nwa se limaj tout rantré kimilé  (yon total pou tout souribrik), tout liy klèr se nonb visit sa-yo pou chak ribrik.',
 	'titre_evolution_visite' => 'Evolisyon vizit yo',
 	'titre_liens_entrants' => 'Lyen sa-yo ka rive',

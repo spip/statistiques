@@ -31,10 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume', # MODIF
 
 	// T
-	'texte_comment_lire_tableau' => 'Artiklens rangering i popularitetslisten vises i marginen. Artiklens popularitet 
-		(et overslag over hvor mange daglige besøg den vil opnå, hvis det aktuelle trafikomfang opretholdes) 
-		og antallet af besøg, der er registreret siden begyndelsen, vises i den ballon, der kommer til syne når musen 
-		holdes over titlen.',
+	'texte_comment_lire_tableau' => 'Artiklens rangering i popularitetslisten vises i marginen. Artiklens popularitet (et overslag over hvor mange daglige besøg den vil opnå, hvis det aktuelle trafikomfang opretholdes) og antallet af besøg, der er registreret siden begyndelsen, vises i den ballon, der kommer til syne når musen holdes over titlen.',
 	'texte_signification' => 'Røde bjælker viser summer (totaler for underafsnit), 
 		grønne bjælker viser antal besøg i hvert afsnit.',
 	'titre_evolution_visite' => 'Udvikling i besøgstal',
