@@ -336,6 +336,10 @@ q=
 q=
 (.*\.|)trouver\.fr
 
+[Pesquisa]
+q=
+pesquisa\.sapo\.pt
+
 #
 # Services de mail
 # 
