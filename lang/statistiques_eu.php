@@ -33,9 +33,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_debut' => 'hasieratik',
 	'onglet_repartition_lang' => 'Hizkuntzakako banaketa',
 
-	// R
-	'resume' => 'Resume', # MODIF
-
 	// T
 	'texte_admin_effacer_stats' => 'Manu hunek gunearen bisiten estatistikei lotutako datu guziak ezabatzen ditu, artikuluen arrakasta barne.',
 	'texte_comment_lire_tableau' => 'Artikuluaren heina, onarpenaren araberako sailkapenean, marjinean dago adierazita ;

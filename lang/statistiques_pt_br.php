@@ -34,9 +34,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_debut' => 'desde o início',
 	'onglet_repartition_lang' => 'Repartição por idiomas',
 
-	// R
-	'resume' => 'Resume', # MODIF
-
 	// T
 	'texte_admin_effacer_stats' => 'Este comando apaga todos os dados ligados às estatísticas de visitação do site, incluindo a popularidade das matérias.',
 	'texte_comment_lire_tableau' => 'A classificação da matéria, na classificação por popularidade, é indicada na margem; a popularidade de uma matéria (uma estimativa do número de visitas diárias que ela receberia se o ritmo atual de acesso se mantivesse) e o número de visitas recebidas depois do lançamento são exibidas na dica que aparece quando o cursor do mouse se sobrepõe ao título.',

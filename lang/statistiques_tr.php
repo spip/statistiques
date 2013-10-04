@@ -15,7 +15,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_repartition_actuelle' => 'Mevcut dağılımı göster',
 	'icone_repartition_visites' => 'Ziyaretlerin dağılımı',
 	'icone_statistiques_visites' => 'İstatistikler',
-	'info_affichier_visites_articles_plus_visites' => '<b>Başlangıçtan beri en çok ziyaret edilen makaleleri<b> göster :',
+	'info_affichier_visites_articles_plus_visites' => '<b>Başlangıçtan beri en çok ziyaret edilen makaleleri</b> göster :',
 	'info_comment_lire_tableau' => 'Bu tabloyu nasıl okumalı ?',
 	'info_forum_statistiques' => 'Ziyaret istatistikleri',
 	'info_popularite_2' => 'Sitenin popülerliği',
@@ -32,9 +32,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_origine_visites' => 'Ziyaretlerin kaynağı',
 	'onglet_repartition_debut' => 'Başlangıçtan beri',
 	'onglet_repartition_lang' => 'Dillere göre dağılım',
-
-	// R
-	'resume' => 'Resume', # MODIF
 
 	// T
 	'texte_admin_effacer_stats' => 'Bu komut, site ziyareti istatistiklerine bağlı tüm bilgileri siler (makalelerin popülerlikleri de dahil).',

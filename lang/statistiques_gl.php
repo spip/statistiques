@@ -34,9 +34,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_debut' => 'desde o principio',
 	'onglet_repartition_lang' => 'Distribución por linguas',
 
-	// R
-	'resume' => 'Resume', # MODIF
-
 	// T
 	'texte_admin_effacer_stats' => 'Este comando borra todos os datos ligados ás estatísticas de visita do web, e inclúe a popularidade dos artigos.',
 	'texte_comment_lire_tableau' => 'O rango do artigo, na clasificación por popularidade, está indicado á marxe; a popularidade do artigo (unha estimación do número de visitas cotiás que terá se o ritmo actual de consulta se mantén) e o número de visitas recibidas dende o principio son amosadas no bolo que aparece cando pasas co rato por riba do título.',

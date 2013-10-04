@@ -13,7 +13,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// I
 	'info_forum_statistiques' => 'Statistiques des visites',
 	'info_previsions' => 'prévisions :',
-	'item_gerer_statistiques' => ' Gérer les statistiques', # MODIF
+	'item_gerer_statistiques' => ' Gérer les statistiques',
 
 	// R
 	'resume' => 'Resume' # MODIF

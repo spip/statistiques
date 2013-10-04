@@ -46,7 +46,7 @@
 		<traducteur nom="dani" lien="http://trad.spip.net/auteur/dani" />
 		<traducteur nom="jotacese" lien="http://trad.spip.net/auteur/jotacese" />
 	</langue>
-	<langue code="eu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=eu" total="34" traduits="25" relire="0" modifs="3" nouveaux="6" pourcent="73.53">
+	<langue code="eu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=eu" total="34" traduits="25" relire="0" modifs="2" nouveaux="7" pourcent="73.53">
 	</langue>
 	<langue code="fa" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fa" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Davood Hossein" lien="http://trad.spip.net/auteur/davood-hossein" />
@@ -62,7 +62,7 @@
 	</langue>
 	<langue code="fr_tu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr_tu" total="34" traduits="25" relire="0" modifs="3" nouveaux="6" pourcent="73.53">
 	</langue>
-	<langue code="gl" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=gl" total="34" traduits="26" relire="0" modifs="3" nouveaux="5" pourcent="76.47">
+	<langue code="gl" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=gl" total="34" traduits="26" relire="0" modifs="2" nouveaux="6" pourcent="76.47">
 		<traducteur nom="Antón Méixome" lien="http://trad.spip.net/auteur/anton-meixome" />
 	</langue>
 	<langue code="hac" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=hac" total="34" traduits="10" relire="0" modifs="1" nouveaux="23" pourcent="29.41">
@@ -73,7 +73,7 @@
 	</langue>
 	<langue code="id" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=id" total="34" traduits="22" relire="0" modifs="2" nouveaux="10" pourcent="64.71">
 	</langue>
-	<langue code="is" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=is" total="34" traduits="3" relire="0" modifs="4" nouveaux="27" pourcent="8.82">
+	<langue code="is" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=is" total="34" traduits="3" relire="0" modifs="2" nouveaux="29" pourcent="8.82">
 	</langue>
 	<langue code="it" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=it" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="phante" lien="http://trad.spip.net/auteur/phante" />
@@ -94,7 +94,7 @@
 	<langue code="nl" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=nl" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Suske" lien="http://trad.spip.net/auteur/suske" />
 	</langue>
-	<langue code="no" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=no" total="34" traduits="2" relire="0" modifs="3" nouveaux="29" pourcent="5.88">
+	<langue code="no" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=no" total="34" traduits="3" relire="0" modifs="2" nouveaux="29" pourcent="8.82">
 	</langue>
 	<langue code="oc_auv" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=oc_auv" total="34" traduits="22" relire="0" modifs="2" nouveaux="10" pourcent="64.71">
 	</langue>
@@ -118,7 +118,7 @@
 		<traducteur nom="Cláudia Anjos Lopes" lien="http://trad.spip.net/auteur/claudia_a_lopes" />
 		<traducteur nom="Ricardo Porto" lien="http://trad.spip.net/auteur/ricardo-porto" />
 	</langue>
-	<langue code="pt_br" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=pt_br" total="34" traduits="26" relire="0" modifs="3" nouveaux="5" pourcent="76.47">
+	<langue code="pt_br" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=pt_br" total="34" traduits="26" relire="0" modifs="2" nouveaux="6" pourcent="76.47">
 		<traducteur nom="Ricardo Porto" lien="http://trad.spip.net/auteur/ricardo-porto" />
 	</langue>
 	<langue code="ro" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=ro" total="34" traduits="25" relire="0" modifs="3" nouveaux="6" pourcent="73.53">
@@ -131,7 +131,7 @@
 	</langue>
 	<langue code="sv" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=sv" total="34" traduits="22" relire="0" modifs="3" nouveaux="9" pourcent="64.71">
 	</langue>
-	<langue code="tr" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=tr" total="34" traduits="25" relire="0" modifs="3" nouveaux="6" pourcent="73.53">
+	<langue code="tr" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=tr" total="34" traduits="25" relire="0" modifs="2" nouveaux="7" pourcent="73.53">
 	</langue>
 	<langue code="vi" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=vi" total="34" traduits="22" relire="0" modifs="2" nouveaux="10" pourcent="64.71">
 	</langue>
