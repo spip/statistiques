@@ -41,9 +41,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// R
 	'resume' => 'Résumé',
 
-	// S
-	'statistiques_bouton_radio_sauvegarde_non_compressee' => 'sauvegarde non compressée sous @fichier@',
-
 	// T
 	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.',
 	'texte_admin_effacer_toutes_stats' => 'Le premier bouton supprime toutes les statistiques : visites, popularité des articles et liens entrants.',
