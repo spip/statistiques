@@ -340,6 +340,10 @@ q=
 q=
 pesquisa\.sapo\.pt
 
+[Qwant]
+q=
+(.*\.|)qwant\.com
+
 #
 # Services de mail
 # 
