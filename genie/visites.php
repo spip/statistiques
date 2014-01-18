@@ -161,14 +161,14 @@ function calculer_visites($t) {
 					if (count($noref))
 						sql_update('spip_articles',
 							array('visites' => "visites+$n",
-							 'popularite' => "popularite+".round($n*$b,2),
+							 'popularite' => "popularite+".number_format(round($n*$b,2), 2, '.', ''),
 							 'maj' => 'maj'),
 							sql_in('id_article',$noref));
 							   
 					if (count($ref))
 						sql_update('spip_articles',
 							   array('visites' => "visites+".($n+1),
-							 'popularite' => "popularite+".round($n*$b,2),
+							 'popularite' => "popularite+".number_format(round($n*$b,2), 2, '.', ''),
 							 'maj' => 'maj'),
 							sql_in('id_article',$ref));
 							   
