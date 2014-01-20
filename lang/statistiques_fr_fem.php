@@ -49,6 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Évolution des visites',
 	'titre_liens_entrants' => 'Liens entrants',
 	'titre_page_statistiques' => 'Statistiques par rubriques',
+	'titre_page_statistiques_visites' => 'Statistiques des visites',
 
 	// V
 	'visites_journalieres' => 'Nombre de visites par jour',
