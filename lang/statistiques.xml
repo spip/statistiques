@@ -57,10 +57,12 @@
 	</langue>
 	<langue code="fr" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 	</langue>
-	<langue code="fr_fem" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr_fem" total="34" traduits="33" relire="0" modifs="0" nouveaux="1" pourcent="97.06">
+	<langue code="fr_fem" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr_fem" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="Cerf" lien="http://trad.spip.net/auteur/cerf" />
 		<traducteur nom="denisb" lien="http://trad.spip.net/auteur/denisb" />
 	</langue>
-	<langue code="fr_tu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr_tu" total="34" traduits="25" relire="0" modifs="3" nouveaux="6" pourcent="73.53">
+	<langue code="fr_tu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr_tu" total="34" traduits="34" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="Cerf" lien="http://trad.spip.net/auteur/cerf" />
 	</langue>
 	<langue code="gl" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=gl" total="34" traduits="26" relire="0" modifs="2" nouveaux="6" pourcent="76.47">
 		<traducteur nom="Antón Méixome" lien="http://trad.spip.net/auteur/anton-meixome" />
