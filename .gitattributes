@@ -16,6 +16,7 @@ inc/stats_visites_to_array.php -text
 javascript/excanvas.js -text
 javascript/jquery.flot.js -text
 javascript/jquery.flot.selection.js -text
+javascript/jquery.flot.time.js -text
 javascript/jquery.tflot.js -text
 lang/paquet-statistiques.xml -text
 lang/paquet-stats.xml -text
