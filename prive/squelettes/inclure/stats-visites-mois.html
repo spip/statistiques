@@ -7,6 +7,8 @@
 	</span>
 	|
 	[<span class="duree">(#GET{duree}|div{30}|intval) <:date_mois:></span>] |
+	<a href="#" class="noajax" onclick="jQuery('.statistiques_visites_mensuelles .visites').show(); jQuery('.statistiques_visites_mensuelles .graphResult-wrap, .statistiques_visites_mensuelles .graphInfo').hide(); return false;"><:statistiques:info_tableaux:></a> |
+	<a href="#" class="noajax" onclick="jQuery('.statistiques_visites_mensuelles .visites').hide(); jQuery('.statistiques_visites_mensuelles .graphResult-wrap, .statistiques_visites_mensuelles .graphInfo').show(); return false;"><:statistiques:info_graphiques:></a> |
 	<a href="[(#SELF|parametre_url{duree,#GET{duree}|duree_zoom{moins}})]"
 		 class="ajax">[(#CHEMIN_IMAGE{zoomout-24.png}|balise_img{<:statistiques:info_zoom:> -})]</a>
 	<a href="[(#SELF|parametre_url{duree,#GET{duree}|duree_zoom{plus}})]"
