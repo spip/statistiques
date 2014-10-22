@@ -60,7 +60,7 @@ function stats_formulaire_admin($flux) {
 				'popularite' => $l[1],
 				'statistiques' => $l[2],
 			));
-			$flux['data'] = preg_replace('%(<!--extra-->)%is', $btn.'$1', $flux['data']);				
+			$flux['data'] = preg_replace('%(<!--extra-->)%is', $btn.'$1', $flux['data']);
 		}
 	}
 	return $flux;
@@ -98,11 +98,13 @@ function generer_url_ecrire_statistiques($id_article) {
 function stats_taches_generales_cron($taches_generales){
 
 	// stats : toutes les 5 minutes on peut vider un panier de visites
-	if ($GLOBALS['meta']["activer_statistiques"] == "oui") {
+	if (isset($GLOBALS['meta']["activer_statistiques"])
+		AND $GLOBALS['meta']["activer_statistiques"] == "oui")
+	{
 		$taches_generales['visites'] = 300; 
 		$taches_generales['popularites'] = 7200; # calcul lourd
 	}
-		
+
 	return $taches_generales;
 }
 
