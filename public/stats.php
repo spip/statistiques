@@ -32,7 +32,7 @@ function public_stats_dist($contexte = null, $referer = null) {
 		return;
 
 	// rejet des pages 404
-erme	if (isset($GLOBALS['page']['status'])
+	if (isset($GLOBALS['page']['status'])
 	AND $GLOBALS['page']['status'] == 404)
 		return;
 
