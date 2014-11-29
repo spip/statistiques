@@ -14,7 +14,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 
 // http://doc.spip.org/@public_stats_dist
 function public_stats_dist($contexte = null, $referer = null) {
-	if (is_array($contexte)){
+	if (!is_array($contexte)){
 		$contexte = $GLOBALS['contexte'];
 	}
 	if (is_null($referer)){
