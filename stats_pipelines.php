@@ -11,9 +11,9 @@ function stats_affichage_entetes_final($entetes){
 		// decomptage des visites, on peut forcer a oui ou non avec le header X-Spip-Visites
 		// par defaut on ne compte que les pages en html (ce qui exclue les js,css et flux rss)
 		$spip_compter_visites = $html?'oui':'non';
-		if (isset($page['entetes']['X-Spip-Visites'])){
+		if (isset($entetes['X-Spip-Visites'])){
 			$spip_compter_visites = in_array($entetes['X-Spip-Visites'],array('oui','non'))
-				?$entetes['entetes']['X-Spip-Visites']
+				?$entetes['X-Spip-Visites']
 				:$spip_compter_visites;
 			unset($entetes['X-Spip-Visites']);
 		}
