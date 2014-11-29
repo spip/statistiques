@@ -13,21 +13,26 @@
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 // http://doc.spip.org/@public_stats_dist
-function public_stats_dist() {
-	// $_SERVER["HTTP_REFERER"] ne fonctionne pas partout
-	if (isset($_SERVER['HTTP_REFERER'])) $referer = $_SERVER['HTTP_REFERER'];
-	else if (isset($GLOBALS["HTTP_SERVER_VARS"]["HTTP_REFERER"])) $referer = $GLOBALS["HTTP_SERVER_VARS"]["HTTP_REFERER"];
-	
+function public_stats_dist($contexte = null, $referer = null) {
+	if (is_array($contexte)){
+		$contexte = $GLOBALS['contexte'];
+	}
+	if (is_null($referer)){
+		// $_SERVER["HTTP_REFERER"] ne fonctionne pas partout
+		if (isset($_SERVER['HTTP_REFERER'])) $referer = $_SERVER['HTTP_REFERER'];
+		else if (isset($GLOBALS["HTTP_SERVER_VARS"]["HTTP_REFERER"])) $referer = $GLOBALS["HTTP_SERVER_VARS"]["HTTP_REFERER"];
+	}
+
 	// Rejet des robots (qui sont pourtant des humains comme les autres)
 	if (_IS_BOT OR (isset($referer) AND strpbrk($referer, '<>"\''))) return;
 
 	// Ne pas tenir compte des tentatives de spam des forums
 	if ($_SERVER['REQUEST_METHOD'] !== 'GET'
-	OR (isset($_GET['page']) AND $_GET['page'] == 'forum'))
+	OR (isset($contexte['page']) AND $contexte['page'] == 'forum'))
 		return;
 
 	// rejet des pages 404
-	if (isset($GLOBALS['page']['status'])
+erme	if (isset($GLOBALS['page']['status'])
 	AND $GLOBALS['page']['status'] == 404)
 		return;
 
@@ -67,17 +72,17 @@ function public_stats_dist() {
 	if (count($content) < 200) {
 
 		// Identification de l'element
-		if (isset($GLOBALS['contexte']['id_article']))
+		if (isset($contexte['id_article']))
 			$log_type = "article";
-		else if (isset($GLOBALS['contexte']['id_breve']))
+		else if (isset($contexte['id_breve']))
 			$log_type = "breve";
-		else if (isset($GLOBALS['contexte']['id_rubrique']))
+		else if (isset($contexte['id_rubrique']))
 			$log_type = "rubrique";
 		else
 			$log_type = "";
 
 		if ($log_type)
-			$log_type .= "\t" . intval($GLOBALS['contexte']["id_$log_type"]);
+			$log_type .= "\t" . intval($contexte["id_$log_type"]);
 		else    $log_type = "autre\t0";
 
 		$log_type .= "\t" . trim($log_referer);
