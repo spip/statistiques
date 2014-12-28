@@ -1,4 +1,5 @@
 * text=auto !eol
+action/statistiques_archiver.php -text
 base/delete_referers.php -text
 base/delete_stats.php -text
 base/stats.php -text
@@ -92,6 +93,7 @@ lang/statistiques_tr.php -text
 lang/statistiques_vi.php -text
 lang/statistiques_zh.php -text
 prive/bouton/statistiques.html -text
+prive/squelettes/contenu/stats_archiver.html -text
 prive/squelettes/contenu/stats_lang.html -text
 prive/squelettes/contenu/stats_lang_fonctions.php -text
 prive/squelettes/contenu/stats_referers.html -text
@@ -107,6 +109,7 @@ prive/squelettes/inclure/stats-visites-jours_fonctions.php -text
 prive/squelettes/inclure/stats-visites-mois.html -text
 prive/squelettes/inclure/stats-visites-mois_fonctions.php -text
 prive/squelettes/inclure/stats-visites-populaires.html -text
+prive/squelettes/navigation/stats_archiver.html -text
 prive/squelettes/top/stats_lang.html -text
 prive/squelettes/top/stats_referers.html -text
 prive/squelettes/top/stats_repartition.html -text
