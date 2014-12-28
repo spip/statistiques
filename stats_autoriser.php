@@ -31,7 +31,7 @@ function autoriser_statsrepartition_onglet_dist($faire, $type, $id, $qui, $opt) 
 }
 
 function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
-	$objets = explode(',', $GLOBALS['meta']['multi_objets']);
+	$objets = explode(',', isset($GLOBALS['meta']['multi_objets']) ? $GLOBALS['meta']['multi_objets'] : '');
 	return (in_array('spip_articles',  $objets)
 	     OR in_array('spip_rubriques', $objets))
 			AND autoriser('voirstats', $type, $id, $qui, $opt);
