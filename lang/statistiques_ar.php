@@ -7,6 +7,23 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	// A
+	'archiver' => 'أرشفة',
+	'archiver_concatener_explications' => 'ستقوم هذه العملية بتجميع إحصاءات زيارات المقالات:',
+	'archiver_concatener_ignorer' => 'الزيارات الاحدث من @nb@ سنة لن تتأثر.',
+	'archiver_concatener_par_an' => 'سيتم تجميع الزيارات الأقدم من @nb@ سنة، لكل مقال، في اول يوم من كل سنة.',
+	'archiver_concatener_par_mois' => 'سيتم تجميع الزيارات الأقدم من @nb@ سنة، لكل مقال، في اليوم الأول من كل شهر.',
+	'archiver_conseil_sauvegarde' => 'ينصح في البداية بإنشاء نسخة احتياطية من قاعدة البيانات.',
+	'archiver_description' => 'توفر هذه الصفحة أدوات لتنظيف او أرشفة إحصاءات الموقع.',
+	'archiver_et_nettoyer' => 'أرشفة وتنظيف',
+	'archiver_nettoyer' => 'تنظيف',
+	'archiver_nettoyer_explications' => 'يحذف اسطر المصادر او الزيارات العائدة الى مقالات غير موجودة (او محذوفة) في قاعدة البيانات.',
+	'archiver_nettoyer_referers_articles' => 'تنظيف مصادر المقالات',
+	'archiver_nettoyer_visites_articles' => 'تنظيف زيارات المقالات',
+	'archiver_nombre_lignes' => 'عدد الاسطر',
+	'archiver_operation_longue' => 'يمكن ان تستغرق هذه العملية وقتاً طويلاً، خاصة لدي تنفيذها للمرة الاولي.',
+	'archiver_operations_irreversibles' => 'لا يمكن التراجع عن هذه العمليات!',
+
 	// B
 	'bouton_effacer_referers' => 'حذف الوصلات الداخلة الآتية',
 	'bouton_effacer_statistiques' => 'حذف كل الاحصاءات',
