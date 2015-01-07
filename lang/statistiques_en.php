@@ -7,6 +7,15 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	// A
+	'archiver' => 'Archive',
+	'archiver_et_nettoyer' => 'Archive and clean',
+	'archiver_nettoyer' => 'Clean',
+	'archiver_nettoyer_referers_articles' => 'Clean articles referrers',
+	'archiver_nettoyer_visites_articles' => 'Clean articles visits',
+	'archiver_nombre_lignes' => 'Number of lines',
+	'archiver_operations_irreversibles' => 'These operations can’t be undone!',
+
 	// B
 	'bouton_effacer_referers' => 'Delete only incoming links',
 	'bouton_effacer_statistiques' => 'Delete all statistics',
