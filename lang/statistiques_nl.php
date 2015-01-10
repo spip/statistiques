@@ -7,6 +7,23 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	// A
+	'archiver' => 'Archiveren',
+	'archiver_concatener_explications' => 'Deze handeling voegt de bezoekstatistieken samen van de artikelen:',
+	'archiver_concatener_ignorer' => 'Bezoeken onder @nb@ jaar worden niet meegenomen.',
+	'archiver_concatener_par_an' => 'Bezoeken van meer dan @nb@ jaar geleden worden samengevoegd, per artikel, in de eerste dag van ieder jaar.',
+	'archiver_concatener_par_mois' => 'Bezoeken van meer dan @nb@ jaar geleden worden samengevoegd, per artikel, in de eerste dag van iedere maand.',
+	'archiver_conseil_sauvegarde' => 'Er wordt aangeraden om eerst een backup van de database te maken.',
+	'archiver_description' => 'Deze bladzijde biedt tools om de statistieken van de site te archiveren en op te schonen.',
+	'archiver_et_nettoyer' => 'Archiveren en opruimen',
+	'archiver_nettoyer' => 'Opruimen',
+	'archiver_nettoyer_explications' => 'Ruim referers of bezoekgegevens op van artikelen die niet (meer) in de database voorkomen.',
+	'archiver_nettoyer_referers_articles' => 'Referers van artikelen opruimen',
+	'archiver_nettoyer_visites_articles' => 'Bezoekgegevens van artikelen opruimen',
+	'archiver_nombre_lignes' => 'Aantal regels',
+	'archiver_operation_longue' => 'Deze handeling kan geruime tijd duren, met name de eerste keer.',
+	'archiver_operations_irreversibles' => 'Deze handelingen zijn onomkeerbaar!',
+
 	// B
 	'bouton_effacer_referers' => 'Alleen binnenkomende links uitwissen',
 	'bouton_effacer_statistiques' => 'De statistieken uitwissen',
