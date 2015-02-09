@@ -122,7 +122,7 @@
 		<traducteur nom="Cláudia Anjos Lopes" lien="http://trad.spip.net/auteur/claudia_a_lopes" />
 		<traducteur nom="Ricardo Porto" lien="http://trad.spip.net/auteur/ricardo-porto" />
 	</langue>
-	<langue code="pt_br" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=pt_br" total="51" traduits="36" relire="0" modifs="0" nouveaux="15" pourcent="70.59">
+	<langue code="pt_br" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=pt_br" total="51" traduits="51" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Ricardo Porto" lien="http://trad.spip.net/auteur/ricardo-porto" />
 		<traducteur nom="telopa" lien="http://trad.spip.net/auteur/telopa" />
 	</langue>

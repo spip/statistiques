@@ -7,6 +7,23 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	// A
+	'archiver' => 'Arquivar',
+	'archiver_concatener_explications' => 'Esta operação vai concatenar as estatísticas de visitasção das matérias',
+	'archiver_concatener_ignorer' => 'As visitas com menos de @nb@ anos N#ao serão alteradas.',
+	'archiver_concatener_par_an' => 'As visitas com mais de @nb@ anos serão concatenadas, para cada matéria, no primeiro dia do ano.',
+	'archiver_concatener_par_mois' => 'As visitas com mais de @nb@ anos serão concatenadas, para cada matéria, no primeiro dia de cada mês.',
+	'archiver_conseil_sauvegarde' => 'É recomendável fazer um backup prévio da base de dados.',
+	'archiver_description' => 'Esta página fornece as ferramentas para limpar ou arquivar as estat’isticas do site.',
+	'archiver_et_nettoyer' => 'Arquivar e limpar',
+	'archiver_nettoyer' => 'Limpar',
+	'archiver_nettoyer_explications' => 'Remove as linhas dos referenciadores ou das visitas que não existem (mais) na base de dados.',
+	'archiver_nettoyer_referers_articles' => 'Limpar os referenciadores das matérias',
+	'archiver_nettoyer_visites_articles' => 'Limpar as visitas das matérias',
+	'archiver_nombre_lignes' => 'Número de linhas',
+	'archiver_operation_longue' => 'Esta operação pode ser muito demorada, especialmente na primeira execução.',
+	'archiver_operations_irreversibles' => 'Estas operações são irreversíveis!',
+
 	// B
 	'bouton_effacer_referers' => 'Apagar somente os links de entrada',
 	'bouton_effacer_statistiques' => 'Apagar todas as estatísticas',
