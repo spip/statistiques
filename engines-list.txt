@@ -352,6 +352,10 @@ q=
 q=
 (.*\.|)ecosia\.org
 
+[Wow]
+q=
+(.*\.|)wow\.com
+
 #
 # Services de mail
 # 
