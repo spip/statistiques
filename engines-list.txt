@@ -356,6 +356,10 @@ q=
 q=
 (.*\.|)wow\.com
 
+[Accentice]
+q=
+(.*\.|)accentice\.com
+
 #
 # Services de mail
 # 
