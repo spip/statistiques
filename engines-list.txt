@@ -356,9 +356,9 @@ q=
 q=
 (.*\.|)wow\.com
 
-[Assentice]
+[Accentice]
 q=
-(.*\.|)assentice\.com
+(.*\.|)accentice\.com
 
 #
 # Services de mail
