@@ -7,6 +7,23 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	// A
+	'archiver' => 'Archiviare',
+	'archiver_concatener_explications' => 'Questa operazione collegherà le statistiche di visita degli articoli :',
+	'archiver_concatener_ignorer' => 'Le visite di meno di @nb@ anni non  verranno toccate.',
+	'archiver_concatener_par_an' => 'I dati di visita di più di @nb@ anni saranno aggiunti, per ogni articolo, il primo giorno di ogni nuovo anno.', # RELIRE
+	'archiver_concatener_par_mois' => 'I dati di visita di più di @nb@ anni saranno aggiunti, per ogni articolo, il primo giorno di ogni mese.', # RELIRE
+	'archiver_conseil_sauvegarde' => 'E’ consigliabile un salvataggio preliminare del database.',
+	'archiver_description' => 'Questa pagina fornisce i mezzi necessari alla pulizia o all’archiviazione delle statistiche del sito.',
+	'archiver_et_nettoyer' => 'Archiviazione e pulizia',
+	'archiver_nettoyer' => 'Pulizia',
+	'archiver_nettoyer_explications' => 'Elimina le righe dei riferimenti di provenienza o delle visite per gli articoli inesistenti (o non più esistenti) dal database.', # RELIRE
+	'archiver_nettoyer_referers_articles' => 'Eliminare i riferimenti di provenienza degli articoli', # RELIRE
+	'archiver_nettoyer_visites_articles' => 'Ripulire le visite degli articoli', # RELIRE
+	'archiver_nombre_lignes' => 'Numero di righe',
+	'archiver_operation_longue' => 'Questa operazione potrebbe richiedere molto tempo, soprattutto se si tratta della prima volta che viene effettuata.',
+	'archiver_operations_irreversibles' => 'Queste operazioni sono irreversibili!',
+
 	// B
 	'bouton_effacer_referers' => 'Eliminare solo i collegamenti in entrata',
 	'bouton_effacer_statistiques' => 'Cancellare le statistiche',
@@ -22,12 +39,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_affichier_visites_articles_plus_visites' => 'Mostra le visite per <b>gli articoli più letti dall’inaugurazione del sito:</b>',
 	'info_comment_lire_tableau' => 'Come leggere questa tabella',
 	'info_forum_statistiques' => 'Statistiche delle visite',
+	'info_graphiques' => 'Grafici',
 	'info_popularite_2' => 'popolarità del sito: ',
 	'info_popularite_3' => 'popolarità: @popularite@; visite: @visites@',
 	'info_popularite_5' => 'popolarità:',
 	'info_previsions' => 'previsioni :',
 	'info_question_vignettes_referer' => 'Quando si consultano le statistiche è possibile visualizzare delle anteprime dei siti di origine delle visite',
 	'info_question_vignettes_referer_oui' => 'Visualizzare le catture di schermo dei siti di origine delle visite',
+	'info_tableaux' => 'Tabelle',
 	'info_visites' => 'visite:',
 	'info_visites_plus_populaires' => 'Pubblica le visite per <b>gli articoli più popolari </b> e per <b>gli ultimi articoli pubblicati:</b>',
 	'info_zoom' => 'zoom',
