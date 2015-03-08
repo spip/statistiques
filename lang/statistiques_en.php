@@ -9,11 +9,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'archiver' => 'Archive',
+	'archiver_conseil_sauvegarde' => 'It is advisable to backup the database first.',
 	'archiver_et_nettoyer' => 'Archive and clean',
 	'archiver_nettoyer' => 'Clean',
 	'archiver_nettoyer_referers_articles' => 'Clean articles referrers',
 	'archiver_nettoyer_visites_articles' => 'Clean articles visits',
 	'archiver_nombre_lignes' => 'Number of lines',
+	'archiver_operation_longue' => 'This operation could take a lot of time especially on the first execution.',
 	'archiver_operations_irreversibles' => 'These operations can’t be undone!',
 
 	// B
