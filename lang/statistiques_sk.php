@@ -7,6 +7,9 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	// A
+	'archiver' => 'Archivovať',
+
 	// B
 	'bouton_effacer_referers' => 'Odstrániť len prichádzajúce odkazy',
 	'bouton_effacer_statistiques' => 'Vymazať všetky štatistiky',
