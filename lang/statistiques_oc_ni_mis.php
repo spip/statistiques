@@ -9,9 +9,18 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'archiver' => 'Arquivà',
+	'archiver_concatener_explications' => 'Aquela ouperacioun va councatenà li estatìstica de visita dei article :',
+	'archiver_concatener_ignorer' => 'Li visita de mens de @nb@ an noun soun toucadi.',
+	'archiver_concatener_par_an' => 'Li visita de mai de @nb@ an seràn coucaternadi, per cada article, en lou premié jou de cada anada.',
+	'archiver_concatener_par_mois' => 'Li visita de mai de @nb@ an seràn councatenadi, per cada article, en lou premié jou de cada mès.',
+	'archiver_conseil_sauvegarde' => 'Es counseiat de faire una sauvagarda preliminari de la basa de dounada.',
+	'archiver_description' => 'Aquela pàgina fournisse lu óutis da netegià o arquivà li estatìstica dóu sit.',
 	'archiver_et_nettoyer' => 'Arquivà e netegià',
 	'archiver_nettoyer' => 'Netegià',
+	'archiver_nettoyer_referers_articles' => 'Netegià li referença ai article',
 	'archiver_nettoyer_visites_articles' => 'Netegià li visita d’article',
+	'archiver_nombre_lignes' => 'Noumbre de ligna',
+	'archiver_operations_irreversibles' => 'Aqueli ouperacioun soun ireversìbli !',
 
 	// B
 	'bouton_effacer_referers' => 'Escassà basta lu estac entrant',
@@ -30,12 +39,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'poupularità dóu sit :',
 	'info_popularite_3' => 'poupularità : @popularite@ ; visita : @visites@',
 	'info_popularite_5' => 'poupularità :',
+	'info_previsions' => 'previsioun :',
 	'info_tableaux' => 'Tabléu',
 	'info_visites' => 'visita :',
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Gerà li estatistica dei visita',
 
 	// O
+	'onglet_origine_visites' => 'Orìgine dei visita',
 	'onglet_repartition_lang' => 'Reparticioun per lenga',
 
 	// R
