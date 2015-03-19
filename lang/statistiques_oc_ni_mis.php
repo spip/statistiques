@@ -36,6 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_statistiques_visites' => 'Estatìstica',
 	'info_comment_lire_tableau' => 'Couma lire aqueu tabléu',
 	'info_forum_statistiques' => 'Estatìstica dei visita',
+	'info_graphiques' => 'Gràficou',
 	'info_popularite_2' => 'poupularità dóu sit :',
 	'info_popularite_3' => 'poupularità : @popularite@ ; visita : @visites@',
 	'info_popularite_5' => 'poupularità :',
@@ -56,7 +57,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'Evoulucioun dei visita',
 	'titre_liens_entrants' => 'Estac intrant',
 	'titre_page_statistiques' => 'Estatistica per rùbrica',
-	'titre_page_statistiques_visites' => 'Estatistica dei visita'
+	'titre_page_statistiques_visites' => 'Estatistica dei visita',
+
+	// V
+	'visites_journalieres' => 'Noumbre de visita per jou',
+	'visites_mensuelles' => 'Noumbre de visita per mès'
 );
 
 ?>
