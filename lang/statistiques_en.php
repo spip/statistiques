@@ -9,9 +9,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'archiver' => 'Archive',
+	'archiver_concatener_explications' => 'This operation will combine the statistics of visits to articles:',
+	'archiver_concatener_ignorer' => 'The visits of at least @nb@ years are not affected.',
+	'archiver_concatener_par_an' => 'Additional visits of @nb@ years will be combined, for every article, on the first day of every year.',
+	'archiver_concatener_par_mois' => 'Additional visits of @nb@ years will be combined, for every article, on the first day of every year.',
 	'archiver_conseil_sauvegarde' => 'It is advisable to backup the database first.',
+	'archiver_description' => 'This page provides tools to clean or archive the statistics of the site.',
 	'archiver_et_nettoyer' => 'Archive and clean',
 	'archiver_nettoyer' => 'Clean',
+	'archiver_nettoyer_explications' => 'Removes lines of referrers or visits to items which do not exist (any more) in the database.',
 	'archiver_nettoyer_referers_articles' => 'Clean articles referrers',
 	'archiver_nettoyer_visites_articles' => 'Clean articles visits',
 	'archiver_nombre_lignes' => 'Number of lines',
