@@ -68,7 +68,7 @@ function stats_formulaire_admin($flux) {
 
 // calculer les visites et popularite d'un objet/id_objet
 // (uniquement valable pour les articles) ...
-// http://doc.spip.org/@admin_stats
+// http://code.spip.net/@admin_stats
 function admin_stats($objet, $id_objet, $var_preview)
 {
 	if ($GLOBALS['meta']["activer_statistiques"] != "non" 
@@ -87,7 +87,7 @@ function admin_stats($objet, $id_objet, $var_preview)
 	return false;
 }
 
-// http://doc.spip.org/@generer_url_ecrire_statistiques
+// http://code.spip.net/@generer_url_ecrire_statistiques
 function generer_url_ecrire_statistiques($id_article) {
 	return generer_url_ecrire('stats_visites', "id_article=$id_article");
 }
