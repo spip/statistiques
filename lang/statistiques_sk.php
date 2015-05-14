@@ -9,6 +9,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'archiver' => 'Archivovať',
+	'archiver_concatener_explications' => 'Táto operácia zreťazí štatistiky návštev článkov:',
+	'archiver_nombre_lignes' => 'Počet riadkov',
+	'archiver_operations_irreversibles' => 'Tieto operácie sa nedajú vrátiť späť!',
 
 	// B
 	'bouton_effacer_referers' => 'Odstrániť len prichádzajúce odkazy',
