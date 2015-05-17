@@ -145,6 +145,10 @@
 	</langue>
 	<langue code="tr" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=tr" total="51" traduits="25" relire="0" modifs="2" nouveaux="24" pourcent="49.02">
 	</langue>
+	<langue code="uk" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=uk" total="51" traduits="51" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="olly" lien="http://trad.spip.net/auteur/olly" />
+		<traducteur nom="Retenodus" lien="http://trad.spip.net/auteur/retenodus" />
+	</langue>
 	<langue code="vi" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=vi" total="51" traduits="22" relire="0" modifs="2" nouveaux="27" pourcent="43.14">
 	</langue>
 	<langue code="zh" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=zh" total="51" traduits="16" relire="0" modifs="7" nouveaux="28" pourcent="31.37">
