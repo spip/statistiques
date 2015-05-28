@@ -9,7 +9,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// S
 	'stats_description' => 'Статистика посещений сайта',
-	'stats_nom' => 'Статистика посещений сайта',
+	'stats_nom' => 'Статистика',
 	'stats_slogan' => 'Плагин по учету статистики посещений вашего сайта'
 );
 
