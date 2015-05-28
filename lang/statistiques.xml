@@ -38,6 +38,7 @@
 		<traducteur nom="Hanjo" lien="http://trad.spip.net/auteur/hanjo" />
 		<traducteur nom="kennethkeen" lien="http://trad.spip.net/auteur/kennethkeen" />
 		<traducteur nom="kent1" lien="http://trad.spip.net/auteur/kent1" />
+		<traducteur nom="olly" lien="http://trad.spip.net/auteur/olly" />
 		<traducteur nom="sQuonk" lien="http://trad.spip.net/auteur/squonk" />
 	</langue>
 	<langue code="en_hx" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=en_hx" total="51" traduits="18" relire="0" modifs="5" nouveaux="28" pourcent="35.29">
@@ -135,7 +136,8 @@
 	</langue>
 	<langue code="ro" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=ro" total="51" traduits="25" relire="0" modifs="3" nouveaux="23" pourcent="49.02">
 	</langue>
-	<langue code="ru" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=ru" total="51" traduits="34" relire="0" modifs="0" nouveaux="17" pourcent="66.67">
+	<langue code="ru" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=ru" total="51" traduits="51" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="olly" lien="http://trad.spip.net/auteur/olly" />
 		<traducteur nom="Serge Markitanenko" lien="http://trad.spip.net/auteur/serge-markitanenko" />
 	</langue>
 	<langue code="sk" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=sk" total="51" traduits="40" relire="0" modifs="0" nouveaux="11" pourcent="78.43">
