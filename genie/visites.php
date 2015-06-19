@@ -238,6 +238,21 @@ function calculer_visites($t) {
 }
 
 /**
+ * Nettoyer les IPs des flooders 24H apres leur dernier passage
+ */
+function visites_nettoyer_flood(){
+	if (is_dir($dir=_DIR_TMP.'flood/')){
+		include_spip('inc/invalideur');
+		if (!defined('_IP_FLOOD_TTL')) define('_IP_FLOOD_TTL',24*3600); // 24H par defaut
+		$options = array(
+			'mtime' => $_SERVER['REQUEST_TIME'] - _IP_FLOOD_TTL,
+		);
+		purger_repertoire($dir,$options);
+	}
+}
+
+
+/**
  * Cron de calcul de statistiques des visites
  * 
  * Calcule les stats en plusieurs étapes
@@ -255,6 +270,9 @@ function genie_visites_dist($t) {
 	// pour etre prioritaire lors du cron suivant
 	if ($encore)
 		return (0 - $t);
+
+	// nettoyer les IP des floodeurs quand on a fini de compter les stats
+	visites_nettoyer_flood();
 
 	return 1;
 }
