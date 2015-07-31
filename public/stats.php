@@ -58,7 +58,7 @@ function public_stats_dist($contexte = null, $referer = null) {
 	}
 
 	//
-	// stockage sous forme de fichier ecrire/data/stats/client_id
+	// stockage sous forme de fichier tmp/visites/client_id
 	//
 
 	// 1. Chercher s'il existe deja une session pour ce numero IP.
