@@ -41,7 +41,7 @@ p=
 delicious\.com
 
 [Ask]
-q=
+(q|queryTerm|searchfor)=
 (.*)\.ask\.com
 
 [HotBot]
