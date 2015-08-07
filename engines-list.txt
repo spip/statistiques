@@ -225,6 +225,10 @@ qry_str=
 rdata=
 www\.lemoteur\.fr
 
+[Orange, le moteur]
+kw=
+lemoteur\.orange\.fr
+
 [alOt]
 q=
 search\.alot\.com
@@ -325,7 +329,7 @@ q=
 (.*\.|)seznam\.cz
 
 [Baidu]
-wd=
+(wd|d)=
 (.*\.|)baidu\.com
 
 [Dogpile]
@@ -359,6 +363,14 @@ q=
 [Accentice]
 q=
 (.*\.|)accentice\.com
+
+[Vi-View]
+q=
+(.*\.|)vi-view\.com
+
+[EasySearch]
+s=
+(.*\.|)easysearch\.org\.uk
 
 #
 # Services de mail
