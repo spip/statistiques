@@ -34,12 +34,12 @@
 			</tr>
 			<tr class="even">
 				<th><a href="#URL_ECRIRE{stats_referers,jour=jour}"
-								title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_aujourdhui|trim{':'}|trim|ucfirst:></a></th>
+								title="<:statistiques:titre_liens_entrants|trim{':'}|trim|attribut_html:>: <:info_aujourdhui|trim{':'}|trim|attribut_html:>"><:info_aujourdhui|trim{':'}|trim|ucfirst:></a></th>
 				<td class='num'>#GET{last}</td>
 			</tr>
 			<tr class="even">
 				<th><a href="#URL_ECRIRE{stats_referers,jour=veille}"
-								title="<:info_moyenne|trim{':'}|trim|attribut_html:>"><:info_hier|trim{':'}|trim|ucfirst:></a></th>
+								title="<:statistiques:titre_liens_entrants|trim{':'}|trim|attribut_html:>: <:info_aujourdhui|trim{':'}|trim|attribut_html:>"><:info_hier|trim{':'}|trim|ucfirst:></a></th>
 				<td class='num'>#GET{lastlast}</td>
 			</tr>
 			<BOUCLE_art(ARTICLES){id_article}{statut?}>
