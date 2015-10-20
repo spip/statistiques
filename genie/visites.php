@@ -55,15 +55,26 @@ function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$r
 			= preg_split(",\t,", $source, 3);
 		
 		// Noter le referer
-		if ($log_referer)
+		if ($log_referer) {
+			if (!isset($referers[$log_referer])) {
+				$referers[$log_referer] = 0;
+			}
 			$referers[$log_referer]++;
+		}
 
 		// S'il s'agit d'un article, noter ses visites
 		if ($log_type == 'article'
 		AND $id_article = intval($log_id_num)) {
+			if (!isset($visites_a[$id_article])) {
+				$visites_a[$id_article] = 0;
+			}
 			$visites_a[$id_article] ++;
-			if ($log_referer)
+			if ($log_referer) {
+				if (!isset($referers_a[$id_article][$log_referer])) {
+					$referers_a[$id_article][$log_referer] = 0;
+				}
 				$referers_a[$id_article][$log_referer]++;
+			}
 		}
 	}
 }
