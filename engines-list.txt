@@ -360,6 +360,10 @@ q=
 q=
 (.*\.|)wow\.com
 
+[Haosou]
+q=
+www\.haosou\.com
+
 [Accentice]
 q=
 (.*\.|)accentice\.com
