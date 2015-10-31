@@ -364,6 +364,10 @@ q=
 q=
 www\.haosou\.com
 
+[Sogou]
+query=
+www\.sogou\.com
+
 [Accentice]
 q=
 (.*\.|)accentice\.com
