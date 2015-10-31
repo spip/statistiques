@@ -364,6 +364,10 @@ q=
 q=
 (.*\.|)accentice\.com
 
+[ParallaxSearch]
+qs=
+(.*\.|)parallaxsearch\.com
+
 [Vi-View]
 q=
 (.*\.|)vi-view\.com
