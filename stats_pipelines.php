@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Déclarations d'autorisations et utilisations de pipelines
+ * 
+ * @plugin Statistiques pour SPIP
+ * @license GNU/GPL
+ * @package SPIP\Stats\Pipelines
+**/
+
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 // sur les envois html,

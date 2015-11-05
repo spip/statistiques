@@ -10,6 +10,14 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Action d'archivage des statistiques
+ *
+ * @plugin Statistiques pour SPIP
+ * @license GNU/GPL
+ * @package SPIP\Stats\Actions
+**/
+
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
 
@@ -71,7 +79,7 @@ function action_statistiques_archiver_dist($arg=null){
 /**
  * Logguer ces informations importantes.
  *
- * @uses spip_log
+ * @uses spip_log()
  * @param string $texte
 **/
 function statistiques_archiver_log($texte) {
@@ -126,9 +134,9 @@ function statistiques_nettoyer_referers_articles() {
  *
  *   Du coup, on applique par petit bouts d'abord.
  *
- * @uses statistiques_concatener_visites_entre_jours();
- * @uses statistiques_concatener_visites_par_mois();
- * @uses statistiques_concatener_visites_par_an();
+ * @uses statistiques_concatener_visites_entre_jours()
+ * @uses statistiques_concatener_visites_par_mois()
+ * @uses statistiques_concatener_visites_par_an()
 **/
 function statistiques_archiver_visites_articles() {
 

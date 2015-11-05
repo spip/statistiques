@@ -10,8 +10,31 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Déclarations relatives à la base de données
+ * 
+ * @plugin Statistiques pour SPIP
+ * @license GNU/GPL
+ * @package SPIP\Stats\Pipelines
+**/
+
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
+/**
+ * Déclarer les tables de statistiques
+ *
+ * Déclare les tables :
+ * - spip_visites
+ * - spip_visites_articles
+ * - spip_referers
+ * - spip_referers_articles
+ *
+ * @pipeline declarer_tables_auxiliaires
+ * @param array $tables_auxiliaires
+ *     Description des tables auxiliaires
+ * @return array
+ *     Description complétée des tables auxiliaires
+ */
 function stats_declarer_tables_auxiliaires($tables_auxiliaires){
 
 	$spip_visites = array(
