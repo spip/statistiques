@@ -10,9 +10,35 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Loguer une visite
+ * 
+ * @plugin Statistiques pour SPIP
+ * @license GNU/GPL
+ * @package SPIP\Stats\Public
+**/
+
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
-// http://code.spip.net/@public_stats_dist
+/**
+ * Logue une visite sur une page 
+ *
+ * Enregistre le passage d'un visiteur sur la page demandée
+ * dans `tmp/visites/` qui seront ensuite traitées par une tache cron. 
+ * 
+ * Ne tient pas compte
+ * - des visites de robots,
+ * - des 404,
+ * - des forum
+ * 
+ * @see genie_visites_dist() Pour la tache cron qui traite les logs.
+ * 
+ * @param array|null $contexte
+ *     Contexte d'appel de la page ; retrouvé automatiquement sinon.
+ * @param string|null $referer
+ *     Referer de provenance ; retrouvé automatiquement sinon.
+ * @return null|void
+**/
 function public_stats_dist($contexte = null, $referer = null) {
 	if (!is_array($contexte)){
 		$contexte = $GLOBALS['contexte'];

@@ -14,7 +14,7 @@
  * Gestion du compage des statistiques de visites (cron)
  * 
  * @plugin Statistiques pour SPIP
- * @license GPL
+ * @license GNU/GPL
  * @package SPIP\Statistiques\Genie
 **/
 

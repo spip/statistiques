@@ -10,11 +10,29 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du calcul des popularités (cron)
+ * 
+ * @plugin Statistiques pour SPIP
+ * @license GNU/GPL
+ * @package SPIP\Statistiques\Genie
+**/
+
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
-//
-// Popularite, modele logarithmique
-//
+
+/**
+ * Calcule des coefficients de popularité en fonction de l'intervalle
+ * écoulé depuis le précédent calcul
+ * 
+ * Popularite, modele logarithmique
+ *
+ * @param int $duree Intervalle écoulé depuis le précédent calcul
+ * @return array {
+ *     @type float $a Coefficient d'amortissement
+ *     @type float $b Constante multiplicative
+ * }
+**/
 function genie_popularite_constantes($duree){
 	// duree de demi-vie d'une visite dans le calcul de la popularite (en jours)
 	$demivie = 0.5;
@@ -32,7 +50,16 @@ function genie_popularite_constantes($duree){
 	return array($a,$b);
 }
 
-// http://code.spip.net/@genie_popularites_dist
+/**
+ * Cron de calcul des popularités des articles
+ * 
+ * @uses genie_popularite_constantes()
+ * 
+ * @param int $t
+ *     Timestamp de la dernière exécution de cette tâche
+ * @return int
+ *     Positif si la tâche a été terminée, négatif pour réexécuter cette tâche
+**/
 function genie_popularites_dist($t) {
 
 	// Si c'est le premier appel, ne pas calculer
