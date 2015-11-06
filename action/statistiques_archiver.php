@@ -177,7 +177,7 @@ function statistiques_archiver_visites_articles() {
 /**
  * Concatène les statistiques de visites d'articles par mois
  *
- * @see concatener_visites_entre_jours()
+ * @see statistiques_concatener_visites_entre_jours()
  * 
  * @param int $annee
  *    On concatène ce qui est avant cette année là.
