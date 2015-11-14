@@ -207,6 +207,10 @@ www\.lemmefind\.fr
 query=
 arianna\.libero\.it
 
+[Lilo]
+q=
+(.*\.|)uselilo\.org
+
 [Lost]
 x_query=
 (www\.)?lo\.st
