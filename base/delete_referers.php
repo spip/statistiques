@@ -23,7 +23,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return; // securiser
  * @param bool $reprise
  * @return string
  */
-function base_delete_referers_dist($titre='', $reprise='')
+function base_delete_referers_dist($titre = '', $reprise = '')
 {
 	if (!$titre) return; // anti-testeur automatique
 	sql_delete("spip_referers");

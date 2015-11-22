@@ -18,7 +18,7 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
  * @param int $glisse
  * @return float
  */
-function moyenne_glissante($valeur = false, $glisse=0) {
+function moyenne_glissante($valeur = false, $glisse = 0) {
 	static $v = array();
 	// pas d'argument, raz de la moyenne
 	if ($valeur === false) {
@@ -57,7 +57,7 @@ function statistiques_moyenne($tab){
  * @param string $serveur
  * @return array
  */
-function classement_populaires($type, $serveur=''){
+function classement_populaires($type, $serveur = ''){
 	static $classement = array();
 	if (isset($classement[$type]))
 		return $classement[$type];

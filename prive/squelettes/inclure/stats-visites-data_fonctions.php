@@ -5,7 +5,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 include_spip('inc/acces');
 include_spip('inc/statistiques');
 
-function duree_affiche($duree,$periode){
+function duree_affiche($duree, $periode){
 	if (intval($duree))
 		return $duree;
 
@@ -18,7 +18,7 @@ function duree_affiche($duree,$periode){
 	return 90;
 }
 
-function duree_zoom($duree,$sens='plus'){
+function duree_zoom($duree, $sens = 'plus'){
 	$largeur_abs = 420/$duree;
 
 	if ($largeur_abs > 1) {
@@ -39,7 +39,7 @@ function duree_zoom($duree,$sens='plus'){
 	return ($sens=='plus'?$duree_moins:$duree_plus);
 }
 
-function stats_total($serveur=''){
+function stats_total($serveur = ''){
 	$row = sql_fetsel("SUM(visites) AS total_absolu", "spip_visites",'','','','','',$serveur);
 	return $row ? $row['total_absolu'] : 0;
 }
