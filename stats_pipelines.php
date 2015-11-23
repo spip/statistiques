@@ -26,7 +26,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @return array
 **/
 function stats_affichage_entetes_final($entetes){
-	if ($GLOBALS['meta']["activer_statistiques"] != "non") {
+	if (isset($GLOBALS['meta']["activer_statistiques"]) and $GLOBALS['meta']["activer_statistiques"] != "non") {
 		$html = preg_match(',^\s*text/html,', $entetes['Content-Type']);
 
 		// decomptage des visites, on peut forcer a oui ou non avec le header X-Spip-Visites
