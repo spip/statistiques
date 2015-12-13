@@ -29,5 +29,3 @@ function stats_ieconfig_metas($table) {
 
 	return $table;
 }
-
-?>

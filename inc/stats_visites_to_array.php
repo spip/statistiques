@@ -48,8 +48,8 @@ function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options =
 		$serveur);
 
 	$format = str_replace('%', '', $format);
-	$periode = ($unite == 'jour' ? 24*3600 : 365*24*3600/12);
-	$step = intval(round($periode*1.1, 0));
+	$periode = ($unite == 'jour' ? 24 * 3600 : 365 * 24 * 3600 / 12);
+	$step = intval(round($periode * 1.1, 0));
 	$glisse = constant('MOYENNE_GLISSANTE_' . strtoupper($unite));
 	moyenne_glissante();
 	$data = array();
@@ -64,7 +64,7 @@ function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options =
 		// donnee suivante
 		$r = sql_fetch($res, $serveur);
 		// si la derniere n'est pas la date courante, l'ajouter
-		if (!$r AND $last != date($format, $now)) {
+		if (!$r and $last != date($format, $now)) {
 			$r = array('d' => date($format, $now), 'v' => 0);
 		}
 
@@ -72,7 +72,7 @@ function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options =
 		if ($r) {
 			$next = strtotime($last);
 			$current = strtotime($r['d']);
-			while (($next += $step) < $current AND $d = date($format, $next)) {
+			while (($next += $step) < $current and $d = date($format, $next)) {
 				if (!isset($data[$d])) {
 					$data[$d] = array('visites' => 0, 'moyenne' => moyenne_glissante(0, $glisse));
 				}
@@ -87,19 +87,16 @@ function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options =
 	// + moyenne au pro rata du temps qui reste
 	$moyenne = end($data);
 	$moyenne = prev($data);
-	$moyenne = ($moyenne AND isset($moyenne['moyenne'])) ? $moyenne['moyenne'] : 0;
+	$moyenne = ($moyenne and isset($moyenne['moyenne'])) ? $moyenne['moyenne'] : 0;
 	$data[$last]['moyenne'] = $moyenne;
 
 	// temps restant
-	$remaining = strtotime(date($format, strtotime(date($format, $now))+$step))-$now;
+	$remaining = strtotime(date($format, strtotime(date($format, $now)) + $step)) - $now;
 
-	$prorata = $remaining/$periode;
+	$prorata = $remaining / $periode;
 
 	// projection
-	$data[$last]['prevision'] = $data[$last]['visites']+intval(round($moyenne*$prorata));
+	$data[$last]['prevision'] = $data[$last]['visites'] + intval(round($moyenne * $prorata));
 
 	return $data;
 }
-
-
-?>

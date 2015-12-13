@@ -87,7 +87,7 @@ function inc_stats_referers_to_array_dist($limit, $jour, $id_article, $options =
 				'referes' => $id_article ? '' : referes($row['referer_md5'])
 			);
 			if (isset($buff["keywords"])
-				AND $c = $buff["keywords"]
+				and $c = $buff["keywords"]
 			) {
 				if (!isset($referers[$refhost]['keywords'][$c])) {
 					$referers[$refhost]['keywords'][$c] = true;
@@ -102,7 +102,7 @@ function inc_stats_referers_to_array_dist($limit, $jour, $id_article, $options =
 					$set['path'] = "/$tmp";
 				}
 			}
-			if (isset($set['path']) OR isset($set['keywords'])) {
+			if (isset($set['path']) or isset($set['keywords'])) {
 				$referers[$refhost]['referers'][] = $set;
 			} else {
 				$referers[$refhost]['visites_racine'] += $visites;
@@ -125,6 +125,3 @@ function inc_stats_referers_to_array_dist($limit, $jour, $id_article, $options =
 
 	return $referers;
 }
-
-
-?>

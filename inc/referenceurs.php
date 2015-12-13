@@ -24,7 +24,7 @@ if (!defined("_ECRIRE_INC_VERSION")) {
  * @return array
  */
 function stats_load_engines() {
-	$arr_engines = Array();
+	$arr_engines = array();
 	lire_fichier(find_in_path('engines-list.txt'), $moteurs);
 	foreach (array_filter(preg_split("/([\r\n]|#.*)+/", $moteurs)) as $ligne) {
 		$ligne = trim($ligne);
@@ -92,7 +92,7 @@ function stats_show_keywords($kw_referer) {
 		} else {
 			for ($cnt = 0; $cnt < sizeof($arr_engines) && !$found; $cnt++) {
 				if ($found = preg_match(',' . $arr_engines[$cnt][2] . ',', $host)
-					OR $found = preg_match(',' . $arr_engines[$cnt][2] . ',', $path)
+					or $found = preg_match(',' . $arr_engines[$cnt][2] . ',', $path)
 				) {
 					$kw_referer_host = $arr_engines[$cnt][0];
 
@@ -117,7 +117,7 @@ function stats_show_keywords($kw_referer) {
 						|| ($kw_referer_host == "MSN")
 					) {
 						include_spip('inc/charsets');
-						if (!isset($ie) OR !$cset = $ie) {
+						if (!isset($ie) or !$cset = $ie) {
 							$cset = 'utf-8';
 						}
 						$keywords = importer_charset($keywords, $cset);
@@ -130,7 +130,7 @@ function stats_show_keywords($kw_referer) {
 
 	$buffer["host"] = $host;
 	$buffer["scheme"] = $scheme;
-	if (!isset($buffer["hostname"]) OR !$buffer["hostname"]) {
+	if (!isset($buffer["hostname"]) or !$buffer["hostname"]) {
 		$buffer["hostname"] = $host;
 	}
 
@@ -179,6 +179,3 @@ function referes($referermd5, $serveur = '') {
 
 	return '';
 }
-
-
-?>

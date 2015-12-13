@@ -71,7 +71,7 @@ function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$r
 
 		// S'il s'agit d'un article, noter ses visites
 		if ($log_type == 'article'
-			AND $id_article = intval($log_id_num)
+			and $id_article = intval($log_id_num)
 		) {
 			if (!isset($visites_a[$id_article])) {
 				$visites_a[$id_article] = 0;
@@ -116,7 +116,7 @@ function calculer_visites($t) {
 	$sessions = preg_files(sous_repertoire(_DIR_TMP, 'visites'));
 
 	$compteur = _CRON_LOT_FICHIERS_VISITE;
-	$date_init = time()-30*60;
+	$date_init = time() - 30 * 60;
 	foreach ($sessions as $item) {
 		if (($d = @filemtime($item)) < $date_init) {
 			if (!$d) {
@@ -138,7 +138,7 @@ function calculer_visites($t) {
 	}
 
 	include_spip('genie/popularites');
-	list($a, $b) = genie_popularite_constantes(24*3600);
+	list($a, $b) = genie_popularite_constantes(24 * 3600);
 
 	// Maintenant on dispose de plusieurs tableaux qu'il faut ventiler dans
 	// les tables spip_visites, spip_visites_articles, spip_referers
@@ -191,7 +191,7 @@ function calculer_visites($t) {
 						sql_update('spip_articles',
 							array(
 								'visites' => "visites+$n",
-								'popularite' => "popularite+" . number_format(round($n*$b, 2), 2, '.', ''),
+								'popularite' => "popularite+" . number_format(round($n * $b, 2), 2, '.', ''),
 								'maj' => 'maj'
 							),
 							sql_in('id_article', $noref));
@@ -200,8 +200,8 @@ function calculer_visites($t) {
 					if (count($ref)) {
 						sql_update('spip_articles',
 							array(
-								'visites' => "visites+" . ($n+1),
-								'popularite' => "popularite+" . number_format(round($n*$b, 2), 2, '.', ''),
+								'visites' => "visites+" . ($n + 1),
+								'popularite' => "popularite+" . number_format(round($n * $b, 2), 2, '.', ''),
 								'maj' => 'maj'
 							),
 							sql_in('id_article', $ref));
@@ -291,10 +291,10 @@ function visites_nettoyer_flood() {
 	if (is_dir($dir = _DIR_TMP . 'flood/')) {
 		include_spip('inc/invalideur');
 		if (!defined('_IP_FLOOD_TTL')) {
-			define('_IP_FLOOD_TTL', 24*3600);
+			define('_IP_FLOOD_TTL', 24 * 3600);
 		} // 24H par defaut
 		$options = array(
-			'mtime' => $_SERVER['REQUEST_TIME']-_IP_FLOOD_TTL,
+			'mtime' => $_SERVER['REQUEST_TIME'] - _IP_FLOOD_TTL,
 		);
 		purger_repertoire($dir, $options);
 	}
@@ -319,7 +319,7 @@ function genie_visites_dist($t) {
 	// Si ce n'est pas fini on redonne la meme date au fichier .lock
 	// pour etre prioritaire lors du cron suivant
 	if ($encore) {
-		return (0-$t);
+		return (0 - $t);
 	}
 
 	// nettoyer les IP des floodeurs quand on a fini de compter les stats
@@ -327,5 +327,3 @@ function genie_visites_dist($t) {
 
 	return 1;
 }
-
-?>

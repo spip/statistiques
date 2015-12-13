@@ -32,5 +32,3 @@ function exec_base_delete_stats_dist() {
 
 	}
 }
-
-?>

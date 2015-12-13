@@ -44,5 +44,3 @@ function formulaires_configurer_compteur_traiter_dist() {
 
 	return array('message_ok' => _T('config_info_enregistree'));
 }
-
-?>

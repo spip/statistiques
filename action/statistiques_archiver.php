@@ -144,10 +144,10 @@ function statistiques_nettoyer_referers_articles() {
 function statistiques_archiver_visites_articles() {
 
 	// Tenter de donner du temps au temps
-	@set_time_limit(15*60); // 15mn
+	@set_time_limit(15 * 60); // 15mn
 
-	$annee_par_mois = date('Y')-STATISTIQUES_ARCHIVER_PAR_MOIS;
-	$annee_par_an = date('Y')-STATISTIQUES_ARCHIVER_PAR_AN;
+	$annee_par_mois = date('Y') - STATISTIQUES_ARCHIVER_PAR_MOIS;
+	$annee_par_an = date('Y') - STATISTIQUES_ARCHIVER_PAR_AN;
 
 	$annee_minimum = statistiques_concatener_annee_minimum();
 	if (!$annee_minimum) {

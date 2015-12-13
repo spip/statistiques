@@ -66,7 +66,7 @@ function autoriser_referers_menu_dist($faire, $type = '', $id = 0, $qui = null, 
  */
 function autoriser_voirstats_dist($faire, $type, $id, $qui, $opt) {
 	return (($GLOBALS['meta']["activer_statistiques"] != 'non')
-		AND ($qui['statut'] == '0minirezo'));
+		and ($qui['statut'] == '0minirezo'));
 }
 
 /**
@@ -115,8 +115,8 @@ function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
 	$objets = explode(',', isset($GLOBALS['meta']['multi_objets']) ? $GLOBALS['meta']['multi_objets'] : '');
 
 	return (in_array('spip_articles', $objets)
-		OR in_array('spip_rubriques', $objets))
-	AND autoriser('voirstats', $type, $id, $qui, $opt);
+		or in_array('spip_rubriques', $objets))
+	and autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
 /**
@@ -133,5 +133,3 @@ function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
 function autoriser_statsreferers_onglet_dist($faire, $type, $id, $qui, $opt) {
 	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
-
-?>

@@ -39,5 +39,3 @@ function base_delete_referers_dist($titre = '', $reprise = '') {
 
 	spip_log("raz des referers operee redirige vers " . _request('redirect'));
 }
-
-?>

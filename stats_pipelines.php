@@ -89,9 +89,9 @@ function stats_affiche_milieu($flux) {
 function stats_formulaire_admin($flux) {
 	if (
 		isset($flux['args']['contexte']['objet'])
-		AND $objet = $flux['args']['contexte']['objet']
-		AND isset($flux['args']['contexte']['id_objet'])
-		AND $id_objet = $flux['args']['contexte']['id_objet']
+		and $objet = $flux['args']['contexte']['objet']
+		and isset($flux['args']['contexte']['id_objet'])
+		and $id_objet = $flux['args']['contexte']['id_objet']
 	) {
 		if ($l = admin_stats($objet, $id_objet, defined('_VAR_PREVIEW') ? _VAR_PREVIEW : '')) {
 			$btn = recuperer_fond('prive/bouton/statistiques', array(
@@ -122,9 +122,9 @@ function stats_formulaire_admin($flux) {
  **/
 function admin_stats($objet, $id_objet, $var_preview = "") {
 	if ($GLOBALS['meta']["activer_statistiques"] != "non"
-		AND $objet == 'article'
-		AND !$var_preview
-		AND autoriser('voirstats')
+		and $objet == 'article'
+		and !$var_preview
+		and autoriser('voirstats')
 	) {
 		$row = sql_fetsel("visites, popularite", "spip_articles", "id_article=$id_objet AND statut='publie'");
 
@@ -164,7 +164,7 @@ function stats_taches_generales_cron($taches_generales) {
 
 	// stats : toutes les 5 minutes on peut vider un panier de visites
 	if (isset($GLOBALS['meta']["activer_statistiques"])
-		AND $GLOBALS['meta']["activer_statistiques"] == "oui"
+		and $GLOBALS['meta']["activer_statistiques"] == "oui"
 	) {
 		$taches_generales['visites'] = 300;
 		$taches_generales['popularites'] = 7200; # calcul lourd
@@ -199,8 +199,8 @@ function stats_configurer_liste_metas($metas) {
 function stats_boite_infos($flux) {
 	if ($GLOBALS['meta']["activer_statistiques"] == "oui") {
 		if ($flux['args']['type'] == 'article'
-			AND $id_article = $flux['args']['id']
-			AND autoriser('voirstats', 'article', $id_article)
+			and $id_article = $flux['args']['id']
+			and autoriser('voirstats', 'article', $id_article)
 		) {
 			$visites = sql_getfetsel('visites', 'spip_articles', 'id_article=' . intval($id_article));
 			if ($visites > 0) {
@@ -213,5 +213,3 @@ function stats_boite_infos($flux) {
 
 	return $flux;
 }
-
-?>

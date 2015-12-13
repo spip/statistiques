@@ -32,5 +32,3 @@ function exec_base_delete_referers_dist() {
 
 	}
 }
-
-?>

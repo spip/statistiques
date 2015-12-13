@@ -41,13 +41,13 @@ function genie_popularite_constantes($duree) {
 	// periode de reference en jours
 	$periode = 1;
 	// $a est le coefficient d'amortissement depuis la derniere mesure
-	$a = pow(2, -$duree/($demivie*24*3600));
+	$a = pow(2, -$duree / ($demivie * 24 * 3600));
 	// $b est la constante multiplicative permettant d'avoir
 	// une visite par jour (periode de reference) = un point de popularite
 	// (en regime stationnaire)
 	// or, magie des maths, ca vaut log(2) * duree journee/demi-vie
 	// si la demi-vie n'est pas trop proche de la seconde ;)
-	$b = log(2)*$periode/$demivie;
+	$b = log(2) * $periode / $demivie;
 
 	return array($a, $b);
 }
@@ -72,7 +72,7 @@ function genie_popularites_dist($t) {
 		return 1;
 	}
 
-	$duree = time()-$t;
+	$duree = time() - $t;
 	list($a, $b) = genie_popularite_constantes($duree);
 
 	// du passe, faisons table (SQL) rase
@@ -113,5 +113,3 @@ function genie_popularites_dist($t) {
 	return 1;
 
 }
-
-?>

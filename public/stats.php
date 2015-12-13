@@ -57,20 +57,20 @@ function public_stats_dist($contexte = null, $referer = null) {
 	}
 
 	// Rejet des robots (qui sont pourtant des humains comme les autres)
-	if (_IS_BOT OR (isset($referer) AND strpbrk($referer, '<>"\''))) {
+	if (_IS_BOT or (isset($referer) and strpbrk($referer, '<>"\''))) {
 		return;
 	}
 
 	// Ne pas tenir compte des tentatives de spam des forums
 	if ($_SERVER['REQUEST_METHOD'] !== 'GET'
-		OR (isset($contexte['page']) AND $contexte['page'] == 'forum')
+		or (isset($contexte['page']) and $contexte['page'] == 'forum')
 	) {
 		return;
 	}
 
 	// rejet des pages 404
 	if (isset($GLOBALS['page']['status'])
-		AND $GLOBALS['page']['status'] == 404
+		and $GLOBALS['page']['status'] == 404
 	) {
 		return;
 	}
@@ -90,8 +90,8 @@ function public_stats_dist($contexte = null, $referer = null) {
 			preg_replace(',^(https?://)?(www\.)?,i', '',
 				url_de_base()));
 		if (!(($url_site_spip <> '')
-			AND strpos('-' . strtolower($referer), strtolower($url_site_spip))
-			AND strpos($referer, "recherche=") === false)
+			and strpos('-' . strtolower($referer), strtolower($url_site_spip))
+			and strpos($referer, "recherche=") === false)
 		) {
 			$log_referer = $referer;
 		}
@@ -146,5 +146,3 @@ function public_stats_dist($contexte = null, $referer = null) {
 		@touch($flood);
 	}
 }
-
-?>

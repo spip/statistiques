@@ -57,7 +57,7 @@ function statistiques_moyenne($tab) {
 		$moyenne += $v;
 	}
 
-	return $moyenne/count($tab);
+	return $moyenne / count($tab);
 }
 
 /**
@@ -79,6 +79,3 @@ function classement_populaires($type, $serveur = '') {
 
 	return $classement[$type];
 }
-
-
-?>

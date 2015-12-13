@@ -40,5 +40,3 @@ function base_delete_stats_dist($titre = '', $reprise = '') {
 	pipeline('delete_statistiques', '');
 	spip_log("raz des stats operee redirige vers " . _request('redirect'));
 }
-
-?>
