@@ -12,68 +12,71 @@
 
 /**
  * Gestion du calcul des popularités (cron)
- * 
+ *
  * @plugin Statistiques pour SPIP
  * @license GNU/GPL
  * @package SPIP\Statistiques\Genie
-**/
+ **/
 
-if (!defined("_ECRIRE_INC_VERSION")) return;
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
 
 /**
  * Calcule des coefficients de popularité en fonction de l'intervalle
  * écoulé depuis le précédent calcul
- * 
+ *
  * Popularite, modele logarithmique
  *
  * @param int $duree Intervalle écoulé depuis le précédent calcul
  * @return array {
- *     @type float $a Coefficient d'amortissement
- *     @type float $b Constante multiplicative
+ * @type float $a Coefficient d'amortissement
+ * @type float $b Constante multiplicative
  * }
-**/
-function genie_popularite_constantes($duree){
+ **/
+function genie_popularite_constantes($duree) {
 	// duree de demi-vie d'une visite dans le calcul de la popularite (en jours)
 	$demivie = 0.5;
 	// periode de reference en jours
 	$periode = 1;
 	// $a est le coefficient d'amortissement depuis la derniere mesure
-	$a = pow(2, - $duree / ($demivie * 24 * 3600));
+	$a = pow(2, -$duree/($demivie*24*3600));
 	// $b est la constante multiplicative permettant d'avoir
 	// une visite par jour (periode de reference) = un point de popularite
 	// (en regime stationnaire)
 	// or, magie des maths, ca vaut log(2) * duree journee/demi-vie
 	// si la demi-vie n'est pas trop proche de la seconde ;)
-	$b = log(2) * $periode / $demivie;
+	$b = log(2)*$periode/$demivie;
 
-	return array($a,$b);
+	return array($a, $b);
 }
 
 /**
  * Cron de calcul des popularités des articles
- * 
+ *
  * @uses genie_popularite_constantes()
- * 
+ *
  * @param int $t
  *     Timestamp de la dernière exécution de cette tâche
  * @return int
  *     Positif si la tâche a été terminée, négatif pour réexécuter cette tâche
-**/
+ **/
 function genie_popularites_dist($t) {
 
 	// Si c'est le premier appel, ne pas calculer
 	$t = $GLOBALS['meta']['date_popularites'];
 	ecrire_meta('date_popularites', time());
 
-	if (!$t)
+	if (!$t) {
 		return 1;
+	}
 
-	$duree = time() - $t;
-	list($a,$b) = genie_popularite_constantes($duree);
+	$duree = time()-$t;
+	list($a, $b) = genie_popularite_constantes($duree);
 
 	// du passe, faisons table (SQL) rase
-	sql_update('spip_articles', array('maj'=>'maj', 'popularite' => "popularite * $a"), 'popularite>1');
+	sql_update('spip_articles', array('maj' => 'maj', 'popularite' => "popularite * $a"), 'popularite>1');
 
 	// enregistrer les metas...
 	$row = sql_fetsel('MAX(popularite) AS max, SUM(popularite) AS tot', "spip_articles");
@@ -91,19 +94,21 @@ function genie_popularites_dist($t) {
 	if (($d = $GLOBALS['meta']['date_statistiques']) != $aujourdhui) {
 		spip_log("Popularite: purger referer depuis $d");
 		ecrire_meta('date_statistiques', $aujourdhui);
-		if (strncmp($GLOBALS['connexions'][0]['type'],'sqlite',6)==0)
+		if (strncmp($GLOBALS['connexions'][0]['type'], 'sqlite', 6) == 0) {
 			spip_query("UPDATE spip_referers SET visites_veille=visites_jour, visites_jour=0");
-	  else
+		} else
 			// version 3 fois plus rapide, mais en 2 requetes
 			#spip_query("ALTER TABLE spip_referers CHANGE visites_jour visites_veille INT( 10 ) UNSIGNED NOT NULL DEFAULT '0',CHANGE visites_veille visites_jour INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");
 			#spip_query("UPDATE spip_referers SET visites_jour=0");
 			// version 4 fois plus rapide que la premiere, en une seule requete
-		  // ATTENTION : peut poser probleme cf https://core.spip.net/issues/2505
+			// ATTENTION : peut poser probleme cf https://core.spip.net/issues/2505
+		{
 			sql_alter("TABLE spip_referers DROP visites_veille,
 			CHANGE visites_jour visites_veille INT(10) UNSIGNED NOT NULL DEFAULT '0',
 			ADD visites_jour INT(10) UNSIGNED NOT NULL DEFAULT '0'");
+		}
 	}
- 
+
 	// et c'est fini pour cette fois-ci
 	return 1;
 

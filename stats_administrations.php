@@ -12,13 +12,15 @@
 
 /**
  * Fichier gérant l'installation et désinstallation du plugin Statistiques
- * 
+ *
  * @plugin Statistiques pour SPIP
  * @license GNU/GPL
  * @package SPIP\Stats\Pipelines
-**/
+ **/
 
-if (!defined("_ECRIRE_INC_VERSION")) return;
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
 /**
  * Installation et mises à jour du plugin
@@ -28,24 +30,25 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
  * @param string $version_cible
  *     Version du schéma de données dans ce plugin (déclaré dans paquet.xml)
  * @return void
-**/
-function stats_upgrade($nom_meta_base_version, $version_cible){
+ **/
+function stats_upgrade($nom_meta_base_version, $version_cible) {
 	// cas particulier :
 	// si plugin pas installe mais que la table existe
 	// considerer que c'est un upgrade depuis v 1.0.0
 	// pour gerer l'historique des installations SPIP <=2.1
-	if (!isset($GLOBALS['meta'][$nom_meta_base_version])){
-		$trouver_table = charger_fonction('trouver_table','base');
+	if (!isset($GLOBALS['meta'][$nom_meta_base_version])) {
+		$trouver_table = charger_fonction('trouver_table', 'base');
 		if ($desc = $trouver_table('spip_visites')
-		  AND isset($desc['exist']) AND $desc['exist']){
-			ecrire_meta($nom_meta_base_version,'1.0.0');
+			AND isset($desc['exist']) AND $desc['exist']
+		) {
+			ecrire_meta($nom_meta_base_version, '1.0.0');
 		}
 		// si pas de table en base, on fera une simple creation de base
 	}
 
 	$maj = array();
 	$maj['create'] = array(
-		array('maj_tables',array('spip_visites','spip_visites_articles','spip_referers','spip_referers_articles')),
+		array('maj_tables', array('spip_visites', 'spip_visites_articles', 'spip_referers', 'spip_referers_articles')),
 	);
 	$maj['1.0.0'] = array();
 
@@ -61,7 +64,7 @@ function stats_upgrade($nom_meta_base_version, $version_cible){
  * @param string $nom_meta_base_version
  *     Nom de la meta informant de la version du schéma de données du plugin installé dans SPIP
  * @return void
-**/
+ **/
 function stats_vider_tables($nom_meta_base_version) {
 	sql_drop_table("spip_visites");
 	sql_drop_table("spip_visites_articles");
@@ -73,4 +76,5 @@ function stats_vider_tables($nom_meta_base_version) {
 
 	effacer_meta($nom_meta_base_version);
 }
+
 ?>

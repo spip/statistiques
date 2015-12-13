@@ -16,42 +16,44 @@
  * @plugin Statistiques pour SPIP
  * @license GNU/GPL
  * @package SPIP\Stats\Actions
-**/
+ **/
 
-if (!defined("_ECRIRE_INC_VERSION")) return;
+if (!defined("_ECRIRE_INC_VERSION")) {
+	return;
+}
 
 
 if (!defined('STATISTIQUES_ARCHIVER_PAR_MOIS')) {
 	/**
 	 * Nombre d'années après quoi on permet de concaténer les statistiques de visites par mois
-	 * 
+	 *
 	 * Après ce nombre d'années, on peut concaténer les données de visites d'articles par mois
 	 * pour prendre moins de place dans la base de données
 	 *
-	 * @var int Nombre d'années  
-	**/
+	 * @var int Nombre d'années
+	 **/
 	define('STATISTIQUES_ARCHIVER_PAR_MOIS', 2);
 }
 
 if (!defined('STATISTIQUES_ARCHIVER_PAR_AN')) {
 	/**
 	 * Nombre d'années après quoi on permet de concaténer les statistiques de visites par an
-	 * 
+	 *
 	 * Après ce nombre d'années, on peut concaténer les données de visites d'articles par années
 	 * pour prendre moins de place dans la base de données
 	 *
-	 * @var int Nombre d'années  
-	**/
+	 * @var int Nombre d'années
+	 **/
 	define('STATISTIQUES_ARCHIVER_PAR_AN', 5);
 }
 
 
 /**
  * Archiver ou nettoyer des statistiques
- * 
+ *
  * @param string $arg
  */
-function action_statistiques_archiver_dist($arg = null){
+function action_statistiques_archiver_dist($arg = null) {
 	if (!$arg) {
 		$securiser_action = charger_fonction('securiser_action', 'inc');
 		$arg = $securiser_action();
@@ -66,7 +68,8 @@ function action_statistiques_archiver_dist($arg = null){
 		'archiver_visites_articles',
 		'nettoyer_visites_articles',
 		'nettoyer_referers_articles'
-	))) {
+	))
+	) {
 		include_spip('inc/minipres');
 		minipres("Argument non compris");
 	}
@@ -81,7 +84,7 @@ function action_statistiques_archiver_dist($arg = null){
  *
  * @uses spip_log()
  * @param string $texte
-**/
+ **/
 function statistiques_archiver_log($texte) {
 	spip_log($texte, 'statistiques_archiver.' . _LOG_INFO_IMPORTANTE);
 }
@@ -91,7 +94,7 @@ function statistiques_archiver_log($texte) {
  *
  * Supprime toutes les lignes qui ne font pas partie
  * d'un article présent en base
-**/
+ **/
 function statistiques_nettoyer_visites_articles() {
 	statistiques_archiver_log("Supprimer les visites d'articles qui n'existent pas dans spip_articles.");
 	$i = sql_delete('spip_visites_articles', 'id_article NOT IN (SELECT id_article FROM spip_articles)');
@@ -103,7 +106,7 @@ function statistiques_nettoyer_visites_articles() {
  *
  * Supprime toutes les lignes qui ne font pas partie
  * d'un article présent en base
-**/
+ **/
 function statistiques_nettoyer_referers_articles() {
 	statistiques_archiver_log("Supprimer les referers d'articles qui n'existent pas dans spip_articles.");
 	$i = sql_delete('spip_referers_articles', 'id_article NOT IN (SELECT id_article FROM spip_articles)');
@@ -119,14 +122,14 @@ function statistiques_nettoyer_referers_articles() {
  *   La base de test avait (en 2014) 12.500.000 d'entrées depuis 2005.
  *   Cet archivage réduit à 1.200.000 entrées en réduisant
  *   par mois jusqu'à 2012 inclu et par an jusqu'à 2009 inclu.
- * 
+ *
  *   Cela prenait 8 minutes sur ma machine locale
  *   (Intel Core i5-4258U CPU @ 2.40GHz × 4 avec disque SSD)
  *
  * @note
  *   On peut suivre l'avancement dans le fichier de log
  *   tail -f tmp/log/statistiques_archiver.log
- * 
+ *
  * @note
  *   On ne peut pas vraiment avec le code actuel de la fonction
  *   appliquer les calculs sur l'ensemble d'un mois car cela
@@ -137,14 +140,14 @@ function statistiques_nettoyer_referers_articles() {
  * @uses statistiques_concatener_visites_entre_jours()
  * @uses statistiques_concatener_visites_par_mois()
  * @uses statistiques_concatener_visites_par_an()
-**/
+ **/
 function statistiques_archiver_visites_articles() {
 
 	// Tenter de donner du temps au temps
-	@set_time_limit(15 * 60); // 15mn
+	@set_time_limit(15*60); // 15mn
 
-	$annee_par_mois = date('Y') - STATISTIQUES_ARCHIVER_PAR_MOIS;
-	$annee_par_an   = date('Y') - STATISTIQUES_ARCHIVER_PAR_AN;
+	$annee_par_mois = date('Y')-STATISTIQUES_ARCHIVER_PAR_MOIS;
+	$annee_par_an = date('Y')-STATISTIQUES_ARCHIVER_PAR_AN;
 
 	$annee_minimum = statistiques_concatener_annee_minimum();
 	if (!$annee_minimum) {
@@ -178,14 +181,13 @@ function statistiques_archiver_visites_articles() {
  * Concatène les statistiques de visites d'articles par mois
  *
  * @see statistiques_concatener_visites_entre_jours()
- * 
+ *
  * @param int $annee
  *    On concatène ce qui est avant cette année là.
-**/
+ **/
 function statistiques_concatener_visites_par_mois($annee) {
 	return statistiques_concatener_visites_entre_jours($annee, 1, 31);
 }
-
 
 
 /**
@@ -200,8 +202,8 @@ function statistiques_concatener_visites_par_mois($annee) {
  *    Numéro de jour de fin de la concaténation, exemple 31.
  *    Toutes les entrées entre le jour $debut+1 et $fin seront supprimées
  *    et concaténées au jour $debut.
- * 
-**/
+ *
+ **/
 function statistiques_concatener_visites_entre_jours($annee, $debut, $fin) {
 
 	$annee_minimum = statistiques_concatener_annee_minimum();
@@ -211,18 +213,19 @@ function statistiques_concatener_visites_entre_jours($annee, $debut, $fin) {
 
 	if ($annee_minimum > $annee) {
 		statistiques_archiver_log("Il n'y a pas de statistiques assez anciennes !");
+
 		return false;
 	}
 
 	// on a besoin pour le champ date d'une écriture sur 2 chiffres.
 	$debut = str_pad($debut, 2, '0', STR_PAD_LEFT);
-	$fin   = str_pad($fin,   2, '0', STR_PAD_LEFT);
+	$fin = str_pad($fin, 2, '0', STR_PAD_LEFT);
 
 	statistiques_archiver_log("\nConcaténer les visites d'articles (jours entre $debut et $fin)");
 	statistiques_archiver_log("===========================================================");
 
 	$annees = range($annee_minimum, $annee);
-	$mois   = range(1, 12);
+	$mois = range(1, 12);
 
 	foreach ($annees as $a) {
 		statistiques_archiver_log("\n- Concaténer les visites de l'année : $a");
@@ -241,7 +244,7 @@ function statistiques_concatener_visites_entre_jours($annee, $debut, $fin) {
  * @return int|bool
  *     - int : l'année
  *     - false : année non trouvée.
-**/
+ **/
 function statistiques_concatener_annee_minimum() {
 	static $annee_minimum = null;
 
@@ -252,6 +255,7 @@ function statistiques_concatener_annee_minimum() {
 
 	if (!$annee_minimum) {
 		statistiques_archiver_log("Erreur de calcul de la plus petite année de statistiques !");
+
 		return false;
 	}
 
@@ -261,11 +265,11 @@ function statistiques_concatener_annee_minimum() {
 
 /**
  * Concatène les statistiques de visites d'articles par an
- * 
+ *
  * @param int $annee
  *    On concatène ce qui est avant cette année là.
- * 
-**/
+ *
+ **/
 function statistiques_concatener_visites_par_an($annee) {
 
 	$annee_minimum = statistiques_concatener_annee_minimum();
@@ -275,6 +279,7 @@ function statistiques_concatener_visites_par_an($annee) {
 
 	if ($annee_minimum > $annee) {
 		statistiques_archiver_log("Il n'y a pas de statistiques assez anciennes !");
+
 		return false;
 	}
 
@@ -300,8 +305,8 @@ function statistiques_concatener_visites_par_an($annee) {
  * @return bool
  *     - false : aucune visite sur cette période
  *     - true : il y avait des visites, elles ont été concaténées (ou l'étaient déjà)
- * 
-**/
+ *
+ **/
 function statistiques_concatener_visites_entre_periode($date_debut, $date_fin) {
 
 	// récupérer toutes les visites de cette période (année, mois, entre jour début et fin)
