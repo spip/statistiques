@@ -28,7 +28,7 @@ function enfants($id_parent, $critere, &$nombre_branche, &$nombre_rub) {
 		$visites = intval(sql_getfetsel("SUM(" . $critere . ")", "spip_articles", "id_rubrique=" . intval($id_rubrique)));
 		$nombre_rub[$id_rubrique] = $visites;
 		$nombre_branche[$id_rubrique] = $visites;
-		$nombre += $visites+enfants($id_rubrique, $critere, $nombre_branche, $nombre_rub);
+		$nombre += $visites + enfants($id_rubrique, $critere, $nombre_branche, $nombre_rub);
 	}
 	if (!isset($nombre_branche[$id_parent])) {
 		$nombre_branche[$id_parent] = 0;
@@ -56,7 +56,7 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 	}
 	$visites_abs = 0;
 	$out = "";
-	$width = intval(floor(($nombre_branche[$id_parent]/$total_site)*$taille));
+	$width = intval(floor(($nombre_branche[$id_parent] / $total_site) * $taille));
 	$width = "width:{$width}px;float:$spip_lang_left;";
 
 
@@ -67,11 +67,11 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 		$titre = typo($row['titre']);
 		$descriptif = attribut_html(couper(typo($row['descriptif']), 80));
 
-		if ($nombre_branche[$id_rubrique] > 0 OR $nombre_rub[$id_rubrique] > 0) {
-			$largeur_branche = floor(($nombre_branche[$id_rubrique]-$nombre_rub[$id_rubrique])*$taille/$total_site);
-			$largeur_rub = floor($nombre_rub[$id_rubrique]*$taille/$total_site);
+		if ($nombre_branche[$id_rubrique] > 0 or $nombre_rub[$id_rubrique] > 0) {
+			$largeur_branche = floor(($nombre_branche[$id_rubrique] - $nombre_rub[$id_rubrique]) * $taille / $total_site);
+			$largeur_rub = floor($nombre_rub[$id_rubrique] * $taille / $total_site);
 
-			if ($largeur_branche+$largeur_rub > 0) {
+			if ($largeur_branche + $largeur_rub > 0) {
 
 				if ($niveau == 0) {
 					$couleur = "#cccccc";
@@ -84,7 +84,7 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 				}
 				$out .= "<table cellpadding='2' cellspacing='0' border='0' width='100%'>";
 				$out .= "\n<tr style='background-color: $couleur'>";
-				$out .= "\n<td style='border-bottom: 1px solid #aaaaaa; padding-$spip_lang_left: " . ($niveau*20+5) . "px;'>";
+				$out .= "\n<td style='border-bottom: 1px solid #aaaaaa; padding-$spip_lang_left: " . ($niveau * 20 + 5) . "px;'>";
 
 
 				if ($largeur_branche > 2) {
@@ -101,14 +101,14 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 
 
 				// pourcentage de visites dans la branche par rapport au total du site
-				$pourcent = round($nombre_branche[$id_rubrique]/$total_site*1000)/10;
+				$pourcent = round($nombre_branche[$id_rubrique] / $total_site * 1000) / 10;
 				$out .= "\n<td class='verdana1' style='text-align: $spip_lang_right; width: 40px; border-bottom: 1px solid #aaaaaa;'>$pourcent%</td>";
 
 
-				$out .= "\n<td align='right' style='border-bottom: 1px solid #aaaaaa; width:" . ($taille+5) . "px'>";
+				$out .= "\n<td align='right' style='border-bottom: 1px solid #aaaaaa; width:" . ($taille + 5) . "px'>";
 
 
-				$out .= "\n<table cellpadding='0' cellspacing='0' border='0' width='" . ($decalage+1+$gauche) . "'>";
+				$out .= "\n<table cellpadding='0' cellspacing='0' border='0' width='" . ($decalage + 1 + $gauche) . "'>";
 				$out .= "\n<tr>";
 				if ($gauche > 0) {
 					$out .= "<td style='width: " . $gauche . "px'></td>";
@@ -133,14 +133,12 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 		if (isset($largeur_branche) && ($largeur_branche > 0)) {
 			$niveau++;
 			$out .= debut_block_depliable(false, "stats$id_rubrique");
-			$out .= enfants_aff($id_rubrique, $largeur_branche, $taille, $critere, $visites_abs+$gauche);
+			$out .= enfants_aff($id_rubrique, $largeur_branche, $taille, $critere, $visites_abs + $gauche);
 			$out .= fin_block();
 			$niveau--;
 		}
-		$visites_abs = $visites_abs+round($nombre_branche[$id_rubrique]/$total_site*$taille);
+		$visites_abs = $visites_abs + round($nombre_branche[$id_rubrique] / $total_site * $taille);
 	}
 
 	return $out;
 }
-
-?>

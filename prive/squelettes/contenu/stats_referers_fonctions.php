@@ -18,7 +18,7 @@ if (!isset($GLOBALS['source_vignettes'])) {
 
 function vigneter_referer($url) {
 
-	if (!strlen($GLOBALS['source_vignettes']) OR $GLOBALS['meta']["activer_captures_referers"] == 'non') {
+	if (!strlen($GLOBALS['source_vignettes']) or $GLOBALS['meta']["activer_captures_referers"] == 'non') {
 		return '';
 	}
 

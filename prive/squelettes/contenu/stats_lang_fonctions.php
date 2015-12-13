@@ -46,8 +46,8 @@ function affiche_stats_lang($critere) {
 
 		$lang = $row['lang'];
 		if ($row['cnt']) {
-			$visites = round($row['cnt']/$total_visites*$taille);
-			$pourcent = round($row['cnt']/$total_visites*100);
+			$visites = round($row['cnt'] / $total_visites * $taille);
+			$pourcent = round($row['cnt'] / $total_visites * 100);
 		}
 
 		if ($visites > 0) {
@@ -65,7 +65,7 @@ function affiche_stats_lang($critere) {
 			$out .= "<td style='width: 100%; border-bottom: 1px solid #cccccc;'><p $dir><span style='float: $spip_lang_right;'>$pourcent%</span>" . traduire_nom_langue($lang) . "</p></td>";
 
 			$out .= "<td style='border-bottom: 1px solid #cccccc;'>";
-			$out .= "\n<table cellpadding='0' cellspacing='0' border='0' width='" . ($taille+5) . "'>";
+			$out .= "\n<table cellpadding='0' cellspacing='0' border='0' width='" . ($taille + 5) . "'>";
 			$out .= "\n<tr><td style='align:$spip_lang_right; background-color: #eeeeee; border: 1px solid #999999; white-space: nowrap;'>";
 			if ($visites_abs > 0) {
 				$out .= "<img src='" . chemin_image('rien.gif') . "' width='$visites_abs' height='10' alt=' ' />";
@@ -84,5 +84,3 @@ function affiche_stats_lang($critere) {
 
 	return $out;
 }
-
-?>
