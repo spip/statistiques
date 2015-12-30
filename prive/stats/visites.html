@@ -87,6 +87,7 @@ function trace_stats(){
 			grille:{weekend:true},
 			flot:{
 				xaxis:{
+					min: [(#ENV{date}|affdate{'Y-m-d 00:00:00'}|strtotime|moins{7776000}|mult{1000})], /* 90 jours */
 					timeformat:"%d %b",
 					minTickSize: [1, "day"]
 				},
