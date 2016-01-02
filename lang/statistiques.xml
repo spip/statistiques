@@ -45,9 +45,10 @@
 	</langue>
 	<langue code="eo" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=eo" total="51" traduits="24" relire="0" modifs="3" nouveaux="24" pourcent="47.06">
 	</langue>
-	<langue code="es" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=es" total="51" traduits="34" relire="0" modifs="0" nouveaux="17" pourcent="66.67">
+	<langue code="es" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=es" total="51" traduits="51" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="dani" lien="http://trad.spip.net/auteur/dani" />
 		<traducteur nom="jotacese" lien="http://trad.spip.net/auteur/jotacese" />
+		<traducteur nom="kent1" lien="http://trad.spip.net/auteur/kent1" />
 	</langue>
 	<langue code="eu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=eu" total="51" traduits="25" relire="0" modifs="2" nouveaux="24" pourcent="49.02">
 	</langue>
