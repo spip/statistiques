@@ -8,15 +8,20 @@ include_spip('inc/acces');
 include_spip('inc/statistiques');
 
 function duree_affiche($duree, $periode) {
-	if (intval($duree)) {
+	if (intval($duree) AND $duree>0) {
+		return $duree;
+	}
+	if ($periode == 'mois' OR $duree<0) {
+		$debut = sql_getfetsel("date", "spip_visites", "", "", "date", "0,1");
+		$debut = strtotime($debut);
+		$duree = ceil((time() - $debut) / 24 / 3600);
+
 		return $duree;
 	}
 
-	$debut = sql_getfetsel("date", "spip_visites", "", "", "date", "0,1");
-	$debut = strtotime($debut);
-	$duree = ceil((time()-$debut)/24/3600);
 
-	return $duree;
+	// par defaut 90 jours
+	return 90;
 }
 
 function duree_zoom($duree, $sens = 'plus') {
