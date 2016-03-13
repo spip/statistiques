@@ -12,7 +12,18 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// A
 	'archiver' => 'Archivovať',
 	'archiver_concatener_explications' => 'Táto operácia zreťazí štatistiky návštev článkov:',
+	'archiver_concatener_ignorer' => 'Návštevy za minimálne @nb@ rok(y)/rokov to neovplyvní.',
+	'archiver_concatener_par_an' => 'Ďalšie návštevy za @nb@ rok(y)/rokov za každý článok v prvý deň roka sa sčítajú.',
+	'archiver_concatener_par_mois' => 'Ďalšie návštevy za @nb@ rok(y)/rokov za každý článok v prvý deň mesiaca sa sčítajú.',
+	'archiver_conseil_sauvegarde' => 'V prvom kroku sa odporúča zálohovať databázu.',
+	'archiver_description' => 'Táto stránka vám ponúka nástroje na vynulovanie a archiváciu štatistík stránky.',
+	'archiver_et_nettoyer' => 'Archivovať a vynulovať',
+	'archiver_nettoyer' => 'Vynulovať',
+	'archiver_nettoyer_explications' => 'Vymaže riadky o "refereroch" a "návštevách", ku ktorým (už viac)  v databáze neexistujú položky.',
+	'archiver_nettoyer_referers_articles' => 'Vynulovať referers_articles',
+	'archiver_nettoyer_visites_articles' => 'Vynulovať visites_articles',
 	'archiver_nombre_lignes' => 'Počet riadkov',
+	'archiver_operation_longue' => 'Táto operácia môže pri prvom spustení zabrať veľa času.',
 	'archiver_operations_irreversibles' => 'Tieto operácie sa nedajú vrátiť späť!',
 
 	// B
