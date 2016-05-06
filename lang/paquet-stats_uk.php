@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'stats_nom' => 'Статистика',
 	'stats_slogan' => 'Плагін з обліку статистики відвідувань вашого сайту'
 );
-

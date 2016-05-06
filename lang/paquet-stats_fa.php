@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'stats_nom' => 'آمارها',
 	'stats_slogan' => 'مديريت آمارها در اسپيپ'
 );
-

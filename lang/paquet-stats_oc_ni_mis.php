@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'stats_nom' => 'Estatìstica',
 	'stats_slogan' => 'Gestioun dei estatìstica en SPIP'
 );
-
