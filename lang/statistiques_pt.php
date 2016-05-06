@@ -58,4 +58,3 @@ na classificação por popularidade, é indicado na margem ; a popularidade do 
 	'visites_journalieres' => 'Número de visitas por dia',
 	'visites_mensuelles' => 'Número de visitas por mês'
 );
-

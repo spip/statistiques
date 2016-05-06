@@ -82,4 +82,3 @@ quando si passa con il mouse sopra al titolo.',
 	'visites_journalieres' => 'Numero di visite per giorno',
 	'visites_mensuelles' => 'Numero di visite per mese'
 );
-

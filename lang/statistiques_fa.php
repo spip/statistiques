@@ -57,4 +57,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'visites_journalieres' => 'تعداد بازديدها طي روز ',
 	'visites_mensuelles' => 'تعداد بازديد‌ها طي ماه '
 );
-

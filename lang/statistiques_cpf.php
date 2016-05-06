@@ -41,4 +41,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques' => 'Bann sifklé sanm inn rubrik',
 	'titre_page_statistiques_visites' => 'Bann sifklé pou bann vizit'
 );
-

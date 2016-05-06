@@ -35,4 +35,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques' => 'Tilastot lohkoittain',
 	'titre_page_statistiques_visites' => 'Kävijä tilastot'
 );
-

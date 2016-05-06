@@ -47,4 +47,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques' => 'Estadistiques per seccions',
 	'titre_page_statistiques_visites' => 'Estatistiques de les visites'
 );
-

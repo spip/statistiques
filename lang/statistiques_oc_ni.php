@@ -48,4 +48,3 @@ qu’apareisse quora la rateta passa sus lo titre.',
 	'titre_page_statistiques' => 'Estatisticas per rubricas',
 	'titre_page_statistiques_visites' => 'Estatisticas dei visitas'
 );
-

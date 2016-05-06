@@ -41,4 +41,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques' => 'အခန်းကဏ္ဍအလိုက်စာရင်းများ',
 	'titre_page_statistiques_visites' => 'ဝက်ဘ်ဆိုက်သို့ ဝင်ရောက်ကြည့်ရှုသူများစာရင်း'
 );
-

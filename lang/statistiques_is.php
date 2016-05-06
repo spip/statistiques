@@ -18,4 +18,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_debut' => 'frá upphafi',
 	'onglet_repartition_lang' => 'eftir tungumáli' # MODIF
 );
-

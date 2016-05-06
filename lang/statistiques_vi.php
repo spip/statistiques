@@ -41,4 +41,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques' => 'Thống kê theo từng đề mục',
 	'titre_page_statistiques_visites' => 'Thống kê về thăm viếng'
 );
-

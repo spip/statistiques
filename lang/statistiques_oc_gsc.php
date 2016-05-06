@@ -45,4 +45,3 @@ qu’apareish quan la murga e passa suu títol.',
 	'titre_page_statistiques' => 'Estadisticas per rubricas',
 	'titre_page_statistiques_visites' => 'Estadisticas de las vesitas'
 );
-

@@ -57,4 +57,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'visites_journalieres' => 'Zuel vun de Visite pro Dag',
 	'visites_mensuelles' => 'Zuel vun de Visite pro Mount'
 );
-

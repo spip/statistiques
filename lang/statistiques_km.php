@@ -44,4 +44,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques' => 'ស្ថិតិ តាមផ្នែក',
 	'titre_page_statistiques_visites' => 'ស្ថិតិ ចំណូលមើល'
 );
-
