@@ -29,4 +29,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_liens_entrants' => 'به‌سته‌رى لڤایچووه‌ری'
 );
 
-?>

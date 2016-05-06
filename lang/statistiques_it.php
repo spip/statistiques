@@ -83,4 +83,3 @@ quando si passa con il mouse sopra al titolo.',
 	'visites_mensuelles' => 'Numero di visite per mese'
 );
 
-?>

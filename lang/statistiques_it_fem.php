@@ -54,4 +54,3 @@ quando si passa con il mouse sopra al titolo.',
 	'titre_page_statistiques_visites' => 'Statistiche delle visite'
 );
 
-?>

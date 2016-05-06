@@ -59,4 +59,3 @@ na classificação por popularidade, é indicado na margem ; a popularidade do 
 	'visites_mensuelles' => 'Número de visitas por mês'
 );
 
-?>

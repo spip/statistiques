@@ -77,4 +77,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'visites_mensuelles' => 'Cantidad de visitas por mes'
 );
 
-?>

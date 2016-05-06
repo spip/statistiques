@@ -46,4 +46,3 @@ qu’apareis quora la rata passa sus lo títol.',
 	'titre_page_statistiques_visites' => 'Estadisticas dei vesitas'
 );
 
-?>

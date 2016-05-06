@@ -21,4 +21,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Resume' # MODIF
 );
 
-?>

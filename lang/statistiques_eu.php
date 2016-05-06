@@ -46,4 +46,3 @@ Artikuluaren onarpena (berak jasoko duen eguneroko bisiten kopuruaren estimazio 
 	'titre_page_statistiques_visites' => 'Bisiten estatistikak'
 );
 
-?>

@@ -46,4 +46,3 @@ qu’apareis quand la murja passa sus lo títol.',
 	'titre_page_statistiques_visites' => 'Estadisticas de las vesitas'
 );
 
-?>
