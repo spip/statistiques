@@ -185,6 +185,7 @@ function stats_taches_generales_cron($taches_generales) {
 function stats_configurer_liste_metas($metas) {
 	$metas['activer_statistiques'] = 'non';
 	$metas['activer_captures_referers'] = 'non';
+	$metas['activer_referers']='oui';
 
 	return $metas;
 }

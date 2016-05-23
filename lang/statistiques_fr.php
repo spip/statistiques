@@ -44,6 +44,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'popularité : @popularite@ ; visites : @visites@',
 	'info_popularite_5' => 'popularité :',
 	'info_previsions' => 'prévisions :',
+	'info_referer_oui' => 'Activer les referers',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d’origine des visites',
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d’origine des visites',
 	'info_tableaux' => 'Tableaux',
