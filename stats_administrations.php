@@ -51,6 +51,10 @@ function stats_upgrade($nom_meta_base_version, $version_cible) {
 		array('maj_tables', array('spip_visites', 'spip_visites_articles', 'spip_referers', 'spip_referers_articles')),
 	);
 	$maj['1.0.0'] = array();
+	$maj['1.0.1'] = array(
+		array('ecrire_meta','activer_referers', 'oui'),
+	);
+
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);

@@ -19,6 +19,7 @@ function formulaires_configurer_compteur_charger_dist() {
 	$valeurs = array();
 
 	$valeurs['activer_statistiques'] = $GLOBALS['meta']['activer_statistiques'];
+	$valeurs['activer_referers'] = $GLOBALS['meta']['activer_referers'];
 	$valeurs['activer_captures_referers'] = $GLOBALS['meta']['activer_captures_referers'];
 
 	return $valeurs;
@@ -29,7 +30,7 @@ function formulaires_configurer_compteur_verifier_dist() {
 	$erreurs = array();
 
 	// les checkbox
-	foreach (array('activer_statistiques', 'activer_captures_referers') as $champ) {
+	foreach (array('activer_statistiques', 'activer_referers', 'activer_captures_referers') as $champ) {
 		if (_request($champ) != 'oui') {
 			set_request($champ, 'non');
 		}
