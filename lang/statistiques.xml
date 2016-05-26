@@ -100,7 +100,7 @@
 	</langue>
 	<langue code="nb" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=nb" total="52" traduits="12" relire="0" modifs="6" nouveaux="34" pourcent="23.08">
 	</langue>
-	<langue code="nl" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=nl" total="52" traduits="51" relire="0" modifs="0" nouveaux="1" pourcent="98.08">
+	<langue code="nl" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=nl" total="52" traduits="52" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Hanjo" lien="http://trad.spip.net/auteur/hanjo" />
 		<traducteur nom="Suske" lien="http://trad.spip.net/auteur/suske" />
 	</langue>
