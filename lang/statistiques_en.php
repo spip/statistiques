@@ -48,6 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_previsions' => 'forecasts:',
 	'info_question_vignettes_referer' => 'When you consult the statistics, you can see a preview of any referring sites from which a visitor came. ',
 	'info_question_vignettes_referer_oui' => 'Show screenshots of referring sites',
+	'info_referer_oui' => 'Enable referrers',
 	'info_tableaux' => 'Tables',
 	'info_visites' => 'visits:',
 	'info_visites_plus_populaires' => 'Show visits for <b>the most popular articles</b> and <b>the most recent articles:</b>',
@@ -64,7 +65,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'This command deletes all statistics on visits to the site, including article popularity.',
-	'texte_admin_effacer_toutes_stats' => 'The first button deletes all statistics: visits, articles popularity and referers.',
+	'texte_admin_effacer_toutes_stats' => 'The first button deletes all statistics: visits, articles popularity and referrers.',
 	'texte_comment_lire_tableau' => 'The rank of the article in the popularity rating is indicated in the margin; the popularity of the article (an estimation of the number of daily visits it receives if the current flow of  consultation continues) and the number of visits received since the beginning are displayed in the tooltip that appears when the mouse is hovering the title.',
 	'texte_signification' => 'Dark bars represent cumulative entries (total subsections), light bars represent the number of visits for each section.',
 	'titre_evolution_visite' => 'Visitor Statistics',
