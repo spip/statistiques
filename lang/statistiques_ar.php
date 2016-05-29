@@ -48,6 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_previsions' => 'توقعات:',
 	'info_question_vignettes_referer' => 'عندما تعاين الاحضاءات، يمكنك ايضاً مشاهدة مصغرات عن المواقع الصادرة منها.',
 	'info_question_vignettes_referer_oui' => 'عرض مصغرات عن مواقع مصدر الزيارات',
+	'info_referer_oui' => 'تنشيط مصادر الزيارات',
 	'info_tableaux' => 'الجداول',
 	'info_visites' => 'زيارة:',
 	'info_visites_plus_populaires' => 'إظهار الزيارات <b>لأكثر المقالات شعبية</b> و<b>لأحدث المقالات المنشورة:</ b>',
