@@ -145,59 +145,57 @@ function calculer_visites($t) {
 					## Ajouter un JOIN sur le statut de l'article ?
 				}
 			}
-			if ($GLOBALS['meta']["activer_referers"] == "oui") {
-				// 3. Les referers du site
-				// insertion pour les nouveaux, au tableau des increments sinon
-				if ($referers[$date]) {
-					$ar = array();
-					$trouver_table = charger_fonction('trouver_table', 'base');
-					$desc = $trouver_table('referers');
-					$n = preg_match('/(\d+)/',$desc['field']['referer'], $r);
-					$n = $n ? $r[1] : 255;
-					foreach ($referers[$date] as $referer => $num) {
-						$referer_md5 = sql_hex(substr(md5($referer), 0, 15));
-						$referer = substr($referer,0,$n);
-						if (!sql_countsel('spip_referers', "referer_md5=$referer_md5"))
-							sql_insertq('spip_referers',
-								array('visites' => $num,
-								      'visites_jour' => $num,
-								      'visites_veille' => $num,
-								      'date' => $date,
-								      'referer' => $referer,
-								      'referer_md5' => $referer_md5));
-						else $ar[$num][] = $referer_md5;
-					}
-			
-				// appliquer les increments sur les anciens
-				// attention on appelle sql_in en mode texte et pas array
-				// pour ne pas passer sql_quote() sur les '0x1234' de referer_md5, cf #849
-					foreach ($ar as $num => $liste) {
-						sql_update('spip_referers', array('visites' => "visites+$num", 'visites_jour' => "visites_jour+$num"), sql_in('referer_md5',join(', ', $liste)));
-					}
+			// 3. Les referers du site
+			// insertion pour les nouveaux, au tableau des increments sinon
+			if ($referers[$date]) {
+				$ar = array();
+				$trouver_table = charger_fonction('trouver_table', 'base');
+				$desc = $trouver_table('referers');
+				$n = preg_match('/(\d+)/',$desc['field']['referer'], $r);
+				$n = $n ? $r[1] : 255;
+				foreach ($referers[$date] as $referer => $num) {
+					$referer_md5 = sql_hex(substr(md5($referer), 0, 15));
+					$referer = substr($referer,0,$n);
+					if (!sql_countsel('spip_referers', "referer_md5=$referer_md5"))
+						sql_insertq('spip_referers',
+							array('visites' => $num,
+							      'visites_jour' => $num,
+							      'visites_veille' => $num,
+							      'date' => $date,
+							      'referer' => $referer,
+							      'referer_md5' => $referer_md5));
+					else $ar[$num][] = $referer_md5;
 				}
-				
-				// 4. Les referers d'articles
-				if ($referers_a[$date]) {
-					$ar = array();
-					$insert = array();
-					// s'assurer d'un slot pour chacun
-					foreach ($referers_a[$date] as $id_article => $referers)
-						foreach ($referers as $referer => $num) {
-							$referer_md5 = sql_hex(substr(md5($referer), 0, 15));
-							$prim = "(id_article=$id_article AND referer_md5=$referer_md5)";
-							if (!sql_countsel('spip_referers_articles', $prim))
-								sql_insertq('spip_referers_articles',
-								     array('visites' => $num,
-									   'id_article' => $id_article,
-									   'referer' => $referer,
-									   'referer_md5' => $referer_md5));
-							else $ar[$num][] = $prim;
-						}
-					// ajouter les visites
-					foreach ($ar as $num => $liste) {
-						sql_update('spip_referers_articles', array('visites' => "visites+$num"), join(" OR ", $liste));
-						## Ajouter un JOIN sur le statut de l'article ?
+		
+			// appliquer les increments sur les anciens
+			// attention on appelle sql_in en mode texte et pas array
+			// pour ne pas passer sql_quote() sur les '0x1234' de referer_md5, cf #849
+				foreach ($ar as $num => $liste) {
+					sql_update('spip_referers', array('visites' => "visites+$num", 'visites_jour' => "visites_jour+$num"), sql_in('referer_md5',join(', ', $liste)));
+				}
+			}
+			
+			// 4. Les referers d'articles
+			if ($referers_a[$date]) {
+				$ar = array();
+				$insert = array();
+				// s'assurer d'un slot pour chacun
+				foreach ($referers_a[$date] as $id_article => $referers)
+					foreach ($referers as $referer => $num) {
+						$referer_md5 = sql_hex(substr(md5($referer), 0, 15));
+						$prim = "(id_article=$id_article AND referer_md5=$referer_md5)";
+						if (!sql_countsel('spip_referers_articles', $prim))
+							sql_insertq('spip_referers_articles',
+							     array('visites' => $num,
+								   'id_article' => $id_article,
+								   'referer' => $referer,
+								   'referer_md5' => $referer_md5));
+						else $ar[$num][] = $prim;
 					}
+				// ajouter les visites
+				foreach ($ar as $num => $liste) {
+					sql_update('spip_referers_articles', array('visites' => "visites+$num"), join(" OR ", $liste));
+					## Ajouter un JOIN sur le statut de l'article ?
 				}
 			}
 		}

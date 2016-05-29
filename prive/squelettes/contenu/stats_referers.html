@@ -1,4 +1,4 @@
-[(#AUTORISER{voirstats}|et{#CONFIG{activer_referers}|=={oui}}|sinon_interdire_acces)]
+[(#AUTORISER{voirstats}|sinon_interdire_acces)]
 <BOUCLE_expose(ARTICLES){id_article}{statut==.*}>
 #BOITE_OUVRIR{'','note'}
 	<a class='annule_filtre ajax' href="[(#SELF|parametre_url{id_article,''})]" title="<:info_tout_afficher|attribut_html:>">[(#CHEMIN_IMAGE{fermer-16.png}|balise_img|inserer_attribut{alt,<:info_tout_afficher:>})]</a>

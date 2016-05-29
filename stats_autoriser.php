@@ -9,7 +9,7 @@ function autoriser_statistiques_menu_dist($faire, $type='', $id=0, $qui = NULL, 
 	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 function autoriser_referers_menu_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL){
-	return ($GLOBALS['meta']["activer_referers"] == 'oui') && autoriser('voirstats', $type, $id, $qui, $opt);
+	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
 
@@ -38,7 +38,7 @@ function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
 }
 
 function autoriser_statsreferers_onglet_dist($faire, $type, $id, $qui, $opt) {
-	return ($GLOBALS['meta']["activer_referers"] == 'oui') && autoriser('voirstats', $type, $id, $qui, $opt);
+	return autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
 ?>

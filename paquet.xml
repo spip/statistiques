@@ -1,11 +1,11 @@
 <paquet
 	prefix="stats"
 	categorie="statistique"
-	version="0.4.37"
+	version="0.4.36"
 	etat="stable"
 	compatibilite="[3.0.0;3.0.*]"
 	logo="prive/themes/spip/images/statistique-32.png"
-	schema="1.0.1"
+	schema="1.0.0"
 >	
 
 	<nom>Statistiques</nom>
