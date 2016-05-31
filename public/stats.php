@@ -85,6 +85,7 @@ function public_stats_dist($contexte = null, $referer = null) {
 
 	// Analyse du referer
 	$log_referer = '';
+	include_spip('inc/config');
 	if (lire_config('activer_referers', 'oui') == "oui") {
 		if (isset($referer)) {
 			$url_site_spip = preg_replace(',/$,', '',
