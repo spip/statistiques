@@ -102,7 +102,7 @@ function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options =
 	 * pour affiner la prediction.
    * A activer dans le mes_options si l'hebergement tient le coup en cas de gros pics de traffic
 	 */
-	if (defined('_STATS_COMPTE_EN_ATTENTE') AND _STATS_COMPTE_EN_ATTENTE){
+	if (!$id_article and defined('_STATS_COMPTE_EN_ATTENTE') AND _STATS_COMPTE_EN_ATTENTE){
 		// eviter un depassement memoire en mesurant un echantillon pour commencer
 		$n = count(glob(_DIR_RACINE . "tmp/visites/0*"));
 		if ($n < 10000) {
