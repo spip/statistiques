@@ -97,6 +97,14 @@ function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options =
 
 	// projection
 	$data[$last]['prevision'] = $data[$last]['visites'] + intval(round($moyenne * $prorata));
+	/*
+	 * Compter les fichiers en attente de depouillement dans tmp/visites/
+	 * pour affiner la prediction.
+   * A activer dans le mes_options si l'hebergement tient le coup en cas de gros pics de traffic
+	 */
+	if (defined('_STATS_COMPTE_EN_ATTENTE') AND _STATS_COMPTE_EN_ATTENTE){
+		$data[$last]['prevision'] += count(glob(_DIR_RACINE . "tmp/visites/*"));
+	}
 
 	return $data;
 }
