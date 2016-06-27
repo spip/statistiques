@@ -103,7 +103,17 @@ function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options =
    * A activer dans le mes_options si l'hebergement tient le coup en cas de gros pics de traffic
 	 */
 	if (defined('_STATS_COMPTE_EN_ATTENTE') AND _STATS_COMPTE_EN_ATTENTE){
-		$data[$last]['prevision'] += count(glob(_DIR_RACINE . "tmp/visites/*"));
+		// eviter un depassement memoire en mesurant un echantillon pour commencer
+		$n = count(glob(_DIR_RACINE . "tmp/visites/0*"));
+		if ($n < 10000) {
+			$n = count(glob(_DIR_RACINE . "tmp/visites/*"));
+		} else {
+			$n += count(glob(_DIR_RACINE . "tmp/visites/4*"));
+			$n += count(glob(_DIR_RACINE . "tmp/visites/8*"));
+			$n += count(glob(_DIR_RACINE . "tmp/visites/c*"));
+			$n = 4 * $n;
+		}
+		$data[$last]['prevision'] += $n;
 	}
 
 	return $data;
