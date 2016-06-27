@@ -210,7 +210,7 @@ function calculer_visites($t) {
 					## Ajouter un JOIN sur le statut de l'article ?
 				}
 			}
-			if (lire_config('activer_referers', 'oui') == "oui") {
+			if (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == "oui") {
 				// 3. Les referers du site
 				// insertion pour les nouveaux, au tableau des increments sinon
 				if ($referers[$date]) {
