@@ -46,7 +46,7 @@ function autoriser_statistiques_menu_dist($faire, $type = '', $id = 0, $qui = nu
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_referers_menu_dist($faire, $type = '', $id = 0, $qui = null, $opt = null) {
-	return (lire_config('activer_referers', 'oui') == "oui") && autoriser('voirstats', $type, $id, $qui, $opt);
+	return (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == "oui") && autoriser('voirstats', $type, $id, $qui, $opt);
 }
 
 
@@ -131,5 +131,5 @@ function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_statsreferers_onglet_dist($faire, $type, $id, $qui, $opt) {
-	return (lire_config('activer_referers', 'oui') == "oui") && autoriser('voirstats', $type, $id, $qui, $opt);
+	return (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == "oui") && autoriser('voirstats', $type, $id, $qui, $opt);
 }
