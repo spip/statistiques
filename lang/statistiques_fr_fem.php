@@ -48,6 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_previsions' => 'prévisions :',
 	'info_question_vignettes_referer' => 'Lorsque vous consultez les statistiques, vous pouvez visualiser des aperçus des sites d’origine des visites',
 	'info_question_vignettes_referer_oui' => 'Afficher les captures des sites d’origine des visites',
+	'info_referer_oui' => 'Activer les referers',
 	'info_tableaux' => 'Tableaux',
 	'info_visites' => 'visites :',
 	'info_visites_plus_populaires' => 'Afficher les visites pour <b>les articles les plus populaires</b> et pour <b>les derniers articles publiés :</b>',
