@@ -66,7 +66,7 @@
 		<traducteur nom="Cerf" lien="http://trad.spip.net/auteur/cerf" />
 		<traducteur nom="denisb" lien="http://trad.spip.net/auteur/denisb" />
 	</langue>
-	<langue code="fr_tu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr_tu" total="52" traduits="48" relire="0" modifs="3" nouveaux="1" pourcent="92.31">
+	<langue code="fr_tu" url="http://trad.spip.net/tradlang_module/statistiques?lang_cible=fr_tu" total="52" traduits="52" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Cerf" lien="http://trad.spip.net/auteur/cerf" />
 		<traducteur nom="RealET" lien="http://trad.spip.net/auteur/realet" />
 	</langue>
