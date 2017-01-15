@@ -49,7 +49,7 @@ function actualise_referers(){
 	}
 }
 jQuery(document).ready(function(){
-	jQuery('#activer_statistiques, #activer_referers').bind('change', actualise_referers);
+	jQuery('#activer_statistiques, #activer_referers').on('change', actualise_referers);
 	actualise_referers();
 });
 </script>

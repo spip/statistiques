@@ -495,7 +495,7 @@
 		function zoomGraphique(graphique) {
 			pid = $(graphique).attr('id').substr(9);
 
-			$(graphique).find('.graphResult').bind("plotselected", function (event, ranges) {
+			$(graphique).find('.graphResult').on("plotselected", function (event, ranges) {
 				graph = $(event.target);
 				pid = graph.closest('.graphique').attr('id').substr(9);
 
@@ -544,7 +544,7 @@
 			if (vignette.length) {
 
 				// zoom depuis la miniature
-				vignette.bind("plotselected", function (event, ranges) {
+				vignette.on("plotselected", function (event, ranges) {
 					graph = $(event.target);
 					pid = graph.closest('.graphique').attr('id').substr(9);
 					vignettesSelection[pid] = ranges;
@@ -582,7 +582,7 @@
 			};
 			$.extend(true, options, settings);
 
-			$(graph).bind("plothover", function (event, pos, item) {
+			$(graph).on("plothover", function (event, pos, item) {
 				$("#x").text(pos.x.toFixed(2));
 				$("#y").text(pos.y.toFixed(2));
 				graph = $(event.target);
