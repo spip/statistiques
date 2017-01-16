@@ -108,10 +108,8 @@ function trace_stats(){
 	});
 	
 }
-(function($){
-	$(document).ready(function(){
-		trace_stats();
-		onAjaxLoad(trace_stats);
-	});
-})(jQuery);
+jQuery(function($) {
+	trace_stats();
+	onAjaxLoad(trace_stats);
+});
 </script>

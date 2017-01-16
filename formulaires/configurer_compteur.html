@@ -38,18 +38,18 @@
 function actualise_referers(){
 	if (jQuery('#activer_statistiques').prop('checked')) {
 		jQuery('#formulaire_configurer_compteur .editer.configurer_activer_captures_referers').show();
-		if (jQuery('#activer_referers').prop('checked'))
+		if (jQuery('#activer_referers').prop('checked')) {
 			jQuery('#formulaire_configurer_compteur .editer.configurer_activer_referers').show();
-		else
+		} else {
 			jQuery('#formulaire_configurer_compteur .editer.configurer_activer_captures_referers').hide();
-	}
-	else {
+		}
+	} else {
 		jQuery('#formulaire_configurer_compteur .editer.configurer_activer_captures_referers').hide();
 		jQuery('#formulaire_configurer_compteur .editer.configurer_activer_referers').hide();
 	}
 }
-jQuery(document).ready(function(){
-	jQuery('#activer_statistiques, #activer_referers').on('change', actualise_referers);
+jQuery(function($){
+	$('#activer_statistiques, #activer_referers').on('change', actualise_referers);
 	actualise_referers();
 });
 </script>
