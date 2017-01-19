@@ -109,6 +109,10 @@ function public_stats_dist($contexte = null, $referer = null) {
 	if (lire_fichier($fichier, $content)) {
 		$content = @unserialize($content);
 	}
+	// fichier absent probablement (ou problème unserialize)
+	if (!is_array($content)) {
+		$content = array();
+	}
 
 	// 2. Plafonner le nombre de hits pris en compte pour un IP (robots etc.)
 	// et ecrire la session
