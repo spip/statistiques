@@ -179,6 +179,10 @@ www\.haosou\.com
 q=
 (.*\.|)holasearch\.com
 
+[HelloSearch]
+q=
+(.*\.|)hellosearch\.fr
+
 [HooSeek]
 recherche=
 (www\.)?hooseek\.com
@@ -244,6 +248,7 @@ www\.moteur-recherche\.net
 (q|s)=
 search(.*)\.msn\.([a-z.]+)$
 leguide(.*)\.msn\.([a-z]+)$
+(.*)\.msn\.([a-z]+)$
 search\.ninemsn\.com\.au
 
 [mySearchDial]
@@ -252,7 +257,7 @@ q=
 
 [MyWay]
 searchfor=
-kf\.mysearch\.myway\.com
+(.*)\.myway\.com
 www\.mywebsearch\.com
 (.*)\.mysearch\.com
 
