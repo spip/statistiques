@@ -171,9 +171,9 @@ q=
 q=
 (.*\.|)globososo\.com
 
-[Haosou]
+[so]
 q=
-www\.haosou\.com
+www\.so\.com
 
 [HolaSearch]
 q=
@@ -390,6 +390,10 @@ q=
 [Club Internet]
 q=
 recherche\.club-internet\.fr
+
+[Haosou]
+q=
+www\.haosou\.com
 
 [n9uf]
 ((K|k)eywords|query)=
