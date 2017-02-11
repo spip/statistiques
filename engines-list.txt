@@ -351,10 +351,6 @@ q=
 qs=
 search\.virgilio\.it
 
-[Voila]
-(kw|rdata)=
-(search|moteur)(.*)\.voila\.(fr|com)
-
 [Yahoo!]
 p=
 (.*)(m|search|ink|dir|google)\.yahoo\.([a-z]+)$
@@ -421,3 +417,7 @@ www\.overture\.com
 [Reacteur.com]
 kw=
 www\.reacteur\.com
+
+[Voila]
+(kw|rdata)=
+(search|moteur)(.*)\.voila\.(fr|com)
