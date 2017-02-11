@@ -421,4 +421,3 @@ www\.reacteur\.com
 [Voila]
 (kw|rdata)=
 (search|moteur)(.*)\.voila\.(fr|com)
-
