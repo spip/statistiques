@@ -48,6 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_previsions' => 'previsioun :',
 	'info_question_vignettes_referer' => 'Coura counsultas li estatìstica, poudès visualisà lu aperçut dei sit d’orìgine dei visita',
 	'info_question_vignettes_referer_oui' => 'Afichà li catura dei sit d’orìgine dei visita',
+	'info_referer_oui' => 'Ativà lu referer',
 	'info_tableaux' => 'Tabléu',
 	'info_visites' => 'visita :',
 	'info_visites_plus_populaires' => 'Afichà li visita per <b>lu article lu mai poupulari</b> e per <b>lu darrié article publicat :</b>',
