@@ -92,13 +92,6 @@ delicious\.com
 q=
 (.*\.|)delta-search\.com
 
-#
-# Dmoz
-#
-[dmoz.org]
-rien=
-(.*\.)?dmoz\.org
-
 [EO]
 q=
 www\.eo\.st
@@ -391,6 +384,10 @@ q=
 [Club Internet]
 q=
 recherche\.club-internet\.fr
+
+[dmoz.org]
+rien=
+(.*\.)?dmoz\.org
 
 [Haosou]
 q=
