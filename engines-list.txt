@@ -206,7 +206,7 @@ arianna\.libero\.it
 
 [Lilo]
 q=
-(.*\.|)uselilo\.org
+(.*\.|)(uselilo|search\.lilo)\.org
 
 [Lost]
 x_query=
