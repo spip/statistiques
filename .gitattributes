@@ -19,7 +19,6 @@ javascript/jquery.flot.js -text
 javascript/jquery.flot.selection.js -text
 javascript/jquery.flot.time.js -text
 javascript/jquery.tflot.js -text
-lang/paquet-statistiques.xml -text
 lang/paquet-stats.xml -text
 lang/paquet-stats_de.php -text
 lang/paquet-stats_es.php -text
