@@ -1,12 +1,12 @@
 <paquet
 	prefix="stats"
 	categorie="statistique"
-	version="0.4.40"
+	version="0.4.41"
 	etat="stable"
 	compatibilite="[3.0.0;3.0.*]"
 	logo="prive/themes/spip/images/statistique-32.png"
 	schema="1.0.0"
->	
+>
 
 	<nom>Statistiques</nom>
 	<!-- Gestion des statistiques dans SPIP -->
