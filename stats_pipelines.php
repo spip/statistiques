@@ -71,6 +71,7 @@ function stats_affiche_milieu($flux) {
 
 	// afficher le formulaire de suppression des visites (configuration > maintenance du site).
 	if ($flux['args']['exec'] == 'admin_tech') {
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/admin_stats_archiver', array());
 		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/admin_effacer_stats', array());
 	}
 
