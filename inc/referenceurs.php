@@ -19,7 +19,7 @@ if (!defined("_ECRIRE_INC_VERSION")) {
  * Adaptees du code des "Visiteurs",
  * par Jean-Paul Dezelus (http://www.phpinfo.net/applis/visiteurs/)
  *
- * http://code.spip.net/@stats_load_engines
+ * https://code.spip.net/@stats_load_engines
  *
  * @return array
  */
@@ -49,7 +49,7 @@ function stats_load_engines() {
  * Adaptees du code des "Visiteurs",
  * par Jean-Paul Dezelus (http://www.phpinfo.net/applis/visiteurs/)
  *
- * http://code.spip.net/@stats_show_keywords
+ * https://code.spip.net/@stats_show_keywords
  *
  * @param string $kw_referer
  * @return array
@@ -152,7 +152,7 @@ function stats_show_keywords($kw_referer) {
 
 /**
  * Recherche des articles pointes par le referer
- * http://code.spip.net/@referes
+ * https://code.spip.net/@referes
  *
  * @param  $referermd5
  * @param string $serveur
