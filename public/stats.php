@@ -12,7 +12,7 @@
 
 if (!defined("_ECRIRE_INC_VERSION")) return;
 
-// http://code.spip.net/@public_stats_dist
+// https://code.spip.net/@public_stats_dist
 function public_stats_dist() {
 	// $_SERVER["HTTP_REFERER"] ne fonctionne pas partout
 	if (isset($_SERVER['HTTP_REFERER'])) $referer = $_SERVER['HTTP_REFERER'];

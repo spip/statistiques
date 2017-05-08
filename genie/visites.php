@@ -20,7 +20,7 @@ if (!defined('_CRON_LOT_FICHIERS_VISITE')) define('_CRON_LOT_FICHIERS_VISITE', 1
 //
 // prendre en compte un fichier de visite
 //
-// http://code.spip.net/@compte_fichier_visite
+// https://code.spip.net/@compte_fichier_visite
 function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$referers_a) {
 
 	// Noter la visite du site (article 0)
@@ -50,7 +50,7 @@ function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$r
 }
 
 
-// http://code.spip.net/@calculer_visites
+// https://code.spip.net/@calculer_visites
 function calculer_visites($t) {
 	include_spip('base/abstract_sql');
 

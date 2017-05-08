@@ -32,7 +32,7 @@ function genie_popularite_constantes($duree){
 	return array($a,$b);
 }
 
-// http://code.spip.net/@genie_popularites_dist
+// https://code.spip.net/@genie_popularites_dist
 function genie_popularites_dist($t) {
 
 	// Si c'est le premier appel, ne pas calculer
