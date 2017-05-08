@@ -16,7 +16,7 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 
 include_spip('inc/presentation');
 
-// http://code.spip.net/@statistiques_lang_ok
+// https://code.spip.net/@statistiques_lang_ok
 function affiche_stats_lang($critere) {
 	global $spip_lang_right;
 

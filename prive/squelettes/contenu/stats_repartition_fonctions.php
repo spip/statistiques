@@ -16,7 +16,7 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 
 include_spip('inc/presentation');
 
-// http://code.spip.net/@enfants
+// https://code.spip.net/@enfants
 function enfants($id_parent, $critere, &$nombre_branche, &$nombre_rub) {
 	$result = sql_select("id_rubrique", "spip_rubriques", "id_parent=" . intval($id_parent));
 
@@ -39,7 +39,7 @@ function enfants($id_parent, $critere, &$nombre_branche, &$nombre_rub) {
 }
 
 
-// http://code.spip.net/@enfants_aff
+// https://code.spip.net/@enfants_aff
 function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 	global $spip_lang_right, $spip_lang_left;
 	static $total_site = null;
