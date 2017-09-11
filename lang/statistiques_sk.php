@@ -48,6 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_previsions' => 'predpovede:',
 	'info_question_vignettes_referer' => 'Keď sa pozriete do štatistiky, uvidíte ukážku každej stránky, z ktorej prišiel nejaký návštevník. ',
 	'info_question_vignettes_referer_oui' => 'Zobraziť obrázky odkazujúcich stránok',
+	'info_referer_oui' => 'Aktivovať prichádzajúce odkazy',
 	'info_tableaux' => 'Tabuľky',
 	'info_visites' => 'Návštev:',
 	'info_visites_plus_populaires' => 'Prehľad počtu návštev   <b>najpopulárnejších</b> a <b>najnovších článkov:</b>',
