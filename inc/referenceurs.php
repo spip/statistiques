@@ -63,9 +63,9 @@ function stats_show_keywords($kw_referer){
 
 	if ($url = @parse_url($kw_referer)){
 		$query = isset($url['query']) ? $url['query'] : "";
-		$host = strtolower($url['host']);
-		$path = $url['path'];
-		$scheme = $url['scheme'];
+		$host = isset($url['host']) ? strtolower($url['host']) : "";
+		$path =  isset($url['path']) ? $url['path'] : "";
+		$scheme = isset($url['scheme']) ? $url['scheme'] : "";
 	}
 	else
 		$scheme = $query = $host = $path = '';
@@ -97,7 +97,7 @@ function stats_show_keywords($kw_referer){
 						$keywords = isset($Tquery[$v]) ? $Tquery[$v]: "";
 
 						// Si on a defini le nom de la variable en expression reguliere, chercher la bonne variable
-						if (!strlen($keywords)>0){
+						if (!empty($keywords) AND !strlen($keywords) > 0) {
 							if (preg_match(",".$arr_engines[$cnt][1]."([^\&]*),", $query, $vals)){
 								$keywords = urldecode($vals[2]);
 							}
