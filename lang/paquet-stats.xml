@@ -2,6 +2,9 @@
 	<langue code="ar" url="https://trad.spip.net/tradlang_module/paquet-stats?lang_cible=ar" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 	</langue>
+	<langue code="br" url="https://trad.spip.net/tradlang_module/paquet-stats?lang_cible=br" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="nonobreizh" lien="https://trad.spip.net/auteur/nonobreizh" />
+	</langue>
 	<langue code="de" url="https://trad.spip.net/tradlang_module/paquet-stats?lang_cible=de" total="3" traduits="3" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="jotacese" lien="https://trad.spip.net/auteur/jotacese" />
 	</langue>
