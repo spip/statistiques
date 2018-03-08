@@ -227,7 +227,7 @@ function calculer_visites($t) {
 								array(
 									'visites' => $num,
 									'visites_jour' => $num,
-									'visites_veille' => $num,
+									'visites_veille' => 0,
 									'date' => $date,
 									'referer' => $referer,
 									'referer_md5' => $referer_md5
