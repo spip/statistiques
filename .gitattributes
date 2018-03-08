@@ -105,6 +105,7 @@ prive/squelettes/contenu/stats_repartition.html -text
 prive/squelettes/contenu/stats_repartition_fonctions.php -text
 prive/squelettes/contenu/stats_visites.html -text
 prive/squelettes/inclure/admin_effacer_stats.html -text
+prive/squelettes/inclure/admin_stats_archiver.html -text
 prive/squelettes/inclure/stats-visites-data.html -text
 prive/squelettes/inclure/stats-visites-data_fonctions.php -text
 prive/squelettes/inclure/stats-visites-jours.html -text
