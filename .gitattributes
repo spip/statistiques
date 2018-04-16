@@ -102,7 +102,6 @@ prive/squelettes/contenu/stats_archiver.html -text
 prive/squelettes/contenu/stats_lang.html -text
 prive/squelettes/contenu/stats_lang_fonctions.php -text
 prive/squelettes/contenu/stats_referers.html -text
-prive/squelettes/contenu/stats_referers_fonctions.php -text
 prive/squelettes/contenu/stats_repartition.html -text
 prive/squelettes/contenu/stats_repartition_fonctions.php -text
 prive/squelettes/contenu/stats_visites.html -text

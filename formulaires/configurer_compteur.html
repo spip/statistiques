@@ -21,10 +21,10 @@
 				</div>
 			</div>
 			<div class='editer configurer_activer_captures_referers[ (#ENV**{erreurs}|table_valeur{activer_captures_referers}|oui)erreur]'>
-				<div class='explication'><:statistiques:info_question_vignettes_referer:></div>
+				<div class='explication'><:statistiques:info_question_vignettes_referer{url=https://plugins.spip.net/thumbsites.html}:></div>
 				[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{activer_captures_referers})</span>]
 				<div class='choix'>
-					<input class='checkbox' type="checkbox" name="activer_captures_referers" value='oui' [checked="(#ENV{activer_captures_referers}|=={oui}|?{checked})"] id="activer_captures_referers"/>
+					<input class='checkbox' type="checkbox" name="activer_captures_referers" value='oui' [checked="(#ENV{activer_captures_referers}|=={oui}|et{#PLUGIN{thumbsites}}|?{checked})"][(#PLUGIN{thumbsites}|non) disabled=disabled"] id="activer_captures_referers"/>
 					<label for="activer_captures_referers"><:statistiques:info_question_vignettes_referer_oui:></label>
 				</div>
 			</div>
