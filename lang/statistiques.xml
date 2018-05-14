@@ -1,5 +1,5 @@
 <traduction module="statistiques" gestionnaire="salvatore" url="https://trad.spip.net" source="svn://zone.spip.org/spip-zone/_core_/plugins/statistiques/lang/" reference="fr">
-	<langue code="ar" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=ar" total="52" traduits="51" relire="0" modifs="1" nouveaux="0" pourcent="98.08">
+	<langue code="ar" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=ar" total="52" traduits="52" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 	</langue>
 	<langue code="ast" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=ast" total="52" traduits="24" relire="0" modifs="4" nouveaux="24" pourcent="46.15">
@@ -33,7 +33,7 @@
 	<langue code="el" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=el" total="52" traduits="12" relire="0" modifs="3" nouveaux="37" pourcent="23.08">
 		<traducteur nom="Yannick Bailly" lien="https://trad.spip.net/auteur/yannick-bailly" />
 	</langue>
-	<langue code="en" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=en" total="52" traduits="51" relire="0" modifs="1" nouveaux="0" pourcent="98.08">
+	<langue code="en" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=en" total="52" traduits="52" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Davood Hossein" lien="https://trad.spip.net/auteur/davood-hossein" />
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 		<traducteur nom="Hanjo" lien="https://trad.spip.net/auteur/hanjo" />
