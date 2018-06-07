@@ -37,7 +37,6 @@ function autoriser_statistiques_menu_dist($faire, $type = '', $id = 0, $qui = nu
 /**
  * Autoriser l'affichage du menu de referers
  *
- * @uses autoriser_voirstats_dist()
  * @param  string $faire Action demandée
  * @param  string $type Type d'objet sur lequel appliquer l'action
  * @param  int $id Identifiant de l'objet
@@ -103,7 +102,6 @@ function autoriser_statsrepartition_onglet_dist($faire, $type, $id, $qui, $opt) 
 /**
  * Autoriser l'affichage de l'onglet répartition par langue dans les statistiques
  *
- * @uses autoriser_voirstats_dist()
  * @param  string $faire Action demandée
  * @param  string $type Type d'objet sur lequel appliquer l'action
  * @param  int $id Identifiant de l'objet
@@ -122,7 +120,6 @@ function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
 /**
  * Autoriser l'affichage de l'onglet référers dans les statistiques
  *
- * @uses autoriser_voirstats_dist()
  * @param  string $faire Action demandée
  * @param  string $type Type d'objet sur lequel appliquer l'action
  * @param  int $id Identifiant de l'objet
