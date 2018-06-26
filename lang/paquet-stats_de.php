@@ -10,7 +10,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// S
-	'stats_description' => 'Estadísticas de SPIP',
-	'stats_nom' => 'Estadísticas',
-	'stats_slogan' => 'Administración de las estadísticas de SPIP'
+	'stats_description' => 'SPIP Statistiken',
+	'stats_nom' => 'Statistiken',
+	'stats_slogan' => 'Verwlatung der SPIIP-Statistiken'
 );
