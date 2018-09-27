@@ -23,9 +23,9 @@ if (!defined("_ECRIRE_INC_VERSION")) {
  *     Déclaration des sauvegardes complétées
  **/
 function stats_ieconfig_metas($table) {
-	$table['statistiques']['titre'] = _T('statistiques:info_forum_statistiques');
-	$table['statistiques']['icone'] = 'statistique-16.png';
-	$table['statistiques']['metas_brutes'] = 'activer_statistiques,activer_captures_referers';
+	$table['statistiques_meta']['titre'] = _T('statistiques:info_forum_statistiques');
+	$table['statistiques_meta']['icone'] = 'statistique-16.png';
+	$table['statistiques_meta']['metas_brutes'] = 'activer_statistiques,activer_captures_referers';
 
 	return $table;
 }
