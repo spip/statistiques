@@ -73,9 +73,10 @@ function classement_populaires($type, $serveur = '') {
 	if (isset($classement[$type])) {
 		return $classement[$type];
 	}
-	$classement[$type] = sql_allfetsel(id_table_objet($type, $serveur), table_objet_sql($type, $serveur),
+	$_id = id_table_objet($type, $serveur);
+	$classement[$type] = sql_allfetsel($_id, table_objet_sql($type, $serveur),
 		"statut='publie' AND popularite > 0", "", "popularite DESC", '', '', $serveur);
-	$classement[$type] = array_map('reset', $classement[$type]);
+	$classement[$type] = array_column($classement[$type], $_id);
 
 	return $classement[$type];
 }
