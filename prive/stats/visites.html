@@ -70,7 +70,22 @@ function trace_stats_table(table, classes, options) {
 				]
 			},
 			yaxis:{
-				position: "right"
+				position: "right",
+				tickDecimals: 1,
+				tickFormatter: function nbFormatter(val, axis) {
+					if (val >= 1000000){
+						var fval = (val / 1000000).toFixed(axis.tickDecimals) ;
+						return fval.replace(/\.0$/,"") + " M";
+					}
+					else{
+						if (val >= 100000)
+							return (val / 1000).toFixed(axis.tickDecimals).replace(/\.0$/,"") + " k";
+						else{
+							var fval = val ;
+							return fval.replace(/(\d{3})$/," $1") ;
+						}
+					}
+				}
 			}
 		},
 		infobulle:{show:true}
