@@ -81,7 +81,7 @@ function trace_stats_table(table, classes, options) {
 						if (val >= 100000)
 							return (val / 1000).toFixed(axis.tickDecimals).replace(/\.0$/,"") + " k";
 						else{
-							var fval = val ;
+							var fval = val.toFixed(axis.tickDecimals).replace(/\.0$/,"") ;
 							return fval.replace(/(\d{3})$/," $1") ;
 						}
 					}
