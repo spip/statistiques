@@ -92,6 +92,10 @@ delicious\.com
 q=
 (.*\.|)delta-search\.com
 
+[Duckduckgo]
+q=
+duckduckgo\.com
+
 [EO]
 q=
 www\.eo\.st
