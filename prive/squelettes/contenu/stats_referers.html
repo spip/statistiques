@@ -26,11 +26,11 @@
 			<BOUCLE_statsr(DATA){source stats_referers,#ENV{limit,100},#ENV{jour,''},#ENV{id_article}}>
 				<li class="item referer" onclick="if(event.button===0){$(this).toggleClass('open').find('.referer-detail').toggle('fast');}">
 						<h3>
-							<span class="visites">[[(#VALEUR{visites}) ](#VALEUR{visites}|singulier_ou_pluriel{info_visite,statistiques:info_visites}|trim{:}|trim)]</span>
+							<span class="visites">[[(#VALEUR{visites}|number_format{0,"","&nbsp;"}) ](#VALEUR{visites}|singulier_ou_pluriel{info_visite,statistiques:info_visites}|trim{:}|trim)]</span>
 							[(#CLE|=={(email)}|oui)
 								#CLE
 							][(#CLE|=={(email)}|non)
-								<a href="[(#VALEUR{url})]" onclick="event.stopPropagation();">[(#CLE)][(#PLUGIN{thumbsites}|oui)[<span class="miniature">(#VALEUR{url}|appliquer_filtre{thumbshot}|image_reduire{120})</span>]]</a>[(#VALEUR{visites_racine}|oui)\(#VALEUR{visites_racine}\)]</h3>
+								<a href="[(#VALEUR{url})]" onclick="event.stopPropagation();">[(#CLE)][<span class="miniature"><img src='(#VALEUR{url}|vigneter_referer)' width="120" height="90" /></span>]</a>[(#VALEUR{visites_racine}|oui)([(#VALEUR{visites_racine}|number_format{0,"","&nbsp;"})])]</h3>
 							]
 
 						</h3>
