@@ -28,6 +28,7 @@ webmail([0-9]*)\.wanadoo\.fr
 www\.laposte\.net
 mail([0-9]*)\.voila\.fr
 \/(web)?mail\/
+outlook\.live\.com
 
 # -----------------------------------------------------------------------------
 # Réseaux sociaux
@@ -46,6 +47,7 @@ twitter\.com
 [Mastodon]
 rien=
 mamot\.fr
+mastodon\.social
 
 # -----------------------------------------------------------------------------
 # Les moteurs vivants - Engines List
