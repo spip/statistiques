@@ -29,6 +29,23 @@ www\.laposte\.net
 mail([0-9]*)\.voila\.fr
 \/(web)?mail\/
 
+# -----------------------------------------------------------------------------
+# Réseaux sociaux
+# -----------------------------------------------------------------------------
+[Facebook]
+rien=
+m\.facebook\.com
+l\.facebook\.com
+www\.facebook\.com
+
+[Twitter]
+rien=
+t\.co
+twitter\.com
+
+[Mastodon]
+rien=
+mamot\.fr
 
 # -----------------------------------------------------------------------------
 # Les moteurs vivants - Engines List
