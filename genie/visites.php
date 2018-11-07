@@ -63,6 +63,7 @@ function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$r
 
 		// Noter le referer
 		if ($log_referer) {
+			$log_referer = nettoyer_referer($log_referer);
 			if (!isset($referers[$log_referer])) {
 				$referers[$log_referer] = 0;
 			}
@@ -302,6 +303,23 @@ function visites_nettoyer_flood() {
 	}
 }
 
+/**
+ * Nettoyer les urls en enlevant les variables de personnalisation marketing, ou variantes Amp
+ */
+
+function nettoyer_referer($url){
+	
+	// &utm_xxx=
+	$url = preg_replace("`[?&]utm_.*$`","",$url);
+	
+	// &fbclid=
+	$url = preg_replace("`[?&]fbclid.*$`","",$url);
+	
+	// &amp=1
+	$url = preg_replace("`[?&]amp=1$`","",$url);
+	
+	return $url ;
+}
 
 /**
  * Cron de calcul de statistiques des visites
