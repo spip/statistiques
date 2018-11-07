@@ -28,7 +28,40 @@ webmail([0-9]*)\.wanadoo\.fr
 www\.laposte\.net
 mail([0-9]*)\.voila\.fr
 \/(web)?mail\/
+outlook\.live\.com
+messageriepro3\.orange\.fr
 
+# -----------------------------------------------------------------------------
+# Réseaux sociaux
+# -----------------------------------------------------------------------------
+[Facebook]
+rien=
+facebook\.com
+
+[Twitter]
+rien=
+t\.co
+twitter\.com
+
+[Mastodon]
+rien=
+mamot\.fr
+mastodon\.social
+mastodon\.xyz
+
+[Linkedin]
+rien=
+linkedin\.com
+com\.linkedin\.android
+lnkd\.in
+
+[Telegram]
+rien=
+org\.telegram\.messenger
+
+[Messenger]
+rien=
+l\.messenger\.com
 
 # -----------------------------------------------------------------------------
 # Les moteurs vivants - Engines List
