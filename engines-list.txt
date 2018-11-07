@@ -29,15 +29,14 @@ www\.laposte\.net
 mail([0-9]*)\.voila\.fr
 \/(web)?mail\/
 outlook\.live\.com
+messageriepro3\.orange\.fr
 
 # -----------------------------------------------------------------------------
 # Réseaux sociaux
 # -----------------------------------------------------------------------------
 [Facebook]
 rien=
-m\.facebook\.com
-l\.facebook\.com
-www\.facebook\.com
+facebook\.com
 
 [Twitter]
 rien=
@@ -48,6 +47,21 @@ twitter\.com
 rien=
 mamot\.fr
 mastodon\.social
+mastodon\.xyz
+
+[Linkedin]
+rien=
+linkedin\.com
+com\.linkedin\.android
+lnkd\.in
+
+[Telegram]
+rien=
+org\.telegram\.messenger
+
+[Messenger]
+rien=
+l\.messenger\.com
 
 # -----------------------------------------------------------------------------
 # Les moteurs vivants - Engines List
