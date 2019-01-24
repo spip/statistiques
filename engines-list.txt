@@ -40,7 +40,7 @@ facebook\.com
 
 [Twitter]
 rien=
-t\.co
+^t\.co
 twitter\.com
 
 [Mastodon]
