@@ -38,7 +38,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'icone_repartition_actuelle' => 'De huidige verdeling tonen',
 	'icone_repartition_visites' => 'Verdeling van de bezoeken',
 	'icone_statistiques_visites' => 'Statistieken',
-	'info_affichier_visites_articles_plus_visites' => 'Bezoekers tonen voor <b>de meest bezochte artikels sinds het begin:</b>',
+	'info_affichier_visites_articles_plus_visites' => 'Bezoekers tonen voor <b>de meest bezochte artikelen sinds het begin:</b>',
 	'info_comment_lire_tableau' => 'Hoe lees je deze tabel',
 	'info_forum_statistiques' => 'Statistieken van de bezoeken',
 	'info_graphiques' => 'Grafieken',
@@ -51,7 +51,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_referer_oui' => 'De referers activeren',
 	'info_tableaux' => 'Tabellen',
 	'info_visites' => 'bezoeke:',
-	'info_visites_plus_populaires' => 'Toon de bezoeken voor <b>de meest populaire artikels</b> en voor <b>de laatst gepubliceerde artikels:</b>',
+	'info_visites_plus_populaires' => 'Toon de bezoeken voor <b>de meest populaire artikelen</b> en voor <b>de laatst gepubliceerde artikelen:</b>',
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Statistieken beheren',
 
@@ -65,7 +65,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'texte_admin_effacer_stats' => 'Deze bestelling wist alle gegevens in verband met de statistieken van bezoek van de plaats uit, met inbegrip van de populariteit van de artikelen.',
-	'texte_admin_effacer_toutes_stats' => 'Het eerste knopje wist alle statiestieken uit: bezoeken, populariteit van de artikels en binnenkomende links.',
+	'texte_admin_effacer_toutes_stats' => 'Het eerste knopje wist alle statistieken uit: bezoeken, populariteit van de artikelen en binnenkomende links.',
 	'texte_comment_lire_tableau' => 'De plaats van het artikel,
  in de rangschikking volgens populariteit, is in de marge
  aangegeven; de populariteit(*) van het artikel en het
