@@ -45,9 +45,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'populariteit van de site:',
 	'info_popularite_3' => 'populariteit: @popularite@; bezoeken: @visites@',
 	'info_popularite_5' => 'populariteit:',
-	'info_previsions' => 'verwachtingen :',
+	'info_previsions' => 'verwachtingen:',
 	'info_question_vignettes_referer' => 'Wanneer je de statistieken raadpleegt, kun je korte overzichten van de plaatsen van oorsprong van de bezoeken zichtbaar maken wanneer <a href="@url@">de plugin Thumbsites</a> actief is.',
-	'info_question_vignettes_referer_oui' => 'De vangsten van de siten van oorsprong van de bezoeken te kennen geven',
+	'info_question_vignettes_referer_oui' => 'De site van waaraf het bezoek werd gedaan weergeven',
 	'info_referer_oui' => 'De referers activeren',
 	'info_tableaux' => 'Tabellen',
 	'info_visites' => 'bezoeken:',
@@ -64,19 +64,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'resume' => 'Samenvatting',
 
 	// T
-	'texte_admin_effacer_stats' => 'Deze bestelling wist alle gegevens in verband met de statistieken van bezoek van de plaats uit, met inbegrip van de populariteit van de artikelen.',
+	'texte_admin_effacer_stats' => 'Deze opdracht wist alle statistische gegevens over bezoeken aan de site, met inbegrip van de populariteit van de artikelen.',
 	'texte_admin_effacer_toutes_stats' => 'Het eerste knopje wist alle statistieken uit: bezoeken, populariteit van de artikelen en binnenkomende links.',
-	'texte_comment_lire_tableau' => 'De plaats van het artikel,
- in de rangschikking volgens populariteit, is in de marge
- aangegeven; de populariteit(*) van het artikel en het
- aantal bezoeken sinds het het begin van de site staan in
- het vakje dat verschijnt als je met de muis over de
- titel van het artikel komt.
-
-(*) de populariteit van een artikel is een schatting van
- het aantal bezoeken dat het artikel op een dag zal
- krijgen als huidige ritme van raadpleging wordt
- aangehouden.',
+	'texte_comment_lire_tableau' => 'De plaats van het artikel, in de rangschikking volgens populariteit, is in de marge aangegeven; de populariteit (een schatting van het aantal bezoeken dat het artikel op een dag zal krijgen als het huidige ritme wordt aangehouden) en het aantal bezoeken sinds het het begin van de site staan in het vakje dat verschijnt als je met de muis over de titel van het artikel beweegt.',
 	'texte_signification' => 'De donkere balkjes stellen alle samengetelde bezoeken weer (totaal van alle subrubrieken), de lichte balkjes het aantal bezoeken voor elke rubriek.',
 	'titre_evolution_visite' => 'Evolutie van de bezoeken',
 	'titre_liens_entrants' => 'Inkomende koppelingen',
