@@ -45,7 +45,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_2' => 'populariteit van de site:',
 	'info_popularite_3' => 'populariteit: @popularite@; bezoeken: @visites@',
 	'info_popularite_5' => 'populariteit:',
-	'info_previsions' => 'verwachtingen:',
+	'info_previsions' => 'verwachting:',
 	'info_question_vignettes_referer' => 'Wanneer je de statistieken raadpleegt, kun je korte overzichten van de plaatsen van oorsprong van de bezoeken zichtbaar maken wanneer <a href="@url@">de plugin Thumbsites</a> actief is.',
 	'info_question_vignettes_referer_oui' => 'De site van waaraf het bezoek werd gedaan weergeven',
 	'info_referer_oui' => 'De referers activeren',
