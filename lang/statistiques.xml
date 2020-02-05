@@ -1,9 +1,9 @@
 <traduction
 	module="statistiques"
-	id="statistiques--statistiques-3959e"
+	id="statistiques--statistiques-c2dca"
 	gestionnaire="salvatore"
 	url="https://trad.spip.net"
-	source="svn://zone.spip.org/spip-zone/_core_/plugins/statistiques/lang"
+	source="https://git.spip.net/spip/statistiques.git"
 	reference="fr">
 	<langue code="ar" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=ar" total="52" traduits="52" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
