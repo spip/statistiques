@@ -100,7 +100,8 @@ function stats_formulaire_admin($flux) {
 				'popularite' => $l[1],
 				'statistiques' => $l[2],
 			));
-			$flux['data'] = preg_replace('%(<!--extra-->)%is', $btn . '$1', $flux['data']);
+			$x='<!--extra-->';
+			$flux['data'] = str_ireplace($x, $btn.$x, $flux['data']);
 		}
 	}
 
