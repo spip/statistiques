@@ -7,8 +7,8 @@
 	<p><:statistiques:info_visites_plus_populaires:></p>
 	<B_pluspop>
 		<ol class='classement'>
-		<BOUCLE_pluspop(ARTICLES){id_article IN #GET{c}}{0,30}{doublons}>
-			<li[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]#contenu" class="ajax"
+		<BOUCLE_pluspop(ARTICLES){id_article IN #GET{c}}{par_ordre_liste id_article,#GET{c}}{0,30}{doublons}>
+			<li value="[(#ID_ARTICLE|array_search{#GET{c}}|plus{1})]"[ class="(#EXPOSE)"]><a href="[(#SELF|parametre_url{id_article,#ID_ARTICLE})]#contenu" class="ajax"
 						title="<:statistiques:info_popularite_3{visites=#VISITES,popularite=#POPULARITE_ABSOLUE}|attribut_html:>">#TITRE</a></li>
 		</BOUCLE_pluspop>
 		</ol>
