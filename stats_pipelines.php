@@ -60,7 +60,6 @@ function stats_affichage_entetes_final_prive($entetes) {
 	if (in_array(_request('exec'), ['stats_referers', 'stats_visites', 'stats_repartition', 'stats_lang'])) {
 		$entetes['Referrer-Policy'] = 'origin-when-cross-origin';
 	}
-	ray($entetes);
 	return $entetes;
 }
 
