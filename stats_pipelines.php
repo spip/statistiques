@@ -51,6 +51,19 @@ function stats_affichage_entetes_final($entetes) {
 	return $entetes;
 }
 
+/**
+ * Ajouter un header Referrer-Policy sur les pages des stats
+ * @param array $entetes
+ * @return array
+ */
+function stats_affichage_entetes_final_prive($entetes) {
+	if (in_array(_request('exec'), ['stats_referers', 'stats_visites', 'stats_repartition', 'stats_lang'])) {
+		$entetes['Referrer-Policy'] = 'origin-when-cross-origin';
+	}
+	ray($entetes);
+	return $entetes;
+}
+
 
 /**
  * Compléter des pages de l'espace privé

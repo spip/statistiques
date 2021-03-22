@@ -1,7 +1,7 @@
 <paquet
 	prefix="stats"
 	categorie="statistique"
-	version="1.3.4"
+	version="1.3.5"
 	etat="stable"
 	compatibilite="[3.3.0-dev;3.3.*]"
 	logo="prive/themes/spip/images/statistique-32.png"
@@ -19,6 +19,7 @@
 	<pipeline nom="declarer_tables_auxiliaires" inclure="base/stats.php" />
 	<pipeline nom="configurer_liste_metas" inclure="stats_pipelines.php" />
 	<pipeline nom="affichage_entetes_final" inclure="stats_pipelines.php" />
+	<pipeline nom="affichage_entetes_final_prive" inclure="stats_pipelines.php" />
 	<pipeline nom="affiche_milieu" inclure="stats_pipelines.php" />
 	<pipeline nom="boite_infos" inclure="stats_pipelines.php" />
 	<pipeline nom="formulaire_admin" inclure="stats_pipelines.php" />
