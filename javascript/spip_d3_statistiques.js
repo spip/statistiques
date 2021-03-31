@@ -25,20 +25,21 @@ function spip_d3_statistiques_toggle_svg_table(btn, id, to) {
  * @param string $id identifiant du graphique
  */
 function spip_d3_statistiques_load_json(btn, id) {
-	jQuery(btn).parent().find('.bouton').removeClass('principal');
-	jQuery(btn).addClass('principal');
-	const json = btn.dataset.json;
-	const json_auteur = btn.dataset.jsonAuteur;
-	const csv_auteur = btn.dataset.csvAuteur;
-	//const csv_auteur = parametre_url(json_auteur, 'page', 'statistiques.csv');
-	jQuery(btn).closest('.statistiques-nav').find('.btn--stats-json').attr('href', json_auteur);
-	jQuery(btn).closest('.statistiques-nav').find('.btn--stats-csv').attr('href', csv_auteur);
+	const $btn = jQuery(btn);
+	$btn.parent().find('.bouton').removeClass('principal');
+	$btn.addClass('principal');
+
+	$btn.closest('.statistiques-nav').find('.btn--stats-json').attr('href', btn.dataset.jsonAuteur);
+	$btn.closest('.statistiques-nav').find('.btn--stats-csv').attr('href', btn.dataset.csvAuteur);
+	$btn.closest('.statistiques-nav').find('.caption--visites').text(btn.dataset.title);
 
 	const url = parametre_url(window.document.location.href, 'graph', btn.dataset.graph);
 	window.history.replaceState({}, window.document.title, url);
 
-	document.querySelector(id).dataset.json = json;
-	const graph = jQuery(id).data('graph');
+	const $id = jQuery(id);
+	$id[0].dataset.json = btn.dataset.json;
+	$id[0].dataset.title = btn.dataset.title;
+	const graph = $id.data('graph');
 
 	graph.updateJson();
 }
