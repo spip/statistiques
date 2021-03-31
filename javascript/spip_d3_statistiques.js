@@ -44,6 +44,56 @@ function spip_d3_statistiques_load_json(btn, id) {
 	graph.updateJson();
 }
 
+
+/** 
+ * Déclare et crée le graphique et tableau html de l'id demandé. 
+ * 
+ * L'url du json de ses données est dans l'attribut data-json.
+*/
+function spip_d3_statistiques_create(id, options = {}) {
+	if (jQuery(id).data('graph')) {
+		return;
+	}
+	const $nav = jQuery(id).parent().find('.statistiques-nav');
+	if ($nav.find('.groupe-boutons--stats-graph .bouton.principal').length) {
+		jQuery(id)[0].dataset.json = $nav.find('.groupe-boutons--stats-graph .bouton.principal').data('json');
+	}
+	const table_visible = !!$nav.find('.btn--stats-to-table.principal').length;
+
+	const graph = new Spip_d3_graph(id, { 
+		language: '#ENV{lang}',
+		d3_directory: '[(#CHEMIN{lib/d3/d3.min.js}|dirname)]',
+	});
+	jQuery(id).data('graph', graph);
+	graph.set_dataLoader(data => {
+		// ici on peuple les dates manquantes du json
+		data.data = graph.fillInDates(data.meta, data.data, currentDate => {
+			return {"date": currentDate, "visites": 0};
+		});
+		graph.update_table(data);
+		spip_d3_statistiques_update_graph(id, data);
+	});
+
+	graph.loading_start();
+	Promise.resolve()
+	// charger la locale de date avant de créer les axes… sinon ils ne sont pas traduits
+	.then(d => graph.localize_d3_time(d))
+	.then(() => {
+		graph.prepare_table(table_visible);
+		spip_d3_statistiques_prepare_graph(id, !table_visible);
+		graph.updateJson();
+	});
+
+}
+
+/**
+ * On prépare le svg, les définitions d'axes, d'histogrammes, etc...
+ * 
+ * On stocke ces infos dans l'objet "modele" que l'on attribut à svg.datum() 
+ * pour être exploité plus tard dans la fonction d'update
+ * 
+ * Cette fonction n'a pas connaissance encore des données du json.
+ */
 function spip_d3_statistiques_prepare_graph(id, visible = true) {
 
 	const inner = d3.select(id).select('.spip_d3_graph_inner');
@@ -221,6 +271,9 @@ function spip_d3_statistiques_prepare_graph(id, visible = true) {
 }
 
 
+/**
+ * On crée les dessins sur le svg, grace aux données obtenues
+ */
 function spip_d3_statistiques_update_graph(id, _data) {
 
 	if (d3.select(id).select('.spip_d3_svg_inner').empty()) {
