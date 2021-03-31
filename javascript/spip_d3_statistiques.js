@@ -229,11 +229,11 @@ function spip_d3_statistiques_prepare_graph(id, visible = true) {
 			}
 			modele.tooltip.empty();
 			if (d) {
-				modele.tooltip.add('date', modele.meta.columns.date, d.label);
-				modele.tooltip.add('visites', modele.meta.columns.visites, d.visites);
-				modele.tooltip.add('moyenne', 'Moyenne mobile', d.moyenne_mobile);
+				modele.tooltip.add('date', modele.meta.translations.date, d.label);
+				modele.tooltip.add('visites', modele.meta.translations.visites, d.visites);
+				modele.tooltip.add('moyenne', modele.meta.translations.moyenne, d.moyenne_mobile);
 			} else {
-				modele.tooltip.add('date', modele.meta.columns.date, '?');
+				modele.tooltip.add('date', modele.meta.translations.date, '?');
 			}
 		}
 	}

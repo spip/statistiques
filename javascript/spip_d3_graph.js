@@ -150,8 +150,8 @@ class Spip_d3_graph {
 
 	prepare_columns(data) {
 		const columns = [];
-		for (const [key, value] of Object.entries(data.meta.columns)) {
-			columns.push({key: key, label: value});
+		for (const value of Object.entries(data.meta.columns)) {
+			columns.push({key: value, label: data.meta.translations[value]});
 		}
 		return columns;
 	}

@@ -121,8 +121,13 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 			'end_date' => $endDate,
 			'first_date' => $firstDate,
 			'columns' => [
+				'date',
+				'visites',
+			],
+			'translations' => [
 				'date' => _T('public:date'),
 				'visites' => _L('Visites'),
+				'moyenne' => spip_ucfirst(trim(_T('info_moyenne'), " :\t\n\r\0\x0B\xc2\xa0")), // "moyenne :" => "Moyenne". hum.
 			],
 		],
 		'data' => array_values($data),
