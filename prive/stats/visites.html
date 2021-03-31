@@ -25,49 +25,18 @@ function spip_d3_statistiques_create(id, options = {}) {
 	jQuery(id).data('graph', graph);
 	graph.set_dataLoader(data => {
 		// ici on peuple les dates manquantes du json
-		return new Promise((resolve, reject) => {
-			function fillInDates(meta, data){
-				// put current data hash for efficient retrieval
-				// determine min/max of data
-				const currentDates = {};
-				const minDate = meta.start_date;
-				let currentDate = minDate;
-				const maxDate = meta.end_date;
-
-				data.forEach(d => { 
-					currentDates[d.date] = d; 
-				});
-
-				// loop data and fill in missing dates
-				const filledInDates = [];
-				while (currentDate < maxDate) {
-					if (currentDates[currentDate]) {
-						filledInDates.push(currentDates[currentDate]);
-					} else {
-						filledInDates.push({"date": currentDate, "visites": 0});  
-					}
-					currentDate = graph.nextDate(currentDate, meta.unite, 1);
-				}
-
-				return filledInDates;
-			}
-
-			data.data = fillInDates(data.meta, data.data);
-
-			resolve(data);
-		})
-		.then(data => {
-			graph.update_table(data);
-			spip_d3_statistiques_update_graph(id, data);
+		data.data = graph.fillInDates(data.meta, data.data, currentDate => {
+			return {"date": currentDate, "visites": 0};
 		});
+		graph.update_table(data);
+		spip_d3_statistiques_update_graph(id, data);
+
 	});
 
 	graph.loading_start();
 	Promise.resolve()
-	.then((d) => {
-		// charger la locale de date avant de créer les axes… sinon ils ne sont pas traduits
-		return graph.localize_d3_time(d);
-	})
+	// charger la locale de date avant de créer les axes… sinon ils ne sont pas traduits
+	.then(d => graph.localize_d3_time(d))
 	.then(() => {
 		graph.prepare_table(table_visible);
 		spip_d3_statistiques_prepare_graph(id, !table_visible);

@@ -117,6 +117,37 @@ class Spip_d3_graph {
 		}
 	}
 
+	/** 
+	 * Remplit les dates manquantes 
+	 * 
+	 * onEmpty est une fonction qui reçoit la date manquante,
+	 * et doit retourner un objet décrivant l'élément vide
+	*/
+	fillInDates(meta, data, onEmpty) {
+		const currentDates = {};
+		const minDate = meta.start_date;
+		let currentDate = minDate;
+		const maxDate = meta.end_date;
+
+		data.forEach(d => { 
+			currentDates[d.date] = d; 
+		});
+
+		// loop data and fill in missing dates
+		const filledInDates = [];
+		while (currentDate < maxDate) {
+			if (currentDates[currentDate]) {
+				filledInDates.push(currentDates[currentDate]);
+			} else {
+
+				filledInDates.push(onEmpty(currentDate));  
+			}
+			currentDate = this.nextDate(currentDate, meta.unite, 1);
+		}
+
+		return filledInDates;
+	}
+
 	prepare_columns(data) {
 		const columns = [];
 		for (const [key, value] of Object.entries(data.meta.columns)) {
@@ -124,28 +155,6 @@ class Spip_d3_graph {
 		}
 		return columns;
 	}
-
-	select_otherwise(element, tag, onempty) {
-		let selection = element.select(tag);
-		if (selection.empty()) {
-			if (typeof onempty === "function") {
-				selection = onempty(element);
-			}
-		}
-		return selection;
-	}
-
-	select_otherwise_append(element, tag, onappend) {
-		let selection = element.select(tag);
-		if (selection.empty()) {
-			selection = element.append(tag);
-			if (typeof onappend === "function") {
-				onappend(selection);
-			}
-		}
-		return selection;
-	}
-
 
 	update_table(data) {
 		if (this.inner.select('table').empty()) {
