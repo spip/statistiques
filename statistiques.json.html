@@ -11,7 +11,7 @@ if (
 ?>
 #CACHE{0}
 #HTTP_HEADER{Content-Type: text/javascript; charset=#CHARSET}
-[(#ENV{unite,jour}|transmettre_statistiques_json{#ENV{duree},#ENV{objet},#ENV{id_objet}})]
+[(#ENV{export,visites}|transmettre_statistiques_json{#ENV{unite},#ENV{duree},#ENV{objet},#ENV{id_objet}})]
 <?php
 } else {
 include_spip('inc/minipres'); 

@@ -6,36 +6,36 @@
 		<a class="bouton[ (#ENV{graph}|non|ou{#ENV{graph}|=={90-days}})principal]" href="#" 
 			data-graph="90-days"
 			data-title="<:statistiques:visites_journalieres|attribut_html:>"
-			data-json="[(#VAL{json}|statistiques_url_data{jour,90})]" 
-			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{jour,90})]" 
-			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{jour,90})]" 
+			data-json="[(#VAL{json}|statistiques_url_data{visites,jour,90})]" 
+			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,jour,90})]" 
+			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,jour,90})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			3 mois
 		</a>
 		<a class="bouton[ (#ENV{graph}|=={730-days}|oui)principal]" href="#" 
 			data-graph="730-days"
 			data-title="<:statistiques:visites_journalieres|attribut_html:>"
-			data-json="[(#VAL{json}|statistiques_url_data{jour,730})]" 
-			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{jour,730})]" 
-			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{jour,730})]" 
+			data-json="[(#VAL{json}|statistiques_url_data{visites,jour,730})]" 
+			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,jour,730})]" 
+			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,jour,730})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			2 ans
 		</a>
 		<a class="bouton[ (#ENV{graph}|=={60-months}|oui)principal]" href="#" 
 			data-graph="60-months"
 			data-title="<:statistiques:visites_mensuelles|attribut_html:>"
-			data-json="[(#VAL{json}|statistiques_url_data{mois,60})]" 
-			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{mois,60})]" 
-			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{mois,60})]" 
+			data-json="[(#VAL{json}|statistiques_url_data{visites,mois,60})]" 
+			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,mois,60})]" 
+			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,mois,60})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			5 ans
 		</a>
 		<a class="bouton[ (#ENV{graph}|=={years}|oui)principal]" href="#" 
 			data-graph="years"
 			data-title="<:statistiques:visites_annuelles|attribut_html:>"
-			data-json="[(#VAL{json}|statistiques_url_data{annee})]" 
-			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{annee})]" 
-			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{annee})]" 
+			data-json="[(#VAL{json}|statistiques_url_data{visites,annee})]" 
+			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,annee})]" 
+			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,annee})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			∞
 		</a>

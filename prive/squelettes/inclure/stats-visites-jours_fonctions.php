@@ -11,8 +11,9 @@ include_spip('prive/squelettes/inclure/stats-visites-data_fonctions');
  * 
  * Nécessite une autorisation avec l'auteur connecté sur l'url cible.
  */
-function statistiques_url_data(array $Pile, string $type = 'json', string $unite = 'jour', ?int $duree = null) : string {
-	$url = generer_url_public("statistiques.$type");
+function statistiques_url_data(array $Pile, string $output = 'json', string $export = 'visites', string $unite = 'jour', ?int $duree = null) : string {
+	$url = generer_url_public("statistiques.$output");
+	$url = parametre_url($url, 'export', $export);
 	$url = parametre_url($url, 'unite', $unite);
 	if ($duree and $duree > 0) {
 		$url = parametre_url($url, 'duree', $duree);
@@ -34,8 +35,8 @@ function statistiques_url_data(array $Pile, string $type = 'json', string $unite
  * Ajoute un hash pour un auteur donné, de sorte qu'il puisse accéder aux statistiques même non connecté
  * Possiblement utilisé pour télécharger périodiquement ses statistiques depuis un cron
  */
-function statistiques_url_data_auteur(array $Pile, string $type = 'json', string $unite = 'jour', ?int $duree = null) : string {
-	$url = statistiques_url_data($Pile, $type, $unite, $duree);
+function statistiques_url_data_auteur(array $Pile, string $output = 'json', string $export = 'visites', string $unite = 'jour', ?int $duree = null) : string {
+	$url = statistiques_url_data($Pile, $output, $export, $unite, $duree);
 	$params = param_low_sec('statistiques', ['hash' => md5($url)], '', 'voirstats');
 	// pas besoin de l'arg hash. Il sert juste à calculer une clé unique pour l'auteur.
 	return parametre_url($url . '&' . $params, 'hash', '');
