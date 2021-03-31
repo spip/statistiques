@@ -16,105 +16,117 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 }
 
 include_spip('inc/statistiques');
-// moyenne glissante sur 30 jours
-define('MOYENNE_GLISSANTE_JOUR', 30);
-// moyenne glissante sur 12 mois
-define('MOYENNE_GLISSANTE_MOIS', 12);
 
-function inc_stats_visites_to_array_dist($unite, $duree, $id_article, $options = array()) {
+/**
+ * Retourne les statistiques globales ou d'un objet pour une durée donnée
+ *
+ * @param string $unite jour | mois | annee
+ * @param ?int $duree Combien de jours | mois | annee on prend…
+ * @param string $objet
+ * @param string $id_objet
+ * @return array [date => nb visites]
+ */
+function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $objet = null, ?int $id_objet = null) {
 	$now = time();
 
-	if (!in_array($unite, array('jour', 'mois'))) {
-		$unite = 'jour';
+	if (!in_array($unite, array('jour', 'mois', 'annee', 'day', 'month', 'year'))) {
+		$unite = 'day';
 	}
+	if (in_array($unite, ['jour', 'day'])) {
+		$format_sql = '%Y-%m-%d';
+		$format = 'Y-m-d';
+		$unite = 'day';
+		$duration = 'D';
+	} elseif (in_array($unite, ['mois', 'month'])) {
+		$format_sql = '%Y-%m';
+		$format = 'Y-m';
+		$unite = 'month';
+		$duration = 'M';
+	} else {
+		$format_sql = '%Y';
+		$format = 'Y';
+		$unite = 'year';
+		$duration = 'Y';
+	}
+	if ($duree and $duree < 0) {
+		$duree = null;
+	}
+
 	$serveur = '';
-
 	$table = "spip_visites";
+	$where = [];
 	$order = "date";
-	$where = array();
+
+	$currentDate = (new \DateTime())->format($format);
+	$startDate = null;
+	$endDate = $currentDate;
+
+
 	if ($duree) {
-		$where[] = sql_date_proche($order, -$duree, 'day', $serveur);
+		$where[] = sql_date_proche($order, -$duree, $unite, $serveur);
+		// sql_date_proche utilise une comparaison stricte. On soustrait 1 jour...
+		$startDate = (new \DateTime())->sub(new \DateInterval('P' . ($duree - 1) . $duration))->format($format);
 	}
 
-	if ($id_article) {
-		$table = "spip_visites_articles";
-		$where[] = "id_article=" . intval($id_article);
-	}
-
-	$where = implode(" AND ", $where);
-	$format = ($unite == 'jour' ? '%Y-%m-%d' : '%Y-%m-01');
-
-	$res = sql_select("SUM(visites) AS v, DATE_FORMAT($order,'$format') AS d", $table, $where, "d", "d", "", '',
-		$serveur);
-
-	$format = str_replace('%', '', $format);
-	$periode = ($unite == 'jour' ? 24 * 3600 : 365 * 24 * 3600 / 12);
-	$step = intval(round($periode * 1.1, 0));
-	$glisse = constant('MOYENNE_GLISSANTE_' . strtoupper($unite));
-	moyenne_glissante();
-	$data = array();
-	$r = sql_fetch($res, $serveur);
-	if (!$r) {
-		$r = array('d' => date($format, $now), 'v' => 0);
-	}
-	do {
-		$data[$r['d']] = array('visites' => $r['v'], 'moyenne' => moyenne_glissante($r['v'], $glisse));
-		$last = $r['d'];
-
-		// donnee suivante
-		$r = sql_fetch($res, $serveur);
-		// si la derniere n'est pas la date courante, l'ajouter
-		if (!$r and $last != date($format, $now)) {
-			$r = array('d' => date($format, $now), 'v' => 0);
-		}
-
-		// completer les trous manquants si besoin
-		if ($r) {
-			$next = strtotime($last);
-			$current = strtotime($r['d']);
-			while (($next += $step) < $current and $d = date($format, $next)) {
-				if (!isset($data[$d])) {
-					$data[$d] = array('visites' => 0, 'moyenne' => moyenne_glissante(0, $glisse));
-				}
-				$last = $d;
-				$next = strtotime($last);
+	if ($objet and $id_objet) {
+		if ($objet === 'article') {
+			$table = "spip_visites_articles";
+			$where[] = "id_article=" . intval($id_objet);
+		} else {
+			// plugin stats objets ?
+			$trouver_table = charger_fonction('trouver_table', 'base');
+			if ($trouver_table('spip_visites_objets')) {
+				$table = "spip_visites_objets";
+				$where[] = "objet=" . table_objet($objet);
+				$where[] = "id_objet=" . intval($id_objet);
+			} else {
+				throw new \Exception('Table spip_visisites_objets not found. You need a plugin for stats outside articles.');
 			}
 		}
-	} while ($r);
-
-	// projection pour la derniere barre :
-	// mesure courante
-	// + moyenne au pro rata du temps qui reste
-	$moyenne = end($data);
-	$moyenne = prev($data);
-	$moyenne = ($moyenne and isset($moyenne['moyenne'])) ? $moyenne['moyenne'] : 0;
-	$data[$last]['moyenne'] = $moyenne;
-
-	// temps restant
-	$remaining = strtotime(date($format, strtotime(date($format, $now)) + $step)) - $now;
-
-	$prorata = $remaining / $periode;
-
-	// projection
-	$data[$last]['prevision'] = $data[$last]['visites'] + intval(round($moyenne * $prorata));
-	/*
-	 * Compter les fichiers en attente de depouillement dans tmp/visites/
-	 * pour affiner la prediction.
-   * A activer dans le mes_options si l'hebergement tient le coup en cas de gros pics de traffic
-	 */
-	if (!$id_article and defined('_STATS_COMPTE_EN_ATTENTE') AND _STATS_COMPTE_EN_ATTENTE){
-		// eviter un depassement memoire en mesurant un echantillon pour commencer
-		$n = count(glob(_DIR_RACINE . "tmp/visites/0*"));
-		if ($n < 10000) {
-			$n = count(glob(_DIR_RACINE . "tmp/visites/*"));
-		} else {
-			$n += count(glob(_DIR_RACINE . "tmp/visites/4*"));
-			$n += count(glob(_DIR_RACINE . "tmp/visites/8*"));
-			$n += count(glob(_DIR_RACINE . "tmp/visites/c*"));
-			$n = 4 * $n;
-		}
-		$data[$last]['prevision'] += $n;
 	}
 
-	return $data;
+
+	$where = implode(" AND ", $where);
+
+	$firstDateStat = sql_getfetsel("date", $table, $where, "", "date", "0,1");
+	if ($firstDateStat) {
+		$firstDate = (new \DateTime($firstDateStat))->format($format);
+	} else {
+		$firstDate = null;
+	}
+
+	$data = sql_allfetsel(
+		"DATE_FORMAT($order,'$format_sql') AS formatted_date, SUM(visites) AS visites", 
+		$table, $where, 
+		"formatted_date",
+		"formatted_date", 
+		"", 
+		'',
+		$serveur
+	);
+	$data = array_map(function($d) {
+		$d['date'] = $d['formatted_date'];
+		unset($d['formatted_date']);
+		return $d;
+	}, $data);
+
+	return [
+		'meta' => [
+			'unite' => $unite,
+			'duree' => $duree,
+			'objet' => $objet,
+			'id_objet' => $id_objet,
+			'format_date' => $format,
+			'start_date' => $startDate ?? $firstDate,
+			'end_date' => $endDate,
+			'first_date' => $firstDate,
+			'columns' => [
+				'date' => _T('public:date'),
+				'visites' => _L('Visites'),
+			],
+		],
+		'data' => array_values($data),
+	];
+
+	return array_values($data);
 }

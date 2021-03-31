@@ -1,0 +1,22 @@
+<?php
+include_spip('inc/autoriser');
+if (
+    autoriser('voirstats')
+    or (
+        $id_auteur = intval(#ENV{id,0})
+        and autoriser('ecrire', '', '', $id_auteur) 
+        and [(#ENV{id,0}|securiser_acces{#ENV{cle}, voirstats, #ENV{op}, #ENV{args}}|?{1,0})]
+    )
+) {
+?>
+#CACHE{0}
+#HTTP_HEADER{Content-Type: text/csv; charset=#CHARSET}
+#HTTP_HEADER{Content-Disposition: attachment; filename=statistiques_#ENV{objet}_#ENV{id_objet}_#ENV{duree,90}.csv}
+<B_statsj><:date|trim{':'}|trim:>,<:statistiques:info_visites|trim{':'}|trim:>
+<BOUCLE_statsj(DATA){source stats_visites,jour,#ENV{duree},#ENV{objet},#ENV{id_objet}}{datapath data}>[(#VALEUR{date}|affdate{'Y-m-d'})],[(#VALEUR{visites})]
+</BOUCLE_statsj>
+<?php
+} else {
+include_spip('inc/minipres'); 
+echo minipres();
+}?>
