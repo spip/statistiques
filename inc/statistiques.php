@@ -15,52 +15,6 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 }
 
 /**
- * Calculer la moyenne glissante sur un nombre d'echantillons donnes
- *
- * @param int|bool $valeur
- * @param int $glisse
- * @return float
- */
-function moyenne_glissante($valeur = false, $glisse = 0) {
-	static $v = array();
-	// pas d'argument, raz de la moyenne
-	if ($valeur === false) {
-		$v = array();
-
-		return 0;
-	}
-
-	// argument, on l'ajoute au tableau...
-	// surplus, on enleve...
-	$v[] = $valeur;
-	if (count($v) > $glisse) {
-		array_shift($v);
-	}
-
-	return round(statistiques_moyenne($v), 2);
-}
-
-/**
- * Calculer la moyenne d'un tableau de valeurs
- *
- * https://code.spip.net/@statistiques_moyenne
- *
- * @param array $tab
- * @return float
- */
-function statistiques_moyenne($tab) {
-	if (!$tab) {
-		return 0;
-	}
-	$moyenne = 0;
-	foreach ($tab as $v) {
-		$moyenne += $v;
-	}
-
-	return $moyenne / count($tab);
-}
-
-/**
  * Construire un tableau par popularite
  *   classemnt => id_truc
  *
