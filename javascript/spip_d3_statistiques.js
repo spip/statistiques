@@ -61,8 +61,8 @@ function spip_d3_statistiques_create(id, options = {}) {
 	const table_visible = !!$nav.find('.btn--stats-to-table.principal').length;
 
 	const graph = new Spip_d3_graph(id, { 
-		language: '#ENV{lang}',
-		d3_directory: '[(#CHEMIN{lib/d3/d3.min.js}|dirname)]',
+		language: options.language || 'fr',
+		d3_directory: options.d3_directory,
 	});
 	jQuery(id).data('graph', graph);
 	graph.set_dataLoader(data => {

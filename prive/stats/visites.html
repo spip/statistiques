@@ -7,16 +7,16 @@
 [<script type="text/javascript" src="(#CHEMIN{javascript/spip_d3_statistiques.js})"></script>]
 
 <script type="text/javascript">
-
-
 function spip_dessiner_statistiques(){
-	spip_d3_statistiques_create("#statistiques_visites");
+	spip_d3_statistiques_create("#statistiques_visites", {
+		language: '#ENV{lang}',
+		d3_directory: '[(#CHEMIN{lib/d3/d3.min.js}|dirname)]',
+	});
 }
 
 jQuery(function($) {
 	spip_dessiner_statistiques();
 	onAjaxLoad(spip_dessiner_statistiques);
 });
-
 </script>
 
