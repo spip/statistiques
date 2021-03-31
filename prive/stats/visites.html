@@ -1,130 +1,90 @@
-<!--[if IE]>[<script type="text/javascript" src="(#CHEMIN{javascript/excanvas.js})"></script>]<![endif]-->
-[<script type="text/javascript" src="(#CHEMIN{javascript/jquery.flot.js})"></script>]
-[<script type="text/javascript" src="(#CHEMIN{javascript/jquery.flot.selection.js})"></script>]
-[<script type="text/javascript" src="(#CHEMIN{javascript/jquery.flot.time.js})"></script>]
-[<script type="text/javascript" src="(#CHEMIN{javascript/jquery.tflot.js})"></script>]
+
+[<link rel="stylesheet" type="text/css" href="(#CHEMIN{css/spip_d3_graph.css})" />]
+[<link rel="stylesheet" type="text/css" href="(#CHEMIN{css/spip_d3_statistiques.css})" />]
+
+[<script type="text/javascript" src="(#CHEMIN{lib/d3/d3.min.js})"></script>]
+[<script type="text/javascript" src="(#CHEMIN{javascript/spip_d3_graph.js})"></script>]
+[<script type="text/javascript" src="(#CHEMIN{javascript/spip_d3_statistiques.js})"></script>]
 
 <script type="text/javascript">
-	
-function trace_stats_table(table, classes, options) {
-	$table = $(table);
-	if ($table.is(':hidden')) {
-		return true; // pas a faire ou deja fait.
+
+function spip_d3_statistiques_create(id, options = {}) {
+	if (jQuery(id).data('graph')) {
+		return;
 	}
+	const $nav = jQuery(id).parent().find('.statistiques-nav');
+	if ($nav.find('.groupe-boutons--stats-graph .bouton.principal').length) {
+		jQuery(id)[0].dataset.json = $nav.find('.groupe-boutons--stats-graph .bouton.principal').data('json');
+	}
+	const table_visible = !!$nav.find('.btn--stats-to-table.principal').length;
 
-	// copier le titre des tableaux
-	titre = $table.find("caption").text();
-	$table.siblings('.pagination').before("<h3 class='caption'>" + titre + "</h3>");
-	$table
-
-		.wrap("<div class='" + classes + "'></div>");
-
-	// mettre les visites avec un fond colore pour le graphique
-	$table.find("thead th:eq(1)").data({fill: true, serie: 'bar', color: '#FFD845',lineWidth:0});
-	$table.find("thead th:eq(2)").data({serie: 'line', color: '#7FC4FF'});
-	$table.find("thead th:eq(3)").data({fill: true, serie: 'bar', color: '#A9DD3A',lineWidth:0});
-	
-	// mettre les previsions en premier
-	// (pour que les autres graph passent par dessus)
-	$table.find('thead tr th:first-child').after(function(){
-		return $(this).parent().find('th:eq(3)').detach();
+	const graph = new Spip_d3_graph(id, { 
+		language: '#ENV{lang}',
+		d3_directory: '[(#CHEMIN{lib/d3/d3.min.js}|dirname)]',
 	});
-	$table.find('tbody tr th:first-child').after(function(){
-		return $(this).parent().find('td:last-child').detach();
-	});
+	jQuery(id).data('graph', graph);
+	graph.set_dataLoader(data => {
+		// ici on peuple les dates manquantes du json
+		return new Promise((resolve, reject) => {
+			function fillInDates(meta, data){
+				// put current data hash for efficient retrieval
+				// determine min/max of data
+				const currentDates = {};
+				const minDate = meta.start_date;
+				let currentDate = minDate;
+				const maxDate = meta.end_date;
 
-	params = {
-		legendeExterne:true,
-		legendeActions:true,
-		width:($('.large #page').length)?'755px':'560px', // 795px, 600px (sans le tableau de resume) ...
-		height:'250px',
-		modeDate:true,
-		zoom:true,
-		parse:{
-			axeOnTitle:true,
-			defaultSerie:{
-				bars:{show:true},
-				lines:{show:true},
-				points:{show:false}
-			}
-		},
-		flot:{
-			grid:{
-				axismargin:10
-			},
-			xaxis:{
-				labelWidth:45,
-				monthNames: [
-					'[(#VAL{2000-01-01}|nom_mois)]',
-					'[(#VAL{2000-02-01}|nom_mois)]',
-					'[(#VAL{2000-03-01}|nom_mois)]',
-					'[(#VAL{2000-04-01}|nom_mois)]',
-					'[(#VAL{2000-05-01}|nom_mois)]',
-					'[(#VAL{2000-06-01}|nom_mois)]',
-					'[(#VAL{2000-07-01}|nom_mois)]',
-					'[(#VAL{2000-08-01}|nom_mois)]',
-					'[(#VAL{2000-09-01}|nom_mois)]',
-					'[(#VAL{2000-10-01}|nom_mois)]',
-					'[(#VAL{2000-11-01}|nom_mois)]',
-					'[(#VAL{2000-12-01}|nom_mois)]'
-				]
-			},
-			yaxis:{
-				position: "right",
-				tickDecimals: 1,
-				tickFormatter: function nbFormatter(val, axis) {
-					if (val >= 1000000){
-						var fval = (val / 1000000).toFixed(axis.tickDecimals) ;
-						return fval.replace(/\.0$/,"") + " M";
+				data.forEach(d => { 
+					currentDates[d.date] = d; 
+				});
+
+				// loop data and fill in missing dates
+				const filledInDates = [];
+				while (currentDate < maxDate) {
+					if (currentDates[currentDate]) {
+						filledInDates.push(currentDates[currentDate]);
+					} else {
+						filledInDates.push({"date": currentDate, "visites": 0});  
 					}
-					else{
-						if (val >= 100000)
-							return (val / 1000).toFixed(axis.tickDecimals).replace(/\.0$/,"") + " k";
-						else{
-							var fval = val.toFixed(axis.tickDecimals).replace(/\.0$/,"") ;
-							return fval.replace(/(\d{3})$/," $1") ;
-						}
-					}
+					currentDate = graph.nextDate(currentDate, meta.unite, 1);
 				}
-			}
-		},
-		infobulle:{show:true}
-	}
 
-	$table.tFlot($.extend(true, {}, params, options));	
-}
-
-function trace_stats(){
-	trace_stats_table(
-		"#visites_quotidiennes",
-		"statistiques_visites_quotidiennes statistiques_visites",
-		{
-			grille:{weekend:true},
-			flot:{
-				xaxis:{
-					timeformat:"%d %b",
-					minTickSize: [1, "day"]
-				},
-				bars:{barWidth:24 * 60 * 60 * 1000}
+				return filledInDates;
 			}
+
+			data.data = fillInDates(data.meta, data.data);
+
+			resolve(data);
+		})
+		.then(data => {
+			graph.update_table(data);
+			spip_d3_statistiques_update_graph(id, data);
 		});
-		
-	trace_stats_table(
-		"#visites_mensuelles",
-		"statistiques_visites_mensuelles statistiques_visites", {
-			grille:{years:true},
-			flot:{
-				xaxis:{
-					timeformat:"%b %y",
-					minTickSize: [1, "month"]
-				},
-				bars:{barWidth:30.4 * 24 * 60 * 60 * 1000 /* nb de jours... approximatif */}
-			}
 	});
-	
+
+	graph.loading_start();
+	Promise.resolve()
+	.then((d) => {
+		// charger la locale de date avant de créer les axes… sinon ils ne sont pas traduits
+		return graph.localize_d3_time(d);
+	})
+	.then(() => {
+		graph.prepare_table(table_visible);
+		spip_d3_statistiques_prepare_graph(id, !table_visible);
+		graph.updateJson();
+	});
+
 }
+
+
+function spip_dessiner_statistiques(){
+	spip_d3_statistiques_create("#statistiques_visites");
+}
+
 jQuery(function($) {
-	trace_stats();
-	onAjaxLoad(trace_stats);
+	spip_dessiner_statistiques();
+	onAjaxLoad(spip_dessiner_statistiques);
 });
+
 </script>
+

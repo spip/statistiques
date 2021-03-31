@@ -1,0 +1,14 @@
+
+
+.spip_d3_statistiques {
+    width: 100%;
+    min-height: 400px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+.spip_d3_statistiques--visites_quotidiennes {}
+
+
+table.spip.spip_table--statistiques {
+    margin-bottom: 3em;
+}

@@ -1,0 +1,194 @@
+
+/*
+.line {
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 2px;
+}*/
+
+.spip_d3_graph {
+	--spip-d3--theme-color--light: var(--spip-color-theme-light, #999);
+	--spip-d3--theme-color: var(--spip-color-theme, #666);
+	--spip-d3--theme-color--dark: var(--spip-color-theme-dark, #444);
+
+	--spip-d3--text-color: #444;
+	--spip-d3--border-color: #ddd;
+	--spip-d3--background-color: #fafafa;
+
+	--spip-d3--loader-color: var(--spip-d3--theme-color);
+	--spip-d3--loader-color--loading: var(--spip-d3--theme-color--dark);
+
+	--spip-d3--line-color: var(--spip-d3--theme-color);
+	--spip-d3--line-color--primary: var(--spip-d3--theme-color);
+	--spip-d3--line-color--secondary: hsl(calc(var(--spip-color-theme--h) + 120), var(--spip-color-theme--s), var(--spip-color-theme--l));
+	--spip-d3--line-color--tertiary: hsl(calc(var(--spip-color-theme--h) + 240), var(--spip-color-theme--s), var(--spip-color-theme--l));
+
+	--spip-d3--bar-color: var(--spip-d3--theme-color--light);
+	--spip-d3--bar-color--hover: var(--spip-d3--theme-color);
+
+	--spip-d3--area-color--low: #fff;
+	--spip-d3--area-color--high: var(--spip-d3--theme-color);
+
+	--spip-d3--grid-color: #ddd;
+}
+
+.spip_d3_graph {
+	display: grid;
+	place-items: center;
+	border: 1px solid var(--spip-d3--border-color);
+	background-color: var(--spip-d3--background-color);
+	margin-bottom: 3em;
+}
+.spip_d3_graph > * {
+	grid-area: 1/1;
+}
+
+/** ratio */
+.spip_d3_graph_ratio {}
+/** loader */
+.spip_d3_graph_loader {
+	color: var(--spip-d3--loader-color);
+	transition: width .3s, height .3s, color .3s;
+	width: 60px; 
+	height: 60px;
+	display: none;
+	z-index: 1000;
+}
+/** when loading */
+.spip_d3_graph--loading .spip_d3_graph_loader {
+	display: block;
+}
+/** graphique */
+.spip_d3_graph_inner {
+	width: 100%;
+	position: relative; /** for tooltip */
+}
+
+/* ===================== */
+.spip_d3_svg {}
+.spip_d3_svg_title {
+	text-anchor: middle;
+	fill: var(--spip-d3--text-color);
+}
+
+.spip_d3_svg_grid line {
+	stroke: var(--spip-d3--grid-color);
+	shape-rendering: crispEdges;
+	stroke-opacity: 0.7;
+}
+.spip_d3_svg_grid path {
+	stroke-width: 0;
+}
+.spip_d3_svg_grid--horizontal line {
+	stroke-opacity: 0.7;
+}
+.spip_d3_svg_grid--vertical line {
+	stroke-opacity: 0.5;
+}
+
+
+
+.spip_d3_svg_area {
+	opacity: 0.5;
+}
+
+.spip_d3_svg_line {
+	fill: none;
+	stroke: var(--spip-d3--line-color);
+	stroke-width: 2;
+	stroke-miterLimit: 1;
+}
+.spip_d3_svg_line--average {
+	stroke: var(--spip-d3--line-color--secondary);
+}
+
+.spip_d3_svg_histogram  {}
+.spip_d3_svg_bar {
+	fill: var(--spip-d3--bar-color);
+	transition: fill .3s;
+}
+.spip_d3_svg_bar--hover,
+.spip_d3_svg_bar:hover {
+	fill: var(--spip-d3--bar-color--hover);
+}
+
+
+.spip_d3_svg_overlay {
+	fill: none;
+	pointer-events: all;
+}
+
+/* ===================== */
+.spip_d3_tooltip {
+	position: absolute;
+	opacity: 0;
+	border-radius: 5px;
+	background-color: var(--spip-color-theme-lightest);
+	border: 1px solid var(--spip-color-theme);
+}
+.spip_d3_tooltip_list {
+	list-style-type: none;
+	margin: 0; 
+	padding: .5em;
+}
+.spip_d3_tooltip_label {
+	font-weight: bold;
+	color: var(--spip-color-theme-darker);
+	padding-right: .5em;
+}
+.spip_d3_tooltip_value {
+	
+}
+
+
+
+
+/* ====================== */
+.spip_d3_table {
+	margin-bottom: 2em;
+}
+
+/** tables responsives */
+@media (max-width: 760px) {
+
+	.spip_table--responsive,
+	.spip_table--responsive thead,
+	.spip_table--responsive tbody,
+	.spip_table--responsive th,
+	.spip_table--responsive td,
+	.spip_table--responsive tr {
+		display: block; 
+	}
+
+	.spip_table--responsive thead tr { 
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
+	.spip_table--responsive tr { 
+		border-top: 1px solid #ccc; 
+		border-bottom: 1px solid #ccc; 
+	}
+	.spip_table--responsive tr + tr { 
+		margin-top: 1em;
+	}
+	.spip_table--responsive td { 
+		text-align: right;
+	}
+	table.spip_table--responsive td {
+		border-top: none;
+		border-bottom: 1px solid rgba(0, 0, 0, .08);
+	}
+	
+	.spip_table--responsive td:before { 
+		float: left;
+		font-weight: bold;
+		content: attr(data-label); 
+	}
+}
