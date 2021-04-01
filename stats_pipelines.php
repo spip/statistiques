@@ -161,7 +161,7 @@ function admin_stats($objet, $id_objet, $var_preview = "") {
  * @return string URL
  **/
 function generer_url_ecrire_statistiques($id_article) {
-	return generer_url_ecrire('stats_visites', "id_article=$id_article");
+	return generer_url_ecrire('stats_visites', "objet=article&id_objet=$id_article");
 }
 
 
