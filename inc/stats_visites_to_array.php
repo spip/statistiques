@@ -121,9 +121,6 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 		$firstDate = null;
 	}
 
-	ray("DATE_FORMAT($order,'$format_sql')");
-	ray($where);
-
 	$data = sql_allfetsel(
 		"DATE_FORMAT($order,'$format_sql') AS formatted_date, SUM(visites) AS visites", 
 		$table, $where, 
