@@ -103,15 +103,16 @@ class Spip_d3_graph {
 	}
 
 	nextDate(date, unit, add) {
-		const current = new Date(String(date));
+		const current = luxon.DateTime.fromISO(date);
+		const next = current.plus({[unit]: add});
 		if (unit === 'day') {
-			const next = new Date(current.setDate(current.getDate() + add));
-			return next.toLocaleDateString('en-CA');
+			return next.toISODate();
+		} else if (unit === 'week') {
+			return next.toFormat("kkkk-'W'WW");
 		} else if (unit === 'month') {
-			const next = new Date(current.setMonth(current.getMonth() + add));
-			return next.toLocaleDateString('en-CA').slice(0, 7);
+			return next.toFormat('yyyy-LL');
 		} else if (unit === 'year') {
-			return current.getFullYear() + add;
+			return next.toFormat('yyyy');
 		} else {
 			throw "invalid unit in nextDate().";
 		}
@@ -150,7 +151,7 @@ class Spip_d3_graph {
 
 	prepare_columns(data) {
 		const columns = [];
-		for (const value of Object.entries(data.meta.columns)) {
+		for (const [key, value] of Object.entries(data.meta.columns)) {
 			columns.push({key: value, label: data.meta.translations[value]});
 		}
 		return columns;

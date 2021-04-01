@@ -143,8 +143,6 @@ function spip_d3_statistiques_prepare_graph(id, visible = true) {
 		const summed = data.map((d, i) => {
 			const start = Math.max(0, i - windowSize)
 			const end = i + 1;
-			//const sum = { ...d };
-			//sum.visites = Math.round(d3.sum(data.slice(start, end), d => d.visites) / (end - start));
 			d.moyenne_mobile = Math.round(d3.sum(data.slice(start, end), d => d.visites) / (end - start));
 			return d;
 		})
@@ -293,9 +291,10 @@ function spip_d3_statistiques_update_graph(id, _data) {
 	// format the data
 	data.forEach(d => {
 		d.label = d.date;
-		d.date = new Date(String(d.date));
+		d.date = luxon.DateTime.fromISO(d.date);
 		d.visites = +d.visites;
 	});
+	// todo: use rolling-sum from an option or meta
 	modele.rollingSum(data);
 
 	x.domain(d3.extent(data, d => d.date));
@@ -304,6 +303,8 @@ function spip_d3_statistiques_update_graph(id, _data) {
 
 	if (meta.unite === 'day') {
 		modele.histogram.thresholds(x.ticks(d3.timeDay));
+	}  else if (meta.unite === 'week') {
+		modele.histogram.thresholds(x.ticks(d3.timeWeek));
 	} else if (meta.unite === 'month') {
 		modele.histogram.thresholds(x.ticks(d3.timeMonth));
 	} else if (meta.unite === 'year') {
