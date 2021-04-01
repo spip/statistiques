@@ -12,12 +12,12 @@
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			3 mois
 		</a>
-		<a class="bouton[ (#ENV{graph}|=={730-days}|oui)principal]" href="#" 
-			data-graph="730-days"
-			data-title="<:statistiques:visites_journalieres|attribut_html:>"
-			data-json="[(#VAL{json}|statistiques_url_data{visites,jour,730})]" 
-			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,jour,730})]" 
-			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,jour,730})]" 
+		<a class="bouton[ (#ENV{graph}|=={104-weeks}|oui)principal]" href="#" 
+			data-graph="104-weeks"
+			data-title="<:statistiques:visites_hebdomadaires|attribut_html:>"
+			data-json="[(#VAL{json}|statistiques_url_data{visites,semaine,104})]" 
+			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,semaine,104})]" 
+			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,semaine,104})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			2 ans
 		</a>
@@ -42,7 +42,8 @@
 	</div>
 
 	<h3 class="caption--visites">
-		[(#ENV{graph}|in_any{#LISTE{60-months,years}}|non|?{<:statistiques:visites_journalieres:>})]
+		[(#ENV{graph}|in_any{#LISTE{104-weeks,60-months,years}}|non|?{<:statistiques:visites_journalieres:>})]
+		[(#ENV{graph}|=={104-weeks}|?{<:statistiques:visites_hebdomadaires:>})]
 		[(#ENV{graph}|=={60-months}|?{<:statistiques:visites_mensuelles:>})]
 		[(#ENV{graph}|=={years}|?{<:statistiques:visites_annuelles:>})]
 	</h3>
