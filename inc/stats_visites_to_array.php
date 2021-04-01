@@ -27,27 +27,53 @@ include_spip('inc/statistiques');
  * @return array [date => nb visites]
  */
 function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $objet = null, ?int $id_objet = null) {
-	$now = time();
+	$unites = [
+		'jour' => 'day',
+		'day' => 'day',
+		'semaine' => 'week',
+		'week' => 'week',
+		'mois' => 'month',
+		'month' => 'month',
+		'annee' => 'year',
+		'year' => 'year',
+	];
+	$unite = $unites[$unite] ?? 'day';
+	$period_unit = $unite;
+	$period_duration = $duree;
 
-	if (!in_array($unite, array('jour', 'mois', 'annee', 'day', 'month', 'year'))) {
-		$unite = 'day';
+	switch ($unite) {
+		case 'day':
+			$format_sql = '%Y-%m-%d';
+			$format = 'Y-m-d';
+			$period_unit_interval = 'D';
+			break;
+
+		case 'week':
+			// https://en.wikipedia.org/wiki/ISO_week_date
+			$format_sql = '%x-W%v';
+			$format = 'o-\WW';
+			$n_today = (new \DateTime())->format('w'); // dimanche 0, samedi 6
+			// on se cale sur un lundi
+			$period_duration = 7 * $duree - $n_today;
+			$period_unit_interval = 'D';
+			break;
+
+		case 'month':
+			$format_sql = '%Y-%m';
+			$format = 'Y-m';
+			$period_unit_interval = 'M';
+			break;
+
+		case 'year':
+			$format_sql = '%Y';
+			$format = 'Y';
+			$period_unit_interval = 'Y';
+			break;
+
+		default:
+			throw new \RuntimeException("Invalid unit $unite");
 	}
-	if (in_array($unite, ['jour', 'day'])) {
-		$format_sql = '%Y-%m-%d';
-		$format = 'Y-m-d';
-		$unite = 'day';
-		$duration = 'D';
-	} elseif (in_array($unite, ['mois', 'month'])) {
-		$format_sql = '%Y-%m';
-		$format = 'Y-m';
-		$unite = 'month';
-		$duration = 'M';
-	} else {
-		$format_sql = '%Y';
-		$format = 'Y';
-		$unite = 'year';
-		$duration = 'Y';
-	}
+
 	if ($duree and $duree < 0) {
 		$duree = null;
 	}
@@ -63,9 +89,9 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 
 
 	if ($duree) {
-		$where[] = sql_date_proche($order, -$duree, $unite, $serveur);
+		$where[] = sql_date_proche($order, -$period_duration, $period_unit, $serveur);
 		// sql_date_proche utilise une comparaison stricte. On soustrait 1 jour...
-		$startDate = (new \DateTime())->sub(new \DateInterval('P' . ($duree - 1) . $duration))->format($format);
+		$startDate = (new \DateTime())->sub(new \DateInterval('P' . ($period_duration - 1) . $period_unit_interval))->format($format);
 	}
 
 	if ($objet and $id_objet) {
@@ -94,6 +120,9 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 	} else {
 		$firstDate = null;
 	}
+
+	ray("DATE_FORMAT($order,'$format_sql')");
+	ray($where);
 
 	$data = sql_allfetsel(
 		"DATE_FORMAT($order,'$format_sql') AS formatted_date, SUM(visites) AS visites", 
