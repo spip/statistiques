@@ -229,7 +229,7 @@ function spip_d3_statistiques_prepare_graph(id, visible = true) {
 			if (d) {
 				modele.tooltip.add('date', modele.meta.translations.date, d.label);
 				modele.tooltip.add('visites', modele.meta.translations.visites, d.visites);
-				modele.tooltip.add('moyenne', modele.meta.translations.moyenne, d.moyenne_mobile);
+				modele.tooltip.add('moyenne', modele.meta.translations.moyenne + " (MM" + modele.rollingSumWindowSize + ")", d.moyenne_mobile);
 			} else {
 				modele.tooltip.add('date', modele.meta.translations.date, '?');
 			}
@@ -294,24 +294,29 @@ function spip_d3_statistiques_update_graph(id, _data) {
 		d.date = luxon.DateTime.fromISO(d.date);
 		d.visites = +d.visites;
 	});
-	// todo: use rolling-sum from an option or meta
-	modele.rollingSum(data);
 
 	x.domain(d3.extent(data, d => d.date));
 
 	modele.histogram.domain(x.domain())
 
+	let rollingSumWindowSize = 7;
 	if (meta.unite === 'day') {
 		modele.histogram.thresholds(x.ticks(d3.timeDay));
 	}  else if (meta.unite === 'week') {
+		rollingSumWindowSize = 4;
 		modele.histogram.thresholds(x.ticks(d3.timeWeek));
 	} else if (meta.unite === 'month') {
+		rollingSumWindowSize = 6;
 		modele.histogram.thresholds(x.ticks(d3.timeMonth));
 	} else if (meta.unite === 'year') {
+		rollingSumWindowSize = 3;
 		modele.histogram.thresholds(x.ticks(d3.timeYear));
 	} else {
 		throw "meta.unite not in day|month|year";
 	}
+
+	modele.rollingSumWindowSize = rollingSumWindowSize;
+	modele.rollingSum(data, rollingSumWindowSize);
 
 	// group the data for the bars
 	const bins = modele.histogram(data);
