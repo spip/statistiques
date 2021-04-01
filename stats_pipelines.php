@@ -220,7 +220,7 @@ function stats_boite_infos($flux) {
 			$visites = sql_getfetsel('visites', 'spip_articles', 'id_article=' . intval($id_article));
 			if ($visites > 0) {
 				$icone_horizontale = chercher_filtre('icone_horizontale');
-				$flux['data'] .= $icone_horizontale(generer_url_ecrire("stats_visites", "id_article=$id_article"),
+				$flux['data'] .= $icone_horizontale(generer_url_ecrire("stats_visites", "objet=article&id_objet=$id_article"),
 					_T('statistiques:icone_evolution_visites', array('visites' => $visites)), "statistique-24.png");
 			}
 		}
