@@ -51,8 +51,8 @@
 	<div class="groupe-boutons groupe-boutons--stats-vue">
 		<a class="bouton[ (#ENV{vue}|non|ou{#ENV{vue}|=={svg}})principal] noajax btn--stats-to-svg" href="#" onclick="spip_d3_statistiques_toggle_svg_table(this, '#statistiques_visites', 'svg'); return false;"><:statistiques:info_graphiques:></a>
 		<a class="bouton[ (#ENV{vue}|=={table}|oui)principal] noajax btn--stats-to-table" href="#"  onclick="spip_d3_statistiques_toggle_svg_table(this, '#statistiques_visites', 'table'); return false;"><:statistiques:info_tableaux:></a>
-		<a class="bouton noajax btn--stats-csv" href="[(#VAL{csv}|statistiques_url_data_auteur{jour,90})]" target="_blank"><:statistiques:csv:></a>
-		<a class="bouton noajax btn--stats-json" href="[(#VAL{json}|statistiques_url_data_auteur{jour,90})]" target="_blank"><:statistiques:json:></a>
+		<a class="bouton noajax btn--stats-csv" href="[(#VAL{csv}|statistiques_url_data_auteur{visites,jour,90})]" target="_blank"><:statistiques:csv:></a>
+		<a class="bouton noajax btn--stats-json" href="[(#VAL{json}|statistiques_url_data_auteur{visites,jour,90})]" target="_blank"><:statistiques:json:></a>
 	</div>
 </div>
 
