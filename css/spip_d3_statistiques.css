@@ -11,4 +11,9 @@
 
 table.spip.spip_table--statistiques {
     margin-bottom: 3em;
+    max-width: 100%;
 }
+table.spip.spip_table--statistiques caption {
+    margin-bottom: 0;
+}
+

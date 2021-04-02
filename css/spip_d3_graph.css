@@ -1,10 +1,21 @@
 
-/*
-.line {
-	fill: none;
-	stroke: steelblue;
-	stroke-width: 2px;
-}*/
+
+.spip_d3_nav {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5em 0 .25em;
+}
+
+.spip_d3_nav_caption {
+	font-size:1.3em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+	margin:0;
+}
+
 
 .spip_d3_graph {
 	--spip-d3--theme-color--light: var(--spip-color-theme-light, #999);
@@ -26,9 +37,6 @@
 	--spip-d3--bar-color: var(--spip-d3--theme-color--light);
 	--spip-d3--bar-color--hover: var(--spip-d3--theme-color);
 
-	--spip-d3--area-color--low: #fff;
-	--spip-d3--area-color--high: var(--spip-d3--theme-color);
-
 	--spip-d3--grid-color: #ddd;
 }
 
@@ -39,6 +47,10 @@
 	background-color: var(--spip-d3--background-color);
 	margin-bottom: 3em;
 }
+.spip_d3_nav + .spip_d3_graph {
+	border-top: 2px solid var(--spip-d3--border-color);
+}
+
 .spip_d3_graph > * {
 	grid-area: 1/1;
 }
@@ -62,6 +74,7 @@
 .spip_d3_graph_inner {
 	width: 100%;
 	position: relative; /** for tooltip */
+	align-self: self-start;
 }
 
 /* ===================== */
@@ -86,11 +99,6 @@
 	stroke-opacity: 0.5;
 }
 
-
-
-.spip_d3_svg_area {
-	opacity: 0.5;
-}
 
 .spip_d3_svg_line {
 	fill: none;

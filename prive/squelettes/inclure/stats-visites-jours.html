@@ -1,7 +1,7 @@
 
 
 
-<div class="statistiques-nav">
+<div class="spip_d3_nav spip_d3_nav--statistiques-visites">
 	<div class="groupe-boutons groupe-boutons--stats-graph">
 		<a class="bouton[ (#ENV{graph}|non|ou{#ENV{graph}|=={90-days}})principal]" href="#" 
 			data-graph="90-days"
@@ -41,7 +41,7 @@
 		</a>
 	</div>
 
-	<h3 class="caption--visites">
+	<h3 class="spip_d3_nav_caption">
 		[(#ENV{graph}|in_any{#LISTE{104-weeks,60-months,years}}|non|?{<:statistiques:visites_journalieres:>})]
 		[(#ENV{graph}|=={104-weeks}|?{<:statistiques:visites_hebdomadaires:>})]
 		[(#ENV{graph}|=={60-months}|?{<:statistiques:visites_mensuelles:>})]

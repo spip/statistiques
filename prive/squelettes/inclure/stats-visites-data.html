@@ -1,4 +1,5 @@
-[(#BOITE_OUVRIR{[(#CHEMIN_IMAGE{statistique-24.png}|balise_img{'',cadre-icone})]<h1><:statistiques:titre_evolution_visite:></h1>,'simple stats'})]
+
+<h1><:statistiques:titre_evolution_visite:></h1>
 
 <BOUCLE_expose(ARTICLES){id_article}{statut==.*}>
 #BOITE_OUVRIR{'','note'}
@@ -11,6 +12,3 @@
 
 <INCLURE{fond=prive/squelettes/inclure/stats-visites-jours-resume, objet, id_objet} />
 <INCLURE{fond=prive/squelettes/inclure/stats-visites-jours,ajax,env} />
-
-#BOITE_FERMER
-

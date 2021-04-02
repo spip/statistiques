@@ -29,9 +29,9 @@ function spip_d3_statistiques_load_json(btn, id) {
 	$btn.parent().find('.bouton').removeClass('principal');
 	$btn.addClass('principal');
 
-	$btn.closest('.statistiques-nav').find('.btn--stats-json').attr('href', btn.dataset.jsonAuteur);
-	$btn.closest('.statistiques-nav').find('.btn--stats-csv').attr('href', btn.dataset.csvAuteur);
-	$btn.closest('.statistiques-nav').find('.caption--visites').text(btn.dataset.title);
+	$btn.closest('.spip_d3_nav').find('.btn--stats-json').attr('href', btn.dataset.jsonAuteur);
+	$btn.closest('.spip_d3_nav').find('.btn--stats-csv').attr('href', btn.dataset.csvAuteur);
+	$btn.closest('.spip_d3_nav').find('.spip_d3_nav_caption').text(btn.dataset.title);
 
 	const url = parametre_url(window.document.location.href, 'graph', btn.dataset.graph);
 	window.history.replaceState({}, window.document.title, url);
@@ -54,7 +54,7 @@ function spip_d3_statistiques_create(id, options = {}) {
 	if (jQuery(id).data('graph')) {
 		return;
 	}
-	const $nav = jQuery(id).parent().find('.statistiques-nav');
+	const $nav = jQuery(id).parent().find('.spip_d3_nav');
 	if ($nav.find('.groupe-boutons--stats-graph .bouton.principal').length) {
 		jQuery(id)[0].dataset.json = $nav.find('.groupe-boutons--stats-graph .bouton.principal').data('json');
 	}
@@ -102,9 +102,9 @@ function spip_d3_statistiques_prepare_graph(id, visible = true) {
 		height: 400,
 		width: 800,
 		margin: {
-			top: 50, 
-			right: 20, 
-			bottom: 20, 
+			top: 30, 
+			right: 30, 
+			bottom: 30, 
 			left: 60
 		}
 	};
