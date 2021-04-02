@@ -99,6 +99,11 @@
 	stroke-opacity: 0.5;
 }
 
+.spip_d3_svg_xaxis,
+.spip_d3_svg_yaxis {
+	color: var(--spip-d3--text-color);
+}
+
 
 .spip_d3_svg_line {
 	fill: none;
