@@ -137,15 +137,16 @@ class Spip_d3_graph {
 
 		// loop data and fill in missing dates
 		const filledInDates = [];
-		while (currentDate < maxDate) {
+		while (currentDate <= maxDate) {
 			if (currentDates[currentDate]) {
 				filledInDates.push(currentDates[currentDate]);
 			} else {
-
 				filledInDates.push(onEmpty(currentDate));  
 			}
 			currentDate = this.nextDate(currentDate, meta.unite, 1);
 		}
+		// we push next date for xaxis to show last histogram bar.
+		filledInDates.push(onEmpty(currentDate));  
 
 		return filledInDates;
 	}

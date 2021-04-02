@@ -330,10 +330,9 @@ function spip_d3_statistiques_update_graph(id, _data) {
 				d.visites += d[j].visites;
 				d.moyenne_mobile += d[j].moyenne_mobile;
 			}
+			d.label = d[0].label;
+			d.date = d[0].date;
 		}
-		d.label = d[0].label;
-		d.date = d[0].date;
-		bins[i] = d;
 	});
 
 	y.domain([0, d3.max(bins, d => d.visites)]);
@@ -356,6 +355,4 @@ function spip_d3_statistiques_update_graph(id, _data) {
 
 	svg.select('.spip_d3_svg_xaxis').call(modele.xAxis);
 	svg.select('.spip_d3_svg_yaxis').call(modele.yAxis);
-
-
 }
