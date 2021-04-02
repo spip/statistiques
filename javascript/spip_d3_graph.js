@@ -79,6 +79,7 @@ class Spip_d3_graph {
 
 	updateJson() {
 		this.loading_start();
+		const me = this;
 		d3
 			.json(this.get_jsonUrl())
 			.then(this.jsonLoaderCallback)
@@ -88,8 +89,8 @@ class Spip_d3_graph {
 			})
 			.catch(function(error) {
 				console.error(error);
-				this.loading_end();
-				this.error(error);
+				me.loading_end();
+				me.error(error);
 			})
 	}
 
