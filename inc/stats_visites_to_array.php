@@ -55,6 +55,7 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 			$n_today = (new \DateTime())->format('w'); // dimanche 0, samedi 6
 			// on se cale sur un lundi
 			$period_duration = 7 * $duree - $n_today;
+			$period_unit = 'day';
 			$period_unit_interval = 'D';
 			break;
 
@@ -122,14 +123,15 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 	}
 
 	$data = sql_allfetsel(
-		"DATE_FORMAT($order,'$format_sql') AS formatted_date, SUM(visites) AS visites", 
+		"DATE_FORMAT($order, '$format_sql') AS formatted_date, SUM(visites) AS visites", 
 		$table, $where, 
 		"formatted_date",
-		"formatted_date", 
+		"formatted_date",
 		"", 
-		'',
+		"",
 		$serveur
 	);
+
 	$data = array_map(function($d) {
 		$d['date'] = $d['formatted_date'];
 		unset($d['formatted_date']);
