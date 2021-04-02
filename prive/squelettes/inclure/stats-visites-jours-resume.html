@@ -24,7 +24,7 @@
 					<:info_hier|trim{':'}|trim|ucfirst:>
 				</a>
 			</th>
-			<BOUCLE_arth(ARTICLES){id_article}{statut?}>
+			<BOUCLE_arth(ARTICLES){id_article=#ENV{id_objet}}{statut?}{si #ENV{objet}|=={article}}>
 				<th scope="col"><:statistiques:info_popularite_5|trim{':'}|trim|ucfirst:></th>
 				<th scope="col"><:info_total|trim{':'}|trim|ucfirst:></th>
 				<th scope="col"></th>
