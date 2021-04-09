@@ -10,7 +10,7 @@
 			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,jour,90})]" 
 			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,jour,90})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
-			3 mois
+			<:statistiques:duree_mois_nb{nb=3}:>
 		</a>
 		<a class="bouton[ (#ENV{graph}|=={104-weeks}|oui)principal]" href="#" 
 			data-graph="104-weeks"
@@ -19,7 +19,7 @@
 			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,semaine,104})]" 
 			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,semaine,104})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
-			2 ans
+			<:statistiques:duree_annee_nb{nb=2}:>
 		</a>
 		<a class="bouton[ (#ENV{graph}|=={60-months}|oui)principal]" href="#" 
 			data-graph="60-months"
@@ -28,7 +28,7 @@
 			data-json-auteur="[(#VAL{json}|statistiques_url_data_auteur{visites,mois,60})]" 
 			data-csv-auteur="[(#VAL{csv}|statistiques_url_data_auteur{visites,mois,60})]" 
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
-			5 ans
+			<:statistiques:duree_annee_nb{nb=5}:>
 		</a>
 		<a class="bouton[ (#ENV{graph}|=={years}|oui)principal]" href="#" 
 			data-graph="years"

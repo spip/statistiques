@@ -31,6 +31,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'csv' => 'csv',
 
+	// D
+	'duree_jour_un' => '@nb@ jour',
+	'duree_jour_nb' => '@nb@ jours',
+	'duree_semaine_un' => '@nb@ semaine',
+	'duree_semaine_nb' => '@nb@ semaines',
+	'duree_mois_un' => '@nb@ mois',
+	'duree_mois_nb' => '@nb@ mois',
+	'duree_annee_un' => '@nb@ an',
+	'duree_annee_nb' => '@nb@ ans',
+
 	// I
 	'icone_evolution_visites' => 'Évolution des visites<br />@visites@ visites',
 	'icone_repartition_actuelle' => 'Afficher la répartition actuelle',
