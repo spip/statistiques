@@ -18,26 +18,23 @@
 
 
 .spip_d3_graph {
-	--spip-d3--theme-color--light: var(--spip-color-theme-light, #999);
-	--spip-d3--theme-color: var(--spip-color-theme, #666);
-	--spip-d3--theme-color--dark: var(--spip-color-theme-dark, #444);
 
-	--spip-d3--text-color: #444;
-	--spip-d3--border-color: #ddd;
-	--spip-d3--background-color: #fafafa;
+	--spip-d3--text-color: var(--spip-color-gray-darker);
+	--spip-d3--border-color: var(--spip-color-gray-lighter);
+	--spip-d3--background-color: hsl(0, 0%, 98%);
 
-	--spip-d3--loader-color: var(--spip-d3--theme-color);
-	--spip-d3--loader-color--loading: var(--spip-d3--theme-color--dark);
+	--spip-d3--loader-color: var(--spip-color-theme);
+	--spip-d3--loader-color--loading: var(--spip-color-theme-dark);
 
-	--spip-d3--line-color: var(--spip-d3--theme-color);
-	--spip-d3--line-color--primary: var(--spip-d3--theme-color);
+	--spip-d3--line-color: var(--spip-color-theme);
+	--spip-d3--line-color--primary: var(--spip-color-theme);
 	--spip-d3--line-color--secondary: hsl(calc(var(--spip-color-theme--h) + 120), var(--spip-color-theme--s), var(--spip-color-theme--l));
 	--spip-d3--line-color--tertiary: hsl(calc(var(--spip-color-theme--h) + 240), var(--spip-color-theme--s), var(--spip-color-theme--l));
 
-	--spip-d3--bar-color: var(--spip-d3--theme-color--light);
-	--spip-d3--bar-color--hover: var(--spip-d3--theme-color);
+	--spip-d3--bar-color: var(--spip-color-theme-light);
+	--spip-d3--bar-color--hover: var(--spip-color-theme);
 
-	--spip-d3--grid-color: #ddd;
+	--spip-d3--grid-color: var(--spip-color-gray-lighter);
 }
 
 .spip_d3_graph {
