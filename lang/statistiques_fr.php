@@ -32,14 +32,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'csv' => 'csv',
 
 	// D
-	'duree_jour_un' => '@nb@ jour',
-	'duree_jour_nb' => '@nb@ jours',
-	'duree_semaine_un' => '@nb@ semaine',
-	'duree_semaine_nb' => '@nb@ semaines',
-	'duree_mois_un' => '@nb@ mois',
-	'duree_mois_nb' => '@nb@ mois',
-	'duree_annee_un' => '@nb@ an',
 	'duree_annee_nb' => '@nb@ ans',
+	'duree_annee_un' => '@nb@ an',
+	'duree_jour_nb' => '@nb@ jours',
+	'duree_jour_un' => '@nb@ jour',
+	'duree_mois_nb' => '@nb@ mois',
+	'duree_mois_un' => '@nb@ mois',
+	'duree_semaine_nb' => '@nb@ semaines',
+	'duree_semaine_un' => '@nb@ semaine',
 
 	// I
 	'icone_evolution_visites' => 'Évolution des visites<br />@visites@ visites',
@@ -63,6 +63,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Gérer les statistiques des visites',
 
+	// J
+	'json' => 'json',
+
 	// O
 	'onglet_origine_visites' => 'Origine des visites',
 	'onglet_repartition_debut' => 'depuis le début',
@@ -70,9 +73,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// R
 	'resume' => 'Résumé',
-
-	// S
-	'json' => 'json',
 
 	// T
 	'texte_admin_effacer_stats' => 'Cette commande efface toutes les données liées aux statistiques de visite du site, y compris la popularité des articles.',
@@ -85,8 +85,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'Statistiques des visites',
 
 	// V
-	'visites_journalieres' => 'Nombre de visites par jour',
-	'visites_hebdomadaires' => 'Nombre de visites par semaine',
-	'visites_mensuelles' => 'Nombre de visites par mois',
 	'visites_annuelles' => 'Nombre de visites par an',
+	'visites_hebdomadaires' => 'Nombre de visites par semaine',
+	'visites_journalieres' => 'Nombre de visites par jour',
+	'visites_mensuelles' => 'Nombre de visites par mois'
 );
