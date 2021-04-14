@@ -2,8 +2,8 @@
 
 
 <div class="spip_d3_nav spip_d3_nav--statistiques-visites">
-	<div class="groupe-boutons groupe-boutons--stats-graph">
-		<a class="bouton[ (#ENV{graph}|non|ou{#ENV{graph}|=={90-days}})principal]" href="#" 
+	<div class="groupe-btns groupe-btns_menu groupe-btns--stats-graph">
+		<a class="btn[ (#ENV{graph}|non|ou{#ENV{graph}|=={90-days}})btn_on]" href="#" 
 			data-graph="90-days"
 			data-title="<:statistiques:visites_journalieres|attribut_html:>"
 			data-json="[(#VAL{json}|statistiques_url_data{visites,jour,90})]" 
@@ -12,7 +12,7 @@
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			<:statistiques:duree_mois_nb{nb=3}:>
 		</a>
-		<a class="bouton[ (#ENV{graph}|=={104-weeks}|oui)principal]" href="#" 
+		<a class="btn[ (#ENV{graph}|=={104-weeks}|oui)btn_on]" href="#" 
 			data-graph="104-weeks"
 			data-title="<:statistiques:visites_hebdomadaires|attribut_html:>"
 			data-json="[(#VAL{json}|statistiques_url_data{visites,semaine,104})]" 
@@ -21,7 +21,7 @@
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			<:statistiques:duree_annee_nb{nb=2}:>
 		</a>
-		<a class="bouton[ (#ENV{graph}|=={60-months}|oui)principal]" href="#" 
+		<a class="btn[ (#ENV{graph}|=={60-months}|oui)btn_on]" href="#" 
 			data-graph="60-months"
 			data-title="<:statistiques:visites_mensuelles|attribut_html:>"
 			data-json="[(#VAL{json}|statistiques_url_data{visites,mois,60})]" 
@@ -30,7 +30,7 @@
 			onclick="spip_d3_statistiques_load_json(this, '#statistiques_visites'); return false;">
 			<:statistiques:duree_annee_nb{nb=5}:>
 		</a>
-		<a class="bouton[ (#ENV{graph}|=={years}|oui)principal]" href="#" 
+		<a class="btn[ (#ENV{graph}|=={years}|oui)btn_on]" href="#" 
 			data-graph="years"
 			data-title="<:statistiques:visites_annuelles|attribut_html:>"
 			data-json="[(#VAL{json}|statistiques_url_data{visites,annee})]" 
@@ -48,11 +48,11 @@
 		[(#ENV{graph}|=={years}|?{<:statistiques:visites_annuelles:>})]
 	</h3>
 
-	<div class="groupe-boutons groupe-boutons--stats-vue">
-		<a class="bouton[ (#ENV{vue}|non|ou{#ENV{vue}|=={svg}})principal] noajax btn--stats-to-svg" href="#" onclick="spip_d3_statistiques_toggle_svg_table(this, '#statistiques_visites', 'svg'); return false;"><:statistiques:info_graphiques:></a>
-		<a class="bouton[ (#ENV{vue}|=={table}|oui)principal] noajax btn--stats-to-table" href="#"  onclick="spip_d3_statistiques_toggle_svg_table(this, '#statistiques_visites', 'table'); return false;"><:statistiques:info_tableaux:></a>
-		<a class="bouton noajax btn--stats-csv" href="[(#VAL{csv}|statistiques_url_data_auteur{visites,jour,90})]" target="_blank"><:statistiques:csv:></a>
-		<a class="bouton noajax btn--stats-json" href="[(#VAL{json}|statistiques_url_data_auteur{visites,jour,90})]" target="_blank"><:statistiques:json:></a>
+	<div class="groupe-btns groupe-btns_menu groupe-btns--stats-vue">
+		<a class="btn[ (#ENV{vue}|non|ou{#ENV{vue}|=={svg}})btn_on] noajax btn--stats-to-svg" href="#" onclick="spip_d3_statistiques_toggle_svg_table(this, '#statistiques_visites', 'svg'); return false;"><:statistiques:info_graphiques:></a>
+		<a class="btn[ (#ENV{vue}|=={table}|oui)btn_on] noajax btn--stats-to-table" href="#"  onclick="spip_d3_statistiques_toggle_svg_table(this, '#statistiques_visites', 'table'); return false;"><:statistiques:info_tableaux:></a>
+		<a class="btn noajax btn--stats-csv" href="[(#VAL{csv}|statistiques_url_data_auteur{visites,jour,90})]" target="_blank"><:statistiques:csv:></a>
+		<a class="btn noajax btn--stats-json" href="[(#VAL{json}|statistiques_url_data_auteur{visites,jour,90})]" target="_blank"><:statistiques:json:></a>
 	</div>
 </div>
 
