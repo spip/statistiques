@@ -55,6 +55,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'lupa',
 	'item_gerer_statistiques' => 'Riadiť štatistiky návštev',
 
+	// M
+	'moyenne' => 'Priemer',
+
 	// O
 	'onglet_origine_visites' => 'Pôvod návštev',
 	'onglet_repartition_debut' => 'od začiatku',
@@ -74,6 +77,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'Štatistiky návštev',
 
 	// V
+	'visites' => 'Návštevy',
 	'visites_journalieres' => 'Počet návštev za deň',
 	'visites_mensuelles' => 'Počet návštev za mesiac'
 );

@@ -55,6 +55,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Manage visitor statistics',
 
+	// M
+	'moyenne' => 'Average',
+
 	// O
 	'onglet_origine_visites' => 'Visitors came from',
 	'onglet_repartition_debut' => 'of all time',
@@ -74,6 +77,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'Visit statistics',
 
 	// V
+	'visites' => 'Visits',
 	'visites_journalieres' => 'Number of visits per day',
 	'visites_mensuelles' => 'Number of visits per month'
 );

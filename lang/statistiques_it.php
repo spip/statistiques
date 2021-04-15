@@ -80,6 +80,7 @@ quando si passa con il mouse sopra al titolo.',
 	'titre_page_statistiques_visites' => 'Statistiche delle visite',
 
 	// V
+	'visites' => 'Visite',
 	'visites_journalieres' => 'Numero di visite per giorno',
 	'visites_mensuelles' => 'Numero di visite per mese'
 );

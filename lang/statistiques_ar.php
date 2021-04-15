@@ -55,6 +55,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'تكبير-تصغير العرض',
 	'item_gerer_statistiques' => 'إدارة إحصاءات الزيارات',
 
+	// M
+	'moyenne' => 'المتوسط',
+
 	// O
 	'onglet_origine_visites' => 'مصدر الزيارات',
 	'onglet_repartition_debut' => 'منذ البداية',

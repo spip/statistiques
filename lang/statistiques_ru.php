@@ -54,6 +54,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'увеличить',
 	'item_gerer_statistiques' => 'Сохранять информацию о посещениях',
 
+	// M
+	'moyenne' => 'Средний результат',
+
 	// O
 	'onglet_origine_visites' => 'Источники переходов',
 	'onglet_repartition_debut' => 'с начала',

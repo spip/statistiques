@@ -42,5 +42,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_evolution_visite' => 'ការវិវត្ត នៃចំណូលមើល',
 	'titre_liens_entrants' => 'តំណភ្ជាប់ចូល',
 	'titre_page_statistiques' => 'ស្ថិតិ តាមផ្នែក',
-	'titre_page_statistiques_visites' => 'ស្ថិតិ ចំណូលមើល'
+	'titre_page_statistiques_visites' => 'ស្ថិតិ ចំណូលមើល',
+
+	// V
+	'visites' => 'ចំណូលមើល'
 );

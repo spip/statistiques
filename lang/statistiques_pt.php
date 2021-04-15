@@ -55,6 +55,7 @@ na classificação por popularidade, é indicado na margem ; a popularidade do 
 	'titre_page_statistiques_visites' => 'Estatísticas das visitas',
 
 	// V
+	'visites' => 'Visitas',
 	'visites_journalieres' => 'Número de visitas por dia',
 	'visites_mensuelles' => 'Número de visitas por mês'
 );

@@ -55,6 +55,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Statistieken beheren',
 
+	// M
+	'moyenne' => 'Gemiddelde',
+
 	// O
 	'onglet_origine_visites' => 'Herkomst van de bezoeken',
 	'onglet_repartition_debut' => 'vanaf het begin',

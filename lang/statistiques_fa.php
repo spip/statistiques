@@ -54,6 +54,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'آمار بازديدها',
 
 	// V
+	'visites' => 'بازديد',
 	'visites_journalieres' => 'تعداد بازديدها طي روز ',
 	'visites_mensuelles' => 'تعداد بازديد‌ها طي ماه '
 );
