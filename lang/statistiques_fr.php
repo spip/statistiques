@@ -66,6 +66,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// J
 	'json' => 'json',
 
+	// M
+	'moyenne' => 'Moyenne',
+
 	// O
 	'onglet_origine_visites' => 'Origine des visites',
 	'onglet_repartition_debut' => 'depuis le début',
@@ -85,6 +88,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'Statistiques des visites',
 
 	// V
+	'visites' => 'Visites',
 	'visites_annuelles' => 'Nombre de visites par an',
 	'visites_hebdomadaires' => 'Nombre de visites par semaine',
 	'visites_journalieres' => 'Nombre de visites par jour',
