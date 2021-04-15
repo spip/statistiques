@@ -1,12 +1,6 @@
 #SET{c,#LISTE}
 [(#ENV{id_article}|oui) #SET{c,#VAL{article}|classement_populaires} ]
 
-
-#SET{max,0}
-#SET{moy,0}
-#SET{last,0}
-#SET{lastlast,0}
-
 <table class='spip spip_table--responsive spip_table--statistiques spip_table--statistiques-resume'>
 	<caption><:statistiques:resume:></caption>
 	<thead>
@@ -39,16 +33,17 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td class="num" data-label="<:info_maximum|spip_str_label|attribut_html:>">[(#GET{max}|number_format{0,"","&nbsp;"})]</td>
-			<td class='num' data-label="<:info_aujourdhui|spip_str_label|attribut_html:>">[(#GET{last}|number_format{0,"","&nbsp;"})]</td>
-			<td class='num' data-label="<:info_hier|spip_str_label|attribut_html:>">[(#GET{lastlast}|number_format{0,"","&nbsp;"})]</td>
+			#SET{stats,#NULL|statistiques_stats_generales}
+			<td class="num" data-label="<:info_maximum|spip_str_label|attribut_html:>">[(#GET{stats/max}|number_format{0,"","&nbsp;"})]</td>
+			<td class="num" data-label="<:info_aujourdhui|spip_str_label|attribut_html:>">[(#GET{stats/today}|number_format{0,"","&nbsp;"})]</td>
+			<td class="num" data-label="<:info_hier|spip_str_label|attribut_html:>">[(#GET{stats/yesterday}|number_format{0,"","&nbsp;"})]</td>
 			<BOUCLE_art(ARTICLES){id_article=#ENV{id_objet}}{statut?}{si #ENV{objet}|=={article}}>
-				<td class='num' data-label="<:statistiques:info_popularite_5|spip_str_label|attribut_html:>">[(#CHAMP_SQL{popularite}|round|number_format{0,"","&nbsp;"})]</td>
-				<td class='num' data-label="<:info_total|spip_str_label|attribut_html:>">[(#VISITES|round|number_format{0,"","&nbsp;"})]</td>
-				<td class='num' data-label="">[<strong>(#ID_ARTICLE|array_search{#GET{c}}|plus{1})</strong>[(#GET{c}|count|singulier_ou_pluriel{info_classement_1,info_classement_2,liste})]]</td>
+				<td class="num" data-label="<:statistiques:info_popularite_5|spip_str_label|attribut_html:>">[(#CHAMP_SQL{popularite}|round|number_format{0,"","&nbsp;"})]</td>
+				<td class="num" data-label="<:info_total|spip_str_label|attribut_html:>">[(#VISITES|round|number_format{0,"","&nbsp;"})]</td>
+				<td class="num" data-label="">[<strong>(#ID_ARTICLE|array_search{#GET{c}}|plus{1})</strong>[(#GET{c}|count|singulier_ou_pluriel{info_classement_1,info_classement_2,liste})]]</td>
 			</BOUCLE_art>
-				<td class='num' data-label="<:info_total|spip_str_label|attribut_html:>">[(#REM|stats_total|number_format{0,"","&nbsp;"})]</td>
-				<td class='num' data-label="<:statistiques:info_popularite_2|spip_str_label|attribut_html:>">[(#CONFIG{popularite_total}|round|number_format{0,"","&nbsp;"})]</td>
+				<td class="num" data-label="<:info_total|spip_str_label|attribut_html:>">[(#REM|stats_total|number_format{0,"","&nbsp;"})]</td>
+				<td class="num" data-label="<:statistiques:info_popularite_2|spip_str_label|attribut_html:>">[(#CONFIG{popularite_total}|round|number_format{0,"","&nbsp;"})]</td>
 			<//B_art>
 		</tr>
 	</tbody>
