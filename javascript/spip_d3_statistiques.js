@@ -70,7 +70,7 @@ function spip_d3_statistiques_create(id, options = {}) {
 		data.data = graph.fillInDates(data.meta, data.data, currentDate => {
 			return {"date": currentDate, "visites": 0};
 		});
-		graph.update_table(data);
+		graph.update_table(data, true);
 		spip_d3_statistiques_update_graph(id, data);
 	});
 

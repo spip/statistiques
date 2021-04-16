@@ -159,7 +159,7 @@ class Spip_d3_graph {
 		return columns;
 	}
 
-	update_table(data) {
+	update_table(data, ignore_last_line = false) {
 		if (this.inner.select('table').empty()) {
 			this.prepare_table();
 		}
@@ -179,9 +179,13 @@ class Spip_d3_graph {
 			.join('th')
 			.text(column => column.label);
 	
+		let _data = data.data;
+		if (ignore_last_line) {
+			_data = _data.slice(0, -1)
+		}
 		table.select('tbody')
 			.selectAll('tr')
-			.data(data.data)
+			.data(_data)
 			.join('tr')
 			.selectAll('td')
 			.data(d => {
