@@ -33,6 +33,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'csv' => 'سي.اس.في.',
 
+	// D
+	'duree_annee_nb' => '@nb@ سنة',
+	'duree_annee_un' => '@nb@ سنة',
+	'duree_jour_nb' => '@nb@ يوم',
+	'duree_jour_un' => '@nb@ يوم',
+	'duree_mois_nb' => '@nb@ شهر',
+	'duree_mois_un' => '@nb@ شهر',
+	'duree_semaine_nb' => '@nb@ أسبوع',
+	'duree_semaine_un' => '@nb@ أسبوع',
+
 	// I
 	'icone_evolution_visites' => 'تطور الزيارات <br />@visites@ زيارة ',
 	'icone_repartition_actuelle' => 'إظهار التوزيع الحالي',
@@ -54,6 +64,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites_plus_populaires' => 'إظهار الزيارات <b>لأكثر المقالات شعبية</b> و<b>لأحدث المقالات المنشورة:</ b>',
 	'info_zoom' => 'تكبير-تصغير العرض',
 	'item_gerer_statistiques' => 'إدارة إحصاءات الزيارات',
+
+	// J
+	'json' => 'json',
 
 	// M
 	'moyenne' => 'المتوسط',
@@ -83,6 +96,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'إحصاءات الزيارات',
 
 	// V
+	'visites' => 'الزيارات',
+	'visites_annuelles' => 'عدد الزيارات السنوية',
+	'visites_hebdomadaires' => 'عدد الزيارات الأسبوعية',
 	'visites_journalieres' => 'عدد الزيارات اليومية',
 	'visites_mensuelles' => 'عدد الزيارات الشهرية'
 );

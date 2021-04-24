@@ -5,7 +5,7 @@
 	url="https://trad.spip.net"
 	source="https://git.spip.net/spip/statistiques.git"
 	reference="fr">
-	<langue code="ar" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=ar" total="65" traduits="53" relire="0" modifs="0" nouveaux="12" pourcent="81.54">
+	<langue code="ar" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=ar" total="65" traduits="65" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 		<traducteur nom="SuperYMS" lien="https://trad.spip.net/auteur/superyms" />
 	</langue>
@@ -31,7 +31,7 @@
 	<langue code="el" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=el" total="65" traduits="12" relire="0" modifs="3" nouveaux="50" pourcent="18.46">
 		<traducteur nom="Yannick Bailly" lien="https://trad.spip.net/auteur/yannick-bailly" />
 	</langue>
-	<langue code="en" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=en" total="65" traduits="54" relire="0" modifs="0" nouveaux="11" pourcent="83.08">
+	<langue code="en" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=en" total="65" traduits="65" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Davood Hossein" lien="https://trad.spip.net/auteur/davood-hossein" />
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 		<traducteur nom="Hanjo" lien="https://trad.spip.net/auteur/hanjo" />
