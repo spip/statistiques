@@ -24,7 +24,7 @@
 	<langue code="cpf_hat" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=cpf_hat" total="65" traduits="22" relire="0" modifs="3" nouveaux="40" pourcent="33.85" />
 	<langue code="cs" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=cs" total="65" traduits="21" relire="0" modifs="4" nouveaux="40" pourcent="32.31" />
 	<langue code="da" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=da" total="65" traduits="21" relire="0" modifs="2" nouveaux="42" pourcent="32.31" />
-	<langue code="de" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=de" total="65" traduits="53" relire="0" modifs="0" nouveaux="12" pourcent="81.54">
+	<langue code="de" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=de" total="65" traduits="65" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="klaus++" lien="https://trad.spip.net/auteur/klaus" />
 		<traducteur nom="Torsten Willmann" lien="https://trad.spip.net/auteur/torsten-willmann" />
 	</langue>

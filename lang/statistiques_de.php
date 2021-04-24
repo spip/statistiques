@@ -33,6 +33,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'csv' => 'CSV',
 
+	// D
+	'duree_annee_nb' => '@nb@ Jahre',
+	'duree_annee_un' => '@nb@ Jahr',
+	'duree_jour_nb' => '@nb@ Tage',
+	'duree_jour_un' => '@nb@ Tag',
+	'duree_mois_nb' => '@nb@ Monate',
+	'duree_mois_un' => '@nb@ Monat',
+	'duree_semaine_nb' => '@nb@ Woche(n)',
+	'duree_semaine_un' => '@nb@ Woche',
+
 	// I
 	'icone_evolution_visites' => 'Besuchsentwicklung<br />@visites@ Abrufe',
 	'icone_repartition_actuelle' => 'Aktuelle Verteilung anzeigen',
@@ -55,6 +65,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'Zoom',
 	'item_gerer_statistiques' => 'Besucherstatistiken verwalten',
 
+	// J
+	'json' => 'Json',
+
+	// M
+	'moyenne' => 'Durchschnitt',
+
 	// O
 	'onglet_origine_visites' => 'Ursprung der Besuche',
 	'onglet_repartition_debut' => 'von Anfang an',
@@ -75,6 +91,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// V
 	'visites' => 'Besuche',
+	'visites_annuelles' => 'Jährliche Besucher',
+	'visites_hebdomadaires' => 'Wüchentliche Besucher',
 	'visites_journalieres' => 'Anzahl Besuche pro Tag',
 	'visites_mensuelles' => 'Anzahl Besucher pro Monat'
 );
