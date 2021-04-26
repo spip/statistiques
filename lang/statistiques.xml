@@ -108,7 +108,7 @@
 		<traducteur nom="Cláudia Anjos Lopes" lien="https://trad.spip.net/auteur/claudia_a_lopes" />
 		<traducteur nom="Ricardo Porto" lien="https://trad.spip.net/auteur/ricardo-porto" />
 	</langue>
-	<langue code="pt_br" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=pt_br" total="65" traduits="52" relire="0" modifs="0" nouveaux="13" pourcent="80.00">
+	<langue code="pt_br" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=pt_br" total="65" traduits="65" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Ricardo Porto" lien="https://trad.spip.net/auteur/ricardo-porto" />
 		<traducteur nom="telopa" lien="https://trad.spip.net/auteur/telopa" />
 	</langue>
