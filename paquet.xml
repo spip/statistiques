@@ -32,5 +32,5 @@
 	<onglet nom="stats_visites" titre="statistiques:icone_statistiques_visites" parent="statistiques" icone="images/statistique-24.png" action="stats_visites" />
 	<onglet nom="stats_referers" titre="statistiques:titre_liens_entrants" parent="statistiques" icone="images/referers-24.png" action="stats_referers" />
 	<onglet nom="stats_repartition" titre="statistiques:icone_repartition_visites" parent="statistiques" icone="images/repartition-24.png" action="stats_repartition" />
-	<onglet nom="stats_lang" titre="statistiques:onglet_repartition_lang" parent="statistiques" icone="images/langue-24.png" action="stats_lang" />
+	<onglet nom="stats_lang" titre="statistiques:onglet_repartition_lang" parent="statistiques" icone="images/statistique-langue-24.png" action="stats_lang" />
 </paquet>

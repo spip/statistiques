@@ -1,17 +1,5 @@
-<svg
-	width="64"
-	height="64"
-	viewBox="128 128 384 384"
-	xmlns="http://www.w3.org/2000/svg">
-		<path transform="translate(0 100)" stroke="#54e360" stroke-width="15" stroke-opacity="0.75"
-			d="m225.876 511.001h-60.25c-8.284 0-15-6.716-15-15v-241c0-8.284 6.716-15 15-15h60.25c8.284 0 15 6.716 15 15v241c0 8.284-6.716 15-15 15z"
-			fill="#54e360"/>
-		<path transform="translate(120 70)" stroke="#1fb4ff" stroke-width="15" stroke-opacity="0.75"
-			d="m346.376 511.001h-60.25c-8.284 0-15-6.716-15-15v-301.25c0-8.284 6.716-15 15-15h60.25c8.284 0 15 6.716 15 15v301.25c0 8.284-6.716 15-15 15z"
-			fill="#1fb4ff"/>
-		<path transform="translate(-120 20)" stroke="#ff4c5b" stroke-width="15" stroke-opacity="0.75"
-			d="m466.876 511.001h-60.25c-8.284 0-15-6.716-15-15v-361.5c0-8.284 6.716-15 15-15h60.25c8.284 0 15 6.716 15 15v361.5c0 8.284-6.716 15-15 15z"
-			fill="#ff4c5b"/>
-
-		<path d="m497.001 512.001h-354c-8.284 0-15-6.716-15-15s6.716-15 15-15h354c8.284 0 15 6.716 15 15s-6.716 15-15 15z" fill="#384949"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <path fill="#fff" d="M11.6 5.8h46.7v46.7H11.6z"/>
+  <path d="M11.6 5.8v46.7h46.7v5.8H5.8V5.8h5.8z" fill="#666"/>
+  <path fill="#1d83d4" d="M55.2 14.3l6.1 6.2-17.6 17.7-8.8-8.8-11.5 11.5-6.2-6.2 17.7-17.6 8.8 8.7z"/>
 </svg>
