@@ -37,7 +37,7 @@
 						<B_sous>
 							<div class="referer-detail none-js">
 								<ul>
-								<BOUCLE_sous(POUR){tableau #VALEUR{referers}}>
+								<BOUCLE_sous(DATA){source table, #VALEUR{referers}}>
 									<li><a href="#VALEUR{referer}">[(#VALEUR{keywords}|?{[&laquo;&nbsp;(#VALEUR{keywords})&nbsp;&raquo;],[(#VALEUR{path})]})]</a>
 										[(#VALEUR{visites}|>{1}|oui)\(#VALEUR{visites}\)]
 										[<br />(#VALEUR{referes})]
