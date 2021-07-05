@@ -22,7 +22,7 @@ class Spip_d3_graph {
 		if (typeof options.locale !== 'undefined') {
 			this.set_desired_locale(options.locale);
 		} else if (typeof options.language !== 'undefined') {
-			this.set_desired_locale(options.language.toLowerCase() + '-' + options.language.toUpperCase());
+			this.set_desired_locale(this.language_to_locale(options.language));
 		}
 		this.d3_directory = options.d3_directory || "";
 	}
@@ -30,6 +30,48 @@ class Spip_d3_graph {
 	set_desired_locale(locale) {
 		locale = locale.replace('_', '-');
 		d3.spip.locale.desired = locale;
+	}
+
+	// depuis un nom de langue, trouver un code de langue adapté…
+	language_to_locale(language) {
+		language = language.toLowerCase();
+		const l2l = {
+			'ar': 'ar-EG',
+			'ca': 'ca-ES',
+			'cs': 'cs-CZ',
+			'da': 'da-DK',
+			//'de': 'de-CH',
+			'de': 'de-DE',
+			//'en': 'en-CA',
+			'en': 'en-GB',
+			//'en': 'en-US',
+			'es': 'es-ES',
+			//'es': 'es-MX',
+			'fa': 'fa-IR',
+			'fi': 'fi-FI',
+			//'fr': 'fr-CA',
+			'fr': 'fr-FR',
+			'he': 'he-IL',
+			'hu': 'hu-HU',
+			'it': 'it-IT',
+			'ja': 'ja-JP',
+			'ko': 'ko-KR',
+			'mk': 'mk-MK',
+			'nb': 'nb-NO',
+			'nl': 'nl-NL',
+			'pl': 'pl-PL',
+			'pt': 'pt-BR',
+			'ru': 'ru-RU',
+			'sv': 'sv-SE',
+			'tr': 'tr-TR',
+			'uk': 'uk-UA',
+			'zh': 'zh-CN',
+			//'zh': 'zh-TW'
+		};
+		if (language in l2l) {
+			return l2l[language];
+		}
+		return language + '-' + language.toUpperCase();
 	}
 
 	/**
