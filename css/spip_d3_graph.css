@@ -101,6 +101,10 @@
 	color: var(--spip-d3--text-color);
 }
 
+.spip_d3_svg_yaxis {
+	text-anchor: start; /* force rtl to align left… for now… */
+}
+
 
 .spip_d3_svg_line {
 	fill: none;
