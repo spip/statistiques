@@ -19,6 +19,14 @@
 		]
 	</ul>
 </div>
+
+<script>
+function deplier_referers(item) {
+	if (event.button===0){
+		$(item).toggleClass('open').find('.referer-detail').toggle('fast');
+	}
+}
+</script>
 <B_statsr>
 	<h1><:statistiques:onglet_origine_visites:> (#TOTAL_BOUCLE [(#TOTAL_BOUCLE|singulier_ou_pluriel{info_site,info_sites})])</h1>
 	<div class="liste">
@@ -26,7 +34,7 @@
 		[<h2>(#ENV{jour,''}|=={veille}|oui)<:date_hier|ucfirst:></h2>]
 		<ul class="liste-items referers">
 			<BOUCLE_statsr(DATA){source stats_referers,#ENV{limit,100},#ENV{jour,''},#ENV{objet},#ENV{id_objet}}>
-				<li class="item referer" onclick="if(event.button===0){$(this).toggleClass('open').find('.referer-detail').toggle('fast');}">
+				<li class="item referer[ (#VALEUR{referers}|oui)depliant]"[ (#VALEUR{referers}|oui) onclick="deplier_referers(this)"]>
 						<h3>
 							<span class="visites">[[(#VALEUR{visites}|number_format{0,"","&nbsp;"}) ](#VALEUR{visites}|singulier_ou_pluriel{info_visite,statistiques:info_visites}|trim{:}|trim)]</span>
 							[(#CLE|=={(email)}|oui)
