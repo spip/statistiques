@@ -1,8 +1,6 @@
 #SET{c,#LISTE}
-#SET{url_stats_referers,#URL_ECRIRE{stats_referers}}
 [(#ENV{id_objet}|oui) 
 	#SET{c,#ENV{objet}|classement_populaires} 
-	#SET{url_stats_referers,#GET{url_stats_referers}|parametre_url{objet,#ENV{objet}}|parametre_url{id_objet,#ENV{id_objet}}}
 ]
 
 <table class='spip spip_table--responsive spip_table--statistiques spip_table--statistiques-resume'>
@@ -12,14 +10,14 @@
 			<th scope="col"><:info_maximum|label_nettoyer:></th>
 			<th scope="col">
 				[(#CONFIG{activer_referers, oui}|=={oui}|oui)
-				<a href="[(#GET{url_stats_referers}|parametre_url{jour,jour})]"
+				<a href="[(#URL_ECRIRE{stats_referers}|parametre_url{jour,jour})]"
 					title="<:statistiques:titre_liens_entrants|label_nettoyer|attribut_html:>: <:info_aujourdhui|label_nettoyer|attribut_html:>">
 					<:info_aujourdhui|label_nettoyer:></a>]
 				[(#CONFIG{activer_referers, oui}|=={oui}|non)<:info_aujourdhui|label_nettoyer:>]
 			</th>
 			<th scope="col">
 				[(#CONFIG{activer_referers, oui}|=={oui}|oui)
-				<a href="[(#GET{url_stats_referers}|parametre_url{jour,veille})]"
+				<a href="[(#URL_ECRIRE{stats_referers}|parametre_url{jour,veille})]"
 					title="<:statistiques:titre_liens_entrants|label_nettoyer|attribut_html:>: <:info_hier|label_nettoyer|attribut_html:>">
 					<:info_hier|label_nettoyer:>
 				</a>]

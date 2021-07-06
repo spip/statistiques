@@ -107,7 +107,7 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 				$where[] = "objet=" . table_objet($objet);
 				$where[] = "id_objet=" . intval($id_objet);
 			} else {
-				throw new \Exception('Table spip_visisites_objets not found. You need a plugin for stats outside articles.');
+				throw new \Exception('Table spip_visites_objets not found. You need a plugin for stats outside articles.');
 			}
 		}
 	}

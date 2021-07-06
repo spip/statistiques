@@ -22,7 +22,7 @@ define('MOYENNE_GLISSANTE_JOUR', 30);
 define('MOYENNE_GLISSANTE_MOIS', 12);
 include_spip('inc/referenceurs');
 
-function inc_stats_referers_to_array_dist($limit, $jour, $id_article, $options = array()) {
+function inc_stats_referers_to_array_dist($limit, ?string $jour = null, ?string $objet = null, ?int $id_objet = null, $options = []) {
 
 	$visites = 'visites';
 	$table = "spip_referers";
@@ -35,9 +35,29 @@ function inc_stats_referers_to_array_dist($limit, $jour, $id_article, $options =
 	}
 	//$res = $referenceurs (0, "SUM(visites_$jour)", 'spip_referers', "visites_$jour>0", "referer", $limit);
 
-	if ($id_article) {
-		$table = "spip_referers_articles";
-		$where[] = "id_article=" . intval($id_article);
+	// Par défaut on cherche dans spip_referers.
+	// Pour un type d'objet ou un objet en particulier,
+	// on regarde dans spip_referers_objets ou spip_referers_articles.
+	if ($objet) {
+		switch ($objet) {
+
+			// articles
+			case 'article':
+				$table = "spip_referers_articles";
+				if (intval($id_objet)) {
+					$where[] = "id_article = " . intval($id_objet);
+				}
+				break;
+
+			// tous les autres objets
+			default:
+				$table = "spip_referers_objets";
+				$where[] = 'objet='.sql_quote($objet);
+				if (intval($id_objet)) {
+					$where[] = "id_objet = " . intval($id_objet);
+				}
+
+		}
 	}
 
 	$where = implode(" AND ", $where);
@@ -84,7 +104,7 @@ function inc_stats_referers_to_array_dist($limit, $jour, $id_article, $options =
 			$set = array(
 				'referer' => $referer,
 				'visites' => $visites,
-				'referes' => $id_article ? '' : referes($row['referer_md5'])
+				'referes' => $id_objet ? '' : referes($row['referer_md5'], $objet)
 			);
 			if (isset($buff["keywords"])
 				and $c = $buff["keywords"]

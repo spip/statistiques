@@ -13,7 +13,7 @@
 <div class="onglets_simple clearfix">
 	<ul>
 		<li>[(#SELF|parametre_url{jour,''}|lien_ou_expose{<:info_tout_afficher:>,[(#ENV{jour,''}|non)],ajax})]</li>
-		[(#ENV{id_article}|non)
+		[(#ENV{id_objet}|et{#ENV{objet}}|non)
 		<li>[(#SELF|parametre_url{jour,jour}|lien_ou_expose{<:date_aujourdhui|ucfirst:>,#ENV{jour,''}|=={jour},ajax})]</li>
 		<li>[(#SELF|parametre_url{jour,veille}|lien_ou_expose{<:date_hier|ucfirst:>,#ENV{jour,''}|=={veille},ajax})]</li>
 		]
@@ -25,7 +25,7 @@
 		[<h2>(#ENV{jour,''}|=={jour}|oui)<:date_aujourdhui|ucfirst:></h2>]
 		[<h2>(#ENV{jour,''}|=={veille}|oui)<:date_hier|ucfirst:></h2>]
 		<ul class="liste-items referers">
-			<BOUCLE_statsr(DATA){source stats_referers,#ENV{limit,100},#ENV{jour,''},#ENV{id_article}}>
+			<BOUCLE_statsr(DATA){source stats_referers,#ENV{limit,100},#ENV{jour,''},#ENV{objet},#ENV{id_objet}}>
 				<li class="item referer" onclick="if(event.button===0){$(this).toggleClass('open').find('.referer-detail').toggle('fast');}">
 						<h3>
 							<span class="visites">[[(#VALEUR{visites}|number_format{0,"","&nbsp;"}) ](#VALEUR{visites}|singulier_ou_pluriel{info_visite,statistiques:info_visites}|trim{:}|trim)]</span>
