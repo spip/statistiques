@@ -7,19 +7,19 @@
 		<tr>
 			<th scope="col"><:info_maximum|label_nettoyer:></th>
 			<th scope="col">
-				[(#CONFIG{activer_referers, oui}|oui)
+				[(#CONFIG{activer_referers, oui}|=={oui}|oui)
 				<a href="#URL_ECRIRE{stats_referers,jour=jour}"
 					title="<:statistiques:titre_liens_entrants|label_nettoyer|attribut_html:>: <:info_aujourdhui|label_nettoyer|attribut_html:>">
 					<:info_aujourdhui|label_nettoyer:></a>]
-				[(#CONFIG{activer_referers, oui}|non)<:info_aujourdhui|label_nettoyer:>]
+				[(#CONFIG{activer_referers, oui}|=={oui}|non)<:info_aujourdhui|label_nettoyer:>]
 			</th>
 			<th scope="col">
-				[(#CONFIG{activer_referers, oui}|oui)
+				[(#CONFIG{activer_referers, oui}|=={oui}|oui)
 				<a href="#URL_ECRIRE{stats_referers,jour=veille}"
 					title="<:statistiques:titre_liens_entrants|label_nettoyer|attribut_html:>: <:info_hier|label_nettoyer|attribut_html:>">
 					<:info_hier|label_nettoyer:>
 				</a>]
-				[(#CONFIG{activer_referers, oui}|non)<:info_hier|label_nettoyer:>]
+				[(#CONFIG{activer_referers, oui}|=={oui}|non)<:info_hier|label_nettoyer:>]
 			</th>
 			<BOUCLE_arth(ARTICLES){id_article=#ENV{id_objet}}{statut?}{si #ENV{objet}|=={article}}>
 				<th scope="col"><:statistiques:info_popularite_5|label_nettoyer:></th>
