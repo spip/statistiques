@@ -1,20 +1,21 @@
 [(#AUTORISER{voirstats}|et{#CONFIG{activer_referers, oui}|=={oui}}|sinon_interdire_acces)]
 
-<BOUCLE_expose(ARTICLES){id_article=#ENV{id_objet}}{statut==.*}{si #ENV{objet}|=={article}}>
+
+<BOUCLE_expose(CONDITION){si #ENV{objet}}{si #ENV{id_objet}}>
 #BOITE_OUVRIR{'','note'}
-	<a class='annule_filtre ajax' href="[(#SELF|parametre_url{id_article,''})]" title="<:info_tout_afficher|attribut_html:>">[(#CHEMIN_IMAGE{fermer-16.png}|balise_img|inserer_attribut{alt,<:info_tout_afficher:>})]</a>
-	<:statistiques:titre_liens_entrants:> <:info_pour:>
-	<h2 class='objet_titre'><a href='#URL_ARTICLE'>#TITRE</a></h2>
-	<a href="#URL_ECRIRE{stats_visites,objet=article&id_objet=#ID_ARTICLE}"><:statistiques:titre_page_statistiques_visites:></a>
+<a class='annule_filtre ajax' href="[(#SELF|parametre_url{objet,''}|parametre_url{id_objet,''})]" title="<:info_tout_afficher|attribut_html:>">[(#CHEMIN_IMAGE{fermer-16.png}|balise_img|inserer_attribut{alt,<:info_tout_afficher:>})]</a>
+<:statistiques:titre_liens_entrants:> <:info_pour:>
+<h2 class='objet_titre'><a href='[(#INFO_URL{#ENV{objet},#ENV{id_objet}})]'>#INFO_TITRE{#ENV{objet},#ENV{id_objet}}</a></h2>
+<a href="[(#URL_ECRIRE{stats_visites}|parametre_url{objet,#ENV{objet}}|parametre_url{id_objet,#ENV{id_objet}})]"><:statistiques:titre_page_statistiques_visites:></a>
 #BOITE_FERMER
 </BOUCLE_expose>
 
 <div class="onglets_simple clearfix">
 	<ul>
-		<li>[(#URL_ECRIRE{stats_referers}|lien_ou_expose{<:info_tout_afficher:>,[(#ENV{jour,''}|non)],ajax})]</li>
+		<li>[(#SELF|parametre_url{jour,''}|lien_ou_expose{<:info_tout_afficher:>,[(#ENV{jour,''}|non)],ajax})]</li>
 		[(#ENV{id_article}|non)
-		<li>[(#URL_ECRIRE{stats_referers,jour=jour}|lien_ou_expose{<:date_aujourdhui|ucfirst:>,#ENV{jour,''}|=={jour},ajax})]</li>
-		<li>[(#URL_ECRIRE{stats_referers,jour=veille}|lien_ou_expose{<:date_hier|ucfirst:>,#ENV{jour,''}|=={veille},ajax})]</li>
+		<li>[(#SELF|parametre_url{jour,jour}|lien_ou_expose{<:date_aujourdhui|ucfirst:>,#ENV{jour,''}|=={jour},ajax})]</li>
+		<li>[(#SELF|parametre_url{jour,veille}|lien_ou_expose{<:date_hier|ucfirst:>,#ENV{jour,''}|=={veille},ajax})]</li>
 		]
 	</ul>
 </div>
