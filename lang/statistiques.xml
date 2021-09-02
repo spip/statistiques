@@ -44,7 +44,8 @@
 	<langue code="eo" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=eo" total="65" traduits="52" relire="0" modifs="0" nouveaux="13" pourcent="80.00">
 		<traducteur nom="gpl" lien="https://trad.spip.net/auteur/gpl" />
 	</langue>
-	<langue code="es" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=es" total="65" traduits="52" relire="0" modifs="1" nouveaux="12" pourcent="80.00">
+	<langue code="es" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=es" total="65" traduits="65" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="comcinco" lien="https://trad.spip.net/auteur/comcinco-7293" />
 		<traducteur nom="dani" lien="https://trad.spip.net/auteur/dani" />
 		<traducteur nom="jotacese" lien="https://trad.spip.net/auteur/jotacese" />
 		<traducteur nom="kent1" lien="https://trad.spip.net/auteur/kent1" />
