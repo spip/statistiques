@@ -10,7 +10,6 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-
 if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
@@ -80,9 +79,9 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 	}
 
 	$serveur = '';
-	$table = "spip_visites";
+	$table = 'spip_visites';
 	$where = [];
-	$order = "date";
+	$order = 'date';
 
 	$currentDate = (new \DateTime())->format($format);
 	$startDate = null;
@@ -97,15 +96,15 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 
 	if ($objet and $id_objet) {
 		if ($objet === 'article') {
-			$table = "spip_visites_articles";
-			$where[] = "id_article=" . intval($id_objet);
+			$table = 'spip_visites_articles';
+			$where[] = 'id_article=' . intval($id_objet);
 		} else {
 			// plugin stats objets ?
 			$trouver_table = charger_fonction('trouver_table', 'base');
 			if ($trouver_table('spip_visites_objets')) {
-				$table = "spip_visites_objets";
-				$where[] = "objet=" . table_objet($objet);
-				$where[] = "id_objet=" . intval($id_objet);
+				$table = 'spip_visites_objets';
+				$where[] = 'objet=' . table_objet($objet);
+				$where[] = 'id_objet=' . intval($id_objet);
 			} else {
 				throw new \Exception('Table spip_visites_objets not found. You need a plugin for stats outside articles.');
 			}
@@ -113,9 +112,9 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 	}
 
 
-	$where = implode(" AND ", $where);
+	$where = implode(' AND ', $where);
 
-	$firstDateStat = sql_getfetsel("date", $table, $where, "", "date", "0,1");
+	$firstDateStat = sql_getfetsel('date', $table, $where, '', 'date', '0,1');
 	if ($firstDateStat) {
 		$firstDate = (new \DateTime($firstDateStat))->format($format);
 	} else {
@@ -123,16 +122,17 @@ function inc_stats_visites_to_array_dist($unite, ?int $duree = null, ?string $ob
 	}
 
 	$data = sql_allfetsel(
-		"DATE_FORMAT($order, '$format_sql') AS formatted_date, SUM(visites) AS visites", 
-		$table, $where, 
-		"formatted_date",
-		"formatted_date",
-		"", 
-		"",
+		"DATE_FORMAT($order, '$format_sql') AS formatted_date, SUM(visites) AS visites",
+		$table,
+		$where,
+		'formatted_date',
+		'formatted_date',
+		'',
+		'',
 		$serveur
 	);
 
-	$data = array_map(function($d) {
+	$data = array_map(function ($d) {
 		$d['date'] = $d['formatted_date'];
 		unset($d['formatted_date']);
 		return $d;

@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -25,8 +25,8 @@ function affiche_stats_lang($critere) {
 	// Statistiques par langue
 	//
 
-	$out = "";
-	$r = sql_fetsel("SUM($critere) AS total_visites", "spip_articles");
+	$out = '';
+	$r = sql_fetsel("SUM($critere) AS total_visites", 'spip_articles');
 
 	$visites = 1;
 	// attention a '0.0'
@@ -36,14 +36,13 @@ function affiche_stats_lang($critere) {
 		$total_visites = 1;
 	}
 
-	$result = sql_select("lang, SUM(" . $critere . ") AS cnt", "spip_articles", "statut='publie' ", "lang");
+	$result = sql_select('lang, SUM(' . $critere . ') AS cnt', 'spip_articles', "statut='publie' ", 'lang');
 
 	$out .= "\n<table cellpadding='2' cellspacing='0' border='0' width='100%' style='border: 1px solid #aaaaaa;'>";
 	$ifond = 1;
 
 	$visites_abs = 0;
 	while ($row = sql_fetch($result)) {
-
 		$lang = $row['lang'];
 		if ($row['cnt']) {
 			$visites = round($row['cnt'] / $total_visites * $taille);
@@ -51,18 +50,17 @@ function affiche_stats_lang($critere) {
 		}
 
 		if ($visites > 0) {
-
 			if ($ifond == 0) {
 				$ifond = 1;
-				$couleur = "white";
+				$couleur = 'white';
 			} else {
 				$ifond = 0;
-				$couleur = "eeeeee";
+				$couleur = 'eeeeee';
 			}
 
 			$out .= "\n<tr style='background-color: $couleur'>";
 			$dir = lang_dir($lang, '', ' dir="rtl"');
-			$out .= "<td style='width: 100%; border-bottom: 1px solid #cccccc;'><p $dir><span style='float: $spip_lang_right;'>$pourcent%</span>" . traduire_nom_langue($lang) . "</p></td>";
+			$out .= "<td style='width: 100%; border-bottom: 1px solid #cccccc;'><p $dir><span style='float: $spip_lang_right;'>$pourcent%</span>" . traduire_nom_langue($lang) . '</p></td>';
 
 			$out .= "<td style='border-bottom: 1px solid #cccccc;'>";
 			$out .= "\n<table cellpadding='0' cellspacing='0' border='0' width='" . ($taille + 5) . "'>";
@@ -75,8 +73,8 @@ function affiche_stats_lang($critere) {
 			}
 			$out .= "</td></tr></table>\n";
 
-			$out .= "</td>";
-			$out .= "</tr>";
+			$out .= '</td>';
+			$out .= '</tr>';
 			$visites_abs += $visites;
 		}
 	}

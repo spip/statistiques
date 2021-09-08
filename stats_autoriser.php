@@ -17,7 +17,8 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *
  * @pipeline autoriser
  */
-function stats_autoriser() { }
+function stats_autoriser() {
+}
 
 /**
  * Autoriser l'affichage du menu de statistiques
@@ -49,7 +50,7 @@ function autoriser_statistiques_menu_dist($faire, $type = '', $id = 0, $qui = nu
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_voirstats_dist($faire, $type, $id, $qui, $opt) {
-	return (($GLOBALS['meta']["activer_statistiques"] != 'non')
+	return (($GLOBALS['meta']['activer_statistiques'] != 'non')
 		and ($qui['statut'] == '0minirezo'));
 }
 
@@ -113,5 +114,5 @@ function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_statsreferers_onglet_dist($faire, $type, $id, $qui, $opt) {
-	return (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == "oui") && autoriser('voirstats', $type, $id, $qui, $opt);
+	return (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == 'oui') && autoriser('voirstats', $type, $id, $qui, $opt);
 }

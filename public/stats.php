@@ -18,7 +18,7 @@
  * @package SPIP\Stats\Public
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -50,8 +50,8 @@ function public_stats_dist($contexte = null, $referer = null) {
 		if (isset($_SERVER['HTTP_REFERER'])) {
 			$referer = $_SERVER['HTTP_REFERER'];
 		} else {
-			if (isset($GLOBALS["HTTP_SERVER_VARS"]["HTTP_REFERER"])) {
-				$referer = $GLOBALS["HTTP_SERVER_VARS"]["HTTP_REFERER"];
+			if (isset($GLOBALS['HTTP_SERVER_VARS']['HTTP_REFERER'])) {
+				$referer = $GLOBALS['HTTP_SERVER_VARS']['HTTP_REFERER'];
 			}
 		}
 	}
@@ -62,14 +62,16 @@ function public_stats_dist($contexte = null, $referer = null) {
 	}
 
 	// Ne pas tenir compte des tentatives de spam des forums
-	if ($_SERVER['REQUEST_METHOD'] !== 'GET'
+	if (
+		$_SERVER['REQUEST_METHOD'] !== 'GET'
 		or (isset($contexte['page']) and $contexte['page'] == 'forum')
 	) {
 		return;
 	}
 
 	// rejet des pages 404
-	if (isset($GLOBALS['page']['status'])
+	if (
+		isset($GLOBALS['page']['status'])
 		and $GLOBALS['page']['status'] == 404
 	) {
 		return;
@@ -78,21 +80,28 @@ function public_stats_dist($contexte = null, $referer = null) {
 	// Identification du client
 	$client_id = substr(md5(
 		$GLOBALS['ip'] . (isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '')
-//		. $_SERVER['HTTP_ACCEPT'] # HTTP_ACCEPT peut etre present ou non selon que l'on est dans la requete initiale, ou dans les hits associes
+		//		. $_SERVER['HTTP_ACCEPT'] # HTTP_ACCEPT peut etre present ou non selon que l'on est dans la requete initiale, ou dans les hits associes
 		. (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : '')
 		. (isset($_SERVER['HTTP_ACCEPT_ENCODING']) ? $_SERVER['HTTP_ACCEPT_ENCODING'] : '')
 	), 0, 10);
 
 	// Analyse du referer
 	$log_referer = '';
-	if (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == "oui") {
+	if (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == 'oui') {
 		if (isset($referer)) {
-			$url_site_spip = preg_replace(',/$,', '',
-				preg_replace(',^(https?://)?(www\.)?,i', '',
-					url_de_base()));
-			if (!(($url_site_spip <> '')
+			$url_site_spip = preg_replace(
+				',/$,',
+				'',
+				preg_replace(
+					',^(https?://)?(www\.)?,i',
+					'',
+					url_de_base()
+				)
+			);
+			if (
+				!(($url_site_spip <> '')
 				and strpos('-' . strtolower($referer), strtolower($url_site_spip))
-				and strpos($referer, "recherche=") === false)
+				and strpos($referer, 'recherche=') === false)
 			) {
 				$log_referer = $referer;
 			}
@@ -104,29 +113,28 @@ function public_stats_dist($contexte = null, $referer = null) {
 	//
 
 	// 1. Chercher s'il existe deja une session pour ce numero IP.
-	$content = array();
+	$content = [];
 	$fichier = sous_repertoire(_DIR_TMP, 'visites') . $client_id;
 	if (lire_fichier($fichier, $content)) {
 		$content = @unserialize($content);
 	}
 	// fichier absent probablement (ou problème unserialize)
 	if (!is_array($content)) {
-		$content = array();
+		$content = [];
 	}
 
 	// 2. Plafonner le nombre de hits pris en compte pour un IP (robots etc.)
 	// et ecrire la session
 	if (count($content) < 200) {
-
 		// Identification de l'element
 		if (isset($contexte['id_article'])) {
-			$log_type = "article";
+			$log_type = 'article';
 		} elseif (isset($contexte['id_breve'])) {
-			$log_type = "breve";
+			$log_type = 'breve';
 		} elseif (isset($contexte['id_rubrique'])) {
-			$log_type = "rubrique";
+			$log_type = 'rubrique';
 		} else {
-			$log_type = "";
+			$log_type = '';
 		}
 
 		if ($log_type) {

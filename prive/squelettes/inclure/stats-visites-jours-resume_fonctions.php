@@ -5,9 +5,9 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 }
 
 /**
- * Calcule visites totales, aujourd'hui, hier pour le site ou objet/id_objet 
+ * Calcule visites totales, aujourd'hui, hier pour le site ou objet/id_objet
  */
-function statistiques_stats_generales(array $Pile) : array {
+function statistiques_stats_generales(array $Pile): array {
 
 	$objet = ($Pile[0]['objet'] ?? null) ?: null;
 	$id_objet = ($Pile[0]['id_objet'] ?? null) ?: null;
