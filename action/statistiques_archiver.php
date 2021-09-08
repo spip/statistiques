@@ -18,7 +18,7 @@
  * @package SPIP\Stats\Actions
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -64,14 +64,15 @@ function action_statistiques_archiver_dist($arg = null) {
 		minipres();
 	}
 
-	if (!in_array($arg, array(
+	if (
+		!in_array($arg, [
 		'archiver_visites_articles',
 		'nettoyer_visites_articles',
 		'nettoyer_referers_articles'
-	))
+		])
 	) {
 		include_spip('inc/minipres');
-		minipres("Argument non compris");
+		minipres('Argument non compris');
 	}
 
 	$func = 'statistiques_' . $arg;
@@ -173,7 +174,7 @@ function statistiques_archiver_visites_articles() {
 		statistiques_concatener_visites_par_an($annee_par_an);
 	}
 
-	statistiques_archiver_log("* Optimiser la table spip_visites_articles après les travaux.");
+	statistiques_archiver_log('* Optimiser la table spip_visites_articles après les travaux.');
 	sql_optimize('spip_visites_articles');
 }
 
@@ -222,7 +223,7 @@ function statistiques_concatener_visites_entre_jours($annee, $debut, $fin) {
 	$fin = str_pad($fin, 2, '0', STR_PAD_LEFT);
 
 	statistiques_archiver_log("\nConcaténer les visites d'articles (jours entre $debut et $fin)");
-	statistiques_archiver_log("===========================================================");
+	statistiques_archiver_log('===========================================================');
 
 	$annees = range($annee_minimum, $annee);
 	$mois = range(1, 12);
@@ -254,7 +255,7 @@ function statistiques_concatener_annee_minimum() {
 	}
 
 	if (!$annee_minimum) {
-		statistiques_archiver_log("Erreur de calcul de la plus petite année de statistiques !");
+		statistiques_archiver_log('Erreur de calcul de la plus petite année de statistiques !');
 
 		return false;
 	}
@@ -284,7 +285,7 @@ function statistiques_concatener_visites_par_an($annee) {
 	}
 
 	statistiques_archiver_log("\nConcaténer les visites d'articles (par an)");
-	statistiques_archiver_log("===========================================================");
+	statistiques_archiver_log('===========================================================');
 
 	$annees = range($annee_minimum, $annee);
 
@@ -310,16 +311,16 @@ function statistiques_concatener_visites_par_an($annee) {
 function statistiques_concatener_visites_entre_periode($date_debut, $date_fin) {
 
 	// récupérer toutes les visites de cette période (année, mois, entre jour début et fin)
-	$visites = sql_allfetsel('id_article, date, visites', 'spip_visites_articles', array(
-		"date >= " . sql_quote($date_debut),
-		"date <= " . sql_quote($date_fin),
-	));
+	$visites = sql_allfetsel('id_article, date, visites', 'spip_visites_articles', [
+		'date >= ' . sql_quote($date_debut),
+		'date <= ' . sql_quote($date_fin),
+	]);
 
 	if (!$visites) {
 		return false;
 	}
 
-	$liste = $updates = array();
+	$liste = $updates = [];
 	$total = 0;
 
 	// - Crée un tableau plus simple (id_article => total des visites de la période) (permettant un array_diff_key facile).
@@ -349,28 +350,27 @@ function statistiques_concatener_visites_entre_periode($date_debut, $date_fin) {
 	statistiques_archiver_log("-- du $date_debut au $date_fin : $total visites dans $nb_articles articles");
 
 	if ($liste) {
-
 		// formater pour l'insertion dans la base.
-		$inserts = array();
+		$inserts = [];
 		foreach ($liste as $id_article => $visites) {
-			$inserts[] = array(
+			$inserts[] = [
 				'id_article' => $id_article,
 				'date' => $date_debut,
 				'visites' => $visites,
-			);
+			];
 		}
 
-		statistiques_archiver_log("--- concaténer les statistiques de " . count($liste) . " articles");
+		statistiques_archiver_log('--- concaténer les statistiques de ' . count($liste) . ' articles');
 
 		// /!\ Attention,
 		// Entre ces 2 requêtes, on peut perdre des données (si timeout ou autre)
 		// Transaction à faire ?
 
-		sql_delete('spip_visites_articles', array(
-			"date >= " . sql_quote($date_debut),
-			"date <= " . sql_quote($date_fin),
+		sql_delete('spip_visites_articles', [
+			'date >= ' . sql_quote($date_debut),
+			'date <= ' . sql_quote($date_fin),
 			sql_in('id_article', array_keys($liste)),
-		));
+		]);
 
 		sql_insertq_multi('spip_visites_articles', $inserts);
 	}

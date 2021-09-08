@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -18,14 +18,14 @@ include_spip('inc/presentation');
 
 // https://code.spip.net/@enfants
 function enfants($id_parent, $critere, &$nombre_branche, &$nombre_rub) {
-	$result = sql_select("id_rubrique", "spip_rubriques", "id_parent=" . intval($id_parent));
+	$result = sql_select('id_rubrique', 'spip_rubriques', 'id_parent=' . intval($id_parent));
 
 	$nombre = 0;
 
 	while ($row = sql_fetch($result)) {
 		$id_rubrique = $row['id_rubrique'];
 
-		$visites = intval(sql_getfetsel("SUM(" . $critere . ")", "spip_articles", "id_rubrique=" . intval($id_rubrique)));
+		$visites = intval(sql_getfetsel('SUM(' . $critere . ')', 'spip_articles', 'id_rubrique=' . intval($id_rubrique)));
 		$nombre_rub[$id_rubrique] = $visites;
 		$nombre_branche[$id_rubrique] = $visites;
 		$nombre += $visites + enfants($id_rubrique, $critere, $nombre_branche, $nombre_rub);
@@ -47,20 +47,20 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 	static $nombre_branche;
 	static $nombre_rub;
 	if (is_null($total_site)) {
-		$nombre_branche = array();
-		$nombre_rub = array();
+		$nombre_branche = [];
+		$nombre_rub = [];
 		$total_site = enfants(0, $critere, $nombre_branche, $nombre_rub);
 		if ($total_site < 1) {
 			$total_site = 1;
 		}
 	}
 	$visites_abs = 0;
-	$out = "";
+	$out = '';
 	$width = intval(floor(($nombre_branche[$id_parent] / $total_site) * $taille));
 	$width = "width:{$width}px;float:$spip_lang_left;";
 
 
-	$result = sql_select("id_rubrique, titre, descriptif", "spip_rubriques", "id_parent=$id_parent", '', '0+titre,titre');
+	$result = sql_select('id_rubrique, titre, descriptif', 'spip_rubriques', "id_parent=$id_parent", '', '0+titre,titre');
 
 	while ($row = sql_fetch($result)) {
 		$id_rubrique = $row['id_rubrique'];
@@ -72,14 +72,13 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 			$largeur_rub = floor($nombre_rub[$id_rubrique] * $taille / $total_site);
 
 			if ($largeur_branche + $largeur_rub > 0) {
-
 				if ($niveau == 0) {
-					$couleur = "#cccccc";
+					$couleur = '#cccccc';
 				} else {
 					if ($niveau == 1) {
-						$couleur = "#eeeeee";
+						$couleur = '#eeeeee';
 					} else {
-						$couleur = "white";
+						$couleur = 'white';
 					}
 				}
 				$out .= "<table cellpadding='2' cellspacing='0' border='0' width='100%'>";
@@ -88,16 +87,23 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 
 
 				if ($largeur_branche > 2) {
-					$out .= bouton_block_depliable("<a href='" . generer_url_entite($id_rubrique,
-							'rubrique') . "' style='color: black;' title=\"$descriptif\">$titre</a>", "incertain",
-						"stats$id_rubrique");
+					$out .= bouton_block_depliable(
+						"<a href='" . generer_url_entite(
+							$id_rubrique,
+							'rubrique'
+						) . "' style='color: black;' title=\"$descriptif\">$titre</a>",
+						'incertain',
+						"stats$id_rubrique"
+					);
 				} else {
 					$out .= "<div class='rubsimple' style='padding-left: 18px;'>"
-						. "<a href='" . generer_url_entite($id_rubrique,
-							'rubrique') . "' style='color: black;' title=\"$descriptif\">$titre</a>"
-						. "</div>";
+						. "<a href='" . generer_url_entite(
+							$id_rubrique,
+							'rubrique'
+						) . "' style='color: black;' title=\"$descriptif\">$titre</a>"
+						. '</div>';
 				}
-				$out .= "</td>";
+				$out .= '</td>';
 
 
 				// pourcentage de visites dans la branche par rapport au total du site
@@ -124,9 +130,9 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 				if ($largeur_rub > 0) {
 					$out .= "<img src='" . chemin_image('rien.gif') . "' class='couleur_nombre' style='vertical-align: top; width: " . $largeur_rub . "px; height: 1em; border: 0px' alt=' ' />";
 				}
-				$out .= "</div>";
+				$out .= '</div>';
 				$out .= "</td></tr></table>\n";
-				$out .= "</td></tr></table>";
+				$out .= '</td></tr></table>';
 			}
 		}
 

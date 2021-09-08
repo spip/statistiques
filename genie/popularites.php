@@ -18,7 +18,7 @@
  * @package SPIP\Statistiques\Genie
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -49,7 +49,7 @@ function genie_popularite_constantes($duree) {
 	// si la demi-vie n'est pas trop proche de la seconde ;)
 	$b = log(2) * $periode / $demivie;
 
-	return array($a, $b);
+	return [$a, $b];
 }
 
 /**
@@ -76,12 +76,12 @@ function genie_popularites_dist($t) {
 	list($a, $b) = genie_popularite_constantes($duree);
 
 	// du passe, faisons table (SQL) rase
-	sql_update('spip_articles', array('maj' => 'maj', 'popularite' => "popularite * $a"), 'popularite>1');
+	sql_update('spip_articles', ['maj' => 'maj', 'popularite' => "popularite * $a"], 'popularite>1');
 
 	// enregistrer les metas...
-	$row = sql_fetsel('MAX(popularite) AS max, SUM(popularite) AS tot', "spip_articles");
-	ecrire_meta("popularite_max", $row['max']);
-	ecrire_meta("popularite_total", $row['tot']);
+	$row = sql_fetsel('MAX(popularite) AS max, SUM(popularite) AS tot', 'spip_articles');
+	ecrire_meta('popularite_max', $row['max']);
+	ecrire_meta('popularite_total', $row['tot']);
 
 
 	// Une fois par jour purger les referers du jour ; qui deviennent
@@ -90,14 +90,13 @@ function genie_popularites_dist($t) {
 	// peut etre appele par deux bases SPIP ne partageant pas le meme
 	// _DIR_TMP, sans tout casser...
 
-	$aujourdhui = date("Y-m-d");
+	$aujourdhui = date('Y-m-d');
 	if (($d = $GLOBALS['meta']['date_statistiques']) != $aujourdhui) {
 		spip_log("Popularite: purger referer depuis $d");
 		ecrire_meta('date_statistiques', $aujourdhui);
 		if (strncmp($GLOBALS['connexions'][0]['type'], 'sqlite', 6) == 0) {
-			spip_query("UPDATE spip_referers SET visites_veille=visites_jour, visites_jour=0");
-		} else
-			// version 3 fois plus rapide, mais en 2 requetes
+			spip_query('UPDATE spip_referers SET visites_veille=visites_jour, visites_jour=0');
+		} else // version 3 fois plus rapide, mais en 2 requetes
 			#spip_query("ALTER TABLE spip_referers CHANGE visites_jour visites_veille INT( 10 ) UNSIGNED NOT NULL DEFAULT '0',CHANGE visites_veille visites_jour INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'");
 			#spip_query("UPDATE spip_referers SET visites_jour=0");
 			// version 4 fois plus rapide que la premiere, en une seule requete
@@ -111,5 +110,4 @@ function genie_popularites_dist($t) {
 
 	// et c'est fini pour cette fois-ci
 	return 1;
-
 }

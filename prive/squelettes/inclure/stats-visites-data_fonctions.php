@@ -10,7 +10,7 @@ include_spip('inc/statistiques');
 
 
 function stats_total($serveur = '') {
-	$row = sql_fetsel("SUM(visites) AS total_absolu", "spip_visites", '', '', '', '', '', $serveur);
+	$row = sql_fetsel('SUM(visites) AS total_absolu', 'spip_visites', '', '', '', '', '', $serveur);
 
 	return $row ? $row['total_absolu'] : 0;
 }

@@ -10,7 +10,6 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-
 if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
@@ -25,11 +24,11 @@ include_spip('inc/referenceurs');
 function inc_stats_referers_to_array_dist($limit, ?string $jour = null, ?string $objet = null, ?int $id_objet = null, $options = []) {
 
 	$visites = 'visites';
-	$table = "spip_referers";
-	$where = array();
+	$table = 'spip_referers';
+	$where = [];
 	$serveur = '';
 
-	if (in_array($jour, array('jour', 'veille'))) {
+	if (in_array($jour, ['jour', 'veille'])) {
 		$visites .= "_$jour";
 		$where[] = "$visites>0";
 	}
@@ -40,41 +39,39 @@ function inc_stats_referers_to_array_dist($limit, ?string $jour = null, ?string 
 	// on regarde dans spip_referers_objets ou spip_referers_articles.
 	if ($objet) {
 		switch ($objet) {
-
 			// articles
 			case 'article':
-				$table = "spip_referers_articles";
+				$table = 'spip_referers_articles';
 				if (intval($id_objet)) {
-					$where[] = "id_article = " . intval($id_objet);
+					$where[] = 'id_article = ' . intval($id_objet);
 				}
 				break;
 
 			// tous les autres objets
 			default:
-				$table = "spip_referers_objets";
-				$where[] = 'objet='.sql_quote($objet);
+				$table = 'spip_referers_objets';
+				$where[] = 'objet=' . sql_quote($objet);
 				if (intval($id_objet)) {
-					$where[] = "id_objet = " . intval($id_objet);
+					$where[] = 'id_objet = ' . intval($id_objet);
 				}
-
 		}
 	}
 
-	$where = implode(" AND ", $where);
-	$limit = $limit ? "0," . intval($limit) : '';
+	$where = implode(' AND ', $where);
+	$limit = $limit ? '0,' . intval($limit) : '';
 
-	$result = sql_select("referer_md5, referer, $visites AS vis", $table, $where, '', "maj DESC", $limit, '', $serveur);
+	$result = sql_select("referer_md5, referer, $visites AS vis", $table, $where, '', 'maj DESC', $limit, '', $serveur);
 
-	$referers = array();
-	$trivisites = array(); // pour le tri
+	$referers = [];
+	$trivisites = []; // pour le tri
 	while ($row = sql_fetch($result, $serveur)) {
 		$referer = interdire_scripts($row['referer']);
 		$buff = stats_show_keywords($referer, $referer);
 
-		if ($buff["host"]) {
-			$refhost = $buff["hostname"];
+		if ($buff['host']) {
+			$refhost = $buff['hostname'];
 			$visites = $row['vis'];
-			$host = $buff["scheme"] . "://" . $buff["host"];
+			$host = $buff['scheme'] . '://' . $buff['host'];
 
 			$referers[$refhost]['referer_md5'] = $row['referer_md5'];
 
@@ -92,7 +89,7 @@ function inc_stats_referers_to_array_dist($limit, ?string $jour = null, ?string 
 				$referers[$refhost]['visites_racine'] = 0;
 			}
 			if (!isset($referers[$refhost]['referers'])) {
-				$referers[$refhost]['referers'] = array();
+				$referers[$refhost]['referers'] = [];
 			}
 
 			$referers[$refhost]['hosts'][$host]++;
@@ -100,23 +97,24 @@ function inc_stats_referers_to_array_dist($limit, ?string $jour = null, ?string 
 			$referers[$refhost]['visites'] += $visites;
 			$trivisites[$refhost] = $referers[$refhost]['visites'];
 
-			$tmp = "";
-			$set = array(
+			$tmp = '';
+			$set = [
 				'referer' => $referer,
 				'visites' => $visites,
 				'referes' => $id_objet ? '' : referes($row['referer_md5'], $objet)
-			);
-			if (isset($buff["keywords"])
-				and $c = $buff["keywords"]
+			];
+			if (
+				isset($buff['keywords'])
+				and $c = $buff['keywords']
 			) {
 				if (!isset($referers[$refhost]['keywords'][$c])) {
 					$referers[$refhost]['keywords'][$c] = true;
 					$set['keywords'] = $c;
 				}
 			} else {
-				$tmp = $buff["path"];
-				if ($buff["query"]) {
-					$tmp .= "?" . $buff['query'];
+				$tmp = $buff['path'];
+				if ($buff['query']) {
+					$tmp .= '?' . $buff['query'];
 				}
 				if (strlen($tmp)) {
 					$set['path'] = "/$tmp";

@@ -28,15 +28,17 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  * @return array
  **/
 function stats_affichage_entetes_final($entetes) {
-	if (isset($GLOBALS['meta']["activer_statistiques"]) and $GLOBALS['meta']["activer_statistiques"] != "non"
-	  and !defined('_STATS_INHIB_COMPTER_VISITES_AFFICHAGE_ENTETES_FINAL')) {
+	if (
+		isset($GLOBALS['meta']['activer_statistiques']) and $GLOBALS['meta']['activer_statistiques'] != 'non'
+		and !defined('_STATS_INHIB_COMPTER_VISITES_AFFICHAGE_ENTETES_FINAL')
+	) {
 		$html = preg_match(',^\s*text/html,', $entetes['Content-Type']);
 
 		// decomptage des visites, on peut forcer a oui ou non avec le header X-Spip-Visites
 		// par defaut on ne compte que les pages en html (ce qui exclue les js,css et flux rss)
 		$spip_compter_visites = $html ? 'oui' : 'non';
 		if (isset($entetes['X-Spip-Visites'])) {
-			$spip_compter_visites = in_array($entetes['X-Spip-Visites'], array('oui', 'non'))
+			$spip_compter_visites = in_array($entetes['X-Spip-Visites'], ['oui', 'non'])
 				? $entetes['X-Spip-Visites']
 				: $spip_compter_visites;
 			unset($entetes['X-Spip-Visites']);
@@ -78,14 +80,16 @@ function stats_affichage_entetes_final_prive($entetes) {
 function stats_affiche_milieu($flux) {
 	// afficher le formulaire de configuration (activer ou desactiver les statistiques).
 	if ($flux['args']['exec'] == 'configurer_avancees') {
-		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer',
-			array('configurer' => 'configurer_compteur'));
+		$flux['data'] .= recuperer_fond(
+			'prive/squelettes/inclure/configurer',
+			['configurer' => 'configurer_compteur']
+		);
 	}
 
 	// afficher le formulaire de suppression des visites (configuration > maintenance du site).
 	if ($flux['args']['exec'] == 'admin_tech') {
-		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/admin_stats_archiver', array());
-		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/admin_effacer_stats', array());
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/admin_stats_archiver', []);
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/admin_effacer_stats', []);
 	}
 
 	return $flux;
@@ -108,13 +112,13 @@ function stats_formulaire_admin($flux) {
 		and $id_objet = $flux['args']['contexte']['id_objet']
 	) {
 		if ($l = admin_stats($objet, $id_objet, defined('_VAR_PREVIEW') ? _VAR_PREVIEW : '')) {
-			$btn = recuperer_fond('prive/bouton/statistiques', array(
+			$btn = recuperer_fond('prive/bouton/statistiques', [
 				'visites' => $l[0],
 				'popularite' => $l[1],
 				'statistiques' => $l[2],
-			));
-			$x='<!--extra-->';
-			$flux['data'] = str_ireplace($x, $btn.$x, $flux['data']);
+			]);
+			$x = '<!--extra-->';
+			$flux['data'] = str_ireplace($x, $btn . $x, $flux['data']);
 		}
 	}
 
@@ -135,20 +139,21 @@ function stats_formulaire_admin($flux) {
  *     - false : pas de statistiques disponibles
  *     - array : Tableau les stats `[visites, popularité, url]`
  **/
-function admin_stats($objet, $id_objet, $var_preview = "") {
-	if ($GLOBALS['meta']["activer_statistiques"] != "non"
+function admin_stats($objet, $id_objet, $var_preview = '') {
+	if (
+		$GLOBALS['meta']['activer_statistiques'] != 'non'
 		and $objet == 'article'
 		and !$var_preview
 		and autoriser('voirstats')
 	) {
-		$row = sql_fetsel("visites, popularite", "spip_articles", "id_article=$id_objet AND statut='publie'");
+		$row = sql_fetsel('visites, popularite', 'spip_articles', "id_article=$id_objet AND statut='publie'");
 
 		if ($row) {
-			return array(
+			return [
 				intval($row['visites']),
 				ceil($row['popularite']),
 				str_replace('&amp;', '&', generer_url_ecrire_statistiques($id_objet))
-			);
+			];
 		}
 	}
 
@@ -178,8 +183,9 @@ function generer_url_ecrire_statistiques($id_article) {
 function stats_taches_generales_cron($taches_generales) {
 
 	// stats : toutes les 5 minutes on peut vider un panier de visites
-	if (isset($GLOBALS['meta']["activer_statistiques"])
-		and $GLOBALS['meta']["activer_statistiques"] == "oui"
+	if (
+		isset($GLOBALS['meta']['activer_statistiques'])
+		and $GLOBALS['meta']['activer_statistiques'] == 'oui'
 	) {
 		$taches_generales['visites'] = 300;
 		$taches_generales['popularites'] = 7200; # calcul lourd
@@ -200,7 +206,7 @@ function stats_taches_generales_cron($taches_generales) {
 function stats_configurer_liste_metas($metas) {
 	$metas['activer_statistiques'] = 'non';
 	$metas['activer_captures_referers'] = 'non';
-	$metas['activer_referers']='oui';
+	$metas['activer_referers'] = 'oui';
 
 	return $metas;
 }
@@ -213,16 +219,20 @@ function stats_configurer_liste_metas($metas) {
  * @return array       Données du pipeline
  */
 function stats_boite_infos($flux) {
-	if ($GLOBALS['meta']["activer_statistiques"] == "oui") {
-		if ($flux['args']['type'] == 'article'
+	if ($GLOBALS['meta']['activer_statistiques'] == 'oui') {
+		if (
+			$flux['args']['type'] == 'article'
 			and $id_article = $flux['args']['id']
 			and autoriser('voirstats', 'article', $id_article)
 		) {
 			$visites = sql_getfetsel('visites', 'spip_articles', 'id_article=' . intval($id_article));
 			if ($visites > 0) {
 				$icone_horizontale = chercher_filtre('icone_horizontale');
-				$flux['data'] .= $icone_horizontale(generer_url_ecrire("stats_visites", "objet=article&id_objet=$id_article"),
-					_T('statistiques:icone_evolution_visites', array('visites' => $visites)), "statistique-24.png");
+				$flux['data'] .= $icone_horizontale(
+					generer_url_ecrire('stats_visites', "objet=article&id_objet=$id_article"),
+					_T('statistiques:icone_evolution_visites', ['visites' => $visites]),
+					'statistique-24.png'
+				);
 			}
 		}
 	}

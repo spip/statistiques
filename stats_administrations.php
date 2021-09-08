@@ -18,7 +18,7 @@
  * @package SPIP\Stats\Pipelines
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -38,7 +38,8 @@ function stats_upgrade($nom_meta_base_version, $version_cible) {
 	// pour gerer l'historique des installations SPIP <=2.1
 	if (!isset($GLOBALS['meta'][$nom_meta_base_version])) {
 		$trouver_table = charger_fonction('trouver_table', 'base');
-		if ($desc = $trouver_table('spip_visites')
+		if (
+			$desc = $trouver_table('spip_visites')
 			and isset($desc['exist']) and $desc['exist']
 		) {
 			ecrire_meta($nom_meta_base_version, '1.0.0');
@@ -46,19 +47,18 @@ function stats_upgrade($nom_meta_base_version, $version_cible) {
 		// si pas de table en base, on fera une simple creation de base
 	}
 
-	$maj = array();
-	$maj['create'] = array(
-		array('maj_tables', array('spip_visites', 'spip_visites_articles', 'spip_referers', 'spip_referers_articles')),
-	);
-	$maj['1.0.0'] = array();
-	$maj['1.0.1'] = array(
-		array('ecrire_meta','activer_referers', 'oui'),
-	);
+	$maj = [];
+	$maj['create'] = [
+		['maj_tables', ['spip_visites', 'spip_visites_articles', 'spip_referers', 'spip_referers_articles']],
+	];
+	$maj['1.0.0'] = [];
+	$maj['1.0.1'] = [
+		['ecrire_meta','activer_referers', 'oui'],
+	];
 
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
-
 }
 
 
@@ -70,13 +70,13 @@ function stats_upgrade($nom_meta_base_version, $version_cible) {
  * @return void
  **/
 function stats_vider_tables($nom_meta_base_version) {
-	sql_drop_table("spip_visites");
-	sql_drop_table("spip_visites_articles");
-	sql_drop_table("spip_referers");
-	sql_drop_table("spip_referers_articles");
+	sql_drop_table('spip_visites');
+	sql_drop_table('spip_visites_articles');
+	sql_drop_table('spip_referers');
+	sql_drop_table('spip_referers_articles');
 
-	effacer_meta("activer_statistiques");
-	effacer_meta("activer_captures_referers");
+	effacer_meta('activer_statistiques');
+	effacer_meta('activer_captures_referers');
 
 	effacer_meta($nom_meta_base_version);
 }
