@@ -33,6 +33,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'csv' => 'csv',
 
+	// D
+	'duree_annee_nb' => '@nb@ anni',
+	'duree_annee_un' => '@nb@ anno',
+	'duree_jour_nb' => '@nb@ giorni',
+	'duree_jour_un' => '@nb@ giorno',
+	'duree_mois_nb' => '@nb@ mesi',
+	'duree_mois_un' => '@nb@ mese',
+	'duree_semaine_nb' => '@nb@ settimane',
+	'duree_semaine_un' => '@nb@ settimana',
+
 	// I
 	'icone_evolution_visites' => 'Evoluzione delle visite<br />@visites@ visite',
 	'icone_repartition_actuelle' => 'Mostra la ripartizione attuale',
@@ -54,6 +64,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_visites_plus_populaires' => 'Pubblica le visite per <b>gli articoli più popolari </b> e per <b>gli ultimi articoli pubblicati:</b>',
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Gestisci le statistiche delle visite',
+
+	// J
+	'json' => 'json',
+
+	// M
+	'moyenne' => 'Significato',
 
 	// O
 	'onglet_origine_visites' => 'Origine delle visite',
@@ -81,6 +97,8 @@ quando si passa con il mouse sopra al titolo.',
 
 	// V
 	'visites' => 'Visite',
+	'visites_annuelles' => 'Numero di visite annuali',
+	'visites_hebdomadaires' => 'Numero di visite per settimana',
 	'visites_journalieres' => 'Numero di visite per giorno',
 	'visites_mensuelles' => 'Numero di visite per mese'
 );

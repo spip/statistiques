@@ -33,6 +33,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'csv' => 'csv',
 
+	// D
+	'duree_annee_nb' => '@nb@ ans',
+	'duree_annee_un' => '@nb@ an',
+	'duree_jour_nb' => '@nb@ jours',
+	'duree_jour_un' => '@nb@ jour',
+	'duree_mois_nb' => '@nb@ mois',
+	'duree_mois_un' => '@nb@ mois',
+	'duree_semaine_nb' => '@nb@ semaines',
+	'duree_semaine_un' => '@nb@ semaine',
+
 	// I
 	'icone_evolution_visites' => 'Évolution des visites<br />@visites@ visites',
 	'icone_repartition_actuelle' => 'Afficher la répartition actuelle',
@@ -55,6 +65,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Gérer les statistiques des visites',
 
+	// J
+	'json' => 'json',
+
+	// M
+	'moyenne' => 'Moyenne',
+
 	// O
 	'onglet_origine_visites' => 'Origine des visites',
 	'onglet_repartition_debut' => 'depuis le début',
@@ -74,6 +90,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'Statistiques des visites',
 
 	// V
+	'visites' => 'Visites',
+	'visites_annuelles' => 'Nombre de visites par an',
+	'visites_hebdomadaires' => 'Nombre de visites par semaine',
 	'visites_journalieres' => 'Nombre de visites par jour',
 	'visites_mensuelles' => 'Nombre de visites par mois'
 );

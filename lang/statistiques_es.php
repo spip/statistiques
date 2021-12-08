@@ -33,6 +33,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'csv' => 'csv',
 
+	// D
+	'duree_annee_nb' => '@nb@ años',
+	'duree_annee_un' => '@nb@ año',
+	'duree_jour_nb' => '@nb@ días',
+	'duree_jour_un' => '@nb@ día',
+	'duree_mois_nb' => '@nb@ meses',
+	'duree_mois_un' => '@nb@ mes',
+	'duree_semaine_nb' => '@nb@ semanas',
+	'duree_semaine_un' => '@nb@ semana',
+
 	// I
 	'icone_evolution_visites' => 'Evolución de las visitas<br />@visites@ visitas',
 	'icone_repartition_actuelle' => 'Mostrar el reparto actual',
@@ -46,13 +56,17 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'Popularidad: @popularite@  Visitas: @visites@',
 	'info_popularite_5' => 'Popularidad:',
 	'info_previsions' => 'pronósticos:',
-	'info_question_vignettes_referer' => 'Cuando consultes las estadísticas, puedes tener una vista de los sitios de origen de las visitas', # MODIF
+	'info_question_vignettes_referer' => 'Al ver las estadísticas, puede ver vistas previas de los sitios de los que proceden las visitas si <a href="@url@">el plugin Thumbsites</a> está activo.',
 	'info_question_vignettes_referer_oui' => 'Mostrar las capturas de los sitios de origen de las visitas',
+	'info_referer_oui' => 'Activar los referenciados',
 	'info_tableaux' => 'Tablas',
 	'info_visites' => 'visitas:',
 	'info_visites_plus_populaires' => 'Mostrar las visitas de <b>los artículos más populares</b> y de <b>los últimos artículos publicados</b>',
 	'info_zoom' => 'zoom',
 	'item_gerer_statistiques' => 'Gestionar las estadísticas de visitas',
+
+	// J
+	'json' => 'json',
 
 	// M
 	'moyenne' => 'Media',
@@ -77,6 +91,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// V
 	'visites' => 'Visitas',
+	'visites_annuelles' => 'Número de visitas por año',
+	'visites_hebdomadaires' => 'Número de visitas por semana',
 	'visites_journalieres' => 'Cantidad de visitas por día',
 	'visites_mensuelles' => 'Cantidad de visitas por mes'
 );
