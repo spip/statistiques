@@ -36,7 +36,7 @@ class Spip_d3_graph {
 	language_to_locale(language) {
 		language = language.toLowerCase();
 		const l2l = {
-			'ar': 'ar-EG',
+			'ar': 'ar-SY',
 			'ca': 'ca-ES',
 			'cs': 'cs-CZ',
 			'da': 'da-DK',
