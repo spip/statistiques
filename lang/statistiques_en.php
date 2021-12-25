@@ -77,7 +77,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'onglet_repartition_lang' => 'Distribution by language',
 
 	// R
-	'resume' => 'Resume',
+	'resume' => 'Summary',
 
 	// T
 	'texte_admin_effacer_stats' => 'This command deletes all statistics on visits to the site, including article popularity.',
