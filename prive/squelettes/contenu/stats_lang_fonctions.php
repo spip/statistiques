@@ -18,6 +18,7 @@ include_spip('inc/presentation');
 
 // https://code.spip.net/@statistiques_lang_ok
 function affiche_stats_lang($critere) {
+	$pourcent = null;
 	global $spip_lang_right;
 
 	$taille = 450;

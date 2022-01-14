@@ -79,10 +79,10 @@ function public_stats_dist($contexte = null, $referer = null) {
 
 	// Identification du client
 	$client_id = substr(md5(
-		$GLOBALS['ip'] . (isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '')
+		$GLOBALS['ip'] . ($_SERVER['HTTP_USER_AGENT'] ?? '')
 		//		. $_SERVER['HTTP_ACCEPT'] # HTTP_ACCEPT peut etre present ou non selon que l'on est dans la requete initiale, ou dans les hits associes
-		. (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : '')
-		. (isset($_SERVER['HTTP_ACCEPT_ENCODING']) ? $_SERVER['HTTP_ACCEPT_ENCODING'] : '')
+		. ($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '')
+		. ($_SERVER['HTTP_ACCEPT_ENCODING'] ?? '')
 	), 0, 10);
 
 	// Analyse du referer

@@ -24,6 +24,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  * @return array
  */
 function stats_load_engines() {
+	$moteurs = null;
 	$arr_engines = [];
 	lire_fichier(find_in_path('engines-list.txt'), $moteurs);
 	foreach (array_filter(preg_split("/([\r\n]|#.*)+/", $moteurs)) as $ligne) {
@@ -55,6 +56,7 @@ function stats_load_engines() {
  * @return array
  */
 function stats_show_keywords($kw_referer) {
+	$buffer = [];
 	static $arr_engines = '';
 	static $url_site;
 
@@ -68,10 +70,10 @@ function stats_show_keywords($kw_referer) {
 	}
 
 	if ($url = @parse_url($kw_referer)) {
-		$query = isset($url['query']) ? $url['query'] : '';
+		$query = $url['query'] ?? '';
 		$host = isset($url['host']) ? strtolower($url['host']) : '';
-		$path =  isset($url['path']) ? $url['path'] : '';
-		$scheme = isset($url['scheme']) ? $url['scheme'] : '';
+		$path =  $url['path'] ?? '';
+		$scheme = $url['scheme'] ?? '';
 	} else {
 		$scheme = $query = $host = $path = '';
 	}
@@ -83,7 +85,7 @@ function stats_show_keywords($kw_referer) {
 	$found = false;
 
 	if (!empty($url_site)) {
-		if (strpos('-' . $kw_referer, $url_site) !== false) {
+		if (strpos('-' . $kw_referer, (string) $url_site) !== false) {
 			if (preg_match(',(s|search|r|recherche)=([^&]+),i', $kw_referer, $regs)) {
 				$keywords = urldecode($regs[2]);
 			} else {
@@ -100,7 +102,7 @@ function stats_show_keywords($kw_referer) {
 					if (strpos($arr_engines[$cnt][1], '=') !== false) {
 						// Fonctionnement simple: la variable existe dans l'array
 						$v = str_replace('=', '', $arr_engines[$cnt][1]);
-						$keywords = isset($Tquery[$v]) ? $Tquery[$v] : '';
+						$keywords = $Tquery[$v] ?? '';
 
 						// Si on a defini le nom de la variable en expression reguliere, chercher la bonne variable
 						if (!strlen($keywords) > 0) {
@@ -191,7 +193,7 @@ function referes(string $referermd5, $objets = null, string $serveur = ''): stri
 		$table_objet_sql = table_objet_sql($objet); // spip_articles
 		$id_table_objet = id_table_objet($objet); // id_article
 		$desc = $trouver_table($table_objet_sql);
-		$champ_titre = isset($desc['titre']) ? $desc['titre'] : 'titre'; // titre, nom...
+		$champ_titre = $desc['titre'] ?? 'titre'; // titre, nom...
 		if ($objet == 'article') {
 			$table_referers = 'spip_referers_articles';
 		} else {

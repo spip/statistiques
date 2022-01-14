@@ -66,7 +66,7 @@ function inc_stats_referers_to_array_dist($limit, ?string $jour = null, ?string 
 	$trivisites = []; // pour le tri
 	while ($row = sql_fetch($result, $serveur)) {
 		$referer = interdire_scripts($row['referer']);
-		$buff = stats_show_keywords($referer, $referer);
+		$buff = stats_show_keywords($referer);
 
 		if ($buff['host']) {
 			$refhost = $buff['hostname'];

@@ -58,7 +58,7 @@ function compte_fichier_visite($fichier, &$visites, &$visites_a, &$referers, &$r
 	}
 
 	foreach ($content as $source => $num) {
-		list($log_type, $log_id_num, $log_referer)
+		[$log_type, $log_id_num, $log_referer]
 			= preg_split(",\t,", $source, 3);
 
 		// Noter le referer
@@ -145,7 +145,7 @@ function calculer_visites($t) {
 	}
 
 	include_spip('genie/popularites');
-	list($a, $b) = genie_popularite_constantes(24 * 3600);
+	[$a, $b] = genie_popularite_constantes(24 * 3600);
 
 	// Maintenant on dispose de plusieurs tableaux qu'il faut ventiler dans
 	// les tables spip_visites, spip_visites_articles, spip_referers
@@ -202,7 +202,7 @@ function calculer_visites($t) {
 					}
 					// il faudrait ponderer la popularite ajoutee ($n) par son anciennete eventuelle
 					// sur le modele de ce que fait genie/popularites
-					if (count($noref)) {
+					if (is_countable($noref) ? count($noref) : 0) {
 						sql_update(
 							'spip_articles',
 							[
@@ -214,7 +214,7 @@ function calculer_visites($t) {
 						);
 					}
 
-					if (count($ref)) {
+					if (is_countable($ref) ? count($ref) : 0) {
 						sql_update(
 							'spip_articles',
 							[

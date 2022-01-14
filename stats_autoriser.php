@@ -96,7 +96,7 @@ function autoriser_statsrepartition_onglet_dist($faire, $type, $id, $qui, $opt) 
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
-	$objets = explode(',', isset($GLOBALS['meta']['multi_objets']) ? $GLOBALS['meta']['multi_objets'] : '');
+	$objets = explode(',', $GLOBALS['meta']['multi_objets'] ?? '');
 
 	return (in_array('spip_articles', $objets)
 		or in_array('spip_rubriques', $objets))
