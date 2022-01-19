@@ -19,8 +19,6 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  * Adaptees du code des "Visiteurs",
  * par Jean-Paul Dezelus (http://www.phpinfo.net/applis/visiteurs/)
  *
- * https://code.spip.net/@stats_load_engines
- *
  * @return array
  */
 function stats_load_engines() {
@@ -49,8 +47,6 @@ function stats_load_engines() {
  *
  * Adaptees du code des "Visiteurs",
  * par Jean-Paul Dezelus (http://www.phpinfo.net/applis/visiteurs/)
- *
- * https://code.spip.net/@stats_show_keywords
  *
  * @param string $kw_referer
  * @return array
