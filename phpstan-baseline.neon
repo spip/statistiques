@@ -346,11 +346,6 @@ parameters:
 			path: inc/referenceurs.php
 
 		-
-			message: "#^Undefined variable\\: \\$moteurs$#"
-			count: 2
-			path: inc/referenceurs.php
-
-		-
 			message: "#^Function id_table_objet not found\\.$#"
 			count: 1
 			path: inc/statistiques.php
