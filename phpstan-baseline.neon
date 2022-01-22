@@ -281,7 +281,7 @@ parameters:
 			path: inc/referenceurs.php
 
 		-
-			message: "#^Function generer_url_entite not found\\.$#"
+			message: "#^Function generer_objet_url not found\\.$#"
 			count: 1
 			path: inc/referenceurs.php
 
@@ -486,7 +486,7 @@ parameters:
 			path: prive/squelettes/contenu/stats_repartition_fonctions.php
 
 		-
-			message: "#^Function generer_url_entite not found\\.$#"
+			message: "#^Function generer_objet_url not found\\.$#"
 			count: 2
 			path: prive/squelettes/contenu/stats_repartition_fonctions.php
 

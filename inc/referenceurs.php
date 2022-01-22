@@ -218,7 +218,7 @@ function referes(string $referermd5, $objets = null, string $serveur = ''): stri
 		$id_table_objet = id_table_objet($objet);
 		foreach ($res as $k => $ligne) {
 			$titre = typo($ligne['titre']);
-			$url = generer_url_entite($ligne[$id_table_objet], $objet, '', '', true);
+			$url = generer_objet_url($ligne[$id_table_objet], $objet, '', '', true);
 			$retours[$k] = "<a href='$url'><i>$titre</i></a>";
 		}
 	}

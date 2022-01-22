@@ -86,7 +86,7 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 
 				if ($largeur_branche > 2) {
 					$out .= bouton_block_depliable(
-						"<a href='" . generer_url_entite(
+						"<a href='" . generer_objet_url(
 							$id_rubrique,
 							'rubrique'
 						) . "' style='color: black;' title=\"$descriptif\">$titre</a>",
@@ -95,7 +95,7 @@ function enfants_aff($id_parent, $decalage, $taille, $critere, $gauche = 0) {
 					);
 				} else {
 					$out .= "<div class='rubsimple' style='padding-left: 18px;'>"
-						. "<a href='" . generer_url_entite(
+						. "<a href='" . generer_objet_url(
 							$id_rubrique,
 							'rubrique'
 						) . "' style='color: black;' title=\"$descriptif\">$titre</a>"
