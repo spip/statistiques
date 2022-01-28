@@ -3,7 +3,7 @@ include_spip('inc/autoriser');
 if (
     autoriser('voirstats')
     or (
-        $id_auteur = intval(#ENV{id,0})
+        $id_auteur = intval('[(#ENV{id,0}|texte_script)]')
         and autoriser('ecrire', '', '', $id_auteur) 
         and [(#ENV{id,0}|securiser_acces{#ENV{cle}, voirstats, #ENV{op}, #ENV{args}}|?{1,0})]
     )
