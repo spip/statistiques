@@ -116,3 +116,44 @@ function autoriser_statslang_onglet_dist($faire, $type, $id, $qui, $opt) {
 function autoriser_statsreferers_onglet_dist($faire, $type, $id, $qui, $opt) {
 	return (!isset($GLOBALS['meta']['activer_referers']) or $GLOBALS['meta']['activer_referers'] == 'oui') && autoriser('voirstats', $type, $id, $qui, $opt);
 }
+
+
+/**
+ * Autoriser l'acces aux statistiques json transmettre meme sans lowsec
+ * @param $faire
+ * @param $type
+ * @param $id
+ * @param $qui
+ * @param $opt
+ * @return bool
+ */
+function autoriser_jsonstatistiquesjson_transmettre_dist($faire, $type, $id, $qui, $opt) {
+
+	// si on est là c'est que la cle lowsec est invalide mais on a une session
+	if (autoriser('voirstats', '', 0, $qui, $opt)
+	  or autoriser('ecrire', '', 0, $qui, $opt)) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Autoriser l'acces aux statistiques csv transmettre meme sans lowsec
+ * @param $faire
+ * @param $type
+ * @param $id
+ * @param $qui
+ * @param $opt
+ * @return bool
+ */
+function autoriser_csvstatistiquescsv_transmettre_dist($faire, $type, $id, $qui, $opt) {
+
+	// si on est là c'est que la cle lowsec est invalide mais on a une session
+	if (autoriser('voirstats', '', 0, $qui, $opt)
+	  or autoriser('ecrire', '', 0, $qui, $opt)) {
+		return true;
+	}
+
+	return false;
+}
