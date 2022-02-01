@@ -124,9 +124,10 @@
 	</langue>
 	<langue code="sv" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=sv" total="65" traduits="22" relire="0" modifs="3" nouveaux="40" pourcent="33.85" />
 	<langue code="tr" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=tr" total="65" traduits="24" relire="0" modifs="3" nouveaux="38" pourcent="36.92" />
-	<langue code="uk" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=uk" total="65" traduits="50" relire="0" modifs="1" nouveaux="14" pourcent="76.92">
+	<langue code="uk" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=uk" total="65" traduits="65" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="olly" lien="https://trad.spip.net/auteur/olly" />
 		<traducteur nom="Retenodus" lien="https://trad.spip.net/auteur/retenodus" />
+		<traducteur nom="Serge Markitanenko" lien="https://trad.spip.net/auteur/serge-markitanenko" />
 	</langue>
 	<langue code="vi" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=vi" total="65" traduits="22" relire="0" modifs="2" nouveaux="41" pourcent="33.85" />
 	<langue code="zh" url="https://trad.spip.net/tradlang_module/statistiques?lang_cible=zh" total="65" traduits="16" relire="0" modifs="7" nouveaux="42" pourcent="24.62" />
