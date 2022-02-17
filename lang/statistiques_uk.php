@@ -33,6 +33,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'csv' => 'csv',
 
+	// D
+	'duree_annee_nb' => '@nb@ років',
+	'duree_annee_un' => '@nb@ рік',
+	'duree_jour_nb' => '@nb@ днів',
+	'duree_jour_un' => '@nb@ день',
+	'duree_mois_nb' => '@nb@ місяців',
+	'duree_mois_un' => '@nb@ місяць',
+	'duree_semaine_nb' => '@nb@ тижнів',
+	'duree_semaine_un' => '@nb@ тиждень',
+
 	// I
 	'icone_evolution_visites' => 'Еволюція відвідувань<br />@visites@ відвідувань',
 	'icone_repartition_actuelle' => 'Перегляд поточного розподілу',
@@ -46,13 +56,23 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_popularite_3' => 'популярність: @popularite@; відвідувань: @visites@',
 	'info_popularite_5' => 'популярність:',
 	'info_previsions' => 'прогноз:',
-	'info_question_vignettes_referer' => 'Система може самостійно робити скріншоти головних сторінок сайтів, з яких до вас приходять відвідувачі. Якщо ви включите цю опцію, то це зображення буде виводиться поряд з посиланням на цей сайт.', # MODIF
+	'info_question_vignettes_referer' => 'Якщо <a href="@url@">плагін Thumbsites</a> активовано, то приперегляді статистики ви будете бачити скріншоти головних сторінок тих сайтів, звідки відвідувачи перейши на ваш сайт.
+
+
+Система може самостійно робити скріншоти головних сторінок сайтів, з яких до вас приходять відвідувачі. Якщо ви включите цю опцію, то це зображення буде виводиться поряд з посиланням на цей сайт.',
 	'info_question_vignettes_referer_oui' => 'Показати скріншоти сайтів, що посилаються',
+	'info_referer_oui' => 'Зберігати джерело відвідувань',
 	'info_tableaux' => 'Таблиці',
 	'info_visites' => 'відвідування:',
 	'info_visites_plus_populaires' => 'Показати статистику для <b>найпопулярніших</b> і <b>останніх опублікованих статей</b>:',
 	'info_zoom' => 'збільшити',
 	'item_gerer_statistiques' => 'Управління статистикою відвідувань',
+
+	// J
+	'json' => 'json',
+
+	// M
+	'moyenne' => 'В середньому',
 
 	// O
 	'onglet_origine_visites' => 'Відвідувачі прийшли з',
@@ -73,6 +93,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_page_statistiques_visites' => 'Статистика відвідувань',
 
 	// V
+	'visites' => 'Відвідування',
+	'visites_annuelles' => 'Кількість відвідувань за рік',
+	'visites_hebdomadaires' => 'Кількість відвідування на тиждень',
 	'visites_journalieres' => 'Кількість відвідувачів (день)',
 	'visites_mensuelles' => 'Кількість відвідувачів (місяць)'
 );
