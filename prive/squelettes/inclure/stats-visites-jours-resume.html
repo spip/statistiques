@@ -36,16 +36,16 @@
 	<tbody>
 		<tr>
 			#SET{stats,#NULL|statistiques_stats_generales}
-			<td class="num" data-label="<:info_maximum|label_nettoyer|attribut_html:>">[(#GET{stats/max}|number_format{0,"","&nbsp;"})]</td>
-			<td class="num" data-label="<:info_aujourdhui|label_nettoyer|attribut_html:>">[(#GET{stats/today}|number_format{0,"","&nbsp;"})]</td>
-			<td class="num" data-label="<:info_hier|label_nettoyer|attribut_html:>">[(#GET{stats/yesterday}|number_format{0,"","&nbsp;"})]</td>
+			<td class="num" data-label="<:info_maximum|label_nettoyer|attribut_html:>">[(#GET{stats/max}|sinon{0}|number_format{0,"","&nbsp;"})]</td>
+			<td class="num" data-label="<:info_aujourdhui|label_nettoyer|attribut_html:>">[(#GET{stats/today}|sinon{0}|number_format{0,"","&nbsp;"})]</td>
+			<td class="num" data-label="<:info_hier|label_nettoyer|attribut_html:>">[(#GET{stats/yesterday}|sinon{0}|number_format{0,"","&nbsp;"})]</td>
 			<BOUCLE_art(ARTICLES){id_article=#ENV{id_objet}}{statut?}{si #ENV{objet}|=={article}}>
 				<td class="num" data-label="<:statistiques:info_popularite_5|label_nettoyer|attribut_html:>">[(#CHAMP_SQL{popularite}|round|number_format{0,"","&nbsp;"})]</td>
-				<td class="num" data-label="<:info_total|label_nettoyer|attribut_html:>">[(#VISITES|round|number_format{0,"","&nbsp;"})]</td>
+				<td class="num" data-label="<:info_total|label_nettoyer|attribut_html:>">[(#VISITES|sinon{0}|round|number_format{0,"","&nbsp;"})]</td>
 				<td class="num" data-label="">[<strong>(#ID_ARTICLE|array_search{#GET{c}}|plus{1})</strong>[(#GET{c}|count|singulier_ou_pluriel{info_classement_1,info_classement_2,liste})]]</td>
 			</BOUCLE_art>
-				<td class="num" data-label="<:info_total|label_nettoyer|attribut_html:>">[(#REM|stats_total|number_format{0,"","&nbsp;"})]</td>
-				<td class="num" data-label="<:statistiques:info_popularite_2|label_nettoyer|attribut_html:>">[(#CONFIG{popularite_total}|round|number_format{0,"","&nbsp;"})]</td>
+				<td class="num" data-label="<:info_total|label_nettoyer|attribut_html:>">[(#REM|stats_total|sinon{0}|number_format{0,"","&nbsp;"})]</td>
+				<td class="num" data-label="<:statistiques:info_popularite_2|label_nettoyer|attribut_html:>">[(#CONFIG{popularite_total}|sinon{0}|round|number_format{0,"","&nbsp;"})]</td>
 			<//B_art>
 		</tr>
 	</tbody>
