@@ -3,7 +3,7 @@
 	categorie="statistique"
 	version="3.0.2"
 	etat="stable"
-	compatibilite="[4.1.0-alpha;4.1.*]"
+	compatibilite="[4.1.0;4.1.*]"
 	logo="prive/themes/spip/images/statistique-32.png"
 	schema="1.0.1"
 >
