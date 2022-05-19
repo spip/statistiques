@@ -6,6 +6,10 @@
 
 - Fichier `CHANGELOG.md`
 
+### Fixed
+
+- #4855 Ne pas nécessiter la présence d’un htaccess pour traiter l’url d’api de statistiques
+
 
 ## [3.0.3] - 2022-03-25
 
