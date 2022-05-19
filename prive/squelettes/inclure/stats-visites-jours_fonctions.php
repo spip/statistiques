@@ -33,6 +33,12 @@ function statistiques_url_data(array $Pile, string $output = 'json', string $exp
 
 	$args = http_build_query($args);
 	$url = generer_url_api_low_sec('transmettre', $output, 'statistiques.' . $output, '', $args, false, $public);
+	// Ne pas nécessiter une redirection d’url
+	$url = str_replace(
+		'transmettre.api/',
+		'?action=api_transmettre&arg=',
+		str_replace('?', '&', $url)
+	);
 	return $url;
 }
 
